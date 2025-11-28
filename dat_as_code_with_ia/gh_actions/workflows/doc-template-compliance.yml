@@ -1,0 +1,44 @@
+name: Documentation - Template Compliance
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'README*.md'
+      - '**/README*.md'
+
+jobs:
+  check-compliance:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check template compliance
+        id: compliance
+        run: |
+          chmod +x .github/scripts/check-template-compliance.sh
+          .github/scripts/check-template-compliance.sh
+
+      - name: Create issue if non-compliant
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/compliance-report.md', 'utf8');
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[DOC-AUTO] Non-conformité templates détectée`,
+              body: report,
+              labels: ['documentation', 'auto-review', 'llm-fix', 'template-compliance']
+            });

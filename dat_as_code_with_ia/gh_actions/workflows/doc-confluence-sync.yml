@@ -1,0 +1,46 @@
+name: Documentation - Confluence Sync Check
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'README.md'
+
+jobs:
+  check-confluence:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check Confluence synchronization
+        id: confluence
+        env:
+          CONFLUENCE_URL: ${{ secrets.CONFLUENCE_URL }}
+          CONFLUENCE_TOKEN: ${{ secrets.CONFLUENCE_TOKEN }}
+          CONFLUENCE_SPACE: CLOUD
+          CONFLUENCE_PAGE_ID: ${{ secrets.TUFIN_PAGE_ID }}
+        run: |
+          chmod +x .github/scripts/check-confluence-sync.sh
+          .github/scripts/check-confluence-sync.sh
+
+      - name: Create issue if out of sync
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/confluence-report.md', 'utf8');
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[DOC-AUTO] Désynchronisation documentation ↔ Confluence`,
+              body: report,
+              labels: ['documentation', 'auto-review', 'llm-fix', 'confluence-sync']
+            });

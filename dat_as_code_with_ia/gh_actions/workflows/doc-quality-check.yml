@@ -1,0 +1,44 @@
+name: Documentation - Quality Check
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - '**/*.md'
+      - '**/*.tf'
+
+jobs:
+  quality-check:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run quality checks
+        id: quality
+        run: |
+          chmod +x .github/scripts/check-doc-quality.sh
+          .github/scripts/check-doc-quality.sh
+
+      - name: Create issues for quality problems
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/quality-report.md', 'utf8');
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[DOC-AUTO] Problèmes de qualité détectés`,
+              body: report,
+              labels: ['documentation', 'auto-review', 'llm-fix', 'quality']
+            });
