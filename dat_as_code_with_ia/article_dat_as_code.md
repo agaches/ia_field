@@ -380,13 +380,13 @@ La documentation technique n'est pas qu'une liste d'éléments techniques :
 Elle a un but, elle doit pouvoir transmettre la compréhension d'un système.  
 (rappellez-vous Diataxis !)
 
-L'IA excelle pour transformer du code en phrases et structurer l'information (merci Diataxis), mais elle n'a pas la "conscience" du contexte métier.  
-Mais elle a aussi du mal pour "maintenir l'intérêt" du lecteur.
+L'IA excelle pour transformer du code en phrases et structurer l'information (merci Diataxis), mais elle n'a pas la "conscience" du contexte (métier, applicatif, technique).  
+Et elle a aussi du mal à "maintenir l'intérêt" du lecteur.
 
 Or, Si tout le monde se dit "chouette, la doc est automatisée", __plus personne ne prendra le temps de relire et de valider ce que l'IA a écrit__.
 
 La documentation sera longue, verbeuse, incipide et remplies d'erreurs.  
-Et on la délaissera en source de vérité. Et le DAT redeviendra un document mort que personne ne veut aller lire.  
+Et on la délaissera en source de vérité. **Et le DAT redeviendra un document mort que personne ne voudra aller lire.**  
 
 L'état de l'art en 2025 ne doit pas viser le "zéro effort" :    
 L'IA supprime la page blanche et la pénibilité de la mise en forme. ELle nous offre le temps de nous concentrer pour la vraie valeur ajoutée : l'analyse, la décision, et la stratégie.  
