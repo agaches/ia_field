@@ -2,11 +2,11 @@
 
 ## Introduction : La boucle de l'enfer
 
-Il y a quelques mois, pour un talk technique, j'ai demandé à Claude : *"Qu'en penses-tu ?"*
+Il y a quelques mois, pour un talk technique, j'ai demandé à Claude une revue : *"Qu'en penses-tu ?"*
 
 *   V1 : *"Excellent ! Solide."*
-*   V2 (après retouches) : *"Génial ! Mais inverse A et B, et rajoutes C."*
-*   V3 (après modifs) : *"Parfait ! Pour améliorer la fluidité, inverser B et A. Et C ne sert à rien."*
+*   V2 (après retouches) : *"Génial ! Mais ça a plus de sens d'inverser A et B, et rajoute un sujet manquant sur C."*
+*   V3 (après modifs) : *"Parfait ! Pour améliorer la fluidité, il faudrait inverser B et A. Et C me paraît inutile."*
 
 J'ai compris ce soir-là que l'IA préférait me répondre positivement plutôt que de me dire ce qui clochait. Ce comportement de "Yes Man" n'est pas un bug, c'est un défaut de conception documenté.
 
@@ -14,7 +14,7 @@ J'ai compris ce soir-là que l'IA préférait me répondre positivement plutôt 
 
 ### La "sycophancy" (complaisance) : un défaut documenté
 
-Les grands modèles de langage (ChatGPT, Claude, Gemini, etc.) montrent systématiquement un comportement appelé "sycophancy" (complaisance) : ils ont tendance à valider les opinions de l'utilisateur plutôt que de les contredire, même lorsque ces opinions sont incorrectes [1].
+Les grands modèles de langage (ChatGPT, Claude, Gemini, etc.) montrent systématiquement de la complaisance (sycophancy[EN]) : ils ont tendance à valider les opinions de l'utilisateur plutôt que de les contredire, même lorsque ces opinions sont incorrectes [1].
 
 ### Le coupable : le réentraînement (Reinforcement Learning from Human Feedback - RLHF)
 
@@ -61,7 +61,7 @@ Cette approche s'inspire de méthodes éprouvées :
 
 Si un LLM lit votre doc et ne comprend pas vos propos, un lecteur pressé risque de ne pas le comprendre non plus.
 
-Par ce test, elle devient un **indicateur de complexité** en identifiant le langage spécifique à votre domaine qu'elle ne maitrise pas (et que donc un lecteur externe ne maitrise pas non plus).
+Par ce test, elle devient un **indicateur de complexité** en identifiant le langage spécifique à votre domaine qu'elle ne maîtrise pas (et que donc un lecteur externe ne maîtrise pas non plus).
 
 ## Limites et bonnes pratiques
 
@@ -92,7 +92,7 @@ Pour vous éviter de partir d'une page blanche, j'ai compilé et testé une sér
 
 ### Mode d'emploi express (15 min chrono)
 
-Voici comment je procède :
+Voici comment procéder :
 1.  **Choisissez 2 Personas opposés** (ex: un CFO pour les chiffres + un Concurrent pour la stratégie).
 2.  **Ouvrez une conversation vierge** pour chaque persona (pour éviter la contamination du contexte).
 3.  **Copiez-collez le prompt + votre texte**.
@@ -100,62 +100,65 @@ Voici comment je procède :
 
 ### La preuve par l'exemple : le crash-test de cet article
 
-Pour ne pas reproduire l'erreur de mon talk réseau, j'ai appliqué cette méthode sur l'article que vous lisez. Je suis parti d'un premier brouillon bavard (consultable ici : [l'article original avant critique](old_article_relecture.md)) et je l'ai fait passer à la moulinette de 3 prompts itératifs.
+Pour ne pas reproduire l'erreur de mon talk réseau, j'ai appliqué cette méthode sur l'article que vous lisez. Je suis parti d'un premier brouillon bavard (consultable ici : [l'article original avant critique](https://github.com/agaches/ia_field/blob/main/doc_negative_review/old_article_relecture.md) et je l'ai fait passer à la moulinette de 3 prompts itératifs.
 
 **1. Le prompt "Valeur" (pour élaguer)**
-> *"Identifie dans ce document :
-1. Les paragraphes qui n'apportent pas de valeur (pure rhétorique)
-2. Les sections qui manquent de substance
-3. Le ratio contenu utile / remplissage
-4. Les zones où l'on pourrait être plus concis
-Fournis un % de contenu "utile" vs "remplissage" pour chaque section."*
+> *"Identifie dans ce document : 
+> 1. Les paragraphes qui n'apportent pas de valeur (pure rhétorique) 
+> 2. Les sections qui manquent de substance 
+> 3. Le ratio contenu utile / remplissage 
+> 4. Les zones où l'on pourrait être plus concis 
+> Fournis un % de contenu "utile" vs "remplissage" pour chaque section."* 
 
 **2. Le prompt "Cohérence" (pour structurer)**
-> *"Analyse ce document en vérifiant :
-La cohérence logique du début à la fin
-Les éventuelles contradictions entre sections
-Les ruptures dans le fil narratif
-Les redondances inutiles"*
+> *"Analyse ce document en vérifiant : 
+La cohérence logique du début à la fin 
+Les éventuelles contradictions entre sections 
+Les ruptures dans le fil narratif 
+Les redondances inutiles"* 
 
 **3. Le prompt "Qualité perçue" (pour crédibiliser)**
-> *"Tu es un lecteur qui sature des articles putaclic et des machins générés par IA.
-Évalue :
-La rigueur de l'argumentation (1-10)
-La qualité des sources et références (1-10)
-Le professionnalisme du ton (1-10)
-La précision des données (1-10)
-Qu'est-ce qui te fait penser "article de qualité" vs "article bof" "*
+> *"Tu es un lecteur qui sature des articles putaclic et des machins générés par IA.  
+Évalue :  
+La rigueur de l'argumentation (1-10)  
+La qualité des sources et références (1-10)  
+Le professionnalisme du ton (1-10)  
+La précision des données (1-10)  
+Qu'est-ce qui te fait penser "article de qualité" vs "article bof" "*  
 
 **4. Le prompt "Journaliste expérimenté" (pour finaliser)**
-> *"Tu es un journaliste expérimenté.
+> *"Tu es un journaliste expérimenté. 
 La personne est un amateur qui apprécie un style simple, direct, concret, qui parle un peu de lui et avec un peu d'humour.
 Reprends une analyse en profondeur de l'article en résultat et donnes-en un avis."*
 
-Les scores avant/après :
+Les scores avant/après :  
 *   **Ratio % utile :** Passée globalement de 60% à 96%
 *   **Qualité perçue :** Note passée de 4/10 (argumentaire mou) à 9/10 (logique implacable).
 
-**L'exemple le plus parlant ? L'introduction.**
-La version brouillon s'étalait sur **12 lignes** de narration personnelle ("Je devais préparer un talk... J'ai la connaissance technique...").
-La version finale tient en **6 lignes** qui posent le conflit immédiatement sans trop rentrer dans le détail.
+**Le plus parlant ? L'introduction.**  
+La version brouillon s'étalait sur **12 lignes** de narration personnelle ("Je devais préparer un talk... J'ai la connaissance technique..."). Je me rendais compte qu'il fallait simplifier, réduire.  
+La version finale tient en **6 lignes** qui posent le problème sans rentrer dans les détails superflus.
 
-Le lien vers la première version pour la comparaison :
-👉 **[Accéder à l'ancien article](https://github.com/agaches/ia_field/blob/main/doc_review/old_article_relecture.md.md)**
+Le lien vers la première version pour la comparaison :  
+👉 **[Accéder à l'ancien article](https://github.com/agaches/ia_field/blob/main/doc_negative_review/old_article_relecture.md)**
 
 L'**Avis final du journaliste:** C'est un article solide, utile et agréable à lire. Il ne cherche pas à impressionner par la complexité, mais à convaincre par l'efficacité.
 
 ## Le mot de la fin
 
 Ne me croyez pas sur parole, essayez. 
-Prenez votre dernier brouillon, et testez divers prompts (même au hasard).
-Essayez le  prompt du "CFO Sceptique" sur vos propositions commerciales
-Essayez le prompt du "Le Bullshit Detector" sur les dernières communications sur l'IA
-Regardez votre texte se faire démolir... avec tous les axes identifiés pour pouvoir mieux le reconstruire.
+Prenez votre dernier brouillon, et testez divers prompts (même au hasard).  
+Essayez le  prompt du "CFO Sceptique" sur vos propositions commerciales.  
+Essayez le prompt du "Le Bullshit Detector" sur les dernières communications sur l'IA.  
+Regardez votre texte se faire démolir... avec tous les axes identifiés pour pouvoir mieux le reconstruire.  
 
-Merci d'avoir lu jusqu'ici. Et j'en profite pour remercier tous mes relecteurs et relectrices.
+Un grand merci à @Benjamin MARSTEAU pour l'énergie qu'il insuffle dans cet Advent of Tech, ainsi qu'à mes relecteurs de l'ombre, @Emilie RESPINGUE et @Yann SCHEPENS.
+Bravo à tous les autres participants de cette édition 2025, et merci à vous de m'avoir lu jusque-là.
+
+On se retrouve le 15 décembre pour ouvrir ensemble une nouvelle case !
 
 ## Sources
 
-[1] [Perez et al., Anthropic 2022](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models) - "Discovering Language Model Behaviors with Model-Written Evaluations". Étude sur 12 modèles différents montrant que le taux d'accord avec l'utilisateur augmente systématiquement avec la taille du modèle. 
-[2] [Malmqvist 2024](https://arxiv.org/html/2411.15287) - "Sycophancy in Large Language Models: Causes and Mitigations". Revue technique analysant les causes, les impacts et les stratégies d'atténuation de la complaisance dans les LLM.
-[3] [Étude DeepMind 2024](https://deepmind.google/discover/blog/evaluating-frontier-models-for-dangerous-capabilities/) citée dans [Computerworld, mars 2024](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html). Les LLM modifient leurs réponses sous pression sociale, même quand ils avaient raison initialement. 
+[1] [Perez et al., Anthropic 2022](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models) - "Discovering Language Model Behaviors with Model-Written Evaluations". Étude sur 12 modèles différents montrant que le taux d'accord avec l'utilisateur augmente systématiquement avec la taille du modèle.  
+[2] [Malmqvist 2024](https://arxiv.org/html/2411.15287) - "Sycophancy in Large Language Models: Causes and Mitigations". Revue technique analysant les causes, les impacts et les stratégies d'atténuation de la complaisance dans les LLM.  
+[3] [Étude DeepMind 2024](https://deepmind.google/discover/blog/evaluating-frontier-models-for-dangerous-capabilities/) citée dans [Computerworld, mars 2024](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html). Les LLM modifient leurs réponses sous pression sociale, même quand ils avaient raison initialement.

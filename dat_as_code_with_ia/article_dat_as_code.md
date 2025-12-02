@@ -2,7 +2,7 @@
 
 ## Introduction
 
-L'année dernière, j'ai écrit un [guide pour moderniser son DAT](https://dev.to/onepoint/moderniser-son-dossier-darchitecture-technique-guide-pratique-pour-2024-7d6). Un an après, avec l'arrivée des coding assistants et leurs connecteurs, je me suis demandé : **qu'est-ce qu'on peut vraiment faire avec l'IA pour maintenir un DAT ?**
+L'année dernière, j'ai écrit un [guide pour moderniser son DAT (Dossier d'Architecture Technique)](https://dev.to/onepoint/moderniser-son-dossier-darchitecture-technique-guide-pratique-pour-2024-7d6). Un an après, avec l'arrivée des coding assistants et leurs connecteurs, je me suis demandé : **qu'est-ce qu'on peut vraiment faire avec l'IA pour maintenir un DAT ?**
 
 J'ai testé sur un projet Terraform. 
 Objectif : partir de zéro et arriver à une doc complète (architecture + exploitation) avec le moins d'effort possible.
@@ -17,7 +17,19 @@ Genre `<!-- décris ici les composants principaux en 5 lignes -->`.
 
 Et ça marche. Le coding assistant suit la structure et remplit chaque section selon les consignes.
 
-<!-- visuel de template markdown avec commentaires HTML contenant des prompts -->
+'''
+## 🏗️ Prérequis
+
+<!-- insérer prérequis techniques (Terraform et autres identifiés dans le code) -->
+
+## Description de la gestion IAM
+
+<!-- 
+créer un fichier à partir du template TPL_README_IAM.md
+insérer lien vers page iam
+exemple: [IAM](./docs/doc_iam.md)
+ -->
+'''
 
 Ça peut paraître con mais c'est le plus efficace que j'ai testé pour garder une cohérence de style documentaire globale.
 
@@ -34,7 +46,15 @@ Et on veut éviter de se retrouver avec de la redite partout.
 
 Ce qui paraît le plus adapté, c'est écrire la doc avec le code et mettre Confluence à jour en conséquence, avec des liens et des références vers la doc sur GitHub.
 
-<!-- visuel de schéma : Github (markdown) <-> Confluence <-> Jira avec flèches de synchronisation -->
+```mermaid
+graph LR
+    A[GitHub<br/>Markdown] <--> B[Confluence]
+    B <--> C[Jira]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+```
 
 ## La solution : MCP (Model Context Protocol)
 
@@ -46,7 +66,28 @@ Les MCP, c'est des connecteurs pour que ton coding assistant discute avec des se
 
 **Atlassian** : s'interface avec Confluence et Jira.
 
-<!-- visuel de diagramme d'architecture : VS Code + Coding Assistant au centre, connecté aux 3 MCP (Github, Atlassian, Context7) -->
+```mermaid
+graph TB
+    subgraph IDE["VS Code / Cursor / IntelliJ"]
+        CA[Coding Assistant]
+    end
+    
+    CA <--> MCP1[MCP Context7<br/>Standards & Gaps]
+    CA <--> MCP2[MCP GitHub<br/>Code Analysis]
+    CA <--> MCP3[MCP Atlassian<br/>Confluence & Jira]
+    
+    MCP2 --> GH[GitHub Repository]
+    MCP3 --> CONF[Confluence]
+    MCP3 --> JIRA[Jira]
+    
+    style CA fill:#ff9,stroke:#333,stroke-width:3px
+    style MCP1 fill:#9cf,stroke:#333,stroke-width:2px
+    style MCP2 fill:#9cf,stroke:#333,stroke-width:2px
+    style MCP3 fill:#9cf,stroke:#333,stroke-width:2px
+    style GH fill:#f9f,stroke:#333,stroke-width:2px
+    style CONF fill:#bbf,stroke:#333,stroke-width:2px
+    style JIRA fill:#bfb,stroke:#333,stroke-width:2px
+```
 
 ## Setup
 
@@ -54,11 +95,49 @@ J'installe les 3 MCP dans mon IDE (VsCode dans mon cas, mais ça marche avec Cur
 
 Pour Atlassian, je configure dans `.vscode/settings.json` :
 - URL de la page Confluence du projet
-- Board Jira associé
+```json
+{
+    // Configuration MCP
+    "mcp.confluence.enabled": true,
+    "mcp.confluence.baseUrl": "https://votre-domaine.atlassian.net",
+    "mcp.confluence.defaultSpace": "SPACE_KEY",
+    "mcp.jira.enabled": true,
+    "mcp.jira.baseUrl": "https://votre-domaine.atlassian.net",
+    "mcp.jira.defaultProject": "PROJECT_KEY",
+    "mcp.servers": {
+        "confluence": {
+            "command": "mcp-confluence",
+            "args": [
+                "--space",
+                "SPACE_KEY",
+                "--page-id",
+                "PAGE_ID"
+            ]
+        },
+        "jira": {
+            "command": "mcp-jira",
+            "args": [
+                "--project",
+                "PROJECT_KEY",
+                "--board",
+                "BOARD_ID"
+            ]
+        }
+    }
+}
+```
 
-<!-- visuel de capture d'écran du fichier settings.json avec configuration MCP -->
+Pour récupérer ces valeurs :
 
-Je teste les connexions : ça passe.
+**Confluence** (`https://domaine.atlassian.net/wiki/spaces/MON_ESPACE/pages/12345678/Titre`)
+* `SPACE_KEY` = `MON_ESPACE`
+* `PAGE_ID` = `12345678`
+
+**Jira** (`https://domaine.atlassian.net/jira/software/c/projects/MON_PROJET/boards/99`)
+* `PROJECT_KEY` = `MON_PROJET`
+* `BOARD_ID` = `99` 
+  
+Je teste les connexions : ça passe ✓
 
 Ensuite, je crée un repo GitHub avec mes templates de doc dans `tpl_docs/` :
 - `TPL_README.md` : vue globale
@@ -68,9 +147,7 @@ Ensuite, je crée un repo GitHub avec mes templates de doc dans `tpl_docs/` :
 - `TPL_README_PROCEDURE.md` : procédures
 - `TPL_README_DEX.md` : dossier d'exploitation
 
-<!-- visuel de capture d'écran de l'arborescence tpl_docs avec les différents templates -->
-
-<!-- lien vers repo public Github avec les exemples de fichiers de template -->
+Vous pouvez consulter les templates complets sur le [repository GitHub](https://github.com/agaches/ia_field/tree/main/dat_as_code_with_ia/tpl_docs).
 
 ## Itération 1 : créer la documentation
 
@@ -81,7 +158,14 @@ Je crée une commande custom "create doc" dans `agents.md` (config du coding ass
 
 **Deuxième problème** : il commence à générer README, IAM, FW... et boom, dépassement de contexte (Claude Sonnet 3.5).
 
-<!-- visuel de diagramme de flux montrant échec : analyse -> README -> IAM -> FW -> BOOM (context overflow) -->
+```
+[INFO] Analyse du code Terraform... ✓
+[INFO] Génération README.md... ✓
+[INFO] Génération IAM.md... ✓
+[INFO] Génération FW.md... ✓
+[ERROR] Context length exceeded (125k tokens)
+[FAIL] Process stopped
+```
 
 Conclusion : Fail. Il faut découper.
 
@@ -93,7 +177,25 @@ Je modifie `agents.md` pour séparer le processus :
 2. **Plan** : liste des docs à générer
 3. **Exécution** : un doc à la fois, une conversation par doc
 
-<!-- visuel de diagramme de flux réussi : 1.Analyse -> 2.Plan -> 3a.README -> 3b.IAM -> 3c.FW -> 3d.SIZING (étapes séquentielles) -->
+```
+NEW CONVERSATION> Analyse le code
+Analyse du code Terraform... ✓
+[INFO] Génération du plan de documentation... ✓
+
+NEW CONVERSATION> Génération README.md
+[INFO] Génération README.md... ✓
+
+NEW CONVERSATION> Génération IAM.md
+[INFO] Génération IAM.md... ✓
+
+NEW CONVERSATION> Génération FW.md
+[INFO] Génération FW.md... ✓
+
+NEW CONVERSATION> Génération SIZING.md
+[INFO] Génération SIZING.md... ✓
+
+[SUCCESS] Documentation complète générée
+```
 
 Résultats :
 - Analyse + plan : ✓
@@ -119,8 +221,6 @@ gcloud compute instances attach-disk instance-1 --disk=disk-1 --zone=europe-west
 
 Ça apporte une valeur ajoutée à la procédure technique et ça évite ensuite de perdre 10 minutes à rechercher/deviner la syntaxe de la commande.
 
-<!-- visuel de exemple avant/après : procédure vague vs procédure avec commande précise gcloud/az/kubectl -->
-
 J'ajoute `TPL_README_DEX.md` et `TPL_README_PROCEDURE.md`, je mets à jour `agents.md`.
 
 Problème : toujours trop verbeux. Je continue d'affiner les prompts. 
@@ -139,10 +239,55 @@ Ma stratégie :
 - `README.md`, `IAM.md`, `FW.md`, `SIZING.md`, `DEX.md`, `PROCEDURE_*.md`
 
 **Confluence** (publication) :
-- Page "Architecture" : liens vers GitHub + résumés
-- Page "Exploitation" : lien DEX + sous-pages procédures
+- Page "Application" : page racine du projet
+    - Sous-page "Architecture" : liens vers GitHub + résumés
+    - Sous-page "Exploitation" : lien DEX + procédures
 
-<!-- visuel de schéma d'organisation : Github (source) avec fichiers markdown vs Confluence (publication) avec pages et liens -->
+```mermaid
+graph TB
+        subgraph GitHub["📁 GitHub (Source)"]
+                README[README.md<br/>Vue globale]
+                IAM[IAM.md<br/>Gestion IAM]
+                FW[FW.md<br/>Firewall]
+                SIZING[SIZING.md<br/>Dimensionnement]
+                DEX[DEX.md<br/>Exploitation]
+                PROC1[PROCEDURE_DB.md]
+                PROC2[PROCEDURE_LB.md]
+                PROC3[PROCEDURE_VM.md]
+        end
+        
+        subgraph Confluence["📄 Confluence (Publication)"]
+                APP[Page Application<br/>Racine du projet]
+                ARCH[Sous-page Architecture<br/>Résumés + Liens GitHub]
+                EXPLOIT[Sous-page Exploitation<br/>Lien DEX]
+                PROC_DB[Sous-page<br/>Procédure DB]
+                PROC_LB[Sous-page<br/>Procédure LB]
+                PROC_VM[Sous-page<br/>Procédure VM]
+        end
+        
+        APP --> ARCH
+        APP --> EXPLOIT
+        
+        ARCH --> README
+        ARCH --> IAM
+        ARCH --> FW
+        ARCH --> SIZING
+        
+        EXPLOIT --> DEX
+        EXPLOIT --> PROC_DB
+        EXPLOIT --> PROC_LB
+        EXPLOIT --> PROC_VM
+        
+        PROC_DB --> PROC1
+        PROC_LB --> PROC2
+        PROC_VM --> PROC3
+        
+        style GitHub fill:#f9f,stroke:#333,stroke-width:2px
+        style Confluence fill:#bbf,stroke:#333,stroke-width:2px
+        style APP fill:#d4e6ff,stroke:#333,stroke-width:2px
+        style ARCH fill:#e6f3ff,stroke:#333,stroke-width:1px
+        style EXPLOIT fill:#e6f3ff,stroke:#333,stroke-width:1px
+```
 
 ## Itération 5 : GitHub Actions (en cours)
 
@@ -163,7 +308,42 @@ Je teste une approche différente :
 
 Pour chaque écart → issue Jira → traitement ciblé.
 
-<!-- visuel de diagramme de détection d'écarts : 3 comparaisons (code↔doc, confluence↔doc, template↔doc) qui génèrent des issues Jira -->
+```mermaid
+graph LR
+    subgraph Sources
+        CODE[Code Terraform]
+        DOC[Doc Markdown]
+        CONF[Confluence]
+        TPL[Templates]
+    end
+
+    subgraph Detection["Détection d'écarts"]
+        COMP1{Code ≠ Doc ?}
+        COMP2{Conf ≠ Doc ?}
+        COMP3{Tpl ≠ Doc ?}
+    end
+
+    subgraph Action
+        JIRA[Création Issue Jira]
+    end
+
+    CODE --> COMP1
+    DOC --> COMP1
+    CONF --> COMP2
+    DOC --> COMP2
+    TPL --> COMP3
+    DOC --> COMP3
+
+    COMP1 -->|Oui| JIRA
+    COMP2 -->|Oui| JIRA
+    COMP3 -->|Oui| JIRA
+
+    %% Coloration des flèches partant de DOC (indices 1, 3, 5)
+    linkStyle 1,3,5 stroke:#ff9900,stroke-width:2px;
+
+    style Detection fill:#fff,stroke:#333,stroke-dasharray: 5 5
+    style JIRA fill:#bfb,stroke:#333,stroke-width:2px
+```
 
 C'est en test, je valide si c'est plus pertinent.
 
@@ -182,8 +362,6 @@ C'est en test, je valide si c'est plus pertinent.
 - Doc exploitation avec procédures
 - Page Confluence propre
 
-<!-- visuel de comparaison avant/après : gauche=repo vide, droite=documentation complète + page Confluence -->
-
 ### Les limites
 
 Il faut quand même **relire**. 
@@ -192,16 +370,42 @@ Le coding assistant peut :
 - Approximer des choses, souvent les nombres
 - Halluciner des informations
 
-### Conclusion
+### Le mot de la fin : Assistant, pas remplaçant
 
-L'IA ne supprime pas le boulot de doc. 
-Elle change la nature du boulot : on peut obtenir 80% d'une documentation avec peu d'efforts.
-Je trouve personnellement que ça devient plus facile : c'est plus simple pour moi de repartir d'une base documentaire et de corriger/éliminer l'inutile que de commencer d'une page blanche.
+Bilan de cette fin d'année 2025 : J'ai voulu avancer sur l'automatisation en CI/CD mais j'avais un frein à vouloir aller dessus.  
+J'ai enfin compris pourquoi :  
+Si techniquement, on pourrait brancher ces agents en CI/CD pour une génération "au kilomètre" sans supervision, je pense en fait que ce serait une erreur.  
 
-En plus, ça apporte une documentation exacte à 80% dans un format standard pour toutes les applications.
+La documentation technique n'est pas qu'une liste d'éléments techniques :  
+Elle a un but, elle doit pouvoir transmettre la compréhension d'un système.  
+(rappellez-vous Diataxis !)
 
-Et franchement, le gain de temps est réel. 
-En doc assistant, ça fonctionne très bien.
+L'IA excelle pour transformer du code en phrases et structurer l'information (merci Diataxis), mais elle n'a pas la "conscience" du contexte métier.  
+Mais elle a aussi du mal pour "maintenir l'intérêt" du lecteur.
 
-L'automatisation complète demande plus de travail car elle nécessite de réfléchir aux différents écarts possibles.
-C'est encore en test et mériterait de pouvoir y consacrer plus de temps.
+Or, Si tout le monde se dit "chouette, la doc est automatisée", __plus personne ne prendra le temps de relire et de valider ce que l'IA a écrit__.
+
+La documentation sera longue, verbeuse, incipide et remplies d'erreurs.  
+Et on la délaissera en source de vérité. Et le DAT redeviendra un document mort que personne ne veut aller lire.  
+
+L'état de l'art en 2025 ne doit pas viser le "zéro effort" :    
+L'IA supprime la page blanche et la pénibilité de la mise en forme. ELle nous offre le temps de nous concentrer pour la vraie valeur ajoutée : l'analyse, la décision, et la stratégie.  
+
+**Prochaine étape ?** S'attaquer aux ADR (Architecture Decision Records).  
+Pour l'instant, l'IA sait décrire ce qui existe.  
+Il est encore compliqué d'expliquer pourquoi nous avons pris telle décision plutôt qu'une autre.  
+Intégrer les ADR dans les moeurs progresse.
+Avoir une IA secrétaire pour enregister les différents éléments et en rédiger un document d'ADR propre et structuré peut aider à cette adhésion.  
+
+Et du coup, ça, c'est mon prochain chantier.
+
+J'espère que cet article vous aura inspiré et motivé à avoir une documentation propre.
+Si vous découvrez le sujet et souhaitez comprendre les fondations de ce "dinosaure numérique" qu'est le DAT, ma série précédente reste le complément idéal pour aller plus loin : 
+https://dev.to/agaches/series/29201
+
+Merci à @Benjamin MARSTEAU pour son énergie positive dans l'organisation de cet Advent of Tech,
+Merci à mes relecteurs @Emilie RESPINGUE et @Yann SCHEPENS.
+Bravo à tous les autres participants pour leurs articles. 
+Et Merci à vous de m'avoir lu jusque là.
+
+Je vous souhaite de très bonnes fêtes de fin d'années à tous et à l'année prochaine.
