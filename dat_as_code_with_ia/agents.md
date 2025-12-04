@@ -52,7 +52,7 @@ Centralisées dans un repository Terraform dédié.
 
 **Demander** :
 1. URL du repository (format: `owner/repo`)
-2. Chemin des fichiers (ex: `DEV/tec-tufin-d.tf`)
+2. Chemin des fichiers (ex: `DEV/fw-rules.tf`)
 
 **Récupérer** :
 - Utiliser `github_repo` pour extraire les règles `google_compute_firewall`
