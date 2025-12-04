@@ -13,8 +13,22 @@ services:
     devices:
       - /dev/kfd:/dev/kfd
       - /dev/dri:/dev/dri
+    # Variables d'environnement pour forcer l'utilisation du GPU
+    environment:
+      - HSA_OVERRIDE_GFX_VERSION=11.0.2  # RDNA3.5 pour Radeon 860M
+      - OLLAMA_DEBUG=1  # Active les logs de debug
+      - GPU_DEVICE_ORDINAL=0
+      - HIP_VISIBLE_DEVICES=0
+      - ROCR_VISIBLE_DEVICES=0
+      # Décommentez pour forcer CPU si GPU ne fonctionne pas:
+      # - OLLAMA_NUM_GPU=0
     ports:
       - "11434:11434"
+    # Ajouter les capabilities pour un meilleur accès GPU
+    security_opt:
+      - seccomp:unconfined
+    # Utiliser root pour éviter les problèmes de permissions
+    user: "0:0"
     networks:
       - otoroshi-network
 

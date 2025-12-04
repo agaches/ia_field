@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # Service Ollama (Inférence) - Mode CPU
+  ollama:
+    image: ollama/ollama:latest  # Image CPU
+    container_name: ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_DEBUG=1
+      - OLLAMA_NUM_GPU=0  # Force l'utilisation du CPU
+      - OLLAMA_NUM_PARALLEL=4  # Nombre de requêtes parallèles
+    ports:
+      - "11434:11434"
+    networks:
+      - otoroshi-network
+    # Optimisation CPU
+    deploy:
+      resources:
+        limits:
+          cpus: '8'  # Ajustez selon votre CPU
+          memory: 16G
+
+  # Service Otoroshi (API Gateway)
+  otoroshi:
+    image: maif/otoroshi:latest
+    container_name: otoroshi
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      - OTOROSHI_INITIAL_ADMIN_LOGIN=admin@otoroshi.io
+      - OTOROSHI_INITIAL_ADMIN_PASSWORD=password
+      - APP_DOMAIN=oto.tools
+      - PLAY_HTTP_SECRET=my-secret-random-string
+      - OTOROSHI_INITIAL_ADMIN_API_KEY_ID=admin-api-apikey-id
+      - OTOROSHI_INITIAL_ADMIN_API_KEY_SECRET=admin-api-apikey-secret
+    depends_on:
+      - ollama
+    networks:
+      - otoroshi-network
+
+networks:
+  otoroshi-network:
+    driver: bridge
+
+volumes:
+  ollama_data:

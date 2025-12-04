@@ -139,6 +139,49 @@ docker logs ollama -f
 docker-compose logs -f
 ```
 
+## 📊 Monitoring et Benchmarks
+
+### Monitoring des ressources
+
+```bash
+# Snapshot unique des ressources
+./monitor_resources.sh
+
+# Monitoring continu avec GPU (si mode GPU)
+./monitor_resources.sh continuous
+
+# Export des statistiques
+./monitor_resources.sh export
+```
+
+**Note:** Le monitoring GPU affichera un avertissement en mode CPU ou si le GPU n'est pas supporté.
+
+### Benchmarks de performance
+
+```bash
+# Rendre les scripts exécutables
+chmod +x monitor_resources.sh benchmark.sh
+
+# Test de latence (10 requêtes séquentielles)
+./benchmark.sh latency 10
+
+# Test de charge (5 requêtes simultanées pendant 30s)
+./benchmark.sh load 5 30
+
+# Benchmark complet
+./benchmark.sh full
+```
+
+### Métriques surveillées
+
+- **CPU**: Utilisation par conteneur et globale
+- **Mémoire**: RAM utilisée par conteneur et système
+- **GPU**: Utilisation GPU AMD (si ROCm installé)
+- **Réseau**: I/O réseau par conteneur
+- **Disque**: Utilisation des volumes Docker
+- **Latence**: Temps de réponse des requêtes
+- **Throughput**: Requêtes par seconde
+
 ## 🔒 Sécurité
 
 ### Deux types de credentials
@@ -176,15 +219,75 @@ chmod +x test_api.sh
 
 ## ⚡ GPU AMD (ROCm)
 
-Le conteneur utilise l'image `ollama/ollama:rocm` pour le support GPU AMD.
-Les devices `/dev/kfd` et `/dev/dri` sont mappés automatiquement.
+### ⚠️ Important: GPU Radeon 860M (RDNA3.5)
 
-Pour utiliser CPU uniquement, modifiez `docker-compose.yml` :
-```yaml
-ollama:
-  image: ollama/ollama:latest  # Au lieu de :rocm
-  # Supprimez la section devices
+Votre GPU **AMD Radeon 860M** (intégré au Ryzen AI 7 350) est très récent (2024) et le **support ROCm est encore expérimental**.
+
+**Deux modes disponibles :**
+
+### Mode CPU (Recommandé - Stable)
+
+```bash
+chmod +x switch_mode.sh
+./switch_mode.sh cpu
 ```
+
+**Avantages:**
+- ✅ Stable et fonctionnel
+- ✅ Bonne performance avec votre Ryzen AI 7 350 (8 cœurs)
+- ✅ Pas de problèmes de compatibilité
+
+**Inconvénients:**
+- ❌ Plus lent que GPU pour les grands modèles
+- ❌ Consommation mémoire RAM plus importante
+
+### Mode GPU (Expérimental)
+
+```bash
+./switch_mode.sh gpu
+docker logs ollama -f  # Surveillez les logs
+```
+
+**Note:** Le Radeon 860M (Device ID: 1114) n'est pas encore officiellement supporté par ROCm.
+Vous pouvez essayer mais des erreurs sont attendues.
+
+### Vérifier le mode actuel
+
+```bash
+./switch_mode.sh status
+```
+
+### Configuration GPU requise (si mode GPU)
+
+**1. Ajouter votre utilisateur au groupe video :**
+
+```bash
+sudo usermod -aG video $USER
+# Déconnexion/reconnexion nécessaire
+```
+
+**2. Identifier la version GFX de votre GPU :**
+
+```bash
+# Votre GPU Radeon 860M est probablement:
+# - gfx1102 (RDNA3.5) → HSA_OVERRIDE_GFX_VERSION=11.0.2
+# - ou gfx1100 (RDNA3) → HSA_OVERRIDE_GFX_VERSION=11.0.0
+
+rocminfo | grep gfx
+```
+
+**3. Ajuster docker-compose.yml si nécessaire**
+
+### Performances comparatives
+
+```bash
+# Benchmark CPU vs GPU
+./benchmark.sh latency 5
+```
+
+**Attendu avec votre configuration:**
+- **CPU Mode**: ~10-30 tokens/sec (selon le modèle)
+- **GPU Mode**: Si compatible, ~30-100 tokens/sec
 
 ## 🎯 Architecture
 
