@@ -91,14 +91,17 @@ echo "📊 HTTP Status: $HTTP_CODE"
 echo -e "\n🔍 Vérification des routes..."
 curl -s -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
   -H "Host: $OTO_API_HOST" \
-  "$OTO_URL/api/routes" | jq '.data[] | {id: .id, name: .name, domains: .frontend.domains}'
+  "$OTO_URL/api/routes" | jq '.[] | {id: .id, name: .name, domains: .frontend.domains, enabled: .enabled}'
 
 # 4. Vérification des API Keys créées
 echo -e "\n🔍 Vérification des API Keys..."
 curl -s -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
   -H "Host: $OTO_API_HOST" \
-  "$OTO_URL/api/apikeys" | jq '.data[] | {clientId: .clientId, clientName: .clientName, authorizedEntities: .authorizedEntities}'
+  "$OTO_URL/api/apikeys" | jq '.[] | {clientId: .clientId, clientName: .clientName, authorizedEntities: .authorizedEntities, enabled: .enabled}'
 
 echo -e "\n\n🎉 Setup Terminé !"
 echo "Vous pouvez maintenant accéder à Ollama via Otoroshi (Basic Auth) :"
 echo "curl -u 'my-llm-client-id:my-llm-client-secret' -H 'Host: ollama.oto.tools' http://localhost:8080/v1/models"
+echo ""
+echo "📝 Note: Utilisez le header 'Otoroshi-Client-Id' et 'Otoroshi-Client-Secret' au lieu de Basic Auth si nécessaire:"
+echo "curl -H 'Otoroshi-Client-Id: my-llm-client-id' -H 'Otoroshi-Client-Secret: my-llm-client-secret' -H 'Host: ollama.oto.tools' http://localhost:8080/v1/models"
