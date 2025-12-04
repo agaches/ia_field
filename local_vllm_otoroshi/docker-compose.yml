@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Service Ollama (Inférence)
+  # Image officielle Ollama (support ROCm inclus ou via tag spécifique si besoin)
+  ollama:
+    image: ollama/ollama:rocm
+    container_name: ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    # Mapping des périphériques pour l'accès GPU AMD
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
+    ports:
+      - "11434:11434"
+
+  # Service Otoroshi (API Gateway)
+  otoroshi:
+    image: maif/otoroshi:latest
+    container_name: otoroshi
+    restart: unless-stopped
+    ports:
+      - "8080:8080" # UI et API
+      - "8443:8443" # HTTPS
+    environment:
+      - OTOROSHI_INITIAL_ADMIN_LOGIN=admin@otoroshi.io
+      - OTOROSHI_INITIAL_ADMIN_PASSWORD=password
+      - APP_DOMAIN=oto.tools
+      - PLAY_HTTP_SECRET=my-secret-random-string
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_data:
