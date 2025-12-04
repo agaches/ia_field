@@ -100,8 +100,12 @@ curl -s -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
   "$OTO_URL/api/apikeys" | jq '.[] | {clientId: .clientId, clientName: .clientName, authorizedEntities: .authorizedEntities, enabled: .enabled}'
 
 echo -e "\n\n🎉 Setup Terminé !"
-echo "Vous pouvez maintenant accéder à Ollama via Otoroshi (Basic Auth) :"
-echo "curl -u 'my-llm-client-id:my-llm-client-secret' -H 'Host: ollama.oto.tools' http://localhost:8080/v1/models"
 echo ""
-echo "📝 Note: Utilisez le header 'Otoroshi-Client-Id' et 'Otoroshi-Client-Secret' au lieu de Basic Auth si nécessaire:"
+echo "✅ Commande de test (avec headers Otoroshi) :"
 echo "curl -H 'Otoroshi-Client-Id: my-llm-client-id' -H 'Otoroshi-Client-Secret: my-llm-client-secret' -H 'Host: ollama.oto.tools' http://localhost:8080/v1/models"
+echo ""
+echo "📚 Pour charger un modèle dans Ollama :"
+echo "docker exec ollama ollama pull llama2"
+echo ""
+echo "🔧 Pour tester directement Ollama (sans Otoroshi) :"
+echo "curl http://localhost:11434/v1/models"
