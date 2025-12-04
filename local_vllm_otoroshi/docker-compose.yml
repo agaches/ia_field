@@ -15,6 +15,8 @@ services:
       - /dev/dri:/dev/dri
     ports:
       - "11434:11434"
+    networks:
+      - otoroshi-network
 
   # Service Otoroshi (API Gateway)
   otoroshi:
@@ -29,8 +31,16 @@ services:
       - OTOROSHI_INITIAL_ADMIN_PASSWORD=password
       - APP_DOMAIN=oto.tools
       - PLAY_HTTP_SECRET=my-secret-random-string
+      - OTOROSHI_INITIAL_ADMIN_API_KEY_ID=admin-api-apikey-id
+      - OTOROSHI_INITIAL_ADMIN_API_KEY_SECRET=admin-api-apikey-secret
     depends_on:
       - ollama
+    networks:
+      - otoroshi-network
+
+networks:
+  otoroshi-network:
+    driver: bridge
 
 volumes:
   ollama_data:

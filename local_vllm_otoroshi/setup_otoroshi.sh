@@ -15,19 +15,23 @@ until curl -s -u "$ADMIN_API_ID:$ADMIN_API_SECRET" -H "Host: $OTO_API_HOST" "$OT
 done
 echo "✅ Otoroshi est prêt !"
 
+# Attente supplémentaire pour s'assurer que l'API est complètement prête
+sleep 3
+
 # 1. Création de la Route (Proxy vers Ollama)
-# Redirige ollama.oto.tools vers le conteneur ollama:11434
-# Ajoute l'authentification par API Key
 echo "🚀 Création de la route Ollama..."
-curl -X POST -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
+ROUTE_RESPONSE=$(curl -s -w "\n%{http_code}" -X POST -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
   -H "Host: $OTO_API_HOST" \
   -H "Content-Type: application/json" \
   -d '{
     "id": "route_ollama_proxy",
     "name": "Ollama AI Proxy",
+    "description": "Route pour accéder à Ollama via Otoroshi",
+    "enabled": true,
+    "groups": ["default"],
     "frontend": {
       "domains": ["ollama.oto.tools"],
-      "strip_path": true,
+      "strip_path": false,
       "exact": false
     },
     "backend": {
@@ -47,28 +51,54 @@ curl -X POST -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
         "plugin": "cp:otoroshi.next.plugins.ApikeyCalls",
         "enabled": true,
         "config": {
-          "validate": true,
-          "header": "Authorization",
-          "prefix": "Bearer "
+          "validate": true
         }
       }
     ]
   }' \
-  "$OTO_URL/api/routes"
+  "$OTO_URL/api/routes")
+
+HTTP_CODE=$(echo "$ROUTE_RESPONSE" | tail -n1)
+ROUTE_BODY=$(echo "$ROUTE_RESPONSE" | sed '$d')
+echo "$ROUTE_BODY"
+echo "📊 HTTP Status: $HTTP_CODE"
 
 # 2. Création d'une API Key pour le client
 echo -e "\n🔑 Création de l'API Key..."
-curl -X POST -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
+APIKEY_RESPONSE=$(curl -s -w "\n%{http_code}" -X POST -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
   -H "Host: $OTO_API_HOST" \
   -H "Content-Type: application/json" \
   -d '{
     "clientId": "my-llm-client-id",
     "clientSecret": "my-llm-client-secret",
     "clientName": "LLM Client",
-    "authorizedEntities": ["route_ollama_proxy"]
+    "description": "API Key pour accéder à Ollama",
+    "authorizedGroup": "default",
+    "authorizedEntities": ["route_ollama_proxy"],
+    "enabled": true,
+    "throttlingQuota": 10000000,
+    "dailyQuota": 10000000,
+    "monthlyQuota": 10000000
   }' \
-  "$OTO_URL/api/apikeys"
+  "$OTO_URL/api/apikeys")
+
+HTTP_CODE=$(echo "$APIKEY_RESPONSE" | tail -n1)
+APIKEY_BODY=$(echo "$APIKEY_RESPONSE" | sed '$d')
+echo "$APIKEY_BODY"
+echo "📊 HTTP Status: $HTTP_CODE"
+
+# 3. Vérification des routes créées
+echo -e "\n🔍 Vérification des routes..."
+curl -s -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
+  -H "Host: $OTO_API_HOST" \
+  "$OTO_URL/api/routes" | jq '.data[] | {id: .id, name: .name, domains: .frontend.domains}'
+
+# 4. Vérification des API Keys créées
+echo -e "\n🔍 Vérification des API Keys..."
+curl -s -u "$ADMIN_API_ID:$ADMIN_API_SECRET" \
+  -H "Host: $OTO_API_HOST" \
+  "$OTO_URL/api/apikeys" | jq '.data[] | {clientId: .clientId, clientName: .clientName, authorizedEntities: .authorizedEntities}'
 
 echo -e "\n\n🎉 Setup Terminé !"
-echo "Vous pouvez maintenant accéder à Ollama via Otoroshi :"
-echo "curl -H 'Host: ollama.oto.tools' -H 'Authorization: Bearer my-llm-client-id:my-llm-client-secret' http://localhost:8080/v1/models"
+echo "Vous pouvez maintenant accéder à Ollama via Otoroshi (Basic Auth) :"
+echo "curl -u 'my-llm-client-id:my-llm-client-secret' -H 'Host: ollama.oto.tools' http://localhost:8080/v1/models"
