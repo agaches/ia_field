@@ -141,6 +141,28 @@ docker-compose logs -f
 
 ## 🔒 Sécurité
 
+### Deux types de credentials
+
+1. **Credentials ADMIN** (pour gérer Otoroshi)
+   - Client ID: `admin-api-apikey-id`
+   - Client Secret: `admin-api-apikey-secret`
+   - Usage: Créer routes, API keys, configuration via API d'admin
+   - ⚠️ Ne jamais utiliser pour les requêtes applicatives
+
+2. **API Key CLIENT** (pour accéder à Ollama)
+   - Client ID: `my-llm-client-id`
+   - Client Secret: `my-llm-client-secret`
+   - Usage: Accès à Ollama via Otoroshi
+   - ✅ À utiliser dans vos applications
+
+### Test de sécurité
+
+Lancez le script de test pour vérifier :
+```bash
+chmod +x test_api.sh
+./test_api.sh
+```
+
 - L'accès à Ollama est protégé par API key via Otoroshi
 - Les quotas sont configurés (10M requêtes/jour)
 - Pour la production, changez les credentials par défaut
