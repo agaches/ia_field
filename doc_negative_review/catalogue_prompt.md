@@ -21,7 +21,8 @@ Une proposition de prompts pour auditer vos documents "Business" (propositions, 
     - [Le Stress Test Concurrent](#le-stress-test-concurrent)
   - [5. Les Tests "Crash Test" (Fun \& Radical)](#5-les-tests-crash-test-fun--radical)
     - [Le Test "12 ans" (Clarté)](#le-test-12-ans-clarté)
-    - [Le Bullshit Detector](#le-bullshit-detector)
+    - [Le Bullshit Detector (violent)](#le-bullshit-detector)
+    - [Le Bullshit Detector avec echelle](#le-bullshit-detector-avec-echelle)
   - [6. Spécial "Publications \& Articles" (Le Kit de l'Article)](#6-spécial-publications--articles-le-kit-de-larticle)
     - [Le Prompt "Valeur / Densité"](#le-prompt-valeur--densité)
     - [Le Prompt "Anti-Putaclic / Qualité Perçue"](#le-prompt-anti-putaclic--qualité-perçue)
@@ -206,6 +207,57 @@ Ton seul job : détecter le bullshit dans ce document.
 - Logique fallacieuse
 
 Sors ton détecteur de bullshit et ne fais pas de prisonniers.
+```
+
+### Le Bullshit Detector avec echelle
+*Pourquoi l'utiliser : Pour éliminer le jargon vide et les promesses intenables.*
+```
+Ton job : détecter et QUANTIFIER le bullshit dans ce document.
+
+ÉCHELLE DE NOTATION (sur 10) :
+
+0-2/10 : SOLIDE
+- Sources vérifiables citées
+- Affirmations nuancées ou prouvées
+- Reconnaissance explicite des limites
+- Pas de promesses exagérées
+- Contenu > packaging
+
+3-4/10 : ACCEPTABLE 
+- Quelques approximations mineures
+- Packaging légèrement marketing mais honnête
+- Manque parfois de nuances
+- Affirmations généralement défendables
+
+5-6/10 : LIMITE
+- Mélange de vrai et d'exagérations
+- Sources faibles ou absentes
+- Promesses un peu trop belles
+- Packaging commence à masquer le fond
+
+7-8/10 : BULLSHIT STANDARD
+- Affirmations péremptoires sans preuves
+- Généralisations abusives
+- "Révolution" / "Game changer" / "Tout a changé"
+- Autopromo déguisée en sagesse
+- Logique circulaire ou fallacieuse
+
+9-10/10 : BULLSHIT PUR
+- Zéro substance, 100% packaging
+- Promesses impossibles assumées
+- Buzzwords en rafale sans sens
+- Pure manipulation émotionnelle
+- Vente forcée déguisée en contenu
+
+ANALYSE OBLIGATOIRE :
+1. Note finale sur 10 avec justification
+2. Top 3 des red flags détectés
+3. Ce qui est factuellement faux (si applicable)
+4. Ce qui est vrai mais exagéré
+5. Le vrai message vs. le message marketé
+
+Sois impitoyable sur les faits, mais juste sur l'échelle.
+Pas de prisonniers sur le bullshit, mais reconnais le contenu solide.
 ```
 
 ## 6. Spécial "Publications & Articles" (Le Kit de l'Article)
