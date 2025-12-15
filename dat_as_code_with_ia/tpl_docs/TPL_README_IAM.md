@@ -72,7 +72,7 @@ Dans chaque case, vous indiquerez si le profil a le rôle affecté avec un ✓, 
 | logging.admin              |   ✓    |         |       |         |
 -->
 
-## ôle Custom
+## Rôle Custom
 
 <!-- pour chaque role custom, s'il en existe, créer un tableau Role | Description listant les différents droits associés. S'il n'existe pas de role custom, indiquer "Pas de rôle custom"
 
