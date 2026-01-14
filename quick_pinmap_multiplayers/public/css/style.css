@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+header, footer {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    flex-grow: 1;
+    overflow: hidden;
+    background-color: #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    /* Prevent selection for better touch experience */
+    user-select: none;
+    -webkit-user-select: none; 
+}
+
+#map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: crosshair;
+}
+
+/* Dots Layer Wrapper matches the image */
+#dots-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Crucial: lets clicks pass to the image/container */
+}
+
+.vote-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 0, 0, 0.8);
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Center dot on coordinates */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.vote-dot.my-dot {
+    background-color: #007bff; /* Blue for my own dot */
+    z-index: 100;
+}

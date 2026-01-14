@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Config: Public Read, Admin Write
+    match /config/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Votes: Public Read, Public Write (Restricted by client logic mostly)
+    match /votes/{voteId} {
+      allow read: if true;
+      
+      // Allow create/update if the document ID matches the userId field
+      // This prevents users from casually overwriting others if they don't know the ID (UUID)
+      allow create, update: if request.resource.data.userId == voteId
+                            && request.resource.data.x is number
+                            && request.resource.data.y is number;
+                            
+      // Only Admin can delete (reset button)
+      allow delete: if request.auth != null;
+    }
+  }
+}
