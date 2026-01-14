@@ -16,6 +16,11 @@ header, footer {
     z-index: 10;
 }
 
+/* Garder le footer en bas sans étirer la map */
+footer {
+    margin-top: auto;
+}
+
 h1 {
     margin: 0;
     font-size: 1.5rem;
@@ -25,8 +30,14 @@ h1 {
     position: relative;
     width: 100%;
     max-width: 1000px;
-    margin: 20px auto;
-    flex-grow: 1;
+    
+    /* Centrage et suppression de l'étirement vertical */
+    margin: auto; 
+    /* flex-grow: 1;  <-- SUPPRIMÉ */
+    
+    /* Suppression espace fantôme sous l'image */
+    line-height: 0;
+    
     overflow: hidden;
     background-color: #ddd;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);

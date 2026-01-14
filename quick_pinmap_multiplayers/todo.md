@@ -1,19 +1,19 @@
 # 🚀 Project Plan: Pin Map Live Vote
 
 ## Phase 1: Setup & Configuration
-- [ ] **Firebase Setup**:
-    - [ ] Create a new project in Firebase Console.
-    - [ ] Enable **Firestore Database** (start in Test mode initially, then switch to locked).
-    - [ ] Enable **Storage** (for image hosting).
-    - [ ] Enable **Authentication** (Email/Password for Admin).
-    - [ ] Get Firebase Web Configuration (API Keys).
-- [ ] **Project Structure**:
-    - [ ] Create `index.html` (User view).
-    - [ ] Create `admin.html` (Admin interface).
-    - [ ] Create `css/style.css` (Shared styles).
-    - [ ] Create `js/firebase-config.js` (Shared Firebase init).
-    - [ ] Create `js/app.js` (User logic).
-    - [ ] Create `js/admin.js` (Admin logic).
+- [x] **Firebase Setup**:
+    - [x] Create a new project in Firebase Console.
+    - [x] Enable **Firestore Database** (start in Test mode initially, then switch to locked).
+    - [x] Enable **Storage** (for image hosting).
+    - [x] Enable **Authentication** (Email/Password for Admin).
+    - [x] Get Firebase Web Configuration (API Keys).
+- [x] **Project Structure**:
+    - [x] Create `index.html` (User view).
+    - [x] Create `admin.html` (Admin interface).
+    - [x] Create `css/style.css` (Shared styles).
+    - [x] Create `js/firebase-config.js` (Shared Firebase init).
+    - [x] Create `js/app.js` (User logic).
+    - [x] Create `js/admin.js` (Admin logic).
 
 ## Phase 2: Frontend Core (User UI & Logic)
 - [x] **Layout & Styling**:

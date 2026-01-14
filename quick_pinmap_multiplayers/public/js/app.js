@@ -85,7 +85,8 @@ function handleMapClick(event) {
     // Identify if the click was on a dot (which might block the container if not careful)
     // CSS pointer-events: none on dots handles this, so event always hits container or image
     
-    const rect = mapContainer.getBoundingClientRect();
+    // Changement ici : on vise l'image, pas le contamp
+    const rect = mapImage.getBoundingClientRect();
     
     // Calculate click position relative to the container
     const xPx = event.clientX - rect.left;
