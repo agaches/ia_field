@@ -1,102 +1,102 @@
-# Phase 5 : Secure - Sécurité IA
+# Phase 5: Secure - AI Security
 
-## Vue d'ensemble
+## Overview
 
-Defense-in-depth (6 layers) : découverte risques, protection, détection, réponse.
+Defense-in-depth (6 layers): risk discovery, protection, detection, response.
 
-## 1. Risques sécurité IA
+## 1. AI Security Risks
 
 ### OWASP LLM Top 10
 
 [OWASP Generative AI](https://genai.owasp.org/)
 
-| Risque | Impact | Mitigation |
+| Risk | Impact | Mitigation |
 |--------|--------|------------|
-| **LLM01: Prompt Injection** | Élevé | Validation inputs, sandboxing, guardrails |
-| **LLM02: Insecure Output** | Élevé | Validation outputs, sanitization |
-| **LLM03: Data Poisoning** | Moyen | Validation sources, data provenance |
-| **LLM04: Model DoS** | Moyen | Rate limiting, quotas |
-| **LLM05: Supply Chain** | Élevé | Vérification provenance, scanning |
-| **LLM06: Info Disclosure** | Élevé | DLP, anonymisation, filtering |
-| **LLM07: Insecure Plugins** | Moyen | Validation plugins, sandboxing |
-| **LLM08: Excessive Agency** | Élevé | Least privilege, human-in-the-loop |
-| **LLM09: Overreliance** | Moyen | Human validation, fact-checking |
-| **LLM10: Model Theft** | Moyen | Contrôles d'accès, watermarking |
+| **LLM01: Prompt Injection** | High | Input validation, sandboxing, guardrails |
+| **LLM02: Insecure Output** | High | Output validation, sanitization |
+| **LLM03: Data Poisoning** | Medium | Source validation, data provenance |
+| **LLM04: Model DoS** | Medium | Rate limiting, quotas |
+| **LLM05: Supply Chain** | High | Provenance verification, scanning |
+| **LLM06: Info Disclosure** | High | DLP, anonymization, filtering |
+| **LLM07: Insecure Plugins** | Medium | Plugin validation, sandboxing |
+| **LLM08: Excessive Agency** | High | Least privilege, human-in-the-loop |
+| **LLM09: Overreliance** | Medium | Human validation, fact-checking |
+| **LLM10: Model Theft** | Medium | Access controls, watermarking |
 
 ### MITRE ATLAS
 
-[MITRE ATLAS](https://atlas.mitre.org/) - Tactiques d'attaque IA
+[MITRE ATLAS](https://atlas.mitre.org/) - AI attack tactics
 
-**Phases** : Reconnaissance → Resource Dev → Initial Access → Execution → Persistence → Exfiltration
+**Phases**: Reconnaissance → Resource Dev → Initial Access → Execution → Persistence → Exfiltration
 
 ## 2. Defense-in-depth (6 layers)
 
-### Layer 1 : Identité et Accès
-- IAM strict (least privilege)
-- MFA obligatoire
-- RBAC pour modèles/données
+### Layer 1: Identity and Access
+- Strict IAM (least privilege)
+- Mandatory MFA
+- RBAC for models/data
 
-### Layer 2 : Réseau
+### Layer 2: Network
 - Segmentation (VPC, subnets)
 - DDoS protection
 - Firewall + IDS/IPS
 
-### Layer 3 : Données
-- Chiffrement (at rest + in transit)
-- DLP (scan données sensibles)
-- Anonymisation/pseudonymisation
+### Layer 3: Data
+- Encryption (at rest + in transit)
+- DLP (sensitive data scanning)
+- Anonymization/pseudonymization
 
-### Layer 4 : Application
+### Layer 4: Application
 - Input/output validation
-- Guardrails (filtrage prompts/outputs)
+- Guardrails (prompt/output filtering)
 - Rate limiting
-- Monitoring API abuse
+- API abuse monitoring
 
-### Layer 5 : Modèles
-- Model scanning (vulnérabilités)
-- Watermarking (traçabilité)
+### Layer 5: Models
+- Model scanning (vulnerabilities)
+- Watermarking (traceability)
 - Adversarial testing
 - Provenance verification
 
-### Layer 6 : Monitoring & Response
-- SIEM (logs centralisés)
-- Alertes anomalies
+### Layer 6: Monitoring & Response
+- SIEM (centralized logs)
+- Anomaly alerts
 - Incident response plan
-- Pentesting régulier
+- Regular pentesting
 
-## 3. DLP Complet
+## 3. Complete DLP
 
-**Prévention** :
-- Classification données automatique
-- Blocage upload données sensibles
-- Masking PII dans prompts/outputs
+**Prevention**:
+- Automatic data classification
+- Block sensitive data uploads
+- PII masking in prompts/outputs
 
-**Détection** :
+**Detection**:
 - Scan conversations/logs
-- Alertes patterns suspects
-- Analyse comportementale
+- Suspicious pattern alerts
+- Behavioral analysis
 
-**Outils** : AWS Macie, GCP DLP API, Azure Purview, solutions tierces
+**Tools**: AWS Macie, GCP DLP API, Azure Purview, third-party solutions
 
-## 4. Pentesting IA
+## 4. AI Pentesting
 
-**Scope** :
+**Scope**:
 - Prompt injection attacks
 - Model extraction attempts
 - Data exfiltration vectors
 - Supply chain vulnerabilities
 
-**Fréquence** : Annuel (minimum) + après changements majeurs
+**Frequency**: Annual (minimum) + after major changes
 
-## Checklist Secure
+## Secure Checklist
 
-- [ ] Defense-in-depth 6 layers implémenté
+- [ ] 6-layer defense-in-depth implemented
 - [ ] OWASP LLM Top 10 mitigations
-- [ ] DLP complet (prévention + détection)
-- [ ] SIEM + monitoring anomalies
+- [ ] Complete DLP (prevention + detection)
+- [ ] SIEM + anomaly monitoring
 - [ ] Incident response plan
-- [ ] Pentesting annuel
+- [ ] Annual pentesting
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 6 : Manage](06-manage.md) - MLOps/LLMOps complet
+→ [Phase 6: Manage](06-manage.md) - Complete MLOps/LLMOps

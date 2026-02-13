@@ -1,72 +1,72 @@
-# Phase 4 : Govern - Gouvernance IA
+# Phase 4: Govern - AI Governance
 
-## Vue d'ensemble
+## Overview
 
-Gouvernance complète : gestion risques, politiques, approbations, AI CoE.
+Complete governance: risk management, policies, approvals, AI CoE.
 
-## 1. Évaluer risques (NIST AI RMF)
+## 1. Assess Risks (NIST AI RMF)
 
 [NIST AI Risk Management Framework](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 
-### Risques principaux
+### Primary Risks
 
-| Risque | Impact | Mitigation |
+| Risk | Impact | Mitigation |
 |--------|--------|------------|
-| **Biais et discrimination** | Élevé (légal, réputation) | Tests de biais, datasets diversifiés |
-| **Hallucinations (GenAI)** | Moyen (crédibilité) | RAG, human-in-the-loop, validation |
-| **Data poisoning** | Élevé (intégrité) | Validation données, provenance |
-| **Privacy leakage** | Élevé (GDPR) | DLP, anonymisation, audits |
-| **Prompt injection** | Moyen (sécurité) | Filtrage inputs, guardrails |
-| **Non-conformité** | Élevé (amendes) | Audits, documentation, politiques |
-| **Drift** | Moyen (business value) | Monitoring continu, retraining |
+| **Bias and discrimination** | High (legal, reputation) | Bias testing, diverse datasets |
+| **Hallucinations (GenAI)** | Medium (credibility) | RAG, human-in-the-loop, validation |
+| **Data poisoning** | High (integrity) | Data validation, provenance |
+| **Privacy leakage** | High (GDPR) | DLP, anonymization, audits |
+| **Prompt injection** | Medium (security) | Input filtering, guardrails |
+| **Non-compliance** | High (fines) | Audits, documentation, policies |
+| **Drift** | Medium (business value) | Continuous monitoring, retraining |
 
-**Évaluation** : Impact × Probabilité (1-5) → Score >15 = Critique
+**Assessment**: Impact × Probability (1-5) → Score >15 = Critical
 
-## 2. Politiques essentielles
+## 2. Essential Policies
 
-**Utilisation acceptable IA** : Cas d'usage autorisés/interdits, restrictions données sensibles
+**Acceptable AI Use**: Authorized/prohibited use cases, sensitive data restrictions
 
-**Gouvernance données** : Classification, rétention, GDPR/CCPA
+**Data Governance**: Classification, retention, GDPR/CCPA
 
-**Approbation modèles** : Gates de validation (dev → staging → prod), critères performance, évaluation biais
+**Model Approval**: Validation gates (dev → staging → prod), performance criteria, bias assessment
 
 ## 3. AI Center of Excellence (AI CoE)
 
-**Rôle** : Centraliser gouvernance IA, standards, best practices
+**Role**: Centralize AI governance, standards, best practices
 
-**Composition** :
+**Composition**:
 - AI Ethics Lead
 - ML Engineers (senior)
 - Legal/Compliance
 - Security
 - Business stakeholders
 
-**Responsabilités** : Approbation modèles, audits, formation, veille réglementaire
+**Responsibilities**: Model approval, audits, training, regulatory monitoring
 
-## 4. Processus d'approbation
+## 4. Approval Process
 
-**3 portes** :
-1. **Concept** → Validation cas d'usage, risques, données
-2. **Développement** → Review modèle, tests biais, sécurité
-3. **Production** → Validation finale, monitoring, DR
+**3 Gates**:
+1. **Concept** → Use case validation, risks, data
+2. **Development** → Model review, bias testing, security
+3. **Production** → Final validation, monitoring, DR
 
-**Gates** : Go/No-Go décidé par AI CoE
+**Gates**: Go/No-Go decided by AI CoE
 
-## 5. Audits & Conformité
+## 5. Audits & Compliance
 
-**Audits réguliers** (trimestriels) :
-- Conformité politiques
-- Tests biais/équité
-- Sécurité (vulnérabilités, DLP)
-- Performance modèles
+**Regular Audits** (quarterly):
+- Policy compliance
+- Bias/fairness testing
+- Security (vulnerabilities, DLP)
+- Model performance
 
-**Conformité réglementaire** : EU AI Act, GDPR, CCPA, sectorielles (santé, finance)
+**Regulatory Compliance**: EU AI Act, GDPR, CCPA, sector-specific (healthcare, finance)
 
-## 6. Conformité Légale - Actions Concrètes
+## 6. Legal Compliance - Concrete Actions
 
 ### EU AI Act (Effective August 2026)
 
-**High-risk systems** (Art. 6): Chatbots client, systèmes crédit, recrutement, biométrie
+**High-risk systems** (Art. 6): Customer chatbots, credit systems, recruitment, biometrics
 
 **Required actions**:
 
@@ -116,14 +116,14 @@ Gouvernance complète : gestion risques, politiques, approbations, AI CoE.
 
 **Insurance**: Fairness testing (protected classes), transparency in pricing models
 
-## Checklist Govern
+## Govern Checklist
 
 **Governance Framework**:
-- [ ] Framework NIST AI RMF implémenté
-- [ ] Politiques IA documentées et appliquées
-- [ ] AI CoE établi
-- [ ] Processus approbation 3 portes
-- [ ] Audits réguliers (trimestriels)
+- [ ] NIST AI RMF framework implemented
+- [ ] AI policies documented and enforced
+- [ ] AI CoE established
+- [ ] 3-gate approval process
+- [ ] Regular audits (quarterly)
 
 **Legal Compliance**:
 - [ ] EU AI Act: High-risk systems identified (if applicable)
@@ -134,6 +134,6 @@ Gouvernance complète : gestion risques, politiques, approbations, AI CoE.
 - [ ] DLP tools deployed (AWS Macie / GCP DLP / Azure Purview)
 - [ ] Sector-specific compliance validated (HIPAA, PCI-DSS, etc.)
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 5 : Secure](05-secure.md) - Sécurité IA production
+→ [Phase 5: Secure](05-secure.md) - Production AI security

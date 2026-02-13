@@ -55,43 +55,43 @@ Transform strategy into actionable steps: skills, resources, timeline.
 
 **Partnerships**: AI consultants, system integrators, cloud partners
 
-## 3. Accéder ressources IA
+## 3. Access AI Resources
 
-| Type | Accès | Coûts |
+| Type | Access | Costs |
 |------|-------|-------|
-| **SaaS AI** | Subscription/Licensing | Licenses utilisateurs |
-| **PaaS AI** | Compte cloud | Usage (tokens, compute, storage) |
-| **IaaS AI** | Compte cloud | Infrastructure (VM, GPU) |
+| **SaaS AI** | Subscription/Licensing | User licenses |
+| **PaaS AI** | Cloud account | Usage (tokens, compute, storage) |
+| **IaaS AI** | Cloud account | Infrastructure (VM, GPU) |
 
-**Services clés** :
-- **AWS** : SageMaker, Bedrock, Rekognition
-- **GCP** : Vertex AI, Generative AI Studio
-- **Azure** : AI Foundry, OpenAI Service
+**Key Services**:
+- **AWS**: SageMaker, Bedrock, Rekognition
+- **GCP**: Vertex AI, Generative AI Studio
+- **Azure**: AI Foundry, OpenAI Service
 
-## 4. Prioriser cas d'usage
+## 4. Prioritize Use Cases
 
-**Critères** :
-- Impact métier (ROI, valeur)
-- Faisabilité technique (maturité, données)
-- Risque (confidentialité, compliance)
+**Criteria**:
+- Business impact (ROI, value)
+- Technical feasibility (maturity, data)
+- Risk (privacy, compliance)
 - Timeline (quick wins vs long-term)
 
-**Matrice** : Impact × Faisabilité → Prioriser High/High en premier
+**Matrix**: Impact × Feasibility → Prioritize High/High first
 
 ## 5. PoC
 
-**Durée** : 1-3 mois
-**Objectif** : Valider faisabilité technique + business value
-**Scope** : Dataset limité, environnement isolé, métriques claires
+**Duration**: 1-3 months
+**Objective**: Validate technical feasibility + business value
+**Scope**: Limited dataset, isolated environment, clear metrics
 
-## Checklist Plan
+## Plan Checklist
 
-- [ ] Évaluer maturité (compétences, données, infra)
-- [ ] Plan développement compétences
-- [ ] Accès ressources cloud
-- [ ] Prioriser cas d'usage (matrice impact/faisabilité)
-- [ ] Lancer PoC (1-3 mois)
+- [ ] Assess maturity (skills, data, infrastructure)
+- [ ] Skills development plan
+- [ ] Cloud resources access
+- [ ] Prioritize use cases (impact/feasibility matrix)
+- [ ] Launch PoC (1-3 months)
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 3 : Ready](03-ready.md) - Préparer environnement IA
+→ [Phase 3: Ready](03-ready.md) - Prepare AI environment

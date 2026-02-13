@@ -1,64 +1,64 @@
-# Phase 3 : Ready - Préparer environnement IA
+# Phase 3: Ready - Prepare AI Environment
 
-## Vue d'ensemble
+## Overview
 
-Construire landing zone IA : gouvernance, réseau, fiabilité, fondation.
+Build AI landing zone: governance, network, reliability, foundation.
 
-## 1. Gouvernance IA
+## 1. AI Governance
 
-**Organisation ressources** :
-- Segmentation logique (workloads internet-facing vs internes)
-- Subscriptions dédiées par workload (isolation coûts, blast radius)
-- Politiques spécifiques IA (modèles autorisés, filtres contenu, contrôles coûts)
+**Resource Organization**:
+- Logical segmentation (internet-facing vs internal workloads)
+- Dedicated subscriptions per workload (cost isolation, blast radius)
+- AI-specific policies (approved models, content filters, cost controls)
 
-**Équivalences cloud** : Voir [GLOSSARY.md](../GLOSSARY.md)
+**Cloud Equivalents**: See [GLOSSARY.md](../GLOSSARY.md)
 
-## 2. Réseau IA
+## 2. AI Network
 
-**Protection DDoS** (workloads internet-facing) : AWS Shield, GCP Cloud Armor, Azure DDoS Protection
+**DDoS Protection** (internet-facing workloads): AWS Shield, GCP Cloud Armor, Azure DDoS Protection
 
-**Accès sécurisé** : Bastion/jumpbox pour admin access
+**Secure Access**: Bastion/jumpbox for admin access
 
-**Équivalences** : Voir [GLOSSARY.md](../GLOSSARY.md)
+**Equivalents**: See [GLOSSARY.md](../GLOSSARY.md)
 
-## 3. Fiabilité IA
+## 3. AI Reliability
 
-**Architecture haute disponibilité** :
-- Multi-région (production critique)
+**High Availability Architecture**:
+- Multi-region (critical production)
 - Load balancing
 - Auto-scaling
 
-**Disaster Recovery** :
-- Backup modèles et données (RTO/RPO définis)
-- Réplication cross-region
-- Tests DR réguliers
+**Disaster Recovery**:
+- Model and data backups (defined RTO/RPO)
+- Cross-region replication
+- Regular DR testing
 
-## 4. Fondation IA
+## 4. AI Foundation
 
-**Infrastructure as Code** : Terraform, Pulumi, CloudFormation
+**Infrastructure as Code**: Terraform, Pulumi, CloudFormation
 
-**Model Registry** : MLflow, SageMaker Model Registry, Vertex AI Model Registry
+**Model Registry**: MLflow, SageMaker Model Registry, Vertex AI Model Registry
 
-**Feature Store** : Centraliser features réutilisables
+**Feature Store**: Centralize reusable features
 
-**MLOps baseline** :
-- CI/CD pipelines (training + déploiement)
-- Monitoring modèles
-- Versioning (code, données, modèles)
+**MLOps Baseline**:
+- CI/CD pipelines (training + deployment)
+- Model monitoring
+- Versioning (code, data, models)
 
 ## Architecture Patterns Reference
 
 For detailed production patterns with diagrams, tech stacks, and code examples, see:
 → **[Architecture Patterns](ARCHITECTURE_PATTERNS.md)** - RAG, Fine-tuning, Multi-Agent, Chatbot, Batch Processing
 
-## Checklist Ready
+## Ready Checklist
 
-- [ ] Landing zone IA (gouvernance, segmentation)
-- [ ] Protection DDoS + accès sécurisé
-- [ ] HA + DR configurés
+- [ ] AI landing zone (governance, segmentation)
+- [ ] DDoS protection + secure access
+- [ ] HA + DR configured
 - [ ] IaC + Model Registry + Feature Store
 - [ ] MLOps baseline (CI/CD, monitoring, versioning)
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 4 : Govern](04-govern.md) - Gouvernance IA complète
+→ [Phase 4: Govern](04-govern.md) - Complete AI governance
