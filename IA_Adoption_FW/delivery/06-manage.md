@@ -232,6 +232,70 @@ owner: tech-lead@company.com
 
 **Monitoring**: Quality (team feedback), Cost (training + inference), Usage (active users)
 
+### Model Versioning (Lightweight)
+
+**For custom models** (rare at Delivery level, but if fine-tuning):
+
+**Metadata tracking** (YAML file in git):
+```yaml
+# models/team-code-reviewer-v1.yaml
+model_id: team-code-reviewer-v1
+base_model: gpt-3.5-turbo
+training_date: 2025-02-10
+training_cost: $45
+dataset_size: 1200 examples
+performance:
+  base_accuracy: 72%
+  finetuned_accuracy: 87%
+  improvement: +15%
+notes: Specialized for code review comments
+```
+
+**Storage**:
+- **Model files**: S3/GCS/Azure Blob (versioned bucket with lifecycle policies)
+- **Metadata**: Git (YAML files) for traceability
+- **Training logs**: Cloud Logging (CloudWatch/Stackdriver/Monitor)
+
+**Rollback procedure**:
+```bash
+# If new model degrades performance
+# 1. Copy previous version from versioned storage
+aws s3 cp s3://models/team-code-reviewer-v1.tar.gz ./
+
+# 2. Redeploy previous version
+# (depends on deployment method - API key change, endpoint update, etc.)
+
+# 3. Document rollback reason
+git commit -m "Rollback to v1: v2 showed 10% accuracy regression"
+```
+
+**Tools** (if needed for sophisticated tracking):
+- **DVC (Data Version Control)**: Git-like versioning for models and datasets
+  ```bash
+  dvc add models/model.pkl
+  dvc push  # Push to remote storage (S3, GCS, etc.)
+  ```
+- **MLflow**: Model registry + experiment tracking + metrics visualization
+  ```python
+  import mlflow
+  mlflow.log_model(model, "team-code-reviewer")
+  mlflow.log_metric("accuracy", 0.87)
+  ```
+- **Weights & Biases**: Experiment tracking, hyperparameter tuning, visualization
+
+**When to use model versioning**:
+- ✅ Fine-tuning custom models (rare but growing)
+- ✅ Multiple model versions in production (A/B testing)
+- ✅ Regulatory requirements (audit trail, reproducibility)
+- ❌ SaaS tools only (GitHub Copilot, ChatGPT) - provider-managed, no versioning needed
+
+**Best practices**:
+1. **Always track metadata** in git (even if model files are external)
+2. **Version models semantically**: v1.0.0 (major.minor.patch)
+3. **Test before promoting**: New version must outperform previous on test set
+4. **Automate rollback**: Script the rollback process (<5 min to execute)
+5. **Archive old models**: Keep last 3 versions, archive older ones
+
 **Important**: Fine-tuning rare for dev teams. Most use off-the-shelf models.
 
 ## 4. Costs: Team Budget & Allocation

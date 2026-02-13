@@ -21,7 +21,7 @@ Develop your basic AI skills and access the right tools.
 
 **Level 1 → 2 Training**: Consult [TRAINING.md](../TRAINING.md) section 3 for:
 - Concepts: GenAI Fundamentals, Prompt Engineering, Business Practice
-- Tools: ChatGPT, Claude, GitHub Copilot, API basics
+- Tools: ChatGPT, Claude, Gemini, code assistants (GitHub Copilot, Cursor, Codeium), API basics
 - Validation: 3 complex prompts + API call + quiz
 - Resources and certifications
 

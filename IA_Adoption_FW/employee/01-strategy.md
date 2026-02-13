@@ -10,7 +10,7 @@ Découvrez les outils IA qui améliorent votre productivité quotidienne. Choisi
 
 | Catégorie | Outils exemples | Usage | Coût |
 |-----------|-------------------|-------|------|
-| **IA conversationnelle** | Claude, Gemini | Rédaction, brainstorming, analyse | 0-20€/mois |
+| **IA conversationnelle** | ChatGPT, Claude, Gemini | Rédaction, brainstorming, analyse | 0-20€/mois |
 | **Assistance code** | GitHub Copilot, Claude Code | Autocomplétion, génération code | 10-20€/mois |
 | **Génération média** | Midjourney, Nano Banana Pro | Images, mockups | 10-20€/mois |
 | **Productivité** | Notion AI, Grammarly | Documents, notes, correction | 10-30€/mois |

@@ -531,3 +531,184 @@ Voir [README.md](README.md) pour les principes IA responsable.
 - Utiliser GLOSSARY pour équivalences
 - Condenser au maximum
 - Focus sur la valeur pratique
+
+---
+
+## Principe d'Agnosticisme des Outils
+
+### Règle d'Or
+
+Le framework fournit des **exemples d'outils**, jamais des **prescriptions**.
+
+**Formulation correcte**: "Examples: GitHub Copilot, Cursor, Codeium"
+**Formulation incorrecte**: "We recommend GitHub Copilot"
+
+### Pourquoi l'agnosticisme ?
+
+1. **Éviter le vendor lock-in** - Organisations libres de choisir selon leur contexte
+2. **Respecter l'existant** - Infrastructures et choix techniques déjà en place
+3. **Maintenir la pertinence** - Framework reste valide malgré l'évolution du marché
+4. **Permettre l'innovation** - Adoption de nouveaux outils sans refonte du framework
+
+### Comment maintenir l'agnosticisme
+
+#### ✅ FAIRE
+
+**Multiples alternatives par catégorie**:
+```markdown
+| Code assist | GitHub Copilot / Cursor / Codeium | Dev productivity | 150-250€/month |
+```
+
+**Formulations neutres**:
+- "Examples: X, Y, Z"
+- "Tools such as X, Y, or Z"
+- "Options include X, Y, Z"
+
+**Critères de sélection** (pas de choix imposé):
+```markdown
+**Vector DB selection criteria**:
+- Managed: Pinecone (ease of use)
+- Hybrid: Weaviate (flexibility)
+- Self-hosted: Qdrant (cost control)
+```
+
+**Équivalences cloud complètes** (voir GLOSSARY.md):
+```markdown
+| ML Platform | AWS SageMaker / GCP Vertex AI / Azure ML |
+```
+
+#### ❌ NE PAS FAIRE
+
+**Langage prescriptif**:
+- ❌ "We recommend X"
+- ❌ "You should use X"
+- ❌ "The best tool is X"
+- ❌ "X is preferred for this use case"
+
+**Outil unique sans alternative**:
+```markdown
+❌ | Code assist | GitHub Copilot | Dev productivity |
+✅ | Code assist | GitHub Copilot / Cursor / Codeium | Dev productivity |
+```
+
+**Triplets cloud incomplets**:
+```markdown
+❌ AWS SageMaker / GCP Vertex
+✅ AWS SageMaker / GCP Vertex AI / Azure ML
+```
+
+**Tutoriels spécifiques à un vendor** (sauf mention explicite):
+```markdown
+❌ "How to deploy on AWS SageMaker"
+✅ "Deployment patterns (example with SageMaker, adaptable to Vertex AI/Azure ML)"
+```
+
+### Exceptions Acceptables
+
+Certaines mentions peuvent être plus spécifiques dans ces cas:
+
+1. **Standards de l'industrie**:
+   - NIST AI RMF (standard de référence gouvernance IA)
+   - OWASP LLM Top 10 (standard sécurité LLM)
+   - ISO27001, SOC2 (certifications)
+
+2. **Open-source largement adopté**:
+   - Kubernetes (orchestration containers)
+   - Terraform (IaC)
+   - MLflow (model registry)
+
+3. **Exemples de code avec disclaimer**:
+   ```markdown
+   ### Code Example (OpenAI API)
+
+   _Note: This example uses OpenAI API. Adapt for Anthropic, Google, or other providers._
+
+   ```python
+   import openai
+   ...
+   ```
+   ```
+
+4. **Comparaisons techniques objectives**:
+   ```markdown
+   | Provider | Context Window | Cost/1M tokens |
+   |----------|---------------|----------------|
+   | OpenAI GPT-4 | 128K | $30 |
+   | Anthropic Claude 3.5 | 200K | $15 |
+   | Google Gemini 1.5 | 1M | $7 |
+   ```
+
+### Checklist de Contribution
+
+Avant d'ajouter ou modifier une mention d'outil, vérifier:
+
+- [ ] Est-ce un **exemple** (pas une prescription) ?
+- [ ] Au moins **2 alternatives** mentionnées (sauf exceptions) ?
+- [ ] **Contexte d'usage** clair (pourquoi cet outil pour ce cas) ?
+- [ ] Si service cloud : **AWS + GCP + Azure** présents ?
+- [ ] **Critères de sélection** fournis (pas juste une liste) ?
+- [ ] **Formulation neutre** ("examples", "such as", "options") ?
+- [ ] **Référence à GLOSSARY.md** si équivalences cloud ?
+
+### Maintenance de l'Agnosticisme
+
+**Audit régulier** (trimestriel recommandé):
+
+```bash
+# Test 1: Vérifier langage prescriptif
+grep -rni "must use\|should use\|recommended\|preferred\|best tool" employee/ delivery/ automation/ --include="*.md"
+# → Résultat attendu: 0 matches (sauf dans citations de standards)
+
+# Test 2: Vérifier équilibre cloud providers
+grep -c "AWS" automation/ --include="*.md"
+grep -c "GCP" automation/ --include="*.md"
+grep -c "Azure" automation/ --include="*.md"
+# → Résultat attendu: ratios similaires (~+/-20%)
+
+# Test 3: Vérifier références GLOSSARY
+grep -c "GLOSSARY.md" automation/ --include="*.md"
+# → Résultat attendu: au moins 1 par fichier mentionnant services cloud
+```
+
+**Processus de correction**:
+1. Identifier les mentions problématiques (audit)
+2. Ajouter alternatives manquantes
+3. Remplacer formulations prescriptives par formulations neutres
+4. Ajouter critères de sélection si pertinent
+5. Vérifier cohérence avec GLOSSARY.md
+
+### Exemples de Corrections
+
+#### Avant → Après
+
+**Cas 1: Mention unique**
+```markdown
+❌ | Code assist | GitHub Copilot Business | 200€/month |
+✅ | Code assist | GitHub Copilot / Cursor / Codeium | 150-250€/month |
+```
+
+**Cas 2: Formulation prescriptive**
+```markdown
+❌ We recommend using GitHub Copilot Business for team productivity.
+✅ Code assistance tools (examples: GitHub Copilot, Cursor, Codeium) improve team productivity.
+   Choose based on IDE integration and budget.
+```
+
+**Cas 3: Triplet cloud incomplet**
+```markdown
+❌ | PaaS ML | AWS SageMaker / GCP Vertex | Training, deployment |
+✅ | PaaS ML | AWS SageMaker / GCP Vertex AI / Azure ML | Training, deployment |
+```
+
+**Cas 4: Ajout de critères**
+```markdown
+❌ Vector DB: Pinecone, Weaviate, Qdrant
+
+✅ **Vector DB selection**:
+- Pinecone (managed, easy setup, higher cost)
+- Weaviate (hybrid, flexible, moderate cost)
+- Qdrant (self-hosted, full control, lower cost)
+Choose based on: team expertise, budget, scale requirements.
+```
+
+---

@@ -81,12 +81,12 @@ See [TRAINING.md](../TRAINING.md) section 7:
 
 | Category | Solution | Use Case | Cost (5-7 team) |
 |----------|----------|----------|------------------|
-| **SaaS GenAI** | ChatGPT Team / Claude Pro | Brainstorming, rapid prototyping | 150-250€/month |
+| **SaaS GenAI** | ChatGPT Team / Claude Pro / Gemini Business | Brainstorming, rapid prototyping | 150-250€/month |
 | **PaaS GenAI** | OpenAI/Anthropic API | Production apps | 500-2K€/month |
-| **PaaS ML** | AWS SageMaker / GCP Vertex | Training, deployment | 200-1K€/month |
+| **PaaS ML** | AWS SageMaker / GCP Vertex AI / Azure ML | Training, deployment | 200-1K€/month |
 | **Vector DB** | Pinecone / Weaviate Cloud | RAG, semantic search | 70-200€/month |
 | **Monitoring** | LangSmith / W&B | Prompt tracking, ML experiments | 0-200€/month |
-| **Code assist** | GitHub Copilot Business | Dev productivity | 200€/month |
+| **Code assist** | GitHub Copilot / Cursor / Codeium | Dev productivity | 150-250€/month |
 
 **Total**: 1-4K€/month dev, 3-10K€/month production
 

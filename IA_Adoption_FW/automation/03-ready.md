@@ -46,6 +46,11 @@ Construire landing zone IA : gouvernance, réseau, fiabilité, fondation.
 - Monitoring modèles
 - Versioning (code, données, modèles)
 
+## Architecture Patterns Reference
+
+For detailed production patterns with diagrams, tech stacks, and code examples, see:
+→ **[Architecture Patterns](ARCHITECTURE_PATTERNS.md)** - RAG, Fine-tuning, Multi-Agent, Chatbot, Batch Processing
+
 ## Checklist Ready
 
 - [ ] Landing zone IA (gouvernance, segmentation)
