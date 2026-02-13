@@ -4,19 +4,26 @@
 
 Développez vos compétences IA de base et accédez aux bons outils.
 
-## 1. Compétences à développer
+## 1. Évaluer vos compétences (Niveau 1-2)
 
-**Fondamentaux** (2-4h) :
-- Bases de l'IA générative (LLM, tokens, limites)
-- Prompt engineering (techniques few-shot, chain-of-thought)
-- Pratique métier (templates, intégration workflow)
+**Auto-évaluation** : Consultez [SKILLS.md](../SKILLS.md) pour :
+- Comprendre les Niveaux 1-2
+- Auto-évaluer vos compétences (Skills Matrix)
+- Identifier les gaps
 
-**Ressources** :
-- Coursera, learnprompting.org, 
-- Anthropic Learn, Google AI Essentials, Microsoft Learn
-- Communautés métier (Reddit, Discord)
+**Quick check - Êtes-vous Niveau 2 ?**
+- ✅ Utilisez-vous 1+ outil SaaS régulièrement ?
+- ✅ Maîtrisez-vous prompt engineering (few-shot, CoT) ?
+- ✅ Avez-vous intégré l'IA dans vos workflows ?
 
-**Certifications optionnelles** : Google AI Essentials, Microsoft AI Skills Challenge, Prompt Engineering (Coursera)
+→ **Oui aux 3** : Niveau 2, passez au [Delivery Framework](../delivery/)
+→ **Non** : Formation Niveau 1→2 ci-dessous
+
+**Formation Niveau 1 → 2** : Consultez [TRAINING.md](../TRAINING.md) section 3 pour :
+- Concepts : Fondamentaux GenAI, Prompt Engineering, Pratique métier
+- Outils : ChatGPT, Claude, GitHub Copilot, APIs basics
+- Validation : 3 prompts complexes + API call + quiz
+- Ressources et certifications
 
 ## 2. Accéder aux outils IA
 
@@ -54,7 +61,8 @@ Créer un compte ou demander un compte à votre entreprise.
 - Optionnel pour : emails, brouillons internes
 
 **Biais** :
-- L'IA a des biais (genre, culture, confirmation)
+- Rappelez-vous : L'IA a des biais et peut se tromper (genre, culture, confirmation)
+- Vérifiez les résultats de l'IA ou demandez-lui de vérifier
 - Varier prompts et outils, valider avec sources externes
 
 ## Checklist Plan

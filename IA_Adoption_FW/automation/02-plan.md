@@ -4,29 +4,54 @@
 
 Transformer stratégie en étapes actionnables : compétences, ressources, timeline.
 
-## 1. Évaluer compétences IA
+## 1. Assess Team AI Skills (Level 3-4)
 
-### Niveaux de maturité
+### Prérequis de maturité
 
-| Niveau | Compétences | Cas d'usage |
-|--------|-------------|-------------|
-| **1** | Concepts IA basiques, intégration données | Copilot/SaaS |
-| **2** | Sélection modèles, déploiement endpoints | Chat GenAI, ML avec AutoML, fine-tuning |
-| **3** | Prompt engineering, RAG, preprocessing | Apps GenAI avec RAG, ML training |
-| **4** | Expertise IA/ML, infrastructure, orchestration | Training grands modèles, apps sur K8s |
+**STOP - Validez avant d'adopter Automation** :
+- ✅ Équipe Niveau 2+ (voir [SKILLS.md](../SKILLS.md))
+- ✅ 6-12 mois expérience Delivery Framework
+- ✅ 1+ projet IA en production
 
-**Évaluation** :
-- Compétences équipe actuelles
+**Évaluation équipe** : Consultez [SKILLS.md](../SKILLS.md) pour :
+- Définition Niveaux 3-4 (target Automation)
+- Skills Matrix (objectif : Niveau 3-4)
+- Validation passage Delivery → Automation
+
+**Critères** :
+1. Skills Matrix équipe (objectif : Niveau 3-4)
+2. Tous membres ≥ Niveau 2
+3. 50%+ équipe Niveau 3
+4. 1+ membre Niveau 4 (Tech Lead)
+
+**Évaluation additionnelle** :
 - Assets données (sources, qualité, accessibilité)
 - Infrastructure tech (compute, storage, réseau, sécurité)
 
-## 2. Acquérir compétences
+## 2. Acquire AI Skills
 
-**Formation** : Coursera, AWS/GCP/Azure Training, Fast.ai, DeepLearning.AI
+### Formation Niveau 3 → 4
 
-**Certifications** : TensorFlow Developer, AWS ML Specialty, GCP ML Engineer, Azure AI Engineer
+**Parcours complet** : Consultez [TRAINING.md](../TRAINING.md) section 5 pour :
 
-**Recrutement** : ML Engineers, Data Scientists, MLOps Engineers, AI Ethics Specialists
+**Concepts** :
+- ML Avancé & Fine-Tuning LLM (LoRA, QLoRA, RLHF)
+- Infrastructure IA (multi-region, GPU optimization)
+- MLOps Complet (CI/CD/CT, A/B testing, canary)
+- IA Responsable (fairness, audits, compliance)
+- Architecture & Scale (patterns, performance)
+
+**Outils** :
+- Découverte : Kubernetes, Terraform, MLflow, Weights & Biases
+- Avancée : GPU clusters (A100/H100), DeepSpeed, Kubeflow, Prometheus/Grafana
+
+**Validation** : Fine-tuning + production multi-region + ROI positif
+
+**Certifications recommandées** :
+- AWS/GCP/Azure ML Advanced
+- Kubernetes Application Developer (CKAD)
+
+**Recrutement** (si nécessaire) : ML Engineers, Data Scientists, MLOps Engineers, AI Ethics Specialists
 
 **Partenariats** : Consultants IA, intégrateurs système, partenaires cloud
 

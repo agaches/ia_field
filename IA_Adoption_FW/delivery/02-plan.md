@@ -6,23 +6,29 @@
 
 ## 1. Assess Team AI Skills
 
-### Maturity Framework (Levels 2-3)
+### Quick Assessment
 
-| Level | Team Capabilities | Data Maturity | Feasible Use Cases |
-|-------|------------------|---------------|-------------------|
-| **2 - Practiced** | Model selection, endpoint deployment, data cleaning, API integration | Structured datasets, basic pipelines | GenAI chat, AutoML, light fine-tuning, API-based AI |
-| **3 - Advanced** | Complex prompting, RAG orchestration, feature engineering, basic MLOps | Large historical data, robust infra, automated pipelines | RAG apps, custom ML models, advanced fine-tuning, multi-tool agents |
+**Évaluation équipe** : Consultez [SKILLS.md](../SKILLS.md) pour :
+- Définition Niveaux 2-3 (target Delivery)
+- Skills Matrix avec barème ⭐ (6 axes de compétences)
+- Validation passage Employee → Delivery
 
-### Assessment Steps
+**Processus** :
+1. Chaque membre remplit Skills Matrix (SKILLS.md section 4)
+2. Agrégation en tableau équipe
+3. Identification gaps collectifs
 
-**1. Skills Matrix**
+**Exemple Skills Matrix équipe** :
 
-| Member | Prompt Eng | ML/Data | APIs/PaaS | DevOps/MLOps | Domain | Level |
-|--------|------------|---------|-----------|--------------|--------|-------|
-| Alice | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | 2-3 |
-| Bob | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐ | ⭐⭐ | 2 |
+| Membre | Prompt Eng | ML/Data | Infra | MLOps | Data Gov | Domain | Niveau |
+|--------|------------|---------|-------|-------|----------|--------|--------|
+| Alice | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | 2-3 |
+| Bob | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐ | ⭐⭐ | ⭐⭐ | 2 |
+| **Équipe** | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐ | ⭐⭐ | ⭐⭐ | **2** (objectif: 3) |
 
-Identify gaps and internal experts.
+→ **Gap** : MLOps faible (⭐), formation nécessaire
+
+### Assessment Steps (continued)
 
 **2. Data Inventory**
 
@@ -39,32 +45,33 @@ Sources, quality (completeness, accuracy, freshness), accessibility, compliance 
 
 ## 2. Acquire AI Skills
 
-### Training Program (1-2 weeks)
+### Formation Niveau 2 → 3
 
-| Module | Duration | Content |
-|--------|----------|---------|
-| **AI/ML Fundamentals** | 2 days | LLM architecture, ML pipelines, GenAI vs ML |
-| **Advanced Prompting** | 1 day | ReAct, Tree-of-Thought, evaluation |
-| **RAG & Vector DBs** | 2 days | Embeddings, chunking, vector stores |
-| **APIs & Integration** | 1 day | OpenAI/Anthropic APIs, token management |
-| **MLOps Basics** | 1 day | Versioning, CI/CD, monitoring |
+**Parcours complet** : Consultez [TRAINING.md](../TRAINING.md) section 4 pour :
 
-**Budget**: 5-10K€ for 5-7 people (external trainer + platform)
-**Platforms**: Udacity, Coursera, AWS Skill Builder, GCP Skills Boost
+**Concepts** :
+- AI/ML Fundamentals (architectures, pipelines)
+- Advanced Prompting (ReAct, Tree-of-Thought)
+- RAG & Vector DBs (embeddings, chunking, retrieval)
+- MLOps Basics (versioning, CI/CD, monitoring)
 
-### Certifications (Target: 50% team certified)
+**Outils** :
+- Découverte : LangChain, LlamaIndex, Pinecone, Weaviate
+- Avancée : APIs (OpenAI/Anthropic), AutoML (SageMaker, Vertex AI)
 
-| Certification | Level | Duration | Cost | Priority |
-|---------------|-------|----------|------|----------|
-| AWS ML Specialty | 3 | 60h | 300$ | High (if AWS) |
-| Google ML Engineer | 3 | 60h | 200$ | High (if GCP) |
-| Azure AI Engineer | 3 | 50h | 165$ | High (if Azure) |
+**Validation** : Projet RAG complet (app fonctionnelle, tests, documentation)
+
+**Certifications recommandées** (target: 50% équipe certifiée) :
+- AWS ML Specialty
+- Google ML Engineer
+- Azure AI Engineer
 
 ### Peer Learning
 
-- **Tech Talks** (weekly, 30min): Member presents AI tool/concept
-- **Code Review AI** (per PR): Review prompts, API calls, models
-- **Lunch & Learn** (bi-monthly, 1h): Informal AI tech discussion
+Voir [TRAINING.md](../TRAINING.md) section 7 :
+- **Tech Talks** (weekly, 30min)
+- **Code Review AI** (per PR)
+- **Lunch & Learn** (bi-monthly, 1h)
 - **Hackathon** (quarterly, 1 day): Experiment new tech
 - **Knowledge Base**: Internal wiki with prompts library, templates, learnings, FAQ
 
