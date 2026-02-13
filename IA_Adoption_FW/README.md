@@ -100,31 +100,31 @@ Voir [00-strategy-global.md](00-strategy-global.md) pour plus de questions/répo
 
 ---
 
-## Compétences et formation
+## Skills and Training
 
-### Évaluez votre niveau
+### Assess Your Level
 
-Consultez **[SKILLS.md](SKILLS.md)** pour :
-- Comprendre les 4 niveaux de maturité (diagramme visuel)
-- Auto-évaluer vos compétences (Skills Matrix - 6 axes)
-- Identifier les gaps prioritaires
-- Critères de passage entre frameworks (Employee → Delivery → Automation)
-- Mapping vers frameworks
+Consult **[SKILLS.md](SKILLS.md)** for:
+- Understand the 4 maturity levels (visual diagram)
+- Self-assess your skills (Skills Matrix - 6 axes)
+- Identify priority gaps
+- Framework transition criteria (Employee → Delivery → Automation)
+- Framework mapping
 
-**Quick check** : Quel niveau êtes-vous ?
-- Niveau 1-2 → [Employee](employee/)
-- Niveau 2-3 → [Delivery](delivery/)
-- Niveau 3-4 → [Automation](automation/)
+**Quick check**: What level are you?
+- Level 1-2 → [Employee](employee/)
+- Level 2-3 → [Delivery](delivery/)
+- Level 3-4 → [Automation](automation/)
 
-### Parcours de formation
+### Training Paths
 
-Consultez **[TRAINING.md](TRAINING.md)** pour :
-- Parcours par niveau (1→2, 2→3, 3→4)
-- Structure Concepts + Outils pour chaque parcours
-- Format formations outils (découverte avec scénarios live)
-- Validation par projet pratique
-- Certifications recommandées
-- Gouvernance formation (LIGHT/MEDIUM/FULL)
+Consult **[TRAINING.md](TRAINING.md)** for:
+- Paths by level (1→2, 2→3, 3→4)
+- Concepts + Tools structure for each path
+- Tool training format (discovery with live scenarios)
+- Project-based validation
+- Recommended certifications
+- Training governance (LIGHT/MEDIUM/FULL)
 
 ---
 

@@ -163,15 +163,15 @@ C'est un **modèle de maturité progressive** où chaque niveau construit sur le
                                                           └───────────────────────────────────────────────┘
 ```
 
-### Grille de maturité détaillée
+### Detailed Maturity Grid
 
-Voir [SKILLS.md](SKILLS.md) pour la définition complète des 4 niveaux avec critères mesurables par axe.
+See [SKILLS.md](SKILLS.md) for the complete definition of 4 levels with measurable criteria per axis.
 
-**Résumé rapide** :
-- **Niveau 1** : SaaS uniquement → **Employee Framework**
-- **Niveau 2** : SaaS + API → **Employee → Delivery**
-- **Niveau 3** : PaaS (RAG, ML custom) → **Delivery → Automation**
-- **Niveau 4** : IaaS (GPU clusters, K8s) → **Automation Framework**
+**Quick summary**:
+- **Level 1**: SaaS only → **Employee Framework**
+- **Level 2**: SaaS + API → **Employee → Delivery**
+- **Level 3**: PaaS (RAG, custom ML) → **Delivery → Automation**
+- **Level 4**: IaaS (GPU clusters, K8s) → **Automation Framework**
 
 ## Diagramme de dépendances entre frameworks
 

@@ -1,21 +1,21 @@
-# Grille de Compétences IA
+# AI Skills Grid
 
-> Référence unique pour évaluer et développer vos compétences IA
+> Single reference to assess and develop your AI skills
 
-## 1. Vue d'ensemble des 4 niveaux
+## 1. Overview of 4 Maturity Levels
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        NIVEAUX DE MATURITÉ                           │
+│                        MATURITY LEVELS                               │
 └─────────────────────────────────────────────────────────────────────┘
 
- Niveau 1                    Niveau 2                    Niveau 3                    Niveau 4
- BASIQUE                     INTERMÉDIAIRE               AVANCÉ                      EXPERT
+ Level 1                     Level 2                     Level 3                     Level 4
+ BASIC                       INTERMEDIATE                ADVANCED                    EXPERT
 
- • SaaS uniquement           • SaaS + API usage          • RAG, ML custom            • Training grands modèles
- • Prompt basics             • Prompt engineering        • Fine-tuning               • Infrastructure complexe
- • Zero code                 • Light integration         • MLOps basics              • MLOps complet
- • Discovery                 • Data pipelines basics     • Production-ready          • Scale enterprise
+ • SaaS only                 • SaaS + API usage          • RAG, custom ML            • LLM training
+ • Prompt basics             • Prompt engineering        • Fine-tuning               • Complex infrastructure
+ • Zero code                 • Light integration         • MLOps basics              • Full MLOps
+ • Discovery                 • Basic data pipelines      • Production-ready          • Enterprise scale
 
  ├─────────────────────────────┤                         ├───────────────────────────────────────┤
  │     EMPLOYEE FRAMEWORK       │                         │        DELIVERY FRAMEWORK              │
@@ -25,173 +25,173 @@
                                                           └───────────────────────────────────────────────┘
 ```
 
-**Mapping frameworks** :
-- Niveau 1-2 → [Employee](employee/)
-- Niveau 2-3 → [Delivery](delivery/)
-- Niveau 3-4 → [Automation](automation/)
+**Framework mapping**:
+- Level 1-2 → [Employee](employee/)
+- Level 2-3 → [Delivery](delivery/)
+- Level 3-4 → [Automation](automation/)
 
 ---
 
-## 2. Définitions des 4 niveaux
+## 2. Definition of 4 Levels
 
-| Niveau | Compétences | Technologies | Cas d'usage | Framework |
-|--------|-------------|--------------|-------------|-----------|
-| **1 - Basique** | Prompt basics, usage SaaS | ChatGPT, Claude, Copilot | Productivité personnelle | Employee |
-| **2 - Intermédiaire** | Prompt engineering, APIs | SaaS + API (OpenAI, Anthropic) | Workflows automatisés, scripts | Employee → Delivery |
-| **3 - Avancé** | RAG, ML custom, MLOps basics | PaaS (SageMaker, Vertex AI), Vector DBs | Applications IA, RAG production | Delivery → Automation |
-| **4 - Expert** | Fine-tuning LLM, infrastructure GPU | K8s, Terraform, GPU clusters | Production critique, scale enterprise | Automation |
+| Level | Skills | Technologies | Use Cases | Framework |
+|-------|--------|--------------|-----------|-----------|
+| **1 - Basic** | Prompt basics, SaaS usage | ChatGPT, Claude, Copilot | Personal productivity | Employee |
+| **2 - Intermediate** | Prompt engineering, APIs | SaaS + API (OpenAI, Anthropic) | Automated workflows, scripts | Employee → Delivery |
+| **3 - Advanced** | RAG, custom ML, MLOps basics | PaaS (SageMaker, Vertex AI), Vector DBs | AI applications, RAG production | Delivery → Automation |
+| **4 - Expert** | LLM fine-tuning, GPU infrastructure | K8s, Terraform, GPU clusters | Critical production, enterprise scale | Automation |
 
 ---
 
-## 3. Les 6 axes de compétences
+## 3. The 6 Skill Axes
 
-Chaque niveau se décompose en 6 axes :
+Each level breaks down into 6 axes:
 
 1. **Prompt Engineering & GenAI**
-   - Niveau 1-2 : Prompts simples → Few-shot, CoT
-   - Niveau 3-4 : ReAct, Tree-of-Thought → Prompt optimization
+   - Level 1-2: Simple prompts → Few-shot, CoT
+   - Level 3-4: ReAct, Tree-of-Thought → Prompt optimization
 
 2. **ML & Data Science**
-   - Niveau 1-2 : Aucun → Basics (régression, classification)
-   - Niveau 3-4 : ML custom, feature engineering → Fine-tuning LLM, RLHF
+   - Level 1-2: None → Basics (regression, classification)
+   - Level 3-4: Custom ML, feature engineering → LLM fine-tuning, RLHF
 
 3. **Infrastructure & DevOps**
-   - Niveau 1-2 : Aucun → Git, CI basics
-   - Niveau 3-4 : Cloud (AWS/GCP/Azure), Docker → K8s, Terraform, GPU clusters
+   - Level 1-2: None → Git, basic CI
+   - Level 3-4: Cloud (AWS/GCP/Azure), Docker → K8s, Terraform, GPU clusters
 
 4. **MLOps & LLMOps**
-   - Niveau 1-2 : Aucun → Versioning basics
-   - Niveau 3-4 : CI/CD ML, monitoring → Production-grade (A/B testing, canary)
+   - Level 1-2: None → Basic versioning
+   - Level 3-4: ML CI/CD, monitoring → Production-grade (A/B testing, canary)
 
 5. **Data Governance & Security**
-   - Niveau 1-2 : RGPD awareness → PII, encryption basics
-   - Niveau 3-4 : DLP, audits → Compliance complète (NIST AI RMF)
+   - Level 1-2: GDPR awareness → PII, basic encryption
+   - Level 3-4: DLP, audits → Full compliance (NIST AI RMF)
 
 6. **Domain Expertise**
-   - Niveau 1-2 : Connaissance métier basique → Solide
-   - Niveau 3-4 : Expert métier → Stratégie IA domaine
+   - Level 1-2: Basic domain knowledge → Solid
+   - Level 3-4: Domain expert → AI strategy for domain
 
 ---
 
 ## 4. Skills Matrix
 
-### Barème ⭐
+### Star Rating ⭐
 
-- **⭐** (Basique) : Awareness, usage guidé
-- **⭐⭐** (Intermédiaire) : Usage autonome quotidien
-- **⭐⭐⭐** (Avancé/Expert) : Architecture, design, mentoring
+- **⭐** (Basic): Awareness, guided usage
+- **⭐⭐** (Intermediate): Daily autonomous usage
+- **⭐⭐⭐** (Advanced/Expert): Architecture, design, mentoring
 
 ### Template
 
-| Axe | Étoiles | Notes |
-|-----|---------|-------|
-| 1. Prompt Engineering & GenAI | ⭐⭐ | Maîtrise few-shot, CoT |
-| 2. ML & Data Science | ⭐ | Basics uniquement |
-| 3. Infrastructure & DevOps | ⭐⭐ | Git, CI/CD basics |
-| 4. MLOps & LLMOps | ⭐ | Versioning uniquement |
-| 5. Data Governance & Security | ⭐⭐ | RGPD, PII |
-| 6. Domain Expertise | ⭐⭐⭐ | Expert métier |
+| Axis | Stars | Notes |
+|------|-------|-------|
+| 1. Prompt Engineering & GenAI | ⭐⭐ | Few-shot, CoT mastered |
+| 2. ML & Data Science | ⭐ | Basics only |
+| 3. Infrastructure & DevOps | ⭐⭐ | Git, basic CI/CD |
+| 4. MLOps & LLMOps | ⭐ | Versioning only |
+| 5. Data Governance & Security | ⭐⭐ | GDPR, PII |
+| 6. Domain Expertise | ⭐⭐⭐ | Domain expert |
 
-**Niveau global** : Calculer la moyenne → Score 0.4-0.6 = Niveau 2
+**Overall level**: Calculate average → Score 0.4-0.6 = Level 2
 
-### Prérequis minimaux par niveau
+### Minimum Prerequisites per Level
 
-**Niveau 2** :
+**Level 2**:
 - Prompt Engineering ≥ ⭐⭐
 
-**Niveau 3** :
+**Level 3**:
 - Prompt Engineering ≥ ⭐⭐
 - ML/Data ≥ ⭐⭐
 - Infrastructure ≥ ⭐⭐
 
-**Niveau 4** :
-- Tous axes ≥ ⭐⭐
+**Level 4**:
+- All axes ≥ ⭐⭐
 - Infrastructure ≥ ⭐⭐⭐
 - MLOps ≥ ⭐⭐⭐
 
 ---
 
-## 5. Auto-évaluation guidée
+## 5. Guided Self-Assessment
 
-**5 étapes rapides (<10min)** :
+**5 quick steps (<10min)**:
 
-1. **Remplir Skills Matrix** (section 4) - 5min
-2. **Calculer score moyen** - 1min
-3. **Vérifier prérequis minimaux** (section 4) - 2min
-4. **Identifier niveau global** (section 2) - 1min
-5. **Identifier gaps prioritaires** - 1min
+1. **Fill Skills Matrix** (section 4) - 5min
+2. **Calculate average score** - 1min
+3. **Check minimum prerequisites** (section 4) - 2min
+4. **Identify overall level** (section 2) - 1min
+5. **Identify priority gaps** - 1min
 
-**Résultat** : Vous connaissez votre niveau et savez quoi améliorer.
+**Result**: You know your level and what to improve.
 
 ---
 
-## 6. Validation passage de framework
+## 6. Framework Transition Validation
 
 ### Employee → Delivery
 
-**Critères individuels** :
-- ✅ Niveau 2 validé (Skills Matrix ≥ ⭐⭐ sur 3+ axes)
-- ✅ 3-6 mois usage quotidien outils SaaS
-- ✅ Prompts complexes maîtrisés (few-shot, CoT)
+**Individual criteria**:
+- ✅ Level 2 validated (Skills Matrix ≥ ⭐⭐ on 3+ axes)
+- ✅ 3-6 months daily SaaS tool usage
+- ✅ Complex prompts mastered (few-shot, CoT)
 
-**Critères équipe** :
-- ✅ 50%+ équipe Niveau 2
-- ✅ 1+ champion IA (prêt à devenir Tech Lead IA)
-- ✅ Use case équipe identifié
+**Team criteria**:
+- ✅ 50%+ team at Level 2
+- ✅ 1+ AI champion (ready to become AI Tech Lead)
+- ✅ Team use case identified
 
-**Red flags** :
-- ❌ <30% équipe utilise IA quotidiennement
-- ❌ Pas de champion IA dans l'équipe
-- ❌ Management non aligné
+**Red flags**:
+- ❌ <30% team uses AI daily
+- ❌ No AI champion in team
+- ❌ Management not aligned
 
 ---
 
 ### Delivery → Automation
 
-**Critères individuels** :
-- ✅ Niveau 3 validé (Skills Matrix ≥ ⭐⭐⭐ sur 2+ axes)
-- ✅ 1+ projet IA en production (PoC → Prod)
-- ✅ MLOps basics maîtrisés
+**Individual criteria**:
+- ✅ Level 3 validated (Skills Matrix ≥ ⭐⭐⭐ on 2+ axes)
+- ✅ 1+ AI project in production (PoC → Prod)
+- ✅ MLOps basics mastered
 
-**Critères équipe** :
-- ✅ Tous membres ≥ Niveau 2
-- ✅ 50%+ équipe Niveau 3
-- ✅ 1+ membre Niveau 4 (Tech Lead)
-- ✅ 6-12 mois expérience Delivery
-- ✅ Infrastructure MLOps opérationnelle
+**Team criteria**:
+- ✅ All members ≥ Level 2
+- ✅ 50%+ team at Level 3
+- ✅ 1+ member at Level 4 (Tech Lead)
+- ✅ 6-12 months Delivery experience
+- ✅ Operational MLOps infrastructure
 
-**Critères organisationnels** :
-- ✅ AI CoE ou équipe dédiée
-- ✅ Sponsor executive (CTO/VP)
-- ✅ Politique IA Responsable définie
+**Organizational criteria**:
+- ✅ AI CoE or dedicated team
+- ✅ Executive sponsor (CTO/VP)
+- ✅ Responsible AI policy defined
 
-**Red flags** :
-- ❌ Aucun projet IA en production
-- ❌ Équipe <5 personnes ou <50% Niveau 3
-- ❌ Infrastructure MLOps inexistante
-- ❌ Pas de sponsor executive
+**Red flags**:
+- ❌ No AI project in production
+- ❌ Team <5 people or <50% Level 3
+- ❌ No MLOps infrastructure
+- ❌ No executive sponsor
 
 ---
 
-## Checklist de transition
+## Transition Checklist
 
-**Avant de passer au framework suivant** :
+**Before moving to next framework**:
 
 ### Employee → Delivery
-- [ ] 50%+ équipe Niveau 2
-- [ ] 3-6 mois expérience individuelle
-- [ ] 1+ champion IA identifié
-- [ ] Use case équipe identifié
-- [ ] Management aligné
+- [ ] 50%+ team at Level 2
+- [ ] 3-6 months individual experience
+- [ ] 1+ AI champion identified
+- [ ] Team use case identified
+- [ ] Management aligned
 
 ### Delivery → Automation
-- [ ] Tous membres ≥ Niveau 2, 50%+ Niveau 3
-- [ ] 1+ membre Niveau 4 (ou prêt à le devenir)
-- [ ] 6-12 mois expérience Delivery
-- [ ] 1+ projet IA en production
-- [ ] Infrastructure MLOps opérationnelle
-- [ ] AI CoE ou gouvernance formalisée
-- [ ] Sponsor executive (CTO/VP)
-- [ ] Politique IA Responsable définie
+- [ ] All members ≥ Level 2, 50%+ Level 3
+- [ ] 1+ member Level 4 (or ready to become)
+- [ ] 6-12 months Delivery experience
+- [ ] 1+ AI project in production
+- [ ] Operational MLOps infrastructure
+- [ ] AI CoE or formalized governance
+- [ ] Executive sponsor (CTO/VP)
+- [ ] Responsible AI policy defined
 
-**En cas de doute** : Restez sur le framework actuel 3-6 mois. Mieux vaut consolider que précipiter.
+**When in doubt**: Stay on current framework 3-6 months. Better to consolidate than rush.

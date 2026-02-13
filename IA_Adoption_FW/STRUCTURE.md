@@ -267,44 +267,44 @@ Voir [GLOSSARY.md](../GLOSSARY.md) pour les équivalences de services cloud.
 
 ---
 
-## Référencement des compétences et formation
+## Skills and Training Referencing
 
-### SKILLS.md : Grille de maturité centralisée
+### SKILLS.md: Centralized Maturity Grid
 
-[SKILLS.md](../SKILLS.md) contient :
-- 4 niveaux avec critères mesurables
-- 6 axes de compétences
-- Skills Matrix avec barème ⭐ explicite
-- Auto-évaluation guidée
-- Validation passage de framework
-- Mapping Niveaux ↔ Frameworks
+[SKILLS.md](../SKILLS.md) contains:
+- 4 levels with measurable criteria
+- 6 skill axes
+- Skills Matrix with explicit ⭐ rating
+- Guided self-assessment
+- Framework transition validation
+- Level ↔ Framework mapping
 
-**Utilisez SKILLS.md au lieu de redéfinir les niveaux.**
+**Use SKILLS.md instead of redefining levels.**
 
-### TRAINING.md : Parcours de formation centralisé
+### TRAINING.md: Centralized Training Paths
 
-[TRAINING.md](../TRAINING.md) contient :
-- 3 parcours (1→2, 2→3, 3→4)
-- Structure Concepts + Outils
-- Format formations outils (découverte)
-- Validation par projet
-- Gouvernance formation (LIGHT/MEDIUM/FULL)
+[TRAINING.md](../TRAINING.md) contains:
+- 3 paths (1→2, 2→3, 3→4)
+- Concepts + Tools structure
+- Tool training format (discovery)
+- Project validation
+- Training governance (LIGHT/MEDIUM/FULL)
 - Certifications
 
-**Référencez TRAINING.md depuis les phases (employee/delivery/automation 02-plan.md).**
+**Reference TRAINING.md from phases (employee/delivery/automation 02-plan.md).**
 
-### Pattern de référence
+### Reference Pattern
 
 ```markdown
-<!-- Bon : Référencer SKILLS.md -->
-Consultez [SKILLS.md](../SKILLS.md) pour les niveaux de maturité.
+<!-- Good: Reference SKILLS.md -->
+Consult [SKILLS.md](../SKILLS.md) for maturity levels.
 
-<!-- Bon : Référencer TRAINING.md -->
-Consultez [TRAINING.md](../TRAINING.md) section "Parcours Niveau X → Y".
+<!-- Good: Reference TRAINING.md -->
+Consult [TRAINING.md](../TRAINING.md) section "Path Level X → Y".
 
-<!-- Mauvais : Redéfinir les niveaux -->
-| Niveau | Compétences | ... |
-|--------|-------------|-----|
+<!-- Bad: Redefine levels -->
+| Level | Skills | ... |
+|-------|--------|-----|
 | 1 | Prompt basics | ... |
 ```
 

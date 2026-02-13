@@ -174,9 +174,9 @@ Référence rapide - Voir [README.md](README.md) pour détails complets.
 | **PaaS** | Moyen | Moyen | Moyen | $$ |
 | **IaaS** | Élevé | Élevé | Élevé | $$$ |
 
-## Niveaux de maturité IA
+## AI Maturity Levels
 
-Voir [SKILLS.md](SKILLS.md) pour la grille de maturité détaillée et [TRAINING.md](TRAINING.md) pour les parcours de formation.
+See [SKILLS.md](SKILLS.md) for the detailed maturity grid and [TRAINING.md](TRAINING.md) for training paths.
 
 ## Rôles IA
 

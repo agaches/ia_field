@@ -2,31 +2,31 @@
 
 > Transform strategy into action - Skill assessment, training, access, prioritization, PoCs
 
-**Focus**: Niveaux 2-3 (intermediate-advanced), SaaS + PaaS, 1-2 sprint PoCs
+**Focus**: Levels 2-3 (intermediate-advanced), SaaS + PaaS, 1-2 sprint PoCs
 
 ## 1. Assess Team AI Skills
 
 ### Quick Assessment
 
-**Évaluation équipe** : Consultez [SKILLS.md](../SKILLS.md) pour :
-- Définition Niveaux 2-3 (target Delivery)
-- Skills Matrix avec barème ⭐ (6 axes de compétences)
-- Validation passage Employee → Delivery
+**Team evaluation**: Consult [SKILLS.md](../SKILLS.md) for:
+- Definition of Levels 2-3 (Delivery target)
+- Skills Matrix with ⭐ rating (6 skill axes)
+- Employee → Delivery transition validation
 
-**Processus** :
-1. Chaque membre remplit Skills Matrix (SKILLS.md section 4)
-2. Agrégation en tableau équipe
-3. Identification gaps collectifs
+**Process**:
+1. Each member fills Skills Matrix (SKILLS.md section 4)
+2. Aggregate into team table
+3. Identify collective gaps
 
-**Exemple Skills Matrix équipe** :
+**Team Skills Matrix example**:
 
-| Membre | Prompt Eng | ML/Data | Infra | MLOps | Data Gov | Domain | Niveau |
-|--------|------------|---------|-------|-------|----------|--------|--------|
+| Member | Prompt Eng | ML/Data | Infra | MLOps | Data Gov | Domain | Level |
+|--------|------------|---------|-------|-------|----------|--------|-------|
 | Alice | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | 2-3 |
 | Bob | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐ | ⭐⭐ | ⭐⭐ | 2 |
-| **Équipe** | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐ | ⭐⭐ | ⭐⭐ | **2** (objectif: 3) |
+| **Team** | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐ | ⭐⭐ | ⭐⭐ | **2** (target: 3) |
 
-→ **Gap** : MLOps faible (⭐), formation nécessaire
+→ **Gap**: Weak MLOps (⭐), training needed
 
 ### Assessment Steps (continued)
 
@@ -45,32 +45,32 @@ Sources, quality (completeness, accuracy, freshness), accessibility, compliance 
 
 ## 2. Acquire AI Skills
 
-### Formation Niveau 2 → 3
+### Level 2 → 3 Training
 
-**Parcours complet** : Consultez [TRAINING.md](../TRAINING.md) section 4 pour :
+**Complete path**: Consult [TRAINING.md](../TRAINING.md) section 4 for:
 
-**Concepts** :
+**Concepts**:
 - AI/ML Fundamentals (architectures, pipelines)
 - Advanced Prompting (ReAct, Tree-of-Thought)
 - RAG & Vector DBs (embeddings, chunking, retrieval)
 - MLOps Basics (versioning, CI/CD, monitoring)
 
-**Outils** :
-- Découverte : LangChain, LlamaIndex, Pinecone, Weaviate
-- Avancée : APIs (OpenAI/Anthropic), AutoML (SageMaker, Vertex AI)
+**Tools**:
+- Discovery: LangChain, LlamaIndex, Pinecone, Weaviate
+- Advanced: APIs (OpenAI/Anthropic), AutoML (SageMaker, Vertex AI)
 
-**Validation** : Projet RAG complet (app fonctionnelle, tests, documentation)
+**Validation**: Complete RAG project (functional app, tests, documentation)
 
-**Certifications recommandées** (target: 50% équipe certifiée) :
+**Recommended certifications** (target: 50% team certified):
 - AWS ML Specialty
 - Google ML Engineer
 - Azure AI Engineer
 
 ### Peer Learning
 
-Voir [TRAINING.md](../TRAINING.md) section 7 :
+See [TRAINING.md](../TRAINING.md) section 7:
 - **Tech Talks** (weekly, 30min)
-- **Code Review AI** (per PR)
+- **AI Code Review** (per PR)
 - **Lunch & Learn** (bi-monthly, 1h)
 - **Hackathon** (quarterly, 1 day): Experiment new tech
 - **Knowledge Base**: Internal wiki with prompts library, templates, learnings, FAQ

@@ -1,79 +1,79 @@
-# Phase 2 : Plan - Planifier votre apprentissage IA
+# Phase 2: Plan - Plan Your AI Learning
 
-## Vue d'ensemble
+## Overview
 
-Développez vos compétences IA de base et accédez aux bons outils.
+Develop your basic AI skills and access the right tools.
 
-## 1. Évaluer vos compétences (Niveau 1-2)
+## 1. Assess Your Skills (Level 1-2)
 
-**Auto-évaluation** : Consultez [SKILLS.md](../SKILLS.md) pour :
-- Comprendre les Niveaux 1-2
-- Auto-évaluer vos compétences (Skills Matrix)
-- Identifier les gaps
+**Self-assessment**: Consult [SKILLS.md](../SKILLS.md) for:
+- Understand Levels 1-2
+- Self-assess your skills (Skills Matrix)
+- Identify gaps
 
-**Quick check - Êtes-vous Niveau 2 ?**
-- ✅ Utilisez-vous 1+ outil SaaS régulièrement ?
-- ✅ Maîtrisez-vous prompt engineering (few-shot, CoT) ?
-- ✅ Avez-vous intégré l'IA dans vos workflows ?
+**Quick check - Are you Level 2?**
+- ✅ Do you use 1+ SaaS tool regularly?
+- ✅ Do you master prompt engineering (few-shot, CoT)?
+- ✅ Have you integrated AI into your workflows?
 
-→ **Oui aux 3** : Niveau 2, passez au [Delivery Framework](../delivery/)
-→ **Non** : Formation Niveau 1→2 ci-dessous
+→ **Yes to all 3**: Level 2, move to [Delivery Framework](../delivery/)
+→ **No**: Level 1→2 training below
 
-**Formation Niveau 1 → 2** : Consultez [TRAINING.md](../TRAINING.md) section 3 pour :
-- Concepts : Fondamentaux GenAI, Prompt Engineering, Pratique métier
-- Outils : ChatGPT, Claude, GitHub Copilot, APIs basics
-- Validation : 3 prompts complexes + API call + quiz
-- Ressources et certifications
+**Level 1 → 2 Training**: Consult [TRAINING.md](../TRAINING.md) section 3 for:
+- Concepts: GenAI Fundamentals, Prompt Engineering, Business Practice
+- Tools: ChatGPT, Claude, GitHub Copilot, API basics
+- Validation: 3 complex prompts + API call + quiz
+- Resources and certifications
 
-## 2. Accéder aux outils IA
+## 2. Access AI Tools
 
-Créer un compte ou demander un compte à votre entreprise.
+Create an account or request one from your company.
 
 ### Checklist
 
-- [ ] Vérifier politiques entreprise (outils autorisés, données partageables)
-- [ ] Créer comptes (min 2 outils selon vos besoins)
-- [ ] Configurer sécurité (2FA, opt-out training, jamais de données sensibles)
-- [ ] Tester sur tâches non-critiques
+- [ ] Check company policies (authorized tools, shareable data)
+- [ ] Create accounts (min 2 tools based on your needs)
+- [ ] Configure security (2FA, opt-out training, never sensitive data)
+- [ ] Test on non-critical tasks
 
-## 3. Expérimenter
+## 3. Experiment
 
-**Démarche** :
-1. Identifiez vos tâches pénibles, répétitives et/ou chronophages
-2. Choisissez 1-2 tâches non-critiques pour commencer
-3. Testez l'outil 1 mois sur vos tâches réelles
-4. Mesurez : Gain de temps ? Qualité acceptable ? Utilisation quotidienne ?
-5. Décision : Adopter / Ajuster / Abandonner
+**Approach**:
+1. Identify your painful, repetitive, and/or time-consuming tasks
+2. Choose 1-2 non-critical tasks to start
+3. Test the tool for 1 month on your real tasks
+4. Measure: Time saved? Acceptable quality? Daily usage?
+5. Decision: Adopt / Adjust / Abandon
 
-## 4. IA Responsable - Règles de base
+## 4. Responsible AI - Basic Rules
 
-**Protection données** :
-- ❌ Jamais : Mots de passe, données clients, code propriétaire, infos financières
-- ✅ OK : Code public, documentation publique, exemples anonymisés
+**Data Protection**:
+- ❌ Never: Passwords, customer data, proprietary code, financial info
+- ✅ OK: Public code, public documentation, anonymized examples
 
-**Vérification outputs** :
-- Jamais de copier-coller aveugle
-- Toujours vérifier faits, références, syntaxe
-- Tester le code avant utilisation
+**Output Verification**:
+- Never blind copy-paste
+- Always verify facts, references, syntax
+- Test code before use
 
-**Transparence de l'usage de l'IA** :
-- Mentionner l'usage IA pour : code en PR, contenu publié, travail évalué
-- Optionnel pour : emails, brouillons internes
+**AI Usage Transparency**:
+- Mention AI usage for: code in PR, published content, evaluated work
+- Optional for: emails, internal drafts
 
-**Biais** :
-- Rappelez-vous : L'IA a des biais et peut se tromper (genre, culture, confirmation)
-- Vérifiez les résultats de l'IA ou demandez-lui de vérifier
-- Varier prompts et outils, valider avec sources externes
+**Bias**:
+- Remember: AI has biases and can be wrong (gender, culture, confirmation)
+- Verify AI results or ask it to verify
+- Vary prompts and tools, validate with external sources
 
-## Checklist Plan
+## Plan Checklist
 
-- [ ] Suivre 2-4h formation (fondamentaux IA, prompt engineering)
-- [ ] Créer comptes 2 outils minimum, configurer sécurité
-- [ ] Identifier vos tâches chronophages, choisir 1-2 pour expérimentation
-- [ ] Expérimenter 1 mois, mesurer résultats
-- [ ] Décider : Adopter / Ajuster / Abandonner
-- [ ] Itérer avec d'autres outils si besoin
+- [ ] Complete 2-4h training (AI fundamentals, prompt engineering)
+- [ ] Create min 2 tool accounts, configure security
+- [ ] Identify time-consuming tasks, choose 1-2 for experimentation
+- [ ] Experiment for 1 month, measure results
+- [ ] Decide: Adopt / Adjust / Abandon
+- [ ] Iterate with other tools if needed
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 3 : Ready](03-ready.md) - Préparer votre environnement
+→ [Phase 3: Ready](03-ready.md) - Prepare your environment

@@ -1,228 +1,228 @@
-# Parcours de Formation IA
+# AI Training Paths
 
-> Guide des formations pour progresser du Niveau 1 au Niveau 4
+> Training guide to progress from Level 1 to Level 4
 
-## 1. Vue d'ensemble
+## 1. Overview
 
-**Philosophie** : Progression 1→2→3→4 avec validation par projet pratique.
+**Philosophy**: Progressive 1→2→3→4 with practical project validation.
 
-**Structure par parcours** :
-- **Concepts** : Théorie, fondamentaux (ce qu'il faut comprendre)
-- **Outils** : Pratique, découverte et usage (ce qu'il faut savoir utiliser)
+**Structure per path**:
+- **Concepts**: Theory, fundamentals (what you need to understand)
+- **Tools**: Practice, discovery and usage (what you need to know how to use)
 
-**Validation** : Chaque parcours se termine par un projet pratique pour valider les acquis.
+**Validation**: Each path ends with a practical project to validate skills.
 
 ---
 
-## 2. Format formations outils
+## 2. Tool Training Format
 
-### Structure type (2h)
+### Standard Structure (2h)
 
-**1. Panorama introductif** (15min)
-- Distinguer les outils (ex: Gemini App vs Workspace vs NotebookLM)
-- Méthode de base (ex: S.C.P.E. - Situation, Contexte, Objectif, Format)
-- Éthique et sécurité (RGPD, confidentialité)
+**1. Introductory Overview** (15min)
+- Distinguish tools (e.g., Gemini App vs Workspace vs NotebookLM)
+- Basic method (e.g., S.C.P.E. - Situation, Context, Purpose, Format)
+- Ethics and security (GDPR, confidentiality)
 
-**2. Scénarios live** (80-90% du temps)
-- Cas d'usage métier concrets
+**2. Live Scenarios** (80-90% of time)
+- Concrete business use cases
 - Hands-on, learning by doing
-- Plusieurs outils en action
+- Multiple tools in action
 
-**3. Next steps** (10min)
-- Ressources internes
-- Sessions Q&R
-- Prochaines formations
+**3. Next Steps** (10min)
+- Internal resources
+- Q&A sessions
+- Upcoming trainings
 
-### Exemple : Découverte Gemini (2h)
+### Example: Gemini Discovery (2h)
 
-**1. Panorama** (15min)
-- Distinguer : Gemini App (cerveau public), Gemini Workspace (assistant intégré), NotebookLM (expert données)
-- Méthode S.C.P.E. (Situation, Contexte, Objectif, Format)
-- RGPD et confidentialité
+**1. Overview** (15min)
+- Distinguish: Gemini App (public brain), Gemini Workspace (integrated assistant), NotebookLM (data expert)
+- S.C.P.E. method (Situation, Context, Purpose, Format)
+- GDPR and confidentiality
 
 **2. Gemini App** (25min)
-- Scénario : "Préparer une réunion d'équipe"
-- Recherche web + Analyse PDF + Génération support
+- Scenario: "Prepare team meeting"
+- Web research + PDF analysis + Support generation
 
 **3. Gemini Workspace** (50min)
-- Side panel : Navigation Drive ↔ Gmail
-- Gmail : Synthèse fil discussion + Réponse polie
-- Sheets : Structure suivi projet en 3 secondes
-- Slides : Génération images concepts abstraits
+- Side panel: Drive ↔ Gmail navigation
+- Gmail: Thread synthesis + Polite response
+- Sheets: Project tracking structure in 3 seconds
+- Slides: Abstract concept image generation
 
 **4. NotebookLM** (20min)
-- Import 5 CR + stratégie annuelle
-- Génération FAQ nouveaux arrivants
-- Audio overview (podcast) pour managers
-- Vérification faits (citations cliquables)
+- Import 5 meeting notes + annual strategy
+- Generate FAQ for newcomers
+- Audio overview (podcast) for managers
+- Fact verification (clickable citations)
 
-**5. Next steps** (10min)
-- Ressources internes IA
-- Sessions Q&R
+**5. Next Steps** (10min)
+- Internal AI resources
+- Q&A sessions
 
-### Adaptation par niveau
+### Adaptation by Level
 
-- **Niveau 1→2** : Outils SaaS (ChatGPT, Claude, Copilot) - Scénarios simples
-- **Niveau 2→3** : Outils PaaS (APIs, LangChain, Vector DBs) - Scénarios techniques
-- **Niveau 3→4** : Outils IaaS (K8s, Terraform, MLOps) - Scénarios production
+- **Level 1→2**: SaaS tools (ChatGPT, Claude, Copilot) - Simple scenarios
+- **Level 2→3**: PaaS tools (APIs, LangChain, Vector DBs) - Technical scenarios
+- **Level 3→4**: IaaS tools (K8s, Terraform, MLOps) - Production scenarios
 
 ---
 
-## 3. Parcours 1→2 (Basique → Intermédiaire)
+## 3. Path 1→2 (Basic → Intermediate)
 
-**Objectif** : SaaS → API + usage équipe
+**Goal**: SaaS → API + team usage
 
 ### Concepts
 
-**Fondamentaux GenAI**
-- LLM, tokens, contexte, limites
-- GenAI vs ML classique
-- Hallucinations et vérification
+**GenAI Fundamentals**
+- LLM, tokens, context, limitations
+- GenAI vs classical ML
+- Hallucinations and verification
 
 **Prompt Engineering**
-- Structure prompt efficace (S.C.P.E.)
+- Effective prompt structure (S.C.P.E.)
 - Few-shot learning
 - Chain-of-thought (CoT)
 
-**Pratique métier**
-- Templates prompts métier
-- Intégration workflow quotidien
-- Cas d'usage par rôle
+**Business Practice**
+- Business prompt templates
+- Daily workflow integration
+- Use cases by role
 
-### Outils
+### Tools
 
-**Découverte**
-- ChatGPT (Plus ou Team)
+**Discovery**
+- ChatGPT (Plus or Team)
 - Claude (Pro)
 - GitHub Copilot
-- M365 Copilot (si applicable)
+- M365 Copilot (if applicable)
 
-**Avancée**
-- APIs basics (OpenAI, Anthropic)
-- Gestion tokens et coûts
-- Intégrations simples
+**Advanced**
+- API basics (OpenAI, Anthropic)
+- Token and cost management
+- Simple integrations
 
 ### Validation
 
-**Projet** : Automatiser 3 tâches quotidiennes avec IA
-- 3 prompts complexes (few-shot, CoT)
-- 1 appel API simple
-- Documentation cas d'usage
+**Project**: Automate 3 daily tasks with AI
+- 3 complex prompts (few-shot, CoT)
+- 1 simple API call
+- Use case documentation
 
-**Quiz** : Fondamentaux GenAI (80% pass)
+**Quiz**: GenAI fundamentals (80% pass)
 
-### Ressources
+### Resources
 
-- Coursera : Google AI Essentials
+- Coursera: Google AI Essentials
 - learnprompting.org
 - Anthropic Learn, Microsoft Learn
-- Communautés : r/ChatGPT, Discord Claude
+- Communities: r/ChatGPT, Claude AI Discord
 
-**Certifications (optionnelles)** :
+**Certifications (optional)**:
 - Google AI Essentials
 - Microsoft AI Skills Challenge
 
 ---
 
-## 4. Parcours 2→3 (Intermédiaire → Avancé)
+## 4. Path 2→3 (Intermediate → Advanced)
 
-**Objectif** : API → RAG/ML custom + MLOps basics
+**Goal**: API → RAG/custom ML + MLOps basics
 
 ### Concepts
 
 **AI/ML Fundamentals**
-- Architectures LLM (GPT, Claude, Llama)
+- LLM architectures (GPT, Claude, Llama)
 - ML pipelines
-- GenAI vs ML classique
+- GenAI vs classical ML
 
 **Advanced Prompting**
 - ReAct (Reasoning + Acting)
 - Tree-of-Thought
-- Evaluation prompts
+- Prompt evaluation
 
 **RAG & Vector DBs**
-- Embeddings et similarité
+- Embeddings and similarity
 - Chunking strategies
 - Retrieval optimization
 
 **MLOps Basics**
 - Versioning (Git, DVC)
-- CI/CD pour ML
-- Monitoring basics
+- CI/CD for ML
+- Basic monitoring
 
-### Outils
+### Tools
 
-**Découverte**
+**Discovery**
 - LangChain / LlamaIndex
 - Pinecone / Weaviate (Vector DBs)
 - AutoML (SageMaker, Vertex AI)
 
-**Avancée**
-- OpenAI/Anthropic APIs (avancé)
+**Advanced**
+- OpenAI/Anthropic APIs (advanced)
 - RAG frameworks
 - Prompt evaluation (LangSmith)
 
 ### Validation
 
-**Projet RAG** : Application fonctionnelle
-- App RAG complète (Q&A sur docs internes)
+**RAG Project**: Functional application
+- Complete RAG app (Q&A on internal docs)
 - Latency <2s (p95)
-- Tests automatisés
-- Documentation technique
+- Automated tests
+- Technical documentation
 
-### Ressources
+### Resources
 
-- Udacity : AI/ML courses
+- Udacity: AI/ML courses
 - AWS Skill Builder, GCP Skills Boost
 - Fast.ai
 - DeepLearning.AI
 
-**Certifications** :
+**Certifications**:
 - AWS ML Specialty
 - Google ML Engineer
 - Azure AI Engineer
 
 ---
 
-## 5. Parcours 3→4 (Avancé → Expert)
+## 5. Path 3→4 (Advanced → Expert)
 
-**Objectif** : RAG/ML → Fine-tuning LLM + Infrastructure production
+**Goal**: RAG/ML → LLM fine-tuning + Production infrastructure
 
 ### Concepts
 
-**ML Avancé & Fine-Tuning LLM**
+**Advanced ML & LLM Fine-Tuning**
 - LoRA, QLoRA, PEFT
 - RLHF (Reinforcement Learning from Human Feedback)
 - Distributed training (DeepSpeed, FSDP)
 
-**Infrastructure IA**
+**AI Infrastructure**
 - Multi-region architecture
 - GPU optimization
 - Autoscaling strategies
 
-**MLOps Complet**
+**Complete MLOps**
 - CI/CD/CT (Continuous Training)
 - A/B testing, canary deployments
-- Observabilité production
+- Production observability
 
-**IA Responsable**
+**Responsible AI**
 - Fairness, bias mitigation
-- Audits et compliance (NIST AI RMF)
+- Audits and compliance (NIST AI RMF)
 - Red-teaming
 
 **Architecture & Scale**
-- Patterns architecture IA
+- AI architecture patterns
 - Performance optimization
-- Leadership technique
+- Technical leadership
 
-### Outils
+### Tools
 
-**Découverte**
+**Discovery**
 - Kubernetes (K8s)
 - Terraform
 - MLflow, Weights & Biases
 
-**Avancée**
+**Advanced**
 - GPU clusters (A100/H100)
 - DeepSpeed, FSDP
 - Kubeflow
@@ -230,67 +230,67 @@
 
 ### Validation
 
-**Projet production** :
-- Fine-tuning LLM (LoRA/QLoRA) sur données métier
-- Infrastructure K8s multi-region
-- CI/CD/CT complet
+**Production Project**:
+- LLM fine-tuning (LoRA/QLoRA) on business data
+- Multi-region K8s infrastructure
+- Complete CI/CD/CT
 - Monitoring + Alerting
-- Audit IA Responsable
-- ROI documenté
+- Responsible AI audit
+- Documented ROI
 
-### Ressources
+### Resources
 
 - Fast.ai Advanced
 - Stanford CS courses
 - Papers (arXiv)
 - NIST AI RMF documentation
 
-**Certifications** :
+**Certifications**:
 - AWS/GCP/Azure ML Advanced
 - Kubernetes Application Developer (CKAD)
 
 ---
 
-## 6. Gouvernance formation
+## 6. Training Governance
 
-### LIGHT - Employee (Niveau 1-2)
+### LIGHT - Employee (Level 1-2)
 
-**Responsabilités** :
-- Individu : Auto-évaluation, formation autonome
-- Manager : Validation budget, temps alloué
+**Responsibilities**:
+- Individual: Self-assessment, autonomous training
+- Manager: Budget validation, time allocation
 
-**Validation** :
-- Quiz en ligne (80% pass)
-- 3 prompts complexes
+**Validation**:
+- Online quiz (80% pass)
+- 3 complex prompts
 - Update Skills Matrix
 
-### MEDIUM - Delivery (Niveau 2-3)
+### MEDIUM - Delivery (Level 2-3)
 
-**Responsabilités** :
-- Individu : Engagement formation
-- Tech Lead : Planification, code review, mentoring
-- RH/L&D : Budget, certifications
+**Responsibilities**:
+- Individual: Training commitment
+- Tech Lead: Planning, code review, mentoring
+- HR/L&D: Budget, certifications
 
-**Validation** :
-- Projet RAG complet
+**Validation**:
+- Complete RAG project
 - Code review (Tech Lead + Senior Dev)
-- Présentation technique (30min)
+- Technical presentation (30min)
 - Update Skills Matrix
 
-### FULL - Automation (Niveau 3-4)
+### FULL - Automation (Level 3-4)
 
-**Responsabilités** :
-- Individu : Formation + leadership
-- Tech Lead : Architecture reviews, mentoring
-- AI CoE : Gouvernance, audits
-- CTO/VP : Sponsor, décisions stratégiques
+**Responsibilities**:
+- Individual: Training + leadership
+- Tech Lead: Architecture reviews, mentoring
+- AI CoE: Governance, audits
+- CTO/VP: Sponsorship, strategic decisions
 
-**Validation** :
-- Projet production complexe
+**Validation**:
+- Complex production project
 - Code review + Architecture review
-- Audit IA Responsable
-- Demo live sous charge
-- ROI documenté
+- Responsible AI audit
+- Live demo under load
+- Documented ROI
 - Update Skills Matrix
 
 ---
@@ -298,79 +298,79 @@
 ## 7. Peer Learning & Knowledge Sharing
 
 **Tech Talks** (weekly, 30min)
-- Membre présente outil/concept IA
-- Q&R équipe
+- Member presents AI tool/concept
+- Team Q&A
 
-**Code Review AI** (per PR)
-- Review prompts, API calls, modèles
-- Partage best practices
+**AI Code Review** (per PR)
+- Review prompts, API calls, models
+- Share best practices
 
 **Lunch & Learn** (bi-monthly, 1h)
-- Discussion informelle tech IA
-- Veille techno
+- Informal AI tech discussion
+- Tech watch
 
 **Hackathon** (quarterly, 1 day)
-- Expérimentation nouvelles tech
-- POCs rapides
+- New tech experimentation
+- Quick POCs
 
-**Knowledge Base** (wiki interne)
+**Knowledge Base** (internal wiki)
 - Prompts library
-- Templates réutilisables
-- Learnings et FAQ
+- Reusable templates
+- Learnings and FAQ
 
 ---
 
-## 8. Ressources recommandées
+## 8. Recommended Resources
 
-### Plateformes de formation
+### Training Platforms
 
-- **Coursera** : Google AI Essentials, Specializations
-- **Udacity** : AI/ML Nanodegrees
-- **Fast.ai** : Practical Deep Learning
-- **DeepLearning.AI** : Andrew Ng courses
-- **AWS Skill Builder** (si AWS)
-- **GCP Skills Boost** (si GCP)
-- **Microsoft Learn** (si Azure)
+- **Coursera**: Google AI Essentials, Specializations
+- **Udacity**: AI/ML Nanodegrees
+- **Fast.ai**: Practical Deep Learning
+- **DeepLearning.AI**: Andrew Ng courses
+- **AWS Skill Builder** (if AWS)
+- **GCP Skills Boost** (if GCP)
+- **Microsoft Learn** (if Azure)
 
-### Certifications par cloud provider
+### Certifications by Cloud Provider
 
-**AWS** :
-- ML Specialty (Niveau 2-3)
-- ML Advanced (Niveau 3-4)
+**AWS**:
+- ML Specialty (Level 2-3)
+- ML Advanced (Level 3-4)
 
-**GCP** :
-- ML Engineer (Niveau 2-3)
-- Professional ML Engineer (Niveau 3-4)
+**GCP**:
+- ML Engineer (Level 2-3)
+- Professional ML Engineer (Level 3-4)
 
-**Azure** :
-- AI Engineer Associate (Niveau 2-3)
-- AI Engineer Expert (Niveau 3-4)
+**Azure**:
+- AI Engineer Associate (Level 2-3)
+- AI Engineer Expert (Level 3-4)
 
-**Autres** :
-- Kubernetes CKAD (Niveau 3-4)
-- TensorFlow Developer (Niveau 2-3)
+**Others**:
+- Kubernetes CKAD (Level 3-4)
+- TensorFlow Developer (Level 2-3)
 
-### Livres
+### Books
 
 - "Hands-On Machine Learning" (Aurélien Géron)
 - "Designing Data-Intensive Applications" (Martin Kleppmann)
 - "Building Machine Learning Pipelines" (O'Reilly)
 
-### Communautés
+### Communities
 
-- Reddit : r/MachineLearning, r/LocalLLaMA
-- Discord : Claude AI, OpenAI Developer
-- GitHub : HuggingFace, LangChain
-- Papers : arXiv.org (ML section)
+- Reddit: r/MachineLearning, r/LocalLLaMA
+- Discord: Claude AI, OpenAI Developer
+- GitHub: HuggingFace, LangChain
+- Papers: arXiv.org (ML section)
 
 ---
 
-## Next steps
+## Next Steps
 
-1. **Évaluer votre niveau** : [SKILLS.md](SKILLS.md)
-2. **Choisir votre parcours** : Selon votre niveau actuel
-3. **Démarrer la formation** : Concepts + Outils
-4. **Valider par projet** : Projet pratique
-5. **Update Skills Matrix** : Suivre votre progression
+1. **Assess your level**: [SKILLS.md](SKILLS.md)
+2. **Choose your path**: Based on your current level
+3. **Start training**: Concepts + Tools
+4. **Validate with project**: Practical project
+5. **Update Skills Matrix**: Track your progress
 
-**Questions ?** Consultez votre Tech Lead ou AI CoE.
+**Questions?** Consult your Tech Lead or AI CoE.

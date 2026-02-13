@@ -32,7 +32,7 @@ Sensibilisation aux risques et bonnes pratiques personnelles.
 
 **MFA** : Activer sur tous comptes IA (app authenticator, pas SMS)
 **Mots de passe** : Gestionnaire (1Password, Bitwarden), mots de passe uniques
-**Secrets** : Jamais dans prompts (utiliser .env, gestionnaire)
+**Secrets** : Jamais dans les prompts (utiliser .env, gestionnaire)
 
 **Checklist avant utilisation** :
 - Données sensibles dans ce prompt ?

@@ -1,8 +1,6 @@
 # 01 - Strategy (Delivery)
 
-> **Scope**: AI Strategy for Development Teams
-> **Timeline**: 2-4 weeks exploration + 2-week sprints
-> **Budget**: Few k€/month
+> **Scope**: AI Strategy for Delivery Teams
 > **Approach**: Pattern-based experimentation
 
 ## 1. AI Integration Patterns
@@ -54,32 +52,30 @@ Budget manageable ($500-2K/month), time-to-value fast (2 weeks), risk low. Act l
 
 | Pattern | Tools | Pricing |
 |---------|-------|---------|
-| Code Review | CodeRabbit, Copilot | $10-49/user/month |
+| Code Review | Github Copilot, Claude Code | $10-49/user/month |
 | Documentation | Mintlify, Swimm | $19-120/month |
-| Test Generation | Copilot, Cursor | $10-39/user/month |
-| Design/Planning | ChatGPT Team, Claude | $30/user/month |
+| Test Generation | Github Copilot, Claude Code| $10-39/user/month |
+| Design/Planning | Claude Code, Antigravity | $30/user/month |
 
-**Tier 2: Light PaaS (Secondary)**
-Only if SaaS doesn't fit. OpenAI/Anthropic API (~$0.01/1K tokens), budget cap $500/month.
+**Tier 2: Light PaaS - API Token (Secondary)**
+Only if SaaS doesn't fit. Anthropic/OpenRouter/Kilocode API (~$0.01/1K tokens), budget cap $500/month.
 
-**Tier 3: IaaS (NOT RECOMMENDED)**
-Self-hosting = high cost, expertise needed, maintenance burden. Use SaaS alternatives (Azure OpenAI, AWS Bedrock) if compliance required.
+**Tier 3: IaaS (For specific constraints, compliance required)**
+Self-hosting = high cost, expertise needed, maintenance burden. 
+For discovery, using SaaS alternatives is easier.
+Then when mature enough, you can build (self-)hosting solutions to comply to compliance.
 
 ### Integration Architecture
 
 **Principle**: AI fits existing workflows, doesn't create new ones.
 
-Touchpoints: IDE (Copilot) → Git (PR review) → CI/CD (security) → Planning (ChatGPT) → Comm (Slack bots)
+Touchpoints: IDE (Copilot) → Git (PR review) → CI/CD (security) → Planning (Claude Code) → Comm (Slack bots)
 
 **Rules**:
 - One tool per touchpoint
 - Async over sync
 - Optional → required (after buy-in)
 - Fail gracefully
-
-### Security Requirements (Non-Negotiable)
-
-All tools must have: SOC 2 Type II, GDPR compliance, data residency transparency, audit logs, zero retention option.
 
 ## 3. Data Strategy
 
@@ -101,16 +97,9 @@ All tools must have: SOC 2 Type II, GDPR compliance, data residency transparency
 **Policy 3**: Client data off-limits - never send production data to AI
 **Policy 4**: Secrets NEVER AI-appropriate - use placeholders, env vars
 
-### Incident Response
-
-If sensitive data sent to AI:
-1. **< 5min**: Delete conversation, rotate credentials, notify tech lead
-2. **< 24h**: Contact vendor for deletion, document incident
-3. **< 1 week**: Team discussion, update policies, no blame culture
-
 ## 4. Responsible AI (Team Level)
 
-Microsoft's 6 principles adapted:
+6 major principles :
 
 1. **Fairness**: AI shouldn't favor/disadvantage team members. Calibrate collectively.
 2. **Reliability**: AI-generated code needs human review + tests. AI is tool, not reviewer.

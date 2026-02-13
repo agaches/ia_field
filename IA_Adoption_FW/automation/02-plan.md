@@ -1,59 +1,59 @@
-# Phase 2 : Plan - Planifier l'adoption IA
+# Phase 2: Plan - Plan AI Adoption
 
-## Vue d'ensemble
+## Overview
 
-Transformer stratégie en étapes actionnables : compétences, ressources, timeline.
+Transform strategy into actionable steps: skills, resources, timeline.
 
 ## 1. Assess Team AI Skills (Level 3-4)
 
-### Prérequis de maturité
+### Maturity Prerequisites
 
-**STOP - Validez avant d'adopter Automation** :
-- ✅ Équipe Niveau 2+ (voir [SKILLS.md](../SKILLS.md))
-- ✅ 6-12 mois expérience Delivery Framework
-- ✅ 1+ projet IA en production
+**STOP - Validate before adopting Automation**:
+- ✅ Team Level 2+ (see [SKILLS.md](../SKILLS.md))
+- ✅ 6-12 months Delivery Framework experience
+- ✅ 1+ AI project in production
 
-**Évaluation équipe** : Consultez [SKILLS.md](../SKILLS.md) pour :
-- Définition Niveaux 3-4 (target Automation)
-- Skills Matrix (objectif : Niveau 3-4)
-- Validation passage Delivery → Automation
+**Team evaluation**: Consult [SKILLS.md](../SKILLS.md) for:
+- Definition of Levels 3-4 (Automation target)
+- Skills Matrix (goal: Level 3-4)
+- Delivery → Automation transition validation
 
-**Critères** :
-1. Skills Matrix équipe (objectif : Niveau 3-4)
-2. Tous membres ≥ Niveau 2
-3. 50%+ équipe Niveau 3
-4. 1+ membre Niveau 4 (Tech Lead)
+**Criteria**:
+1. Team Skills Matrix (goal: Level 3-4)
+2. All members ≥ Level 2
+3. 50%+ team at Level 3
+4. 1+ member at Level 4 (Tech Lead)
 
-**Évaluation additionnelle** :
-- Assets données (sources, qualité, accessibilité)
-- Infrastructure tech (compute, storage, réseau, sécurité)
+**Additional assessment**:
+- Data assets (sources, quality, accessibility)
+- Tech infrastructure (compute, storage, network, security)
 
 ## 2. Acquire AI Skills
 
-### Formation Niveau 3 → 4
+### Level 3 → 4 Training
 
-**Parcours complet** : Consultez [TRAINING.md](../TRAINING.md) section 5 pour :
+**Complete path**: Consult [TRAINING.md](../TRAINING.md) section 5 for:
 
-**Concepts** :
-- ML Avancé & Fine-Tuning LLM (LoRA, QLoRA, RLHF)
-- Infrastructure IA (multi-region, GPU optimization)
-- MLOps Complet (CI/CD/CT, A/B testing, canary)
-- IA Responsable (fairness, audits, compliance)
+**Concepts**:
+- Advanced ML & LLM Fine-Tuning (LoRA, QLoRA, RLHF)
+- AI Infrastructure (multi-region, GPU optimization)
+- Complete MLOps (CI/CD/CT, A/B testing, canary)
+- Responsible AI (fairness, audits, compliance)
 - Architecture & Scale (patterns, performance)
 
-**Outils** :
-- Découverte : Kubernetes, Terraform, MLflow, Weights & Biases
-- Avancée : GPU clusters (A100/H100), DeepSpeed, Kubeflow, Prometheus/Grafana
+**Tools**:
+- Discovery: Kubernetes, Terraform, MLflow, Weights & Biases
+- Advanced: GPU clusters (A100/H100), DeepSpeed, Kubeflow, Prometheus/Grafana
 
-**Validation** : Fine-tuning + production multi-region + ROI positif
+**Validation**: Fine-tuning + multi-region production + positive ROI
 
-**Certifications recommandées** :
+**Recommended certifications**:
 - AWS/GCP/Azure ML Advanced
 - Kubernetes Application Developer (CKAD)
 
-**Recrutement** (si nécessaire) : ML Engineers, Data Scientists, MLOps Engineers, AI Ethics Specialists
+**Recruitment** (if needed): ML Engineers, Data Scientists, MLOps Engineers, AI Ethics Specialists
 
-**Partenariats** : Consultants IA, intégrateurs système, partenaires cloud
+**Partnerships**: AI consultants, system integrators, cloud partners
 
 ## 3. Accéder ressources IA
 

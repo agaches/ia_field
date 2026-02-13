@@ -1,4 +1,4 @@
-# Phase 4 : Govern - Gouvernance IA individuelle (LIGHT)
+# Phase 4 : Govern - Gouvernance IA individuelle
 
 ## Vue d'ensemble
 

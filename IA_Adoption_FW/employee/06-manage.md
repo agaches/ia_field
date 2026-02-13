@@ -40,11 +40,11 @@ Gérer votre productivité personnelle et vos coûts individuels.
 ### Optimisation
 
 **Stack optimisé développeur ($30)** :
-- GitHub Copilot ($10) + ChatGPT Plus ($20)
-- Versions gratuites pour usage occasionnel
+- GitHub Copilot ($10) + Claude PRO ($20)
+- Versions gratuites pour usage occasionnel (Gemini, Kilocode)
 
 **Stack optimisé non-tech ($20-30)** :
-- ChatGPT Plus ($20) + Grammarly gratuit
+- Claude PRO ($20) + Grammarly gratuit
 
 **ROI** : Si gain >2h/semaine, investissement rentabilisé
 
@@ -54,14 +54,14 @@ Gérer votre productivité personnelle et vos coûts individuels.
 
 | Outil | Coût | Utilisation | Action |
 |-------|------|-------------|--------|
-| ChatGPT | $20 | Quotidien | Garder |
-| Claude | $20 | Rare | Annuler |
+| ChatGPT | $20 | Rare | Annuler  |
+| Claude | $20 | Quotidien  | Garder |
 
 **Revue mensuelle** (15min) : Évaluer usage réel, garder/annuler outils
+Reminder par email
 
 ## 4. Backup (optionnel)
 
-**ChatGPT** : Settings → Export Data
 **Prompts importants** : Sauvegarder dans repo Git personnel
 
 ## Checklist Manage
