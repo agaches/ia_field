@@ -1,60 +1,60 @@
-# Phase 4 : Govern - Gouvernance IA individuelle
+# Phase 4: Govern - Individual AI Governance
 
-## Vue d'ensemble
+## Overview
 
-Respecter la politique d'usage et adopter les bonnes pratiques personnelles.
+Respect usage policy and adopt personal best practices.
 
-## 1. Risques individuels
+## 1. Individual Risks
 
-| Risque | Impact |
+| Risk | Impact |
 |--------|--------|
-| **Fuite données** | Partage accidentel données sensibles |
-| **Overreliance** | Confiance aveugle aux outputs |
-| **Violation IP** | Utilisation code/contenu sans vérification |
+| **Data Leak** | Accidental sharing of sensitive data |
+| **Overreliance** | Blind trust in outputs |
+| **IP Violation** | Using code/content without verification |
 
-**Principe** : Vous êtes responsable de ce que vous partagez et utilisez.
+**Principle**: You are responsible for what you share and use.
 
-## 2. Règles d'usage
+## 2. Usage Rules
 
-**✅ À faire** :
-- Vérifier outputs avant utilisation
-- MFA sur tous comptes IA
-- Signaler incidents à IT
+**✅ To Do**:
+- Verify outputs before use
+- MFA on all AI accounts
+- Report incidents to IT
 
-**❌ Interdit** :
-- Partager données sensibles, credentials, PII
-- Partager IP confidentielle
-- Contourner contrôles sécurité
+**❌ Forbidden**:
+- Share sensitive data, credentials, PII
+- Share confidential IP
+- Bypass security controls
 
-**Classification données** :
+**Data Classification**:
 
-| Type | Exemples | Partage IA |
+| Type | Examples | AI Sharing |
 |------|----------|-----------|
-| Public | Docs publiques | ✅ OK |
-| Interne | Emails, docs projet | ⚠️ Selon politique |
-| Confidentiel | Contrats, financials | ❌ Interdit |
-| Secret | Credentials, keys | ❌ Jamais |
+| Public | Public docs | ✅ OK |
+| Internal | Emails, project docs | ⚠️ According to policy |
+| Confidential | Contracts, financials | ❌ Forbidden |
+| Secret | Credentials, keys | ❌ Never |
 
-## 3. Signalement incidents
+## 3. Incident Reporting
 
-**Si problème détecté** :
-1. Identifier (fuite données, output problématique, compte compromis)
-2. Ouvrir ticket IT (description, impact, actions prises)
-3. Suivre résolution avec IT
+**If problem detected**:
+1. Identify (data leak, problematic output, compromised account)
+2. Open IT ticket (description, impact, actions taken)
+3. Follow resolution with IT
 
-## 4. Formation
+## 4. Training
 
-**IA Awareness (2h)** : Concepts IA, risques OWASP LLM Top 10, politique, sécurité, signalement
+**AI Awareness (2h)**: AI concepts, OWASP LLM Top 10 risks, policy, security, reporting
 
-**Ressources** : [OWASP LLM Top 10](https://genai.owasp.org/), guides outils IA
+**Resources**: [OWASP LLM Top 10](https://genai.owasp.org/), AI tools guides
 
-## Checklist Govern
+## Govern Checklist
 
-- [ ] Accepter politique d'usage
-- [ ] Formation IA Awareness (2h)
-- [ ] MFA configuré
-- [ ] Connaître processus signalement IT
+- [ ] Accept usage policy
+- [ ] AI Awareness training (2h)
+- [ ] MFA configured
+- [ ] Know IT reporting process
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 5 : Secure](05-secure.md) - Sécuriser votre usage IA
+→ [Phase 5: Secure](05-secure.md) - Secure your AI usage

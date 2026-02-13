@@ -1,59 +1,59 @@
-# Phase 1 : Strategy - Stratégie IA individuelle
+# Phase 1: Strategy - Individual AI Strategy
 
-## Vue d'ensemble
+## Overview
 
-Découvrez les outils IA qui améliorent votre productivité quotidienne. Choisissez selon vos besoins, testez, gardez ce qui marche.
+Discover AI tools that improve your daily productivity. Choose according to your needs, test, keep what works.
 
-## 1. Choisir vos outils IA
+## 1. Choose Your AI Tools
 
-### Matrice par usage
+### Matrix by Usage
 
-| Catégorie | Outils exemples | Usage | Coût |
+| Category | Example Tools | Usage | Cost |
 |-----------|-------------------|-------|------|
-| **IA conversationnelle** | ChatGPT, Claude, Gemini | Rédaction, brainstorming, analyse | 0-20€/mois |
-| **Assistance code** | GitHub Copilot, Claude Code | Autocomplétion, génération code | 10-20€/mois |
-| **Génération média** | Midjourney, Nano Banana Pro | Images, mockups | 10-20€/mois |
-| **Productivité** | Notion AI, Grammarly | Documents, notes, correction | 10-30€/mois |
+| **Conversational AI** | ChatGPT, Claude, Gemini | Writing, brainstorming, analysis | 0-20€/month |
+| **Code Assistance** | GitHub Copilot, Claude Code | Autocompletion, code generation | 10-20€/month |
+| **Media Generation** | Midjourney, Nano Banana Pro | Images, mockups | 10-20€/month |
+| **Productivity** | Notion AI, Grammarly | Documents, notes, correction | 10-30€/month |
 
-**Principe** : Choisissez 2-3 outils alignés avec votre travail. Budget typique : 20-50€/mois.
+**Principle**: Choose 2-3 tools aligned with your work. Typical budget: 20-50€/month.
 
-### Approche simple
+### Simple Approach
 
-1. **Sélectionner** 2-3 outils selon vos besoins
-2. **Tester** 1 mois sur vos tâches réelles
-3. **Décider** : Adopter / Ajuster / Abandonner
-4. **Itérer** avec d'autres outils si besoin
+1. **Select** 2-3 tools according to your needs
+2. **Test** 1 month on your real tasks
+3. **Decide**: Adopt / Adjust / Abandon
+4. **Iterate** with other tools if needed
 
-## 2. Principe SaaS uniquement
+## 2. SaaS Only Principle
 
-Utilisez des solutions SaaS (ChatGPT, Copilot, etc.). Pas de setup infrastructure, pas de modèles locaux, pas d'APIs complexes.
+Use SaaS solutions (ChatGPT, Copilot, etc.). No infrastructure setup, no local models, no complex APIs.
 
-## 3. Règles données
+## 3. Data Rules
 
-**✅ OK** : Notes personnelles, brouillons non-confidentiels, code open-source, infos publiques
-**❌ Interdit** : Données clients, IP confidentielle, code propriétaire, PII
+**✅ OK**: Personal notes, non-confidential drafts, open-source code, public information
+**❌ Forbidden**: Customer data, confidential IP, proprietary code, PII
 
-Si usage de solution payante et revue de sécurité, possible d'envisager certaines données de l'entreprise
+If using a paid solution with security review, it may be possible to consider certain company data
 
-Voir [Phase 4: Govern](04-govern.md) pour la politique complète.
-Voir [Phase 5: Secure](05-secure.md) pour la sécurité (des données).
+See [Phase 4: Govern](04-govern.md) for complete policy.
+See [Phase 5: Secure](05-secure.md) for (data) security.
 
 
-## 4. IA Responsable
+## 4. Responsible AI
 
-**Votre rôle** :
-- Soyez conscient des biais et limites de l'IA
-- Validez toujours les outputs (pas de confiance aveugle)
-- Ne partagez jamais de données sensibles
-- Vous êtes responsable de vos prompts et résultats
+**Your Role**:
+- Be aware of AI biases and limitations
+- Always validate outputs (no blind trust)
+- Never share sensitive data
+- You are responsible for your prompts and results
 
-## Checklist Strategy
+## Strategy Checklist
 
-- [ ] Choisir 2-3 outils selon vos besoins (voir matrice)
-- [ ] Budgéter 20-50€/mois
-- [ ] Vérifier la politique d'usage de votre entreprise
-- [ ] Respecter les règles données (section 3)
+- [ ] Choose 2-3 tools according to your needs (see matrix)
+- [ ] Budget 20-50€/month
+- [ ] Check your company's usage policy
+- [ ] Respect data rules (section 3)
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 2 : Plan](02-plan.md) - Évaluer et développer vos compétences IA
+→ [Phase 2: Plan](02-plan.md) - Assess and develop your AI skills

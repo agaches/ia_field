@@ -1,71 +1,71 @@
-# Phase 5 : Secure - Sécuriser votre usage IA (AWARENESS)
+# Phase 5: Secure - Secure Your AI Usage (AWARENESS)
 
-## Vue d'ensemble
+## Overview
 
-Sensibilisation aux risques et bonnes pratiques personnelles.
+Awareness of risks and personal best practices.
 
-## 1. Risques critiques OWASP LLM Top 10
+## 1. Critical Risks OWASP LLM Top 10
 
-**Focus sur 2 risques majeurs** :
+**Focus on 2 major risks**:
 
-**LLM06 - Information Disclosure** 🚨 :
+**LLM06 - Information Disclosure** 🚨:
 
-**❌ Jamais (tous outils)** : credentials, API keys, passwords, secrets
+**❌ Never (all tools)**: credentials, API keys, passwords, secrets
 
-**Données internes** (selon type outil) :
+**Internal data** (depending on tool type):
 
-| Type outil | Données publiques | Données internes | Données confidentielles |
+| Tool Type | Public Data | Internal Data | Confidential Data |
 |------------|-------------------|------------------|------------------------|
-| **Outils personnels** (ChatGPT perso, Claude perso) | ✅ OK | ❌ Interdit | ❌ Interdit |
-| **Outils corporate** (ChatGPT Team, Copilot Business) | ✅ OK | ⚠️ Selon politique entreprise | ❌ Interdit sauf autorisation |
+| **Personal tools** (Personal ChatGPT, Personal Claude) | ✅ OK | ❌ Forbidden | ❌ Forbidden |
+| **Corporate tools** (ChatGPT Team, Copilot Business) | ✅ OK | ⚠️ According to company policy | ❌ Forbidden unless authorized |
 
-**Règle** : Toujours vérifier la politique de votre entreprise avant de partager des données internes
+**Rule**: Always check your company's policy before sharing internal data
 
-**LLM09 - Overreliance** ⚠️ :
-- L'IA peut halluciner, générer du code buggé, donner conseils incorrects
-- **Toujours** vérifier, tester, valider
+**LLM09 - Overreliance** ⚠️:
+- AI can hallucinate, generate buggy code, give incorrect advice
+- **Always** verify, test, validate
 
-**Autres risques** (awareness) : Prompt injection, insecure output, insecure plugins
-**Ressource** : [OWASP LLM Top 10](https://genai.owasp.org/)
+**Other risks** (awareness): Prompt injection, insecure output, insecure plugins
+**Resource**: [OWASP LLM Top 10](https://genai.owasp.org/)
 
-## 2. Bonnes pratiques essentielles
+## 2. Essential Best Practices
 
-**MFA** : Activer sur tous comptes IA (app authenticator, pas SMS)
-**Mots de passe** : Gestionnaire (1Password, Bitwarden), mots de passe uniques
-**Secrets** : Jamais dans les prompts (utiliser .env, gestionnaire)
+**MFA**: Enable on all AI accounts (authenticator app, not SMS)
+**Passwords**: Manager (1Password, Bitwarden), unique passwords
+**Secrets**: Never in prompts (use .env, manager)
 
-**Checklist avant utilisation** :
-- Données sensibles dans ce prompt ?
-- Outil approuvé par l'entreprise ?
-- Vais-je valider l'output ?
+**Checklist before use**:
+- Sensitive data in this prompt?
+- Tool approved by company?
+- Will I validate the output?
 
-## 3. Paramètres confidentialité
+## 3. Privacy Settings
 
-**ChatGPT** : Settings → Data Controls, désactiver "Improve model"
-**GitHub Copilot** : Settings → Vérifier "Public code suggestions"
+**ChatGPT**: Settings → Data Controls, disable "Improve model"
+**GitHub Copilot**: Settings → Check "Public code suggestions"
 
 ## 4. Incident Response
 
-**Si erreur (ex: API key partagée)** :
-1. Immédiatement : Révoquer/changer le secret
-2. < 1h : Ouvrir ticket IT (incident sécurité)
-3. Documenter : Quelle donnée, quel outil, quand, actions prises
+**If error (e.g., shared API key)**:
+1. Immediately: Revoke/change the secret
+2. < 1h: Open IT ticket (security incident)
+3. Document: What data, which tool, when, actions taken
 
-**Règle** : Erreurs arrivent, réagir vite.
+**Rule**: Errors happen, react quickly.
 
-## 5. Formation
+## 5. Training
 
-**Formation IA Awareness (2h)** - obligatoire
-**Ressource** : [OWASP LLM Top 10](https://genai.owasp.org/) (lecture 1h)
+**AI Awareness Training (2h)** - mandatory
+**Resource**: [OWASP LLM Top 10](https://genai.owasp.org/) (1h reading)
 
-## Checklist Secure
+## Secure Checklist
 
-- [ ] MFA activé sur tous comptes IA
-- [ ] Gestionnaire mots de passe utilisé
-- [ ] OWASP LLM Top 10 lu (focus LLM06, LLM09)
-- [ ] Paramètres confidentialité vérifiés
-- [ ] Processus signalement IT connu
+- [ ] MFA enabled on all AI accounts
+- [ ] Password manager used
+- [ ] OWASP LLM Top 10 read (focus LLM06, LLM09)
+- [ ] Privacy settings verified
+- [ ] IT reporting process known
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 6 : Manage](06-manage.md) - Gérer votre productivité avec l'IA
+→ [Phase 6: Manage](06-manage.md) - Manage your productivity with AI

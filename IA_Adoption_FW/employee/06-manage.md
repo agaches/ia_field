@@ -1,84 +1,83 @@
-# Phase 6 : Manage - Gestion productivité IA
+# Phase 6: Manage - AI Productivity Management
 
-## Vue d'ensemble
+## Overview
 
-Gérer votre productivité personnelle et vos coûts individuels.
+Manage your personal productivity and individual costs.
 
-## 1. Outils corporate vs personnels
+## 1. Corporate vs Personal Tools
 
-**Si outils fournis par l'entreprise** :
-- Utiliser efficacement
-- Signaler problèmes au support IT/provider
-- Respecter procédures d'accès de l'organisation
+**If tools provided by company**:
+- Use them optimally
+- Report problems to IT support/provider
+- Respect organization access procedures
 
-**Si outils personnels** :
-- Gérer vos abonnements
-- Suivre vos coûts
-- Optimiser selon usage réel
+**If personal tools**:
+- Manage your subscriptions
+- Track your costs
+- Optimize according to actual usage
 
-**SaaS = Rien à gérer** : Providers gèrent serveurs, mises à jour, monitoring.
+**SaaS = Nothing to manage**: Providers manage servers, updates, monitoring.
 
-**En cas de problème** :
-1. Vérifier status page provider
-2. Utiliser outil alternatif temporairement
+**In case of problem**:
+1. Check provider status page
+2. Use alternative tool temporarily
 
-## 2. Gérer vos coûts personnels
+## 2. Manage Your Personal Costs
 
-### Budget typique
+### Typical Budget
 
-| Outil | Coût/mois | Nécessaire ? |
+| Tool | Cost/month | Necessary? |
 |-------|-----------|--------------|
-| GitHub Copilot | $10 | Recommandé (devs) |
-| ChatGPT Plus | $20 | Recommandé |
-| Claude Pro | $20 | Optionnel |
-| Cursor Pro | $20 | Optionnel (devs) |
-| Grammarly Premium | $12 | Optionnel |
-| Notion AI | $10 | Optionnel |
+| GitHub Copilot | $10 | Recommended (devs) |
+| ChatGPT Plus | $20 | Recommended |
+| Claude Pro | $20 | Optional |
+| Cursor Pro | $20 | Optional (devs) |
+| Grammarly Premium | $12 | Optional |
+| Notion AI | $10 | Optional |
 
-**Budget recommandé** : $20-50/mois
+**Recommended budget**: $20-50/month
 
-### Optimisation
+### Optimization
 
-**Stack optimisé développeur ($30)** :
+**Optimized developer stack ($30)**:
 - GitHub Copilot ($10) + Claude PRO ($20)
-- Versions gratuites pour usage occasionnel (Gemini, Kilocode)
+- Free versions for occasional use (Gemini, Kilocode)
 
-**Stack optimisé non-tech ($20-30)** :
-- Claude PRO ($20) + Grammarly gratuit
+**Optimized non-tech stack ($20-30)**:
+- Claude PRO ($20) + Grammarly free
 
-**ROI** : Si gain >2h/semaine, investissement rentabilisé
+**ROI**: If saving >2h/week, investment paid off
 
-## 3. Tracking personnel (optionnel)
+## 3. Personal Tracking (optional)
 
-**Feuille calcul simple** :
+**Simple spreadsheet**:
 
-| Outil | Coût | Utilisation | Action |
+| Tool | Cost | Usage | Action |
 |-------|------|-------------|--------|
-| ChatGPT | $20 | Rare | Annuler  |
-| Claude | $20 | Quotidien  | Garder |
+| ChatGPT | $20 | Rare | Cancel  |
+| Claude | $20 | Daily  | Keep |
 
-**Revue mensuelle** (15min) : Évaluer usage réel, garder/annuler outils
-Reminder par email
+**Monthly review** (15min): Assess actual usage, keep/cancel tools, Email reminder
 
-## 4. Backup (optionnel)
+## 4. Backup (optional)
 
-**Prompts importants** : Sauvegarder dans repo Git personnel
+**Important prompts**: Save in personal Git repo
 
-## Checklist Manage
+## Manage Checklist
 
-- [ ] Budget défini ($20-50/mois)
-- [ ] Tracking coûts si besoin
-- [ ] Revue mensuelle usage
-- [ ] Annuler outils sous-utilisés
+- [ ] Budget defined ($20-50/month)
+- [ ] Cost tracking if needed
+- [ ] Monthly usage review
+- [ ] Cancel underused tools
 
 ## Conclusion
 
-**Focus** : Coûts maîtrisés, ROI positif, revue mensuelle simple
+**Focus**: Controlled costs, positive ROI, simple monthly review
 
-L'IA doit améliorer votre productivité, pas devenir une charge.
+AI should improve your productivity, not become a burden.
 
-## Prochaines étapes
+## Next Steps
 
-- Réviser régulièrement les 6 phases
-- Partager learnings avec l'équipe
-- Explorer [Delivery](../delivery/) pour usage équipe
+- Regularly review phases (govern <-> secure <-> manage)
+- Capitalize learnings with the team
+- Explore [Delivery](../delivery/) for team usage

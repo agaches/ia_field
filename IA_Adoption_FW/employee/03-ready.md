@@ -1,53 +1,53 @@
-# Phase 3 : Ready - Configuration environnement personnel IA
+# Phase 3: Ready - Personal AI Environment Configuration
 
-## Vue d'ensemble
+## Overview
 
-Configurez votre environnement de travail pour utiliser efficacement les outils IA.
+Configure your work environment to effectively use AI tools.
 
-## 1. Politique d'usage acceptable
+## 1. Acceptable Use Policy
 
-**Actions** :
-- Lire la politique IA de votre entreprise (intranet, RH/IT, manager)
-- Clarifier : outils approuvés, données autorisées, obligations sécurité
-- Signer l'attestation si requis
+**Actions**:
+- Read your company's AI policy (intranet, HR/IT, manager)
+- Clarify: approved tools, authorized data, security obligations
+- Sign attestation if required
 
-## 2. Réseau et fiabilité
+## 2. Network and Reliability
 
-**SaaS = Pas de config réseau nécessaire**
+**SaaS = No network configuration needed**
 
-Vérifications :
-- Accès internet et HTTPS fonctionnels
-- Outils non bloqués par proxy entreprise
-- Si bloqué : contacter IT support
+Verifications:
+- Internet access and HTTPS functional
+- Tools not blocked by company proxy
+- If blocked: contact IT support
 
-## 3. Setup outils
+## 3. Tools Setup
 
-### Pour développeurs
+### For Developers
 
-**IDE + Extension** :
+**IDE + Extension**:
 - VS Code + GitHub Copilot / Codeium
-- Cursor (IA intégrée)
+- Cursor (integrated AI)
 - JetBrains IDEs + AI Assistant
 
-**Installation** : Suivre doc officielle de chaque outil
+**Installation**: Follow official documentation for each tool
 
-### Sécurité
+### Security
 
-**Obligatoire** :
-- MFA sur tous les comptes IA
-- Gestionnaire mots de passe (1Password, Bitwarden)
-- Jamais de credentials en dur dans le code (utiliser .env)
-- Vérifier .gitignore (.env, *.key, secrets.json)
+**Mandatory**:
+- MFA on all AI accounts
+- Password manager (1Password, Bitwarden)
+- Never hardcode credentials in code (use .env)
+- Verify .gitignore (.env, *.key, secrets.json)
 
-## Checklist Ready
+## Ready Checklist
 
-- [ ] Lire et accepter politique IA entreprise
-- [ ] Installer IDE + extension IA (si dev)
-- [ ] Créer comptes outils (ChatGPT/Claude) avec MFA
-- [ ] Installer gestionnaire mots de passe
-- [ ] Vérifier .gitignore (si dev)
-- [ ] Tester setup
+- [ ] Read and accept company AI policy
+- [ ] Install IDE + AI extension (if dev)
+- [ ] Create tool accounts (ChatGPT/Claude) with MFA
+- [ ] Install password manager
+- [ ] Verify .gitignore (if dev)
+- [ ] Test setup
 
-## Prochaine étape
+## Next Step
 
-→ [Phase 4 : Govern](04-govern.md) - Gouverner votre usage IA
+→ [Phase 4: Govern](04-govern.md) - Govern your AI usage
