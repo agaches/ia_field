@@ -1,207 +1,126 @@
 # 03 - Ready (Delivery)
 
-> Shared team infrastructure for effective AI usage
+> Establish AI governance, networking, reliability, and technical foundations
 
-## 1. Governance: Team Policies
+## Establish AI governance
 
-### Document Team Policies (5-10 pages)
+Define and communicate team policies for AI tool usage.
 
-**Minimum content**:
-- Approved tools
-- Experimentation process (2-week sprints)
-- Data handling rules
-- Output validation (code review, tests)
-- Budget allocation
+### Team Policies
 
-**Policy Template Example** (adapt to your tools):
-```markdown
-# AI Policy - Team [Name]
+**Document policies covering:**
+- Approved tools and experimentation process
+- Data handling rules (reference Strategy phase classification)
+- Output validation requirements (code review, tests)
+- Budget allocation and approval process
 
-## Approved Tools
-[Examples: Code assistants, LLM access (commercial/self-hosted), IDE integrations]
+**Storage and maintenance:**
+- Team wiki or knowledge base (versioned)
+- Review quarterly and update as needed
+- Include in new member onboarding
 
-## Data Handling
-✅ Open-source, non-proprietary code
-⚠️ Internal architecture (anonymized)
-❌ Client code, credentials, secrets
+### Policy Communication
 
-## Validation Required
-Code review mandatory, unit tests for critical code, security scans
+- Kickoff meeting (30 min) to introduce policies
+- Link in team documentation
+- Regular reminders in retrospectives
 
-## Budget
-[Define based on your stack: SaaS licenses, API usage, or infrastructure costs]
-20% buffer for experiments, monthly review
+## Establish AI networking
 
-## Training
-2h onboarding for new members, monthly best practices workshop
-```
+Ensure team members can access AI tools and services.
 
-> **Note**: This is an example template. Adapt tool names, budget, and policies to your team's chosen stack.
+### Network Access Requirements
 
-**Storage**: Team wiki (Confluence, Notion, GitHub Wiki), versioned, quarterly review
+- **Cloud-based tools**: Internet connectivity, VPN if required
+- **API access**: Network policies allowing API endpoints
+- **Self-hosted**: Internal network access to AI infrastructure
+- **Authentication**: SSO, API keys, or credential management
 
-### Communicate Policies
+### Connectivity Checklist
 
-Team meeting (30min), email with link, add to onboarding, remind in retros.
+- Verify tool access from team workstations
+- Configure firewalls/proxies if needed
+- Document access procedures
+- Test failover connectivity
 
-## 2. Network: Optional (VPN if remote)
+## Establish AI reliability
 
-VPN only needed if: distributed team accessing on-prem resources, internal AI tools, strict compliance (finance, healthcare).
+Understand service levels and plan for continuity.
 
-Most cloud-based SaaS tools don't need VPN.
-
-**If required**: Choose a mesh VPN or zero-trust solution (examples: Tailscale, Twingate, WireGuard, OpenVPN, or enterprise solutions).
-
-## 3. Reliability: SLA Awareness
-
-### Provider SLAs (Examples)
+### Provider SLAs
 
 | Tool Type | Typical SLA | Fallback Strategy |
 |-----------|-------------|-------------------|
-| **Code Assistants** | 99%+ (commercial), N/A (self-hosted) | Alternative assistant, local model, manual |
-| **LLM APIs (commercial)** | 99-99.9% (enterprise), lower (free/basic) | Alternative API, self-hosted model |
+| **Code Assistants** | 99%+ (commercial) | Alternative assistant, local model, manual |
+| **LLM APIs** | 99-99.9% (enterprise) | Alternative API, self-hosted model |
 | **Self-hosted** | Depends on your infrastructure | Redundancy, backups, commercial fallback |
-| **VCS (cloud)** | 99.9%+ | N/A (critical dependency) |
 
-**General expectations**: Commercial SaaS ~4-8h downtime/year. Self-hosted depends on your infrastructure reliability.
-
-> **Note**: Check specific SLAs for your chosen tools/infrastructure.
+**Expectations**: Commercial SaaS typically 4-8h downtime/year
 
 ### Continuity Plan
 
-If tool down:
-1. **Identify** (5min): Check status page, confirm with team
-2. **Activate fallback** (10min): Switch to alternative, continue non-blocking work
-3. **Communicate** (immediate): Notify team, update PO if impacts delivery
-4. **Monitor** (ongoing): Check status, update when resolved
-5. **Post-mortem** (if >4h): Document impact, adjust plan if needed
+**If tool unavailable:**
+1. Identify outage and confirm with team
+2. Activate fallback (alternative tool or manual workflow)
+3. Communicate to team and stakeholders if delivery impacted
+4. Document impact for post-mortem if significant (>4h)
 
-## 4. Foundation: Shared Infrastructure
+## Establish an AI foundation
+
+Set up accounts, configurations, and shared resources.
 
 ### Accounts & Licenses
 
-**Approach depends on your stack**:
+- Provision licenses for all team members
+- Assign administrator (tech lead or designated person)
+- Document onboarding/offboarding procedures
 
-**Commercial SaaS** (if chosen):
-- Create organization/team accounts
-- Invite team members, assign licenses
-- Configure policies: audit logs, data retention, training opt-out
-- Typical cost: $10-50/user/month per tool
+### Administration
 
-**Self-hosted** (if chosen):
-- Setup infrastructure (compute, storage)
-- Deploy services (LLM inference, code assistants)
-- Configure authentication, access control
-- Typical cost: Infrastructure + maintenance effort
+**Onboarding:**
+- Create accounts and assign licenses
+- Provide training (1-2 hours on policies and tools)
+- Grant access to shared resources
 
-**Hybrid**: Combination of both approaches
-
-> **Examples**: GitHub Team + Copilot, GitLab self-hosted + Continue.dev, Gitea + Ollama + Tabby
-
-### Administration Setup
-
-**Assign responsible person**: Tech lead or designated admin to manage access, licenses, support
-
-**Define processes**:
-
-**Onboarding (new member)**:
-1. Create accounts (VCS, LLM access, tool-specific)
-2. Assign access/licenses (based on your stack)
-3. 2h training (policy, tools, prompt library)
-4. Access shared resources (prompts, configs, docs)
-5. Add to team dashboard
-
-**Offboarding (departing member)**:
-1. Revoke access immediately (all systems)
-2. Recover licenses/resources (reallocation or savings)
-3. Remove from team dashboard
-4. Archive data if necessary (compliance)
-
-> **Adapt to your stack**: SaaS (account management), Self-hosted (user removal, key revocation), Hybrid (both)
-
-**Documentation**: Create administration runbook (wiki/Notion) with detailed procedures
+**Offboarding:**
+- Revoke access immediately
+- Recover licenses for reallocation
+- Archive data if required
 
 ### IDE Configuration
 
-**Goal**: Standardize AI tool setup across team
+**Standardize tooling:**
+- Create shared configuration repository
+- Document recommended extensions and settings
+- Distribute via Git for version control
+- Support multiple IDEs as needed (VS Code, JetBrains, etc.)
 
-**Approach**:
-1. Create shared config repo (e.g., `team-ide-config`)
-2. Document recommended extensions/plugins for your IDE(s)
-3. Include settings for AI tools (if applicable)
-4. Version control and distribute via Git
+### Shared Knowledge Library
 
-**Example (VS Code)**:
-```json
-{
-  "recommendations": [
-    "[your-code-assistant-extension]",
-    "[formatter]",
-    "[linter]"
-  ]
-}
-```
+**Create repository for:**
+- Effective prompts and patterns
+- Team best practices
+- Lessons learned
 
-**Example (JetBrains)**: Share `settings.zip` or plugin configuration files
+**Contribution process:** Team member submits → tech lead reviews → share with team
 
-**Distribution**: Commit to repo, team members clone/import, update via Git
+### CI/CD Integration
 
-> **Adapt to your IDE**: VS Code, JetBrains IDEs, Vim/Neovim, Emacs, etc.
+**Implement security checks:**
+- Pre-commit hooks for secret detection (e.g., Gitleaks)
+- CI/CD pipeline security scans
+- Automated validation of AI-generated code
 
-### Shared Prompt Library
-
-**Structure**:
-```
-team-ai-prompts/
-├── README.md
-├── coding/ (code-review.md, test-generation.md, refactoring.md)
-├── documentation/ (api-docs.md, readme.md)
-├── planning/ (story-breakdown.md, estimation.md)
-```
-
-**Contribution**: Dev discovers effective prompt → PR → Tech lead review → Announce in standup
-
-### CI/CD Integration (Light)
-
-**Pre-commit Hooks (Secret Detection)**:
-```bash
-pip install pre-commit
-# Create .pre-commit-config.yaml with gitleaks
-pre-commit install
-```
-
-**GitHub Actions (Security Scan)**:
-```yaml
-name: Security Scan
-on: [push, pull_request]
-jobs:
-  gitleaks:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: gitleaks/gitleaks-action@v2
-```
+**Example tools:** Gitleaks, TruffleHog, GitHub Actions, GitLab CI
 
 ### Monitoring Dashboard
 
-**Metrics to track**: Adoption (% PRs with AI), Quality (bug rate AI vs manual), Costs ($/dev/month)
+**Track key metrics:**
+- Adoption rates (% team using tools, % PRs with AI assistance)
+- Quality indicators (defect rates, review findings)
+- Cost per developer per month
 
-**Simple dashboard**: Google Sheets/Notion, monthly update, 30min team meeting review.
-
-## Ready Checklist
-
-- [ ] Document team policy (5-10 pages)
-- [ ] Provision team licenses (Copilot, ChatGPT)
-- [ ] Assign admin responsible (tech lead)
-- [ ] Define onboarding/offboarding processes
-- [ ] Create administration runbook (wiki)
-- [ ] Create shared prompt library (Git repo)
-- [ ] Standardize IDE config (VS Code sync)
-- [ ] Configure pre-commit hooks (secrets)
-- [ ] Setup CI/CD security scans
-- [ ] Create metrics dashboard
-- [ ] Train team (2h onboarding)
-- [ ] Establish continuity plan (fallback tools)
+**Implementation:** Simple dashboard (spreadsheet, Notion) updated monthly
 
 ## Next Step
 

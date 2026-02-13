@@ -1,110 +1,118 @@
 # 04 - Govern (Delivery)
 
-> Team governance - Collective policies, validation, supervision
+> Assess risks, document policies, enforce standards, and monitor team AI usage
 
-## 1. Assess Team Risks
+## Assess AI organizational risks
 
-### Main Risks
+Identify and evaluate risks specific to team AI adoption.
+
+### Key Risks
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| **Generated code quality** | Production bugs | Systematic code review |
-| **Output bias** | Poor UX | Validation process |
-| **Team data leaks** | IP compromise | DLP monitoring basics |
-| **Inconsistent usage** | Variable quality | Team standards |
-| **Over-dependency** | Loss of autonomy | Continuous training |
+| **Generated code quality** | Production bugs | Systematic code review and testing |
+| **Output bias** | Poor UX, unfair outcomes | Validation and testing processes |
+| **Data leakage** | IP compromise | Data classification enforcement |
+| **Inconsistent usage** | Variable quality | Team standards and training |
+| **Over-dependency** | Loss of critical skills | Continuous learning, manual fallbacks |
 
-### Risk Evaluation (simplified)
+### Risk Assessment
 
-Per tool/pattern, score 1-5:
-- Data impact (what data shared?)
-- Quality impact (how validate outputs?)
-- Productivity impact (gain vs risk?)
-- Team impact (everyone can use?)
+For each AI tool or pattern, evaluate:
+- **Data impact**: What data is shared with the tool?
+- **Quality impact**: How are outputs validated?
+- **Productivity impact**: Benefits vs. risks?
+- **Team impact**: Can all members use it effectively?
 
-**Approval threshold**: Average score >3 → Tech lead approves
+**Approval process**: Tech lead reviews and approves based on risk assessment
 
-## 2. Document Team Policies (5-10 pages)
+## Document AI governance policies
 
-**Structure**:
-1. **Acceptable Usage**: Approved tools, encouraged vs discouraged cases, limits
-2. **Data Handling**: Classification (public/internal/confidential), sharing rules, anonymization
-3. **Output Validation**: Code review for AI code, doc validation, tests required
-4. **Approvals**: Who approves what (tech lead, PO), new tool process, escalation
-5. **Monitoring**: Team dashboard (adoption, quality, costs), monthly reviews, adjustments
+Maintain and evolve team policies for AI usage.
 
-## 3. Apply Policies
+### Policy Documentation
 
-### New Tool Approval Process
+**Core policies** (from Ready phase):
+- Approved tools and services
+- Data handling and classification rules
+- Output validation requirements
+- Experimentation and approval process
+- Budget allocation
 
-```
-Proposal → Tech Lead evaluates (risk framework) → Score <3: Rejected | Score ≥3: Approved → Trial (1 sprint) → Re-evaluate
-```
+### Policy Review Process
 
-Timeline: 1-2 days decision, 1 sprint validation
+- **Regular review**: Quarterly or after major changes
+- **Update triggers**: New tools, incidents, regulatory changes
+- **Version control**: Track policy changes over time
+- **Team involvement**: Gather feedback during retrospectives
 
-### Peer Review Process
+## Enforce AI governance policies
 
-**For AI-generated code**:
-1. Developer marks code as "AI-generated" in PR
-2. Reviewer checks: logic, vulnerabilities (secrets, injection), tests, standards
-3. Approve or request changes
+Implement mechanisms to ensure policy compliance.
 
-**Light automation**: Pre-commit hooks (secrets), CI checks (tests), linting (standards)
+### Enforcement Mechanisms
 
-## 4. Monitor Team Metrics
+**Technical controls:**
+- Pre-commit hooks for secret detection
+- CI/CD security scans
+- Access controls and authentication
+- Monitoring and logging of tool usage
 
-### Dashboard (monthly update)
+**Process controls:**
+- Mandatory code review for AI-generated code
+- Training requirements for new tools
+- Approval workflow for experiments
+- Incident response procedures
 
-**Adoption**: % PRs using AI, % team actively using, most used tools
-**Quality**: Bug rate (AI vs manual), review time, regressions
-**Productivity**: Velocity (story points/sprint), lead time, dev satisfaction (quarterly survey)
-**Costs**: Cost/dev/month, estimated ROI
+**Cultural practices:**
+- Peer accountability
+- Regular policy reminders
+- Recognition of good practices
+- Transparent discussions about challenges
 
-### Monthly Review (30min)
+## Monitor AI organizational risks
 
-Present metrics, identify what works/doesn't, decide continue/adjust/stop, actions for next month.
+Track metrics and costs to identify issues and demonstrate value.
 
-## 5. Optional AI CoE
+### Monitoring Dashboard
 
-### Alternative: Platform Team
+**Adoption metrics:**
+- % of team actively using AI tools
+- % of PRs with AI assistance
+- Most used tools and patterns
 
-Without dedicated AI CoE, **platform team** or **tech leads** can: maintain approved tools list, organize internal training, share best practices, coordinate with other teams.
+**Quality metrics:**
+- Defect rates (AI-assisted vs. manual)
+- Code review findings
+- Test coverage changes
 
-Major ethical risks escalated to management.
+**Productivity metrics:**
+- Velocity trends
+- Lead time changes
+- Developer satisfaction (quarterly survey)
 
-### Inter-Team Coordination
+**Cost metrics:**
+- Cost per developer per month
+- Total team AI spending
+- ROI estimates (time saved × cost)
 
-If multiple teams use AI: monthly tech leads meeting, share learnings, standardize tools (optional), shared license costs.
+### Budget Management
 
-## 6. Cost Allocation
+**Budget components:**
+- SaaS licenses (if applicable)
+- API usage costs (if applicable)
+- Infrastructure costs (if self-hosted)
+- Buffer for experimentation (20%)
 
-### Team Budget Model
+**Tracking**: Monthly review of costs per team, adjust as needed
 
-**Budget Components**:
-- **SaaS**: Per-user licenses (if applicable)
-- **APIs**: Usage-based costs (if applicable)
-- **Infrastructure**: Compute, storage (if self-hosted)
-- **Buffer**: 20% for experiments
+### Review Cadence
 
-**Tracking**: Monthly costs per team, dashboard in finance tool
-
-**Example range** (10 devs):
-- Self-hosted: $100-500/month (infrastructure)
-- SaaS-heavy: $500-700/month (licenses)
-- Hybrid: $300-600/month
-
-> **Note**: Actual costs depend heavily on your stack choices (SaaS vs self-hosted)
-
-## Govern Checklist
-
-- [ ] Document team policy (5-10 pages)
-- [ ] Establish approval process (tech lead)
-- [ ] Implement peer review process
-- [ ] Create metrics dashboard
-- [ ] Plan monthly reviews
-- [ ] Allocate team budget
-- [ ] Train team on policies
+**Monthly review** (30 min):
+- Present dashboard metrics
+- Identify what's working and what isn't
+- Decide to continue, adjust, or stop specific practices
+- Plan actions for next month
 
 ## Next Step
 

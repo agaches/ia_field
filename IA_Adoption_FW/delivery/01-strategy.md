@@ -1,93 +1,71 @@
 # 01 - Strategy (Delivery)
 
-> **Scope**: AI Strategy for Delivery Teams
-> **Approach**: Pattern-based experimentation
+> Create your AI strategy for delivery teams using pattern-based experimentation
 
-## 1. AI Integration Patterns
+## Why strategic AI planning matters
 
-### Why Patterns Over Use Cases?
+Traditional use case analysis leads to analysis paralysis. For delivery teams, AI strategy should be lightweight, experimental, and pattern-based. Focus on proven patterns that address real team pain points, experiment quickly, and scale what works.
 
-Traditional use case analysis = analysis paralysis. Instead: **catalog proven patterns**, experiment with 1-2 that fit.
+**Key principles:**
+- Start small with manageable experiments ($500-2K/month budget)
+- Fast time-to-value (1-2 sprints)
+- Low risk (like trying a new IDE extension)
+- Learn through doing, not extensive planning
+
+## Identify AI use cases
+
+Catalog proven patterns that fit your team's delivery workflow. Select 1-2 patterns to experiment with based on team pain points.
 
 ### Pattern Catalog
 
-| Pattern | Tool Category | Maturity | Timeline | Value |
-|---------|---------------|----------|----------|-------|
-| **Code Review AI** | AI code assistant, LLM with code context | Low-Med | 1-2 sprints | -20-30% review time |
-| **Doc Generation** | AI documentation tool, LLM | Low | 1 sprint | -50% doc time |
-| **Test Generation** | AI code assistant, test framework integration | Medium | 2-3 sprints | +20-30% coverage |
-| **Refactoring** | AI-powered IDE, code transformation tool | Med-High | 2-4 sprints | Large-scale refactor |
-| **Design Review** | LLM with architecture context | Medium | 2-3 sprints | Architecture quality |
-| **Sprint Planning** | LLM, planning tool integration | Low-Med | 1-2 sprints | -30-40% planning time |
-| **Onboarding** | AI code assistant, context-aware chat | Low | 1 sprint | Faster ramp-up |
-| **Bug Triage** | AI-powered error tracking, log analysis | Med-High | 3-4 sprints | Root cause detection |
+| Pattern | Tool Category | Maturity | Value |
+|---------|---------------|----------|-------|
+| **Code Review AI** | AI code assistant, LLM with code context | Low-Med | -20-30% review time |
+| **Doc Generation** | AI documentation tool, LLM | Low | -50% doc time |
+| **Test Generation** | AI code assistant, test framework integration | Medium | +20-30% coverage |
+| **Refactoring** | AI-powered IDE, code transformation tool | Med-High | Large-scale refactor |
+| **Design Review** | LLM with architecture context | Medium | Architecture quality |
+| **Sprint Planning** | LLM, planning tool integration | Low-Med | -30-40% planning time |
+| **Onboarding** | AI code assistant, context-aware chat | Low | Faster ramp-up |
+| **Bug Triage** | AI-powered error tracking, log analysis | Med-High | Root cause detection |
 
-> **Examples**: Code assistants (GitHub Copilot, Continue.dev, Cody, Tabby), LLMs (OpenAI, Anthropic, Ollama local), IDEs (Cursor, VS Code + extensions)
+> **Tool examples**: Code assistants (GitHub Copilot, Continue.dev, Cody, Tabby), LLMs (OpenAI, Anthropic, Ollama), IDEs (Cursor, VS Code + extensions)
 
-### Experimentation Framework (2-week sprints)
+### Pattern Selection
 
-**Phase 1: Pattern Selection (Week 1-2)**
-- Team workshop (2h): Review patterns, vote on 1-2
-- Criteria: Pain point alignment, feasibility, risk, learning value
-- Output: 1-page experiment charter (hypothesis, metrics, timeline)
+**Team workshop process:**
+1. Review pattern catalog
+2. Identify top pain points
+3. Vote on 1-2 patterns to pilot
+4. Define success criteria
+5. Create experiment charter (hypothesis, metrics, timeline)
 
-**Phase 2: Sprint Experiment (Week 3-4)**
-- Provision tools (free trials)
-- Train team (1h session)
-- Log interactions (what works, what doesn't)
-- Collect data: quantitative (time, quality) + qualitative (feedback)
+## Define an AI technology strategy
 
-**Phase 3: Decision (Week 5)**
-- Team retro (90min)
-- Decision: **Adopt** (met criteria) | **Adjust** (partial success) | **Abandon** (failed)
-- **Important**: Abandoning = success (learned what doesn't work)
+Choose your technology stack based on your team's context. No single "best" approach exists.
 
-### Why No Business Cases?
+### Stack Options
 
-Budget manageable ($500-2K/month), time-to-value fast (2 weeks), risk low. Act like trying new IDE extension, not implementing SAP.
+| Approach | When to Use | Examples | Trade-offs |
+|----------|-------------|----------|------------|
+| **SaaS** | Quick start, low maintenance | Managed AI services, cloud IDEs | Fast setup / Vendor lock-in |
+| **PaaS (APIs)** | Custom integration, pay-per-use | LLM APIs, ML platforms | Flexibility / Integration work |
+| **Self-Hosted** | Data sovereignty, compliance | Local LLMs (Ollama, LM Studio) | Full control / Ops overhead |
+| **Hybrid** | Balance control and convenience | SaaS + self-hosted models | Best of both / Complexity |
 
-## 2. Technology Strategy
+### Selection Criteria
 
-### Choose Your Stack Based on Context
-
-**No single "best" approach** - select based on: budget, skills, compliance, data sensitivity, infrastructure.
-
-**Stack Options** (all valid):
-
-| Approach | When to Use | Examples | Considerations |
-|----------|-------------|----------|----------------|
-| **SaaS** | Quick start, low maintenance, public cloud OK | Managed AI services, cloud IDEs | +Fast setup, -Vendor lock-in, -Data leaves premises |
-| **PaaS (APIs)** | Custom integration, pay-per-use | LLM APIs, ML platforms | +Flexibility, +Scale, -Requires integration work |
-| **Self-Hosted** | Data sovereignty, compliance, cost control | Local LLMs (Ollama, LM Studio), on-premise compute | +Full control, +Privacy, -Ops overhead, -Requires expertise |
-| **Hybrid** | Balance control and convenience | SaaS tools + self-hosted models | +Best of both, -Complexity |
-
-**Selection Criteria**:
 - **Data sensitivity**: High → Self-hosted or private cloud
-- **Budget**: Limited → Self-hosted open-source or pay-per-use APIs
+- **Budget**: Limited → Self-hosted open-source or pay-per-use
 - **Team skills**: Low → SaaS, High → Self-hosted
 - **Compliance**: Strict → Self-hosted or compliant SaaS
 - **Speed**: Fast start → SaaS, Custom needs → PaaS/Self-hosted
 
-### Integration Architecture
+**Integration principle**: AI fits into existing workflows (IDE, VCS, CI/CD, planning tools), doesn't create new ones.
 
-**Principle**: AI fits existing workflows, doesn't create new ones.
+## Define a data strategy
 
-**Touchpoints**: IDE (code assistant) → VCS (PR review bot) → CI/CD (security scan) → Planning (LLM integration) → Communication (chat integration)
-
-**Example tools by category**:
-- **Code assistants**: GitHub Copilot, Continue.dev, Cody, Tabby, Ollama with IDE plugins
-- **VCS integration**: PR review bots, commit analysis
-- **CI/CD**: Security scanners, test generators
-- **Planning**: LLM APIs, self-hosted models
-- **Chat**: Slack/Teams/Mattermost bots
-
-**Rules**:
-- One tool per touchpoint
-- Async over sync
-- Optional → required (after buy-in)
-- Fail gracefully
-
-## 3. Data Strategy
+Classify what data can be used with AI tools and establish clear boundaries.
 
 ### Data Classification
 
@@ -100,79 +78,45 @@ Budget manageable ($500-2K/month), time-to-value fast (2 weeks), risk low. Act l
 | **Credentials/secrets** | ❌ NEVER | Keys, passwords, tokens |
 | **Proprietary algorithms** | ⚠️ Case-by-case | Core differentiators |
 
-### Team Data Policies
+**Key policies:**
+- Train team on data classification
+- Setup secret detection (e.g., Gitleaks)
+- Client data always off-limits
+- Document incident response plan
 
-**Policy 1**: Default to caution - if unsure, ask tech lead
-**Policy 2**: Tool-specific controls - disable Copilot on sensitive repos, use business accounts
-**Policy 3**: Client data off-limits - never send production data to AI
-**Policy 4**: Secrets NEVER AI-appropriate - use placeholders, env vars
+## Develop a responsible AI strategy
 
-## 4. Responsible AI (Team Level)
+Establish team practices for responsible AI usage:
 
-6 major principles :
+- **Accountability**: Developers own AI-generated code, not the AI
+- **Validation**: All AI outputs require review and testing
+- **Transparency**: Document when AI was used (e.g., in PRs)
+- **Inclusiveness**: Ensure all team members can use tools effectively
+- **Continuous learning**: Share patterns, workflows, and limitations
 
-1. **Fairness**: AI shouldn't favor/disadvantage team members. Calibrate collectively.
-2. **Reliability**: AI-generated code needs human review + tests. AI is tool, not reviewer.
-3. **Privacy**: No data leaks. PII filtering, opt-out training, SOC2 tools only.
-4. **Inclusiveness**: Training for all, hardware equity, shared knowledge.
-5. **Transparency**: Label AI contributions in PRs, share workflows/limitations.
-6. **Accountability**: Author owns code even if AI wrote it. No AI blame.
+Teams should maintain the same quality standards regardless of whether code was written manually or AI-assisted.
 
-### Checklist
+## Example AI strategy
 
-- [ ] Fairness: Works for all team members?
-- [ ] Reliability: Tests/validation for AI output?
-- [ ] Privacy: Only approved data to AI?
-- [ ] Security: Tool meets security requirements?
-- [ ] Inclusiveness: Everyone can use effectively?
-- [ ] Transparency: Clear when AI used?
-- [ ] Accountability: Clear ownership?
+### Phase 1: Exploration (Week 1-2)
+- Team workshop to select 1-2 patterns
+- Define success criteria and metrics
+- Create experiment charter
 
-## Strategy Checklist
+### Phase 2: Experimentation (Week 3-4)
+- Provision tools (use free trials)
+- Train team (1-2 hours)
+- Run sprint experiment
+- Collect quantitative and qualitative data
 
-### Exploration (Week 1-2)
-- [ ] Review pattern catalog
-- [ ] Identify team pain points
-- [ ] Team workshop: select 1-2 patterns
-- [ ] Define success criteria
-- [ ] Create experiment charter
+### Phase 3: Decision (Week 5)
+- Team retrospective
+- Decision: **Adopt** (success) | **Adjust** (partial) | **Abandon** (learned it doesn't fit)
+- Document learnings
+- Scale or iterate
 
-### Experimentation (Week 3-4)
-- [ ] Provision tools (free trials)
-- [ ] Train team (1h)
-- [ ] Define workflows
-- [ ] Baseline metrics
-- [ ] Run 2-week sprint
-- [ ] Log feedback
-
-### Decision (Week 5)
-- [ ] Review metrics vs criteria
-- [ ] Team retrospective
-- [ ] Decide: Adopt/Adjust/Abandon
-- [ ] Document learnings
-- [ ] Rollout or iterate
-
-### Technology
-- [ ] Prioritize SaaS over custom
-- [ ] Vet tools (SOC2/GDPR)
-- [ ] Budget caps ($500/month APIs)
-- [ ] Integrate into existing workflows
-- [ ] Tool approval process
-
-### Data
-- [ ] Classify data (public/internal/client/secrets)
-- [ ] Train on anonymization
-- [ ] Setup secret detection (Gitleaks)
-- [ ] Policy: client data off-limits
-- [ ] Incident response plan
-
-### Responsible AI
-- [ ] Collective calibration
-- [ ] Tests for AI code
-- [ ] Maintain accountability
-- [ ] Document AI usage in PRs
-- [ ] Share workflows/limitations
+**Remember**: Abandoning an experiment is success—you learned what doesn't work for your team.
 
 ## Next Steps
 
-→ [Phase 2: Plan](02-plan.md) - Convert patterns into concrete plans
+→ [Phase 2: Plan](02-plan.md) - Convert strategy into concrete implementation plans
