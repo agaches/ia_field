@@ -18,10 +18,11 @@ Structured AI adoption following the "Person → Team → Product" model: indivi
 
 ## Which Framework to Use?
 
-- **Personal productivity** (Copilot, ChatGPT) → [Employee](employee/)
+- **Personal productivity** (work assistant, coding assistant) → [Employee](employee/)
 - **Team processes** (code review, testing) → [Delivery](delivery/)
-- **Production apps** (chatbot, API) → [Automation](automation/)
-- **Never used AI?** → Start with [Employee](employee/)
+- **Production apps** (chatbot, API, AI workflows) → [Automation](automation/)
+
+> Never used AI? → Start with [Employee](employee/)
 
 ## Getting Started
 
@@ -29,13 +30,12 @@ Structured AI adoption following the "Person → Team → Product" model: indivi
 2. **Choose your framework**: Based on maturity and scope (see table above)
 3. **Follow the 6 phases**: Strategy → Plan → Ready → Govern → Secure → Manage
 
-**Next step**: Read [00-strategy-global.md](00-strategy-global.md) to understand the complete model
+**Next step**: Read [STRATEGY.md](STRATEGY.md) to understand the complete model
 
 ## Resources
 
 - **Training**: [TRAINING.md](TRAINING.md) - Progression paths by level (1→2, 2→3, 3→4)
 - **Glossary**: [GLOSSARY.md](GLOSSARY.md) - Cloud service equivalences (AWS/GCP/Azure)
-- **References**: NIST AI RMF, MITRE ATLAS, OWASP Generative AI
 
 ---
 
