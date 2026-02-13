@@ -1,59 +1,107 @@
 # Phase 1: Strategy - Individual AI Strategy
 
-## Overview
+## Why strategic AI planning matters
 
-Discover AI tools that improve your daily productivity. Choose according to your needs, test, keep what works.
+Strategic AI planning helps you identify the right tools for your work, avoid wasted time and money, and ensure responsible usage. A clear strategy prevents tool overload and keeps you focused on productivity gains.
 
-## 1. Choose Your AI Tools
+## Identify AI use cases
 
-### Matrix by Usage
+Identify tasks where AI improves your productivity:
+
+**Common use cases by role**:
+- **Writing**: Emails, documentation, content creation, editing
+- **Development**: Code completion, debugging, documentation, test generation
+- **Analysis**: Data interpretation, research synthesis, pattern identification
+- **Creative**: Image generation, mockups, brainstorming, design ideas
+
+**Selection criteria**:
+1. Repetitive and time-consuming tasks
+2. Tasks requiring quick iteration (drafts, prototypes)
+3. Tasks where AI augments your expertise (not replaces it)
+
+## Define an AI technology strategy
+
+### AI services (SaaS)
+
+Use SaaS solutions exclusively. No infrastructure setup, no local models, no complex APIs.
+
+**Tool matrix by category**:
 
 | Category | Example Tools | Usage | Cost |
 |-----------|-------------------|-------|------|
 | **Conversational AI** | ChatGPT, Claude, Gemini | Writing, brainstorming, analysis | 0-20€/month |
-| **Code Assistance** | GitHub Copilot, Claude Code | Autocompletion, code generation | 10-20€/month |
-| **Media Generation** | Midjourney, Nano Banana Pro | Images, mockups | 10-20€/month |
-| **Productivity** | Notion AI, Grammarly | Documents, notes, correction | 10-30€/month |
+| **Code Assistance** | GitHub Copilot, Claude Code, Cursor | Code completion, generation | 10-20€/month |
+| **Media Generation** | Midjourney, DALL-E | Images, mockups | 10-20€/month |
+| **Productivity** | Notion AI, Grammarly | Documents, correction | 10-30€/month |
 
-**Principle**: Choose 2-3 tools aligned with your work. Typical budget: 20-50€/month.
+**Selection approach**:
+1. Choose 2-3 tools aligned with your use cases
+2. Typical budget: 20-50€/month
+3. Start with free tiers, upgrade if needed
 
-### Simple Approach
+## Define a data strategy
 
-1. **Select** 2-3 tools according to your needs
-2. **Test** 1 month on your real tasks
-3. **Decide**: Adopt / Adjust / Abandon
-4. **Iterate** with other tools if needed
+### Data classification rules
 
-## 2. SaaS Only Principle
+**✅ Safe to share**:
+- Personal notes and drafts (non-confidential)
+- Open-source code and public documentation
+- Public information and general knowledge questions
 
-Use SaaS solutions (ChatGPT, Copilot, etc.). No infrastructure setup, no local models, no complex APIs.
+**❌ Never share**:
+- Customer data, credentials, API keys
+- Confidential intellectual property
+- Proprietary code and business secrets
+- Personally identifiable information (PII)
 
-## 3. Data Rules
+**⚠️ Check company policy**:
+- Internal documents and project information
+- Company code (even if non-confidential)
+- Business data and metrics
 
-**✅ OK**: Personal notes, non-confidential drafts, open-source code, public information
-**❌ Forbidden**: Customer data, confidential IP, proprietary code, PII
+**Paid tools with security review may allow some company data** - always verify with IT first.
 
-If using a paid solution with security review, it may be possible to consider certain company data
+## Develop a responsible AI strategy
 
-See [Phase 4: Govern](04-govern.md) for complete policy.
-See [Phase 5: Secure](05-secure.md) for (data) security.
+### Your responsibilities
 
+- **Validate outputs**: Never trust AI blindly, always verify facts and code
+- **Respect data rules**: Follow classification guidelines above
+- **Acknowledge limitations**: AI has biases, can hallucinate, makes mistakes
+- **Be transparent**: Mention AI usage for code reviews, published content
+- **Own your results**: You're responsible for what you share and produce
 
-## 4. Responsible AI
+### Ethical considerations
 
-**Your Role**:
-- Be aware of AI biases and limitations
-- Always validate outputs (no blind trust)
-- Never share sensitive data
-- You are responsible for your prompts and results
+- Check for bias in AI outputs (gender, culture, confirmation bias)
+- Verify sources and references (AI can invent citations)
+- Test code before using it in production
+- Vary prompts and tools for critical decisions
+
+## Example AI strategy
+
+**Developer example**:
+- **Use cases**: Code completion, debugging, documentation, learning new frameworks
+- **Tools**: GitHub Copilot ($10) + Claude Pro ($20)
+- **Data**: Open-source code only, no proprietary code
+- **Budget**: $30/month
+- **ROI target**: Save 3+ hours/week
+
+**Non-technical example**:
+- **Use cases**: Email drafting, content creation, research, document editing
+- **Tools**: ChatGPT Plus ($20) + Grammarly free
+- **Data**: Public information, personal drafts only
+- **Budget**: $20/month
+- **ROI target**: Save 2+ hours/week
 
 ## Strategy Checklist
 
-- [ ] Choose 2-3 tools according to your needs (see matrix)
-- [ ] Budget 20-50€/month
-- [ ] Check your company's usage policy
-- [ ] Respect data rules (section 3)
+- [ ] Identify 3-5 use cases from your daily work
+- [ ] Choose 2-3 tools based on use cases (see matrix)
+- [ ] Set budget: 20-50€/month
+- [ ] Read company AI policy if available
+- [ ] Understand data classification rules
 
 ## Next Step
 
-→ [Phase 2: Plan](02-plan.md) - Assess and develop your AI skills
+→ [Phase 2: Plan](02-plan.md) - Assess skills and plan your learning
