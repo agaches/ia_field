@@ -36,6 +36,18 @@ Ce framework d'adoption IA est structuré autour d'un modèle progressif en **3 
     └──────────────────┘     Timeline: Months → Quarters
 ```
 
+### En résumé
+
+> **Person → Project → Product** = "**J'apprends** → **On collabore** → **On industrialise**"
+
+C'est un **modèle de maturité progressive** où chaque niveau construit sur le précédent, au lieu de tout vouloir faire d'un coup !
+
+- **Person (J'apprends)** : Je développe mes compétences individuelles avec l'IA
+- **Project (On collabore)** : On applique ces compétences aux processus d'équipe
+- **Product (On industrialise)** : On déploie en production pour automatiser le métier
+
+---
+
 ## Les 3 catégories : démarcation claire
 
 ### 1. Person (Employee) - Adoption individuelle
