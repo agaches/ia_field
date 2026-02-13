@@ -1,10 +1,6 @@
 # Phase 5: Secure - AI Security
 
-## Overview
-
-Defense-in-depth (6 layers): risk discovery, protection, detection, response.
-
-## 1. AI Security Risks
+## Discover AI security risks
 
 ### OWASP LLM Top 10
 
@@ -29,42 +25,40 @@ Defense-in-depth (6 layers): risk discovery, protection, detection, response.
 
 **Phases**: Reconnaissance → Resource Dev → Initial Access → Execution → Persistence → Exfiltration
 
-## 2. Defense-in-depth (6 layers)
+## Protect AI resources and data
 
-### Layer 1: Identity and Access
+### Secure AI resources
+
+**Identity and Access**:
 - Strict IAM (least privilege)
 - Mandatory MFA
 - RBAC for models/data
 
-### Layer 2: Network
+**Network**:
 - Segmentation (VPC, subnets)
 - DDoS protection
 - Firewall + IDS/IPS
 
-### Layer 3: Data
-- Encryption (at rest + in transit)
-- DLP (sensitive data scanning)
-- Anonymization/pseudonymization
-
-### Layer 4: Application
-- Input/output validation
-- Guardrails (prompt/output filtering)
-- Rate limiting
-- API abuse monitoring
-
-### Layer 5: Models
+**Models**:
 - Model scanning (vulnerabilities)
 - Watermarking (traceability)
 - Adversarial testing
 - Provenance verification
 
-### Layer 6: Monitoring & Response
-- SIEM (centralized logs)
-- Anomaly alerts
-- Incident response plan
-- Regular pentesting
+### Secure AI data
 
-## 3. Data Loss Prevention (DLP)
+**Data protection**:
+- Encryption (at rest + in transit)
+- DLP (sensitive data scanning)
+- Anonymization/pseudonymization
+
+**Application security**:
+- Input/output validation
+- Guardrails (prompt/output filtering)
+- Rate limiting
+- API abuse monitoring
+
+**Data Loss Prevention (DLP)**:
 
 **Prevention**:
 - Automatic data classification
@@ -78,7 +72,21 @@ Defense-in-depth (6 layers): risk discovery, protection, detection, response.
 
 > See [GLOSSARY.md](../GLOSSARY.md) for DLP tool options (cloud, on-premise, open-source)
 
-## 4. AI Pentesting
+## Detect AI security threats
+
+### Monitoring and response
+
+**SIEM (Security Information and Event Management)**:
+- Centralized logs
+- Anomaly alerts
+- Correlation rules for AI-specific threats
+
+**Incident response**:
+- Defined procedures for AI security incidents
+- Escalation paths
+- Containment and recovery plans
+
+### Penetration testing
 
 **Scope**:
 - Prompt injection attacks
@@ -87,15 +95,6 @@ Defense-in-depth (6 layers): risk discovery, protection, detection, response.
 - Supply chain vulnerabilities
 
 **Frequency**: Annual (minimum) + after major changes
-
-## Secure Checklist
-
-- [ ] 6-layer defense-in-depth implemented
-- [ ] OWASP LLM Top 10 mitigations
-- [ ] Complete DLP (prevention + detection)
-- [ ] SIEM + anomaly monitoring
-- [ ] Incident response plan
-- [ ] Annual pentesting
 
 ## Next Step
 

@@ -1,22 +1,15 @@
 # Phase 2: Plan - Plan AI Adoption
 
-## Overview
+## Assess AI skills
 
-Transform strategy into actionable steps: skills, resources, timeline.
-
-## 1. Assess Team AI Skills (Level 3-4)
-
-### Maturity Prerequisites
+### Maturity prerequisites
 
 **STOP - Validate before adopting Automation**:
 - ✅ Team Level 2+ (see [SKILLS.md](../SKILLS.md))
 - ✅ 6-12 months Delivery Framework experience
 - ✅ 1+ AI project in production
 
-**Team evaluation**: Consult [SKILLS.md](../SKILLS.md) for:
-- Definition of Levels 3-4 (Automation target)
-- Skills Matrix (goal: Level 3-4)
-- Delivery → Automation transition validation
+### Team evaluation
 
 **Criteria**:
 1. Team Skills Matrix (goal: Level 3-4)
@@ -28,11 +21,11 @@ Transform strategy into actionable steps: skills, resources, timeline.
 - Data assets (sources, quality, accessibility)
 - Tech infrastructure (compute, storage, network, security)
 
-## 2. Acquire AI Skills
+> Consult [SKILLS.md](../SKILLS.md) for Levels 3-4 definition and Automation transition validation
 
-### Level 3 → 4 Training
+## Acquire AI skills
 
-**Complete path**: Consult [TRAINING.md](../TRAINING.md) section 5 for:
+### Level 3 → 4 training path
 
 **Concepts**:
 - Advanced ML & LLM Fine-Tuning (LoRA, QLoRA, RLHF)
@@ -47,15 +40,17 @@ Transform strategy into actionable steps: skills, resources, timeline.
 
 **Validation**: Fine-tuning + multi-region production + positive ROI
 
-**Recommended certifications**:
-- AWS/GCP/Azure ML Advanced
-- Kubernetes Application Developer (CKAD)
+> See [TRAINING.md](../TRAINING.md) section 5 for complete training path
 
-**Recruitment** (if needed): ML Engineers, Data Scientists, MLOps Engineers, AI Ethics Specialists
+### Options
+
+**Certifications**: AWS/GCP/Azure ML Advanced, Kubernetes Application Developer (CKAD)
+
+**Recruitment**: ML Engineers, Data Scientists, MLOps Engineers, AI Ethics Specialists
 
 **Partnerships**: AI consultants, system integrators, cloud partners
 
-## 3. Access AI Resources
+## Access AI resources
 
 | Type | Access | Costs |
 |------|-------|-------|
@@ -65,7 +60,7 @@ Transform strategy into actionable steps: skills, resources, timeline.
 
 > See [GLOSSARY.md](../GLOSSARY.md) for platform-specific AI services and self-hosted alternatives
 
-## 4. Prioritize Use Cases
+## Prioritize AI use cases
 
 **Criteria**:
 - Business impact (ROI, value)
@@ -75,19 +70,21 @@ Transform strategy into actionable steps: skills, resources, timeline.
 
 **Matrix**: Impact × Feasibility → Prioritize High/High first
 
-## 5. PoC
+## Create AI proof of concepts
 
 **Duration**: 1-3 months
 **Objective**: Validate technical feasibility + business value
 **Scope**: Limited dataset, isolated environment, clear metrics
 
-## Plan Checklist
+## Implement responsible AI
 
-- [ ] Assess maturity (skills, data, infrastructure)
-- [ ] Skills development plan
-- [ ] Cloud resources access
-- [ ] Prioritize use cases (impact/feasibility matrix)
-- [ ] Launch PoC (1-3 months)
+Establish responsible AI practices from Phase 1 strategy during PoC:
+- Apply fairness and bias monitoring
+- Implement human oversight requirements
+- Document data usage and model decisions
+- Validate compliance with regulations
+
+> Reference [Phase 1: Responsible AI strategy](01-strategy.md#develop-a-responsible-ai-strategy)
 
 ## Next Step
 

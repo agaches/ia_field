@@ -1,14 +1,10 @@
 # Phase 4: Govern - AI Governance
 
-## Overview
-
-Complete governance: risk management, policies, approvals, AI CoE.
-
-## 1. Assess Risks (NIST AI RMF)
+## Assess AI organizational risks
 
 [NIST AI Risk Management Framework](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 
-### Primary Risks
+### Primary risks
 
 | Risk | Impact | Mitigation |
 |--------|--------|------------|
@@ -22,7 +18,9 @@ Complete governance: risk management, policies, approvals, AI CoE.
 
 **Assessment**: Impact × Probability (1-5) → Score >15 = Critical
 
-## 2. Essential Policies
+## Document AI governance policies
+
+### Essential policies
 
 **Acceptable AI Use**: Authorized/prohibited use cases, sensitive data restrictions
 
@@ -30,43 +28,9 @@ Complete governance: risk management, policies, approvals, AI CoE.
 
 **Model Approval**: Validation gates (dev → staging → prod), performance criteria, bias assessment
 
-## 3. AI Center of Excellence (AI CoE)
+### Compliance requirements
 
-**Role**: Centralize AI governance, standards, best practices
-
-**Composition**:
-- AI Ethics Lead
-- ML Engineers (senior)
-- Legal/Compliance
-- Security
-- Business stakeholders
-
-**Responsibilities**: Model approval, audits, training, regulatory monitoring
-
-## 4. Approval Process
-
-**3 Gates**:
-1. **Concept** → Use case validation, risks, data
-2. **Development** → Model review, bias testing, security
-3. **Production** → Final validation, monitoring, DR
-
-**Gates**: Go/No-Go decided by AI CoE
-
-## 5. Audits & Compliance
-
-**Regular Audits** (quarterly):
-- Policy compliance
-- Bias/fairness testing
-- Security (vulnerabilities, DLP)
-- Model performance
-
-**Regulatory Compliance**: EU AI Act, GDPR, CCPA, sector-specific (healthcare, finance)
-
-## 6. Legal Compliance
-
-### Regional Regulations
-
-**EU AI Act**: Risk-based approach for high-risk AI systems (chatbots, credit, recruitment, biometrics)
+**EU AI Act**: Risk-based approach for high-risk AI systems
 - Risk management framework (NIST AI RMF recommended)
 - Data governance and lineage
 - Technical documentation (model cards)
@@ -80,35 +44,60 @@ Complete governance: risk management, policies, approvals, AI CoE.
 - Breach notification procedures
 - Data portability
 
+**Sector-specific**:
+- **Healthcare**: PHI protection, encryption, access controls, audit trails
+- **Finance**: Data protection, model explainability, regulatory reporting
+- **Insurance**: Fairness testing, transparency in decision models
+
 > Research specific regulatory requirements for your jurisdiction and industry
 
-### Sector-Specific Compliance
+## Enforce AI governance policies
 
-**Healthcare**: PHI protection, encryption, access controls, audit trails
+### AI Center of Excellence (AI CoE)
 
-**Finance**: Data protection, model explainability, regulatory reporting
+**Role**: Centralize AI governance, standards, best practices
 
-**Insurance**: Fairness testing, transparency in decision models
+**Composition**:
+- AI Ethics Lead
+- ML Engineers (senior)
+- Legal/Compliance
+- Security
+- Business stakeholders
 
-> Consult legal/compliance teams for specific requirements
+**Responsibilities**: Model approval, audits, training, regulatory monitoring
 
-## Govern Checklist
+### Approval process
 
-**Governance Framework**:
-- [ ] Risk management framework implemented (NIST AI RMF recommended)
-- [ ] AI policies documented and enforced
-- [ ] AI CoE or governance body established
-- [ ] Approval process for AI systems
-- [ ] Regular audits scheduled
+**3 Gates**:
+1. **Concept** → Use case validation, risks, data
+2. **Development** → Model review, bias testing, security
+3. **Production** → Final validation, monitoring, DR
 
-**Legal Compliance**:
-- [ ] Applicable regulations identified
-- [ ] Technical documentation requirements met
-- [ ] PII protection and anonymization implemented
-- [ ] Data retention policies configured
-- [ ] Audit trails operational
-- [ ] DLP tools deployed
-- [ ] Sector-specific compliance validated
+**Gates**: Go/No-Go decided by AI CoE
+
+## Monitor AI organizational risks
+
+### Regular audits
+
+**Frequency**: Quarterly (minimum)
+
+**Scope**:
+- Policy compliance
+- Bias/fairness testing
+- Security (vulnerabilities, DLP)
+- Model performance
+- Regulatory compliance
+
+### Continuous monitoring
+
+**Track**:
+- Risk score trends
+- Policy violations
+- Model drift and degradation
+- Compliance status
+- Incident reports
+
+**Actions**: Alert on threshold breach, trigger reviews, update policies
 
 ## Next Step
 

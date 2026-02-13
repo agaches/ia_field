@@ -1,12 +1,10 @@
 # Phase 1: Strategy - AI Strategy
 
-## Overview
+## Why strategic AI planning matters
 
-Structured planning: Use cases, Tech strategy, Data governance, Responsible AI.
+AI adoption requires structured planning to ensure business value, technical feasibility, and responsible implementation. Without strategy, organizations risk wasted resources, compliance issues, and failed deployments.
 
-## 1. Identify AI Use Cases
-
-### Methodology
+## Identify AI use cases
 
 **Steps**:
 1. Automation opportunities (repetitive processes, data-heavy tasks, frequent errors)
@@ -23,9 +21,9 @@ Structured planning: Use cases, Tech strategy, Data governance, Responsible AI.
 | Document processing | Reduce costs | Completion rate |
 | Inventory management | Reduce costs | Stock duration |
 
-## 2. Technology Strategy
+## Define an AI technology strategy
 
-### Consumption Models
+### Consumption models
 
 | Model | When to Use | Approach |
 |--------|---------------|----------|
@@ -37,7 +35,7 @@ Structured planning: Use cases, Tech strategy, Data governance, Responsible AI.
 
 > See [GLOSSARY.md](../GLOSSARY.md) for cloud/on-premise service equivalents
 
-## 3. Data Strategy
+## Define a data strategy
 
 **Governance**:
 - Data classification (sensitivity)
@@ -56,7 +54,7 @@ Structured planning: Use cases, Tech strategy, Data governance, Responsible AI.
 
 > See [GLOSSARY.md](../GLOSSARY.md) for DLP and data pipeline tool options
 
-## 4. Responsible AI
+## Develop a responsible AI strategy
 
 **Governance**:
 - AI Center of Excellence
@@ -74,12 +72,13 @@ Structured planning: Use cases, Tech strategy, Data governance, Responsible AI.
 
 **Compliance**: EU AI Act, GDPR, CCPA/CPRA, sector-specific regulations
 
-## Strategy Checklist
+## Example AI strategy
 
-- [ ] Identify AI use cases (objectives + metrics)
-- [ ] Define tech strategy (SaaS/PaaS/IaaS)
-- [ ] Data strategy (governance, lifecycle)
-- [ ] Responsible AI (center of excellence, compliance)
+**Use Case**: Customer support chatbot
+**Technology**: PaaS (RAG with managed LLM)
+**Data**: FAQ database + support ticket history (classified, access-controlled)
+**Responsible AI**: Human escalation for complex issues, bias monitoring, GDPR compliance
+**Success Metrics**: 30% reduction in response time, 85% customer satisfaction
 
 ## Next Step
 
