@@ -265,6 +265,49 @@ Les fichiers `01-strategy.md` des 3 frameworks sont **fondamentalement différen
 Voir [GLOSSARY.md](../GLOSSARY.md) pour les équivalences de services cloud.
 ```
 
+---
+
+## Référencement des compétences et formation
+
+### SKILLS.md : Grille de maturité centralisée
+
+[SKILLS.md](../SKILLS.md) contient :
+- 4 niveaux avec critères mesurables
+- 6 axes de compétences
+- Skills Matrix avec barème ⭐ explicite
+- Auto-évaluation guidée
+- Validation passage de framework
+- Mapping Niveaux ↔ Frameworks
+
+**Utilisez SKILLS.md au lieu de redéfinir les niveaux.**
+
+### TRAINING.md : Parcours de formation centralisé
+
+[TRAINING.md](../TRAINING.md) contient :
+- 3 parcours (1→2, 2→3, 3→4)
+- Structure Concepts + Outils
+- Format formations outils (découverte)
+- Validation par projet
+- Gouvernance formation (LIGHT/MEDIUM/FULL)
+- Certifications
+
+**Référencez TRAINING.md depuis les phases (employee/delivery/automation 02-plan.md).**
+
+### Pattern de référence
+
+```markdown
+<!-- Bon : Référencer SKILLS.md -->
+Consultez [SKILLS.md](../SKILLS.md) pour les niveaux de maturité.
+
+<!-- Bon : Référencer TRAINING.md -->
+Consultez [TRAINING.md](../TRAINING.md) section "Parcours Niveau X → Y".
+
+<!-- Mauvais : Redéfinir les niveaux -->
+| Niveau | Compétences | ... |
+|--------|-------------|-----|
+| 1 | Prompt basics | ... |
+```
+
 ```markdown
 <!-- Mauvais : Re-expliquer les principes IA responsable -->
 Les 6 principes d'IA responsable sont :

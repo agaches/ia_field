@@ -165,12 +165,13 @@ C'est un **modèle de maturité progressive** où chaque niveau construit sur le
 
 ### Grille de maturité détaillée
 
-| Niveau | Compétences | Technologies | Données | Opérations | Framework |
-|--------|-------------|--------------|---------|------------|-----------|
-| **Niveau 1** | Prompt basics, usage SaaS | SaaS uniquement (Copilot, ChatGPT) | Personnelle | Aucune | **Employee** |
-| **Niveau 2** | Prompt engineering, sélection modèles | SaaS + API usage (OpenAI API) | Personnelle + interne simple | Minimal (Git) | **Employee → Delivery** |
-| **Niveau 3** | RAG, ML basics, data preprocessing | PaaS (SageMaker, Vertex AI) | Interne complexe | MLOps basics | **Delivery → Automation** |
-| **Niveau 4** | Training modèles, ML avancé | IaaS (GPU clusters, K8s) | Production, clients | MLOps complet | **Automation** |
+Voir [SKILLS.md](SKILLS.md) pour la définition complète des 4 niveaux avec critères mesurables par axe.
+
+**Résumé rapide** :
+- **Niveau 1** : SaaS uniquement → **Employee Framework**
+- **Niveau 2** : SaaS + API → **Employee → Delivery**
+- **Niveau 3** : PaaS (RAG, ML custom) → **Delivery → Automation**
+- **Niveau 4** : IaaS (GPU clusters, K8s) → **Automation Framework**
 
 ## Diagramme de dépendances entre frameworks
 

@@ -176,12 +176,7 @@ Référence rapide - Voir [README.md](README.md) pour détails complets.
 
 ## Niveaux de maturité IA
 
-Référence rapide - Voir [02-plan.md](02-plan.md) pour grille complète.
-
-- **Niveau 1** : Basique - SaaS, données minimales
-- **Niveau 2** : Intermédiaire - PaaS, ML simple, GenAI sans RAG
-- **Niveau 3** : Avancé - RAG, ML custom, training modèles
-- **Niveau 4** : Expert - Training grands modèles, infrastructure complexe
+Voir [SKILLS.md](SKILLS.md) pour la grille de maturité détaillée et [TRAINING.md](TRAINING.md) pour les parcours de formation.
 
 ## Rôles IA
 

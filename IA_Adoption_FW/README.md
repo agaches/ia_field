@@ -100,6 +100,34 @@ Voir [00-strategy-global.md](00-strategy-global.md) pour plus de questions/répo
 
 ---
 
+## Compétences et formation
+
+### Évaluez votre niveau
+
+Consultez **[SKILLS.md](SKILLS.md)** pour :
+- Comprendre les 4 niveaux de maturité (diagramme visuel)
+- Auto-évaluer vos compétences (Skills Matrix - 6 axes)
+- Identifier les gaps prioritaires
+- Critères de passage entre frameworks (Employee → Delivery → Automation)
+- Mapping vers frameworks
+
+**Quick check** : Quel niveau êtes-vous ?
+- Niveau 1-2 → [Employee](employee/)
+- Niveau 2-3 → [Delivery](delivery/)
+- Niveau 3-4 → [Automation](automation/)
+
+### Parcours de formation
+
+Consultez **[TRAINING.md](TRAINING.md)** pour :
+- Parcours par niveau (1→2, 2→3, 3→4)
+- Structure Concepts + Outils pour chaque parcours
+- Format formations outils (découverte avec scénarios live)
+- Validation par projet pratique
+- Certifications recommandées
+- Gouvernance formation (LIGHT/MEDIUM/FULL)
+
+---
+
 ## Structure des frameworks
 
 Chaque framework (Employee, Delivery, Automation) suit 6 phases communes :
