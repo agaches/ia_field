@@ -2,59 +2,40 @@
 
 > Lightweight AI adoption framework, cloud vendor agnostic, based on Cloud Adoption Framework best practices.
 
-## 3 AI Adoption Categories
+## Purpose
 
-| Category | For Whom? | Risk | Maturity | Framework |
-|----------|-----------|------|----------|-----------|
-| **Employee** | Individuals | Low-Medium | Levels 1-2 | [employee/](employee/) |
-| **Delivery** | Teams | Medium | Levels 2-3 | [delivery/](delivery/) |
-| **Automation** | Organizations | High-Critical | Levels 3-4 | [automation/](automation/) |
+Structured AI adoption following the "Person → Team → Product" model: individual skills, team processes, business production.
+
+## 3 AI Adoption Frameworks
+
+| Framework | For Whom? | Maturity | Start Here |
+|-----------|-----------|----------|------------|
+| **[Employee](employee/)** | Individuals | Levels 1-2 | Personal productivity |
+| **[Delivery](delivery/)** | Teams | Levels 2-3 | Team processes |
+| **[Automation](automation/)** | Organizations | Levels 3-4 | Production apps |
 
 **Progression**: Employee → Delivery → Automation (don't skip steps)
 
-See [00-strategy-global.md](00-strategy-global.md) for complete model and detailed descriptions.
-
-## Quick Guide: Which Framework?
+## Which Framework to Use?
 
 - **Personal productivity** (Copilot, ChatGPT) → [Employee](employee/)
 - **Team processes** (code review, testing) → [Delivery](delivery/)
 - **Production apps** (chatbot, API) → [Automation](automation/)
 - **Never used AI?** → Start with [Employee](employee/)
 
-More Q&A in [00-strategy-global.md](00-strategy-global.md)
-
-## Skills and Training
-
-- **Assess your level**: [SKILLS.md](SKILLS.md) - 4 maturity levels, self-assessment matrix
-- **Training paths**: [TRAINING.md](TRAINING.md) - Progression by level (1→2, 2→3, 3→4)
-
-## 6-Phase Structure
-
-All frameworks follow the same structure, adapted to their scope:
-
-```
-STRATEGY → PLAN → READY → GOVERN ⟷ SECURE ⟷ MANAGE
-```
-
-Each framework directory contains:
-- `01-strategy.md` - Define vision and use cases
-- `02-plan.md` - Plan adoption and skills
-- `03-ready.md` - Prepare environment
-- `04-govern.md` - Governance policies
-- `05-secure.md` - Security practices
-- `06-manage.md` - Operations and lifecycle
-
 ## Getting Started
 
-1. Read [00-strategy-global.md](00-strategy-global.md) for the complete model
-2. Assess your level with [SKILLS.md](SKILLS.md)
-3. Choose your framework based on maturity and scope
-4. Follow the 6 phases in order
+1. **Assess your level**: [SKILLS.md](SKILLS.md) - Self-assessment matrix (4 maturity levels)
+2. **Choose your framework**: Based on maturity and scope (see table above)
+3. **Follow the 6 phases**: Strategy → Plan → Ready → Govern → Secure → Manage
 
-## Additional Resources
+**Next step**: Read [00-strategy-global.md](00-strategy-global.md) to understand the complete model
 
+## Resources
+
+- **Training**: [TRAINING.md](TRAINING.md) - Progression paths by level (1→2, 2→3, 3→4)
 - **Glossary**: [GLOSSARY.md](GLOSSARY.md) - Cloud service equivalences (AWS/GCP/Azure)
-- **References**: NIST AI RMF, MITRE ATLAS, OWASP Generative AI (see framework docs)
+- **References**: NIST AI RMF, MITRE ATLAS, OWASP Generative AI
 
 ---
 

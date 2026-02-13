@@ -6,7 +6,12 @@
 
 Integrate AI into team processes: code review, documentation, testing, refactoring.
 
-**Prerequisites**: Levels 2-3 - See [GLOSSARY.md](../GLOSSARY.md)
+## Prerequisites
+
+Ce framework suppose que votre organisation a :
+- ✅ **Maturité individuelle** : Membres d'équipe compétents en IA (voir [Framework Employee](../employee/README.md))
+
+**Pas encore prêt ?** Commencez par [IA pour l'Employé](../employee/README.md)
 
 ## 6-Phase Framework
 
@@ -18,7 +23,3 @@ Integrate AI into team processes: code review, documentation, testing, refactori
 | [Govern](04-govern.md) | Establish policies |
 | [Secure](05-secure.md) | Implement security controls |
 | [Manage](06-manage.md) | Monitor and optimize |
-
-**Next step**: Start with [01-strategy.md](01-strategy.md)
-
-**Progression**: Level 3+ → [Framework Automation](../automation/README.md)

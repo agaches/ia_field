@@ -20,16 +20,6 @@ Ce framework s'adresse aux **individus** (tech et non-tech) souhaitant commencer
 5. **[Secure](05-secure.md)** - Adopter les bonnes pratiques sécurité
 6. **[Manage](06-manage.md)** - Gérer votre productivité
 
-## Quick Start
+## Nexts steps
 
-1. Lisez [Strategy](01-strategy.md) pour découvrir les outils
-2. Testez 2-3 outils pendant 1 mois
-3. Consultez [Secure](05-secure.md) pour les règles de base
-4. Évaluez vos résultats
-
-**Timeline** : Quelques heures à quelques jours
-**Coût** : 20-50€/mois
-
-## Progression
-
-Maîtrisé l'usage individuel ? Passez au **[Framework Delivery](../delivery/README.md)** pour intégrer l'IA dans vos processus d'équipe.
+Passez au **[Framework Delivery](../delivery/README.md)** pour intégrer l'IA dans vos processus d'équipe.
