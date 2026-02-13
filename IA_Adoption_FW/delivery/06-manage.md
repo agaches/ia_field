@@ -4,45 +4,45 @@
 
 ## 1. Operations: Basic Monitoring
 
-### Administration Quotidienne
+### Daily Administration
 
-**Responsable** : Tech lead ou admin désigné
+**Responsible**: Tech lead or designated admin
 
-**Onboarding (nouveau membre)** :
+**Onboarding (new member)**:
 ```markdown
-Checklist nouveau dev [Nom]
-- [ ] Créer compte GitHub org (invite email)
-- [ ] Assigner licence Copilot Business ($19/mois)
-- [ ] Créer compte ChatGPT Team workspace ($30/mois)
-- [ ] Optionnel : Claude for Work ($30/mois)
-- [ ] Envoyer accès repos (team-ai-prompts, team-vscode-config)
-- [ ] Planifier training 2h (politique, outils, demos)
-- [ ] Ajouter dashboard équipe (tracking costs, adoption)
-- [ ] Date : [Date] | Budget impact : +$49-79/mois
+New dev checklist [Name]
+- [ ] Create GitHub org account (email invite)
+- [ ] Assign Copilot Business license ($19/month)
+- [ ] Create ChatGPT Team workspace account ($30/month)
+- [ ] Optional: Claude for Work ($30/month)
+- [ ] Send access to repos (team-ai-prompts, team-vscode-config)
+- [ ] Schedule 2h training (policy, tools, demos)
+- [ ] Add to team dashboard (tracking costs, adoption)
+- [ ] Date: [Date] | Budget impact: +$49-79/month
 ```
 
-**Offboarding (départ membre)** :
+**Offboarding (departing member)**:
 ```markdown
-Checklist départ dev [Nom]
-- [ ] Révoquer accès GitHub org (immédiat)
-- [ ] Retirer ChatGPT Team workspace (immédiat)
-- [ ] Retirer Claude for Work si applicable
-- [ ] Récupérer licences (réallocation ou budget saved)
-- [ ] Retirer dashboard équipe
-- [ ] Archive conversations si requis conformité
-- [ ] Date : [Date] | Budget impact : -$49-79/mois
+Departing dev checklist [Name]
+- [ ] Revoke GitHub org access (immediate)
+- [ ] Remove from ChatGPT Team workspace (immediate)
+- [ ] Remove Claude for Work if applicable
+- [ ] Recover licenses (reallocation or budget saved)
+- [ ] Remove from team dashboard
+- [ ] Archive conversations if required for compliance
+- [ ] Date: [Date] | Budget impact: -$49-79/month
 ```
 
-**Support quotidien** :
-- Questions outils → Channel Slack dédié
-- Problèmes accès → Admin résout <2h
-- Demandes nouvelles licences → Validation lead + ajout budget
+**Daily support**:
+- Tool questions → Dedicated Slack channel
+- Access issues → Admin resolves <2h
+- New license requests → Lead validation + budget addition
 
-**Reporting mensuel management** :
-- Adoption (% équipe active)
-- Coûts (budget vs réel)
-- ROI (vélocité, satisfaction)
-- Incidents (downtime, problèmes)
+**Monthly management reporting**:
+- Adoption (% active team)
+- Costs (budget vs actual)
+- ROI (velocity, satisfaction)
+- Incidents (downtime, issues)
 
 ### Adoption & Usage Metrics
 
@@ -462,7 +462,7 @@ def validate_embeddings(file_path):
 ### Operations
 - [ ] Setup onboarding/offboarding checklists
 - [ ] Establish support channel (Slack)
-- [ ] Configure reporting mensuel management
+- [ ] Configure monthly management reporting
 - [ ] Create adoption dashboard (Google Sheets/Notion)
 - [ ] Configure GitHub metrics tracking
 - [ ] Establish monthly review routine (30min)

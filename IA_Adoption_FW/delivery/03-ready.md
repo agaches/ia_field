@@ -83,24 +83,24 @@ If tool down:
 
 ### Administration Setup
 
-**Désigner responsable** : Tech lead ou admin désigné pour gérer accès, licences, support
+**Assign responsible person**: Tech lead or designated admin to manage access, licenses, support
 
-**Définir processus** :
+**Define processes**:
 
-**Onboarding (nouveau membre)** :
-1. Créer comptes (GitHub org, ChatGPT workspace, Claude)
-2. Assigner licences (Copilot Business, ChatGPT Team)
-3. Training 2h (politique, outils, prompt library)
-4. Accès repos (team-ai-prompts, team-vscode-config)
-5. Ajout dashboard équipe
+**Onboarding (new member)**:
+1. Create accounts (GitHub org, ChatGPT workspace, Claude)
+2. Assign licenses (Copilot Business, ChatGPT Team)
+3. 2h training (policy, tools, prompt library)
+4. Access repos (team-ai-prompts, team-vscode-config)
+5. Add to team dashboard
 
-**Offboarding (départ membre)** :
-1. Révoquer accès immédiat (GitHub, ChatGPT, Claude)
-2. Récupérer licence (réallocation budget)
-3. Retrait dashboard équipe
-4. Archive conversations si nécessaire (conformité)
+**Offboarding (departing member)**:
+1. Revoke access immediately (GitHub, ChatGPT, Claude)
+2. Recover license (reallocation or budget savings)
+3. Remove from team dashboard
+4. Archive conversations if necessary (compliance)
 
-**Documentation** : Créer runbook administration (wiki/Notion) avec procédures détaillées
+**Documentation**: Create administration runbook (wiki/Notion) with detailed procedures
 
 ### IDE Configuration
 
@@ -164,9 +164,9 @@ jobs:
 
 - [ ] Document team policy (5-10 pages)
 - [ ] Provision team licenses (Copilot, ChatGPT)
-- [ ] Désigner responsable admin (tech lead)
-- [ ] Définir processus onboarding/offboarding
-- [ ] Créer runbook administration (wiki)
+- [ ] Assign admin responsible (tech lead)
+- [ ] Define onboarding/offboarding processes
+- [ ] Create administration runbook (wiki)
 - [ ] Create shared prompt library (Git repo)
 - [ ] Standardize IDE config (VS Code sync)
 - [ ] Configure pre-commit hooks (secrets)
