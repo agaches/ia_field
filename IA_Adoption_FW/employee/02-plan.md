@@ -12,8 +12,8 @@ Développez vos compétences IA de base et accédez aux bons outils.
 - Pratique métier (templates, intégration workflow)
 
 **Ressources** :
-- Coursera (Google AI Essentials), Microsoft Learn
-- learnprompting.org, guides OpenAI/Anthropic
+- Coursera, learnprompting.org, 
+- Anthropic Learn, Google AI Essentials, Microsoft Learn
 - Communautés métier (Reddit, Discord)
 
 **Certifications optionnelles** : Google AI Essentials, Microsoft AI Skills Challenge, Prompt Engineering (Coursera)
