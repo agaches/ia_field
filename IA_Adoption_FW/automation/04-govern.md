@@ -62,77 +62,53 @@ Complete governance: risk management, policies, approvals, AI CoE.
 
 **Regulatory Compliance**: EU AI Act, GDPR, CCPA, sector-specific (healthcare, finance)
 
-## 6. Legal Compliance - Concrete Actions
+## 6. Legal Compliance
 
-### EU AI Act (Effective August 2026)
+### Regional Regulations
 
-**High-risk systems** (Art. 6): Customer chatbots, credit systems, recruitment, biometrics
+**EU AI Act**: Risk-based approach for high-risk AI systems (chatbots, credit, recruitment, biometrics)
+- Risk management framework (NIST AI RMF recommended)
+- Data governance and lineage
+- Technical documentation (model cards)
+- Transparency requirements
+- Human oversight for critical decisions
 
-**Required actions**:
+**GDPR/Privacy Laws**:
+- Data minimization and anonymization
+- Right to explanation (explainable AI)
+- Data retention policies
+- Breach notification procedures
+- Data portability
 
-| Requirement | Technical Implementation | Tools Examples |
-|-------------|-------------------------|----------------|
-| Risk management (Art. 9) | NIST AI RMF + quarterly assessment | Risk register, audit logs |
-| Data governance (Art. 10) | Data lineage + quality metrics | OpenMetadata, DataHub, Apache Atlas |
-| Technical documentation (Art. 11) | Model cards (templates) | Model registry + metadata |
-| Transparency (Art. 13) | User disclosure ("AI-generated content") | UI/UX requirements |
-| Human oversight (Art. 14) | Human-in-the-loop (critical decisions) | Workflow approval tools |
-| Accuracy/robustness (Art. 15) | Drift detection + retraining triggers | Evidently AI, NannyML, Fiddler |
+> Research specific regulatory requirements for your jurisdiction and industry
 
-**Compliance timeline**:
-- **Feb 2026**: High-risk system identification (gap analysis)
-- **Aug 2026**: Full compliance required (all controls operational)
-- **Ongoing**: Quarterly audits + annual reassessment
+### Sector-Specific Compliance
 
-### GDPR (Operational)
+**Healthcare**: PHI protection, encryption, access controls, audit trails
 
-**Technical actions**:
+**Finance**: Data protection, model explainability, regulatory reporting
 
-| GDPR Requirement | Implementation | Validation |
-|------------------|----------------|------------|
-| Data minimization (Art. 5) | Anonymize training data (PII removal) | DLP scans, audit logs |
-| Right to explanation (Art. 22) | Log model decisions (traceability) | Decision audit trail |
-| Data retention (Art. 5) | Auto-delete logs >30 days (configurable) | Retention policies |
-| Breach notification (Art. 33) | DPO notification (<72h) | Incident response playbook |
-| Data portability (Art. 20) | Export user data on request | API endpoints |
+**Insurance**: Fairness testing, transparency in decision models
 
-**Tools**: AWS Macie / GCP DLP API / Azure Purview, Microsoft Presidio
-
-### CCPA (California - if applicable)
-
-**Key requirements**:
-- Right to know (data collected)
-- Right to delete
-- Opt-out of data sale
-- Privacy notice at collection
-
-**Implementation**: Similar to GDPR controls + California-specific disclosures
-
-### Sector-Specific (if applicable)
-
-**Healthcare (HIPAA)**: PHI encryption, access controls, BAA with vendors, audit trails
-
-**Finance (PCI-DSS, SOX)**: Cardholder data protection, model explainability for credit decisions, SOX controls for ML pipelines
-
-**Insurance**: Fairness testing (protected classes), transparency in pricing models
+> Consult legal/compliance teams for specific requirements
 
 ## Govern Checklist
 
 **Governance Framework**:
-- [ ] NIST AI RMF framework implemented
+- [ ] Risk management framework implemented (NIST AI RMF recommended)
 - [ ] AI policies documented and enforced
-- [ ] AI CoE established
-- [ ] 3-gate approval process
-- [ ] Regular audits (quarterly)
+- [ ] AI CoE or governance body established
+- [ ] Approval process for AI systems
+- [ ] Regular audits scheduled
 
 **Legal Compliance**:
-- [ ] EU AI Act: High-risk systems identified (if applicable)
-- [ ] EU AI Act: Technical documentation (model cards) ready
-- [ ] GDPR: PII anonymization automated
-- [ ] GDPR: Data retention policies configured (<30 days)
-- [ ] GDPR: Audit trail for model decisions operational
-- [ ] DLP tools deployed (AWS Macie / GCP DLP / Azure Purview)
-- [ ] Sector-specific compliance validated (HIPAA, PCI-DSS, etc.)
+- [ ] Applicable regulations identified
+- [ ] Technical documentation requirements met
+- [ ] PII protection and anonymization implemented
+- [ ] Data retention policies configured
+- [ ] Audit trails operational
+- [ ] DLP tools deployed
+- [ ] Sector-specific compliance validated
 
 ## Next Step
 

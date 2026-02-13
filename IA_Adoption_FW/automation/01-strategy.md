@@ -27,30 +27,34 @@ Structured planning: Use cases, Tech strategy, Data governance, Responsible AI.
 
 ### Consumption Models
 
-| Model | When to Use | Examples |
+| Model | When to Use | Approach |
 |--------|---------------|----------|
-| **SaaS** | Productivity, standard | Copilots (M365, GitHub), SaaS chatbots |
-| **PaaS** | RAG, AI agents, fine-tuning | AWS SageMaker/Bedrock, GCP Vertex AI, Azure AI Foundry |
-| **IaaS** | Proprietary models, compliance, performance | GPU VMs, Kubernetes (EKS/GKE/AKS) |
+| **SaaS** | Productivity, standard | Managed AI services, copilots |
+| **PaaS** | RAG, AI agents, fine-tuning | Managed ML platforms |
+| **IaaS** | Proprietary models, compliance, performance | GPU VMs, Kubernetes, self-hosted |
 
 **Interoperability**: Standard protocols (MCP, REST APIs, JSON/Parquet)
+
+> See [GLOSSARY.md](../GLOSSARY.md) for cloud/on-premise service equivalents
 
 ## 3. Data Strategy
 
 **Governance**:
 - Data classification (sensitivity)
 - Access controls
-- Tools: AWS Macie, GCP DLP, Azure Purview, Apache Ranger
+- DLP (Data Loss Prevention) tools
 
 **Lifecycle**:
 - Collection (DB, APIs, IoT)
-- ETL/ELT pipelines (AWS Glue, GCP Dataflow, Azure Data Factory, Airflow)
+- ETL/ELT pipelines (orchestration, transformation)
 - Retention (compliance + performance)
 
 **Responsible Practices**:
 - Source/usage traceability
 - Quality and bias detection
 - Compliance
+
+> See [GLOSSARY.md](../GLOSSARY.md) for DLP and data pipeline tool options
 
 ## 4. Responsible AI
 

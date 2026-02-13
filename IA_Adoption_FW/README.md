@@ -2,6 +2,8 @@
 
 > Lightweight AI adoption framework, cloud vendor agnostic, based on Cloud Adoption Framework best practices.
 
+> This framework provides guidance, not prescriptive details. Users are expected to research specific topics based on their context.
+
 ## Purpose
 
 Structured AI adoption following the "Person → Team → Product" model: individual skills, team processes, business production.

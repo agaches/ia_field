@@ -60,13 +60,10 @@ Transform strategy into actionable steps: skills, resources, timeline.
 | Type | Access | Costs |
 |------|-------|-------|
 | **SaaS AI** | Subscription/Licensing | User licenses |
-| **PaaS AI** | Cloud account | Usage (tokens, compute, storage) |
-| **IaaS AI** | Cloud account | Infrastructure (VM, GPU) |
+| **PaaS AI** | Cloud/platform account | Usage (tokens, compute, storage) |
+| **IaaS AI** | Infrastructure (cloud/on-premise) | Infrastructure (VM, GPU) |
 
-**Key Services**:
-- **AWS**: SageMaker, Bedrock, Rekognition
-- **GCP**: Vertex AI, Generative AI Studio
-- **Azure**: AI Foundry, OpenAI Service
+> See [GLOSSARY.md](../GLOSSARY.md) for platform-specific AI services and self-hosted alternatives
 
 ## 4. Prioritize Use Cases
 

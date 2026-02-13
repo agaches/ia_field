@@ -15,11 +15,11 @@ Build AI landing zone: governance, network, reliability, foundation.
 
 ## 2. AI Network
 
-**DDoS Protection** (internet-facing workloads): AWS Shield, GCP Cloud Armor, Azure DDoS Protection
+**DDoS Protection** (internet-facing workloads): Platform DDoS services or appliances (Cloudflare, F5, etc.)
 
 **Secure Access**: Bastion/jumpbox for admin access
 
-**Equivalents**: See [GLOSSARY.md](../GLOSSARY.md)
+> See [GLOSSARY.md](../GLOSSARY.md) for network security options
 
 ## 3. AI Reliability
 
@@ -35,16 +35,18 @@ Build AI landing zone: governance, network, reliability, foundation.
 
 ## 4. AI Foundation
 
-**Infrastructure as Code**: Terraform, Pulumi, CloudFormation
+**Infrastructure as Code**: Terraform, Pulumi, or platform-specific tools
 
-**Model Registry**: MLflow, SageMaker Model Registry, Vertex AI Model Registry
+**Model Registry**: MLflow or platform model registry
 
-**Feature Store**: Centralize reusable features
+**Feature Store**: Centralize reusable features (Feast, Tecton, or platform-native)
 
 **MLOps Baseline**:
 - CI/CD pipelines (training + deployment)
 - Model monitoring
 - Versioning (code, data, models)
+
+> See [GLOSSARY.md](../GLOSSARY.md) for IaC and MLOps tool options
 
 ## Architecture Patterns Reference
 

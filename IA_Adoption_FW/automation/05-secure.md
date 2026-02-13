@@ -64,7 +64,7 @@ Defense-in-depth (6 layers): risk discovery, protection, detection, response.
 - Incident response plan
 - Regular pentesting
 
-## 3. Complete DLP
+## 3. Data Loss Prevention (DLP)
 
 **Prevention**:
 - Automatic data classification
@@ -76,7 +76,7 @@ Defense-in-depth (6 layers): risk discovery, protection, detection, response.
 - Suspicious pattern alerts
 - Behavioral analysis
 
-**Tools**: AWS Macie, GCP DLP API, Azure Purview, third-party solutions
+> See [GLOSSARY.md](../GLOSSARY.md) for DLP tool options (cloud, on-premise, open-source)
 
 ## 4. AI Pentesting
 

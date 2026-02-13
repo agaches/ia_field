@@ -2,6 +2,8 @@
 
 > Production AI - Business applications and APIs
 
+> This framework provides guidance, not prescriptive details. Users are expected to research specific topics based on their context.
+
 ## Purpose
 
 This framework is for **organizations, architects, and SREs** who want to:

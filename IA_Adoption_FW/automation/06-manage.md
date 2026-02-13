@@ -9,26 +9,28 @@ Complete management: operations, deployments, models, costs, data, continuity.
 ### Monitoring
 
 **Infrastructure Metrics**:
-- Latency (p50, p95, p99)
-- Throughput (requests/sec)
-- Availability (uptime %)
-- Resource utilization (CPU, GPU, memory)
+- Latency (percentiles)
+- Throughput
+- Availability
+- Resource utilization
 
 **ML Metrics**:
-- Model performance (accuracy, F1, etc.)
-- Drift (data drift, concept drift)
+- Model performance
+- Drift detection
 - Bias/fairness
 - Cost per inference
 
-**Tools**: Prometheus + Grafana, CloudWatch/Stackdriver/Azure Monitor, ML-specific (Weights & Biases, MLflow)
+**Tools**: Prometheus + Grafana, platform monitoring, ML-specific tools
+
+> See [GLOSSARY.md](../GLOSSARY.md) for monitoring tool options
 
 ### Alerting
 
-**Critical Thresholds**:
-- Latency >500ms (p95)
-- Error rate >1%
-- Drift detected (>10% deviation)
-- Costs exceed budget (+20%)
+**Define thresholds** for:
+- Latency degradation
+- Error rates
+- Drift detection
+- Cost overruns
 
 **Escalation**: Alerts → On-call → Incident response
 
@@ -36,38 +38,38 @@ Complete management: operations, deployments, models, costs, data, continuity.
 
 ### CI/CD ML
 
-**Pipeline**:
+**Pipeline stages**:
 1. Code commit → Unit tests
 2. Model training → Performance validation
 3. Staging deployment → Integration tests
-4. Production deployment → Canary/Blue-green
+4. Production deployment → Progressive rollout
 5. Post-deploy monitoring
 
-**Tools**: GitHub Actions/GitLab CI, Jenkins, Kubeflow Pipelines, SageMaker Pipelines
+> See [GLOSSARY.md](../GLOSSARY.md) for CI/CD and ML pipeline tools
 
 ### Deployment Strategies
 
-| Strategy | Usage | Risk |
-|-----------|-------|--------|
-| **Canary** | Progressive deployment (5% → 50% → 100%) | Low |
-| **Blue-Green** | Instant switchover with fast rollback | Medium |
-| **A/B Testing** | Simultaneous version comparison | Low |
+| Strategy | Usage |
+|-----------|-------|
+| **Canary** | Progressive deployment with gradual rollout |
+| **Blue-Green** | Instant switchover with fast rollback |
+| **A/B Testing** | Simultaneous version comparison |
 
 ## 3. Manage Models
 
 ### Model Registry
 
-**Versioning**:
-- Models (v1, v2, v3...)
+**Track versioning**:
+- Models
 - Training datasets
 - Hyperparameters
 - Performance metrics
 
-**Tools**: MLflow Model Registry, SageMaker Model Registry, Vertex AI Model Registry
+> See [GLOSSARY.md](../GLOSSARY.md) for model registry options
 
 ### Drift Detection
 
-**Types**:
+**Monitor**:
 - **Data drift**: Data distribution changes
 - **Concept drift**: Input/output relationship changes
 
@@ -76,7 +78,7 @@ Complete management: operations, deployments, models, costs, data, continuity.
 - Triggered retraining
 - New model validation
 
-**Tools**: Evidently AI, NannyML, custom solutions
+> See [GLOSSARY.md](../GLOSSARY.md) for drift detection tools
 
 ### Retraining
 
@@ -121,31 +123,31 @@ Complete management: operations, deployments, models, costs, data, continuity.
 
 ### Data Pipeline
 
-**ETL/ELT**:
+**ETL/ELT stages**:
 - Ingestion (batch/streaming)
 - Transformation (cleaning, feature engineering)
 - Quality validation
 - Storage
 
-**Tools**: Airflow, dbt, Spark, cloud services (Glue, Dataflow, Data Factory)
+> See [GLOSSARY.md](../GLOSSARY.md) for data pipeline tools
 
 ### Data Quality
 
-**Automatic Checks**:
-- Completeness (% null)
-- Accuracy (business rule validation)
-- Consistency (types, formats)
-- Freshness (data latency)
+**Validate**:
+- Completeness
+- Accuracy
+- Consistency
+- Freshness
 
-**Actions**: Alerts, pipeline block if quality <threshold
+**Actions**: Alerts, pipeline block if quality below threshold
 
 ### Data Lineage
 
-**Traceability**:
+**Track**:
 - Data source → Transformations → Model → Predictions
-- Impact analysis (if source changes, which model affected?)
+- Impact analysis (source changes affect which models?)
 
-**Tools**: OpenMetadata, DataHub, AWS Glue Data Catalog
+> See [GLOSSARY.md](../GLOSSARY.md) for data lineage tools
 
 ## 6. Continuity
 
@@ -156,11 +158,11 @@ Complete management: operations, deployments, models, costs, data, continuity.
 - Data (hot + archives)
 - Configurations (IaC)
 
-**RTO/RPO**:
-- RTO: <4h (service restoration)
-- RPO: <1h (max data loss)
+**Define**:
+- RTO (Recovery Time Objective)
+- RPO (Recovery Point Objective)
 
-**Testing**: Quarterly DR drills
+**Test**: Regular DR drills
 
 ### Business Continuity
 
