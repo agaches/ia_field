@@ -1,362 +1,173 @@
-# Phase 5 : Secure - Sécuriser l'usage IA en équipe (PRAGMATIQUE)
+# 05 - Secure (Delivery)
 
-## Vue d'ensemble
+> Pragmatic security - Implement what you can, manage what you can't
 
-La sécurité pour l'usage IA en équipe implémente des **contrôles pragmatiques** adaptés aux capacités de l'équipe. L'approche : "Implémenter ce qu'on peut, manager ce qu'on ne peut pas encore".
+## 1. OWASP LLM Top 10 (Pragmatic)
 
-## 1. OWASP LLM Top 10 - Implémentation pragmatique
+### Priority Risks (Team Focus: LLM01, LLM06, LLM09)
 
-### Focus sur les risques équipe les plus critiques
+| Risk | Team Implementation | Tools/Approach |
+|------|---------------------|----------------|
+| **LLM01: Prompt Injection** | ✅ Input validation for AI code review, sanitization | Pre-commit hooks |
+| **LLM02: Insecure Output** | ✅ Output validation in workflows, code scanning | CI checks |
+| **LLM03: Data Poisoning** | ⚠️ Manage (provider responsibility) | N/A |
+| **LLM04: Model DoS** | ⚠️ Awareness (rate limiting, usage monitoring) | Alerts |
+| **LLM05: Supply Chain** | ✅ Vendor validation for new tools | Approval process |
+| **LLM06: Info Disclosure** | 🚨 **CRITICAL** - DLP monitoring, data masking, secrets detection | Gitleaks, pre-commit |
+| **LLM07: Insecure Plugins** | ✅ Plugin validation, allowlist | Policy |
+| **LLM08: Excessive Agency** | ✅ Approval for agent actions, least privilege | Workflows |
+| **LLM09: Overreliance** | 🚨 **CRITICAL** - Mandatory validation (code review, tests) | Branch protection |
+| **LLM10: Model Theft** | ⚠️ Manage (not applicable, no custom models) | N/A |
 
-**Principe** : Prioriser LLM01, LLM06, LLM09 (les plus pertinents pour delivery)
+## 2. Team Security Controls
 
-| Risque | Implémentation Équipe | Outils/Approche |
-|--------|----------------------|-----------------|
-| **LLM01: Prompt Injection** | ✅ **IMPLÉMENTER** | Validation inputs pour code review IA, sanitization |
-| **LLM02: Insecure Output** | ✅ **IMPLÉMENTER** | Validation outputs dans workflows, code scanning |
-| **LLM03: Data Poisoning** | ⚠️ **MANAGER** | N/A pour équipe (provider responsibility) |
-| **LLM04: Model DoS** | ⚠️ **AWARENESS** | Rate limiting awareness, monitoring usage |
-| **LLM05: Supply Chain** | ✅ **IMPLÉMENTER** | Vendor validation process pour nouveaux outils |
-| **LLM06: Info Disclosure** | 🚨 **CRITIQUE** | DLP monitoring, data masking, secrets detection |
-| **LLM07: Insecure Plugins** | ✅ **IMPLÉMENTER** | Plugin validation process, allowlist |
-| **LLM08: Excessive Agency** | ✅ **IMPLÉMENTER** | Approval pour agent actions, least privilege |
-| **LLM09: Overreliance** | 🚨 **CRITIQUE** | Validation process obligatoire (code review, tests) |
-| **LLM10: Model Theft** | ⚠️ **MANAGER** | N/A pour équipe (pas de modèles custom) |
+### Access Controls (Least Privilege)
 
-### Détail des 3 risques prioritaires
-
-#### LLM01: Prompt Injection (Code Review)
-
-**Scénario** : Un développeur utilise l'IA pour review du code qui contient un prompt injection
-
-**Mitigation** :
-- ✅ Validation des inputs avant envoi à l'IA
-- ✅ Sanitization des prompts (enlever markdown malveillant)
-- ✅ Awareness équipe (formation)
-
-**Implémentation** :
-```bash
-# Pre-commit hook : valider les prompts
-if grep -E "(ignore previous|disregard instructions)" prompt.txt; then
-  echo "⚠️ Prompt suspect détecté"
-  exit 1
-fi
-```
-
-#### LLM06: Information Disclosure (DLP)
-
-**Scénario** : Un développeur partage accidentellement un secret dans un prompt
-
-**Mitigation** :
-- 🚨 **Secrets detection** : Pre-commit hooks (gitleaks, truffleHog)
-- ⚠️ **DLP monitoring** : Tracking des uploads vers outils IA (si possible)
-- ✅ **Data masking** : Anonymiser données sensibles avant partage
-
-**Implémentation** :
-```yaml
-# .pre-commit-config.yaml
-repos:
-  - repo: https://github.com/gitleaks/gitleaks
-    rev: latest
-    hooks:
-      - id: gitleaks
-```
-
-#### LLM09: Overreliance (Validation)
-
-**Scénario** : Code IA mergé sans validation, introduit des bugs
-
-**Mitigation** :
-- 🚨 **Code review obligatoire** : Tout code IA doit être reviewé
-- ✅ **Tests obligatoires** : Coverage minimum pour code critique
-- ⚠️ **Validation process** : Checklist reviewer
-
-**Implémentation** :
-- GitHub branch protection : require review
-- CI : fail si coverage < 80% sur code critique
-- Template PR : "Code IA ? [x] Oui [ ] Non"
-
-## 2. Contrôles de sécurité équipe
-
-### Access Controls
-
-**Principe** : Least privilege pour les outils IA
-
-| Rôle | Outils | Permissions |
-|------|--------|-------------|
-| **Junior Dev** | GitHub Copilot | Autocomplétion uniquement |
-| **Mid Dev** | Copilot + ChatGPT Team | Code review, documentation |
+| Role | Tools | Permissions |
+|------|-------|-------------|
+| **Junior Dev** | GitHub Copilot | Autocomplete only |
+| **Mid Dev** | Copilot + ChatGPT Team | Code review, docs |
 | **Senior Dev** | Copilot + ChatGPT + Claude Code | Full access |
-| **Tech Lead** | All tools + admin | Configuration équipe |
+| **Tech Lead** | All tools + admin | Team config |
 
-**Implémentation** :
-- GitHub Teams : assigner par rôle
-- Licences : allouer selon besoins
-- Review trimestriel : ajuster les accès
+**Implementation**: GitHub Teams by role, licenses by need, quarterly review.
 
-### DLP Monitoring Basique
+### DLP Monitoring (Basic)
 
-**Ce qu'on peut implémenter sans équipe sécurité dédiée** :
+**What teams CAN do**:
+1. **Secrets Detection (local)**: Pre-commit hooks (Gitleaks, TruffleHog)
+2. **Data Masking (manual)**: Guidelines, examples, reviews
+3. **Usage Monitoring (basic)**: Monthly logs, cost dashboard, escalate if suspicious
 
-**1. Secrets Detection (local)** :
-```bash
-# Installation
-brew install gitleaks
+**What teams CAN'T do** (and it's OK): Enterprise DLP, real-time monitoring, encryption at use.
 
-# Scan pré-commit
-gitleaks detect --source . --verbose
-```
+### Content Filtering
 
-**2. Data Masking (manuel)** :
-- Guidelines : "Remplacer les vraies valeurs par des placeholders"
-- Exemples dans la doc équipe
-- Reviews : vérifier que masking appliqué
-
-**3. Monitoring Usage (basique)** :
-- Logs mensuels : qui utilise quoi
-- Dashboard coûts : détecter usage anormal
-- Escalade si pattern suspect
-
-**Ce qu'on ne peut PAS faire (et c'est OK)** :
-- DLP enterprise complet (coût prohibitif)
-- Monitoring temps réel (complexité)
-- Encryption at use (pas accessible)
-
-### Content Filtering pour Team Tools
-
-**Si vous self-hostez des outils IA** :
-
-**Guardrails basiques** :
-```python
-# Exemple : blocker les prompts suspects
-BLOCKED_PATTERNS = [
-    "ignore previous instructions",
-    "disregard your training",
-    "you are now in developer mode"
-]
-
-def validate_prompt(prompt: str) -> bool:
-    for pattern in BLOCKED_PATTERNS:
-        if pattern.lower() in prompt.lower():
-            return False
-    return True
-```
-
-**Pour outils SaaS (ChatGPT Team, Copilot)** :
-- Utiliser les guardrails du provider (activés par défaut)
-- Configurer les settings équipe (content filtering)
+**For SaaS tools**: Use provider guardrails (enabled by default), configure team settings.
 
 ## 3. Code Scanning
 
 ### Secrets Detection (CI/CD)
 
-**GitHub Actions** :
+**GitHub Actions**:
 ```yaml
 name: Security Scan
 on: [push, pull_request]
-
 jobs:
   secrets:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: gitleaks/gitleaks-action@v2
 ```
 
-**GitLab CI** :
-```yaml
-secrets-scan:
-  stage: test
-  image: zricethezav/gitleaks:latest
-  script:
-    - gitleaks detect --source . --verbose
-  allow_failure: false
-```
+### Static Analysis
 
-### Static Code Analysis
-
-**Pour code généré par IA** :
-
-**Linters** :
-- Python : pylint, flake8, mypy
-- JavaScript : ESLint, TypeScript
-- Go : golangci-lint
-
-**SAST Tools** :
-- Semgrep (open-source)
-- Snyk (freemium)
-- SonarQube (community edition)
-
-**Configuration** :
-```yaml
-# .semgrep.yml
-rules:
-  - id: hardcoded-secret
-    pattern: password = "..."
-    message: Hardcoded secret detected
-    severity: ERROR
-```
+**Linters**: pylint, ESLint, golangci-lint
+**SAST**: Semgrep (open-source), Snyk (freemium), SonarQube (community)
 
 ## 4. Validation Process
 
-### Code Review Checklist pour Code IA
+### Code Review Checklist (AI Code)
 
-**Reviewer doit vérifier** :
+**Security**:
+- [ ] No hardcoded secrets
+- [ ] No obvious vulnerabilities (SQLi, XSS)
+- [ ] Input validation
+- [ ] Error handling
 
-**Sécurité** :
-- [ ] Pas de secrets hardcodés
-- [ ] Pas de vulnérabilités évidentes (SQLi, XSS)
-- [ ] Validation des inputs utilisateur
-- [ ] Gestion des erreurs appropriée
+**Quality**:
+- [ ] Correct logic
+- [ ] Adequate tests (coverage > threshold)
+- [ ] Team standards
+- [ ] Documentation if needed
 
-**Qualité** :
-- [ ] Logique correcte et compréhensible
-- [ ] Tests adéquats (coverage > seuil équipe)
-- [ ] Conformité aux standards équipe
-- [ ] Documentation si nécessaire
-
-**IA-specific** :
-- [ ] Code IA marqué comme tel dans PR
-- [ ] Prompt utilisé documenté (si pertinent)
-- [ ] Output validé (pas d'hallucination évidente)
+**AI-specific**:
+- [ ] AI code marked in PR
+- [ ] Prompt documented (if relevant)
+- [ ] Output validated (no hallucinations)
 
 ### Testing Requirements
 
-**Pour code critique généré par IA** :
-
-**Unit Tests** :
-- Coverage minimum : 80%
-- Edge cases : obligatoires
-- Mocking approprié
-
-**Integration Tests** :
-- Workflows complets testés
-- Cas d'erreur couverts
-
-**Validation manuelle** :
-- Tester localement avant push
-- Smoke tests en staging
+**For critical AI-generated code**:
+- Unit tests: 80% coverage minimum, edge cases mandatory
+- Integration tests: Full workflows, error cases
+- Manual validation: Test locally, smoke tests in staging
 
 ## 5. Vendor Validation
 
-### Process pour nouveaux outils IA
+### New Tool Process (1-2 weeks)
 
-**Étape 1 : Évaluation Tech Lead (1-2 jours)**
+**Step 1: Tech Lead Evaluation** (1-2 days)
+- Security: MFA? SOC2? ISO27001?
+- Privacy: Data used for training?
+- Cost: Within budget?
+- Support: Documentation? Available support?
 
-| Critère | Questions | Acceptable ? |
-|---------|-----------|--------------|
-| **Sécurité** | MFA ? SOC2 ? ISO27001 ? | ? |
-| **Confidentialité** | Données utilisées pour training ? | ? |
-| **Coût** | Budget équipe OK ? | ? |
-| **Support** | Documentation ? Support disponible ? | ? |
+**Step 2: Trial** (1-2 weeks): 2-3 people test, feedback on security/quality/UX, decide adopt/abandon
 
-**Étape 2 : Trial (1-2 semaines)**
-- 2-3 personnes testent
-- Feedback sur sécurité, qualité, UX
-- Décision : adopter ou abandonner
-
-**Étape 3 : Rollout équipe**
-- Formation (1h session)
-- Documentation interne
-- Monitoring adoption
+**Step 3: Rollout**: Training (1h), internal documentation, monitor adoption
 
 ### Vendor Security Checklist
 
-- [ ] Provider a SOC2 Type II ou ISO27001
-- [ ] Data residency appropriée (EU, US, etc.)
-- [ ] Politique de confidentialité claire
-- [ ] Pas d'utilisation données pour training (ou opt-out)
-- [ ] MFA disponible pour équipe
-- [ ] SSO possible (si requirement)
-- [ ] Logs d'audit disponibles
+- [ ] SOC2 Type II or ISO27001
+- [ ] Appropriate data residency (EU, US, etc.)
+- [ ] Clear privacy policy
+- [ ] No training data usage (or opt-out)
+- [ ] MFA available
+- [ ] SSO possible (if required)
+- [ ] Audit logs available
 
-## 6. Incident Response Équipe
+## 6. Team Incident Response
 
-### Team Escalation Process
-
-**Si incident détecté par un membre** :
+### Escalation Process
 
 ```
-Incident détecté
-      ↓
-Signaler au Tech Lead (< 1h)
-      ↓
-Tech Lead évalue impact
-      ↓
-   ┌──────┴──────┐
-   │             │
-Équipe  Organisation
-   │             │
-   ↓             ↓
-Résolution    Escalade IT/Sécu
-équipe
+Incident detected → Report to Tech Lead (<1h) → Tech Lead assesses impact → Team level: Resolve internally | Org level: Escalate to IT/Security
 ```
 
-**Incidents "équipe"** : bugs, partage accidentel non-critique
-**Incidents "org"** : fuite de secrets, compromission, violation compliance
+**Team incidents**: bugs, accidental non-critical sharing
+**Org incidents**: secret leaks, compromise, compliance violations
 
-### Playbook Basique
+### Basic Playbooks
 
-**Incident : Secret exposé dans code IA**
+**Incident: Secret exposed in AI code**
+1. <5min: Revoke secret immediately
+2. <30min: Check if used (logs)
+3. <1h: Notify Tech Lead + IT Security
+4. <2h: Quick team post-mortem
+5. <24h: Document learnings, adjust process
 
-1. **< 5min** : Révoquer le secret immédiatement
-2. **< 30min** : Vérifier si le secret a été utilisé (logs)
-3. **< 1h** : Notifier Tech Lead + IT Security
-4. **< 2h** : Post-mortem rapide équipe
-5. **< 24h** : Documenter learnings, ajuster processus
+**Incident: Defective AI code in production**
+1. <5min: Immediate rollback
+2. <30min: Identify root cause
+3. <1h: Fix + tests
+4. <2h: Validated redeployment
+5. <24h: Post-mortem, improve validation
 
-**Incident : Code IA défectueux en production**
+## 7. Usage Monitoring
 
-1. **< 5min** : Rollback immédiat
-2. **< 30min** : Identifier la root cause
-3. **< 1h** : Fix + tests
-4. **< 2h** : Redéploiement validé
-5. **< 24h** : Post-mortem, améliorer validation process
+### Basic Tracking
 
-## 7. Monitoring Usage
+**Metrics**: Active users, usage volume (requests, tokens), monthly costs
+**Per person**: Daily/weekly usage, anomalies (10x average)
+**Dashboard**: Google Sheets/Excel, monthly update, team meeting review
 
-### Basic Usage Monitoring
+### Basic Alerts
 
-**Métriques à tracker** :
+**Trigger if**: Monthly cost >120% budget, individual usage >3x average, unapproved tool used
+**Action**: Tech Lead investigates and adjusts
 
-**Par outil** :
-- Nombre d'utilisateurs actifs
-- Volume d'usage (requests, tokens)
-- Coûts mensuels
+## Secure Checklist
 
-**Par personne** :
-- Usage quotidien/hebdomadaire
-- Anomalies (usage 10x supérieur à la moyenne)
+- [ ] Implement secrets detection (pre-commit + CI)
+- [ ] Establish AI code review process
+- [ ] Configure access controls by role
+- [ ] Implement vendor validation process
+- [ ] Train team on OWASP LLM Top 10 (focus LLM01, 06, 09)
+- [ ] Create team incident response playbook
+- [ ] Monitor monthly usage
 
-**Dashboard simple** :
-- Feuille Google Sheets / Excel
-- Mise à jour mensuelle
-- Review en team meeting
+## Next Step
 
-### Alertes basiques
-
-**Trigger alerts si** :
-- Coût mensuel > 120% du budget
-- Usage individuel > 3x la moyenne équipe
-- Nouvel outil utilisé sans approbation
-
-**Action** : Tech Lead investigate et ajuste
-
-## Checklist Secure (Delivery)
-
-### 🏢 Équipe
-
-- [ ] Implémenter secrets detection (pre-commit + CI)
-- [ ] Établir le code review process pour code IA
-- [ ] Configurer access controls par rôle
-- [ ] Mettre en place vendor validation process
-- [ ] Former l'équipe sur OWASP LLM Top 10 (focus LLM01, 06, 09)
-- [ ] Créer le playbook incident response équipe
-- [ ] Monitorer l'usage mensuel
-
-## Prochaine étape
-
-→ [Phase 6 : Manage](06-manage.md) - Gérer les opérations IA en équipe
+→ [Phase 6: Manage](06-manage.md) - Manage team AI operations

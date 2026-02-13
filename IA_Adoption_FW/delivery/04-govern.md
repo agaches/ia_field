@@ -1,209 +1,102 @@
-# Phase 4 : Govern - Gouvernance IA équipe (MEDIUM)
+# 04 - Govern (Delivery)
 
-## Vue d'ensemble
+> Team governance - Collective policies, validation, supervision
 
-La gouvernance pour l'usage IA en équipe établit des **politiques collectives**, des **processus de validation** et une **supervision adaptée**. L'objectif est d'assurer qualité et cohérence sans ralentir la livraison.
+## 1. Assess Team Risks
 
-## 1. Évaluer les risques équipe
+### Main Risks
 
-### Risques principaux pour l'usage collectif
+| Risk | Impact | Mitigation |
+|------|--------|------------|
+| **Generated code quality** | Production bugs | Systematic code review |
+| **Output bias** | Poor UX | Validation process |
+| **Team data leaks** | IP compromise | DLP monitoring basics |
+| **Inconsistent usage** | Variable quality | Team standards |
+| **Over-dependency** | Loss of autonomy | Continuous training |
 
-| Risque | Description | Impact | Mitigation |
-|--------|-------------|--------|------------|
-| **Qualité du code généré** | Code IA non validé introduit des bugs | Défauts en production | Code review systématique |
-| **Biais dans les livrables** | Outputs IA biaisés affectent le produit | Expérience utilisateur dégradée | Validation output process |
-| **Fuite de données équipe** | Partage de code/données sensibles | IP compromise | DLP monitoring basique |
-| **Inconsistance dans l'usage** | Chacun utilise l'IA différemment | Qualité variable | Standards d'équipe |
-| **Dépendance excessive** | Équipe ne peut plus livrer sans IA | Perte d'autonomie | Formation continue |
+### Risk Evaluation (simplified)
 
-### Framework d'évaluation des risques (simplifié)
+Per tool/pattern, score 1-5:
+- Data impact (what data shared?)
+- Quality impact (how validate outputs?)
+- Productivity impact (gain vs risk?)
+- Team impact (everyone can use?)
 
-Pour chaque nouveau tool ou pattern IA :
+**Approval threshold**: Average score >3 → Tech lead approves
 
-| Critère | Questions | Score (1-5) |
-|---------|-----------|-------------|
-| **Impact données** | Quelles données seront partagées ? | ? |
-| **Impact qualité** | Comment valider les outputs ? | ? |
-| **Impact productivité** | Quel gain vs risque ? | ? |
-| **Impact équipe** | Tout le monde peut l'utiliser ? | ? |
+## 2. Document Team Policies (5-10 pages)
 
-**Seuil d'approbation** : Score moyen > 3 → Approuvé par team lead
+**Structure**:
+1. **Acceptable Usage**: Approved tools, encouraged vs discouraged cases, limits
+2. **Data Handling**: Classification (public/internal/confidential), sharing rules, anonymization
+3. **Output Validation**: Code review for AI code, doc validation, tests required
+4. **Approvals**: Who approves what (tech lead, PO), new tool process, escalation
+5. **Monitoring**: Team dashboard (adoption, quality, costs), monthly reviews, adjustments
 
-## 2. Documenter les politiques d'équipe
+## 3. Apply Policies
 
-### Structure de la politique (5-10 pages)
-
-#### 1. Usage Acceptable
-- Outils approuvés pour l'équipe
-- Cas d'usage encouragés vs découragés
-- Limites d'utilisation
-
-#### 2. Data Handling
-- Classification des données (public, internal, confidential)
-- Règles de partage avec outils IA
-- Anonymisation requise pour données sensibles
-
-#### 3. Validation des Outputs
-- Processus de code review pour code IA
-- Validation pour documentation générée
-- Tests requis pour code généré
-
-#### 4. Approbations
-- Qui approuve quoi (team lead, tech lead)
-- Processus pour nouveaux outils
-- Escalade pour cas complexes
-
-#### 5. Monitoring et Métriques
-- Dashboard équipe (adoption, qualité, coûts)
-- Revues mensuelles
-- Ajustements basés sur learnings
-
-### Template de politique équipe
-
-```markdown
-# Politique IA - Équipe [Nom]
-
-## 1. Outils Approuvés
-- GitHub Copilot (tous les devs)
-- ChatGPT Team (tech leads uniquement)
-- Claude Code (seniors uniquement)
-
-## 2. Data Handling
-- ✅ Code non-propriétaire
-- ⚠️ Architecture interne (après anonymisation)
-- ❌ Credentials, secrets, données clients
-
-## 3. Validation Requise
-- Code review obligatoire pour tout code IA (pas de commit direct)
-- Tests unitaires pour code critique
-- Documentation review pour docs générées
-
-## 4. Approbations
-- Tech Lead : nouveaux outils, patterns expérimentaux
-- Product Owner : features client-facing utilisant IA
-- Sécurité : intégrations tierces
-
-## 5. Métriques
-- Adoption : % de PRs avec IA
-- Qualité : taux de bugs dans code IA vs manuel
-- Coûts : budget mensuel par dev
-```
-
-## 3. Appliquer les politiques
-
-### Processus d'approbation pour nouveaux outils
+### New Tool Approval Process
 
 ```
-Proposition d'outil
-       ↓
-Team Lead évalue (framework risques)
-       ↓
-   ┌───┴───┐
-   │       │
-Score < 3   Score ≥ 3
-   │       │
-   ↓       ↓
-Rejeté   Approuvé
-         ↓
-      Essai (1 sprint)
-         ↓
-      Réévaluation
+Proposal → Tech Lead evaluates (risk framework) → Score <3: Rejected | Score ≥3: Approved → Trial (1 sprint) → Re-evaluate
 ```
 
-**Timeline** : 1-2 jours pour décision, 1 sprint pour validation
+Timeline: 1-2 days decision, 1 sprint validation
 
 ### Peer Review Process
 
-**Pour code généré par IA** :
-1. Developer marque le code comme "AI-generated" dans PR
-2. Reviewer vérifie :
-   - Logique correcte
-   - Pas de vulnérabilités (secrets, injection)
-   - Tests adéquats
-   - Conformité standards équipe
-3. Approbation ou demande de modifications
+**For AI-generated code**:
+1. Developer marks code as "AI-generated" in PR
+2. Reviewer checks: logic, vulnerabilities (secrets, injection), tests, standards
+3. Approve or request changes
 
-**Automation légère** :
-- Pre-commit hooks : détection de secrets
-- CI checks : tests obligatoires
-- Linting : standards de code
+**Light automation**: Pre-commit hooks (secrets), CI checks (tests), linting (standards)
 
-## 4. Surveiller les métriques équipe
+## 4. Monitor Team Metrics
 
-### Dashboard équipe (mise à jour mensuelle)
+### Dashboard (monthly update)
 
-**Adoption** :
-- % de PRs utilisant IA
-- % de l'équipe utilisant activement les outils
-- Outils les plus utilisés
+**Adoption**: % PRs using AI, % team actively using, most used tools
+**Quality**: Bug rate (AI vs manual), review time, regressions
+**Productivity**: Velocity (story points/sprint), lead time, dev satisfaction (quarterly survey)
+**Costs**: Cost/dev/month, estimated ROI
 
-**Qualité** :
-- Taux de bugs : code IA vs code manuel
-- Temps de review : code IA vs code manuel
-- Régressions introduites
+### Monthly Review (30min)
 
-**Productivité** :
-- Vélocité équipe (story points/sprint)
-- Lead time (commit → production)
-- Satisfaction développeur (survey trimestriel)
+Present metrics, identify what works/doesn't, decide continue/adjust/stop, actions for next month.
 
-**Coûts** :
-- Coût mensuel par développeur
-- ROI estimé (gain productivité vs coût)
+## 5. Optional AI CoE
 
-### Revues mensuelles
+### Alternative: Platform Team
 
-**Format** : 30min team meeting
-1. Présenter les métriques du mois
-2. Identifier ce qui marche / ne marche pas
-3. Décider : continuer, ajuster, arrêter
-4. Actions pour le mois suivant
+Without dedicated AI CoE, **platform team** or **tech leads** can: maintain approved tools list, organize internal training, share best practices, coordinate with other teams.
 
-## 5. AI CoE Optionnel
+Major ethical risks escalated to management.
 
-### Alternative : Platform Team
+### Inter-Team Coordination
 
-Pour équipes sans AI CoE dédié, le **platform team** ou **tech leads** peuvent :
-- Maintenir la liste d'outils approuvés
-- Organiser les formations internes
-- Partager les best practices
-- Coordonner avec d'autres équipes
+If multiple teams use AI: monthly tech leads meeting, share learnings, standardize tools (optional), shared license costs.
 
-**Pas de comité éthique formel** : les risques éthiques majeurs sont escaladés à la direction.
+## 6. Cost Allocation
 
-### Coordination inter-équipes
+### Team Budget Model
 
-Si plusieurs équipes utilisent l'IA :
-- Réunion mensuelle tech leads
-- Partage des learnings
-- Standardisation des outils (optionnel)
-- Mutualisation des coûts (licences équipe)
+**Per dev**: Copilot $10/month, ChatGPT Team $25/month, Other tools variable
+**Team budget**: (# devs × cost/dev) + 20% buffer
+**Tracking**: Monthly billing per team, dashboard in finance tool
 
-## 6. Allocation des coûts
+**Example** (10 devs): Base $500/month + $100 buffer = $600/month = $7,200/year
 
-### Modèle de coûts équipe
+## Govern Checklist
 
-**Par développeur** :
-- GitHub Copilot : 10€/mois
-- ChatGPT Team : 25€/mois
-- Autres outils : variable
+- [ ] Document team policy (5-10 pages)
+- [ ] Establish approval process (tech lead)
+- [ ] Implement peer review process
+- [ ] Create metrics dashboard
+- [ ] Plan monthly reviews
+- [ ] Allocate team budget
+- [ ] Train team on policies
 
-**Budget équipe** : (Nb devs × coût/dev) + buffer 20%
+## Next Step
 
-**Tracking** : Facturation mensuelle par équipe, dashboard dans finance tool
-
-## Checklist Govern (Delivery)
-
-### 🏢 Équipe
-
-- [ ] Documenter la politique équipe (5-10 pages)
-- [ ] Établir le processus d'approbation (team lead)
-- [ ] Mettre en place le peer review process
-- [ ] Créer le dashboard métriques équipe
-- [ ] Planifier les revues mensuelles
-- [ ] Allouer le budget équipe
-- [ ] Former l'équipe aux politiques
-
-## Prochaine étape
-
-→ [Phase 5 : Secure](05-secure.md) - Sécuriser l'usage IA en équipe
+→ [Phase 5: Secure](05-secure.md) - Secure team AI usage

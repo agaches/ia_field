@@ -27,13 +27,9 @@ Ce framework suppose que votre organisation a :
 ## Maturité requise
 
 **Niveaux 3-4** : Compétences avancées à expert
-- Maîtrise prompt engineering et sélection modèles
-- Training et déploiement modèles ML/GenAI
-- Gestion infrastructure (VM/Kubernetes/Containers)
-- Workflows training complexes
-- Optimisation performance
-
-Voir [GLOSSARY.md](../GLOSSARY.md) pour détails des niveaux de maturité.
+- Prompt engineering et sélection modèles
+- Infrastructure (VM/Kubernetes/Containers)
+- MLOps/LLMOps
 
 ## Structure du framework
 
@@ -69,39 +65,9 @@ Le framework suit 6 phases :
 - [ ] Implémenter defense-in-depth (6 layers)
 - [ ] Mettre en place MLOps/LLMOps complet
 
-## Progression de maturité
+## Progression
 
-Ce framework représente le niveau le plus élevé d'adoption IA. Il suppose que vous avez déjà :
-1. Développé les compétences individuelles ([Employee](../employee/README.md))
-2. Intégré l'IA dans vos processus d'équipe ([Delivery](../delivery/README.md))
-3. Acquis l'expérience nécessaire pour gérer l'IA en production
-
-```
-┌──────────────────────┐
-│  IA pour l'Employé   │ ← Foundation: Compétences individuelles
-└──────────────────────┘
-          ↓
-    (Niveaux 1-2)
-          ↓
-┌──────────────────────┐
-│   IA for Delivery    │ ← Build on: Maturité individuelle
-└──────────────────────┘
-          ↓
-    (Niveaux 2-3)
-          ↓
-┌──────────────────────┐
-│  IA Automatisation   │ ← Build on: Processus delivery + compétences
-└──────────────────────┘
-```
-
-## Principes IA Responsable
-
-Ce framework suit les 6 principes d'IA responsable :
-1. **Équité** : Traiter tous les utilisateurs de manière équitable
-2. **Fiabilité et sécurité** : Fonctionnement sûr et fiable
-3. **Confidentialité et sécurité** : Respect de la vie privée
-4. **Inclusivité** : Accessible à tous
-5. **Transparence** : Compréhensible et explicable
-6. **Responsabilité** : Responsabilité claire
-
-Voir [README.md](../README.md) pour plus de détails.
+Niveau le plus élevé d'adoption IA. Prérequis :
+1. [Employee](../employee/README.md) - Compétences individuelles
+2. [Delivery](../delivery/README.md) - Processus d'équipe
+3. Expérience gestion IA en production

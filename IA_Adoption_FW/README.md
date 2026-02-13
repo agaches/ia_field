@@ -4,9 +4,9 @@
 
 ## Vue d'ensemble
 
-Ce framework fournit un processus structuré pour adopter l'IA dans votre organisation, applicable quel que soit votre fournisseur cloud (AWS, GCP, Azure, ou hybride).
+Ce framework fournit un processus structuré pour adopter l'IA dans votre organisation, aagnostique des outils et technologies.
 
-Le framework est organisé en **3 catégories** suivant le modèle "Person → Project → Product" :
+Le framework est organisé en **3 catégories** suivant le modèle "Person (Employee) → Equipe (Delivery) → Product (Automation)" :
 - **[Employee](employee/)** - Adoption individuelle (compétences personnelles)
 - **[Delivery](delivery/)** - Intégration équipe (processus collectifs)
 - **[Automation](automation/)** - Production métier (applications IA)
@@ -19,11 +19,11 @@ Voir [00-strategy-global.md](00-strategy-global.md) pour comprendre le modèle c
 
 ### Vue d'ensemble comparative
 
-| Catégorie | Pour qui ? | Usage | Risque | Budget | Framework |
-|-----------|-----------|-------|--------|--------|-----------|
-| **Employee** | Individus | Productivité personnelle | Low-Medium | 20-50€/mois/personne | [employee/](employee/) |
-| **Delivery** | Équipes | Processus collectifs | Medium | Quelques k€/mois/équipe | [delivery/](delivery/) |
-| **Automation** | Organisations | Production métier | High-Critical | Dizaines-centaines k€/mois | [automation/](automation/) |
+| Catégorie | Pour qui ? | Usage | Risque | Maturité / Prérequis | Framework |
+|-----------|-----------|-------|--------|----------------------|-----------|
+| **Employee** | Individus | Productivité personnelle | Low-Medium | Niveaux 1-2 | [employee/](employee/) |
+| **Delivery** | Équipes | Processus collectifs | Medium | Niveaux 2-3 + Maîtrise Employee | [delivery/](delivery/) |
+| **Automation** | Organisations | Production métier | High-Critical | Niveaux 3-4 + Expérience Delivery | [automation/](automation/) |
 
 ### 1. Employee - Adoption individuelle
 
@@ -59,7 +59,7 @@ Voir [00-strategy-global.md](00-strategy-global.md) pour comprendre le modèle c
 
 ### 3. Automation - Production métier
 
-**Pour qui** : Organisations, architectes, SRE souhaitant déployer des applications IA en production
+**Pour qui** : Organisations, Equipes produits souhaitant déployer des applications IA en production
 
 **Exemples** :
 - API IA exposée publiquement
