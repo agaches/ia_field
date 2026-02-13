@@ -155,30 +155,7 @@
 | **ETL** | Extract, Transform, Load | Extract, transform, load |
 | **ELT** | Extract, Load, Transform | Extract, load, transform |
 
-## Responsible AI Principles
-
-Quick reference - See [README.md](README.md) for complete details.
-
-1. **Fairness**: Treat all users equitably
-2. **Reliability and Safety**: Safe and reliable operation
-3. **Privacy and Security**: Respect for privacy
-4. **Inclusiveness**: Accessible to all
-5. **Transparency**: Understandable and explainable
-6. **Accountability**: Clear accountability
-
-## AI Consumption Models
-
-| Model | Control | Customization | Complexity | Relative Cost |
-|-------|---------|---------------|------------|---------------|
-| **SaaS** | Low | Low | Low | $ |
-| **PaaS** | Medium | Medium | Medium | $$ |
-| **IaaS** | High | High | High | $$$ |
-
-## AI Maturity Levels
-
-See [SKILLS.md](SKILLS.md) for the detailed maturity grid and [TRAINING.md](TRAINING.md) for training paths.
-
-## AI Roles
+## AI & Data Roles
 
 | Role | Main Responsibilities |
 |------|----------------------|

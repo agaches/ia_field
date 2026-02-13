@@ -24,7 +24,7 @@ This AI adoption framework is structured around a progressive model in **3 categ
     ┌──────────────────┐
     │     PROJECT      │  ← Build on: Individual maturity
     │   (Delivery)     │     Usage: Collective team processes
-    │   Levels 2-3     │     Risk: Medium
+    │   Levels 3-4     │     Risk: Medium
     └──────────────────┘     Timeline: Weeks → Months
             ↓
     (Team experience validated)
@@ -32,7 +32,7 @@ This AI adoption framework is structured around a progressive model in **3 categ
     ┌──────────────────┐
     │     PRODUCT      │  ← Build on: Processes + Skills
     │  (Automation)    │     Usage: Business APIs in production
-    │   Levels 3-4     │     Risk: High-Critical
+    │   Levels 5-6     │     Risk: High-Critical
     └──────────────────┘     Timeline: Months → Quarters
 ```
 
@@ -128,87 +128,17 @@ This is a **progressive maturity model** where each level builds on the previous
 |---------|----------|----------|------------|
 | **Scope** | Individual | Team | Organization |
 | **Maturity level** | 1-2 | 2-3 | 3-4 |
-| **Risk** | Low-Medium | Medium | High-Critical |
+| **Risk** | Low | Medium | High-Critical |
 | **Budget** | $20-50/month/person | Few k$/month/team | Tens-hundreds k$/month |
 | **Timeline** | Hours → Days | Weeks → Months | Months → Quarters |
-| **Governance** | LIGHT (1-2 pages) | MEDIUM (5-10 pages) | FULL (NIST AI RMF, AI CoE) |
+| **Governance** | LIGHT | MEDIUM | FULL (NIST AI RMF, AI CoE) |
 | **Security** | Awareness | Pragmatic (OWASP basics) | Complete (Defense-in-depth) |
 | **Operations** | Minimal (SaaS subscriptions) | Basic (MLOps basics) | Complete (MLOps/LLMOps) |
 | **Data** | Personal only | Internal team (anonymized) | Customer/business (sensitive) |
 | **Tech Stack** | SaaS only | SaaS + Light PaaS | SaaS/PaaS/IaaS |
 | **Approval** | None (self-service) | Team Lead | Multi-gate (CoE, Legal, Security) |
 
-## Maturity Progression
 
-### Levels 1-4 Mapped to Categories
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        MATURITY LEVELS                               │
-└─────────────────────────────────────────────────────────────────────┘
-
- Level 1                     Level 2                     Level 3                     Level 4
- BASIC                       INTERMEDIATE                ADVANCED                    EXPERT
-
- • SaaS only                 • SaaS + API usage + MCP    • RAG, custom ML            • Large model training
- • Prompt basics             • Prompt engineering        • Fine-tuning               • Complex infrastructure
- • Zero code                 • MCP Usage                 • MLOps basics              • Complete MLOps
- • Discovery                 • Data pipelines basics     • Production-ready          • Enterprise scale
-
- ├─────────────────────────────┤                         ├───────────────────────────────────────┤
- │     EMPLOYEE FRAMEWORK       │                         │        DELIVERY FRAMEWORK              │
- └─────────────────────────────┘                         └───────────────────────────────────────┘
-                                                          ├───────────────────────────────────────────────┤
-                                                          │        AUTOMATION FRAMEWORK                    │
-                                                          └───────────────────────────────────────────────┘
-```
-
-### Detailed Maturity Grid
-
-See [SKILLS.md](SKILLS.md) for the complete definition of 4 levels with measurable criteria per axis.
-
-**Quick summary**:
-- **Level 1**: SaaS only → **Employee Framework**
-- **Level 2**: SaaS + API + MCP → **Employee → Delivery**
-- **Level 3**: PaaS (RAG, custom ML) → **Delivery → Automation**
-- **Level 4**: IA Factory & Worflow (A2A) → **Automation Framework**
-
-## Framework Dependencies Diagram
-
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│                    FRAMEWORK DEPENDENCIES                             │
-└──────────────────────────────────────────────────────────────────────┘
-
-                     ┌───────────────────────┐
-                     │  Employee Framework   │
-                     │  (Foundation)         │
-                     │                       │
-                     │  Individual           │
-                     │  skills               │
-                     └───────────────────────┘
-                               │
-                               │ Prerequisites: Levels 1-2
-                               ↓
-                     ┌───────────────────────┐
-                     │  Delivery Framework   │
-                     │  (Build On)           │
-                     │                       │
-                     │  + Team processes     │
-                     │  + Data handling      │
-                     └───────────────────────┘
-                               │
-                               │ Prerequisites: Levels 2-3
-                               ↓
-                     ┌───────────────────────┐
-                     │ Automation Framework  │
-                     │ (Build On)            │
-                     │                       │
-                     │ + Production          │
-                     │ + Full governance     │
-                     │ + Complete MLOps      │
-                     └───────────────────────┘
-```
 
 ### Why This Layered Structure?
 
@@ -225,79 +155,6 @@ See [SKILLS.md](SKILLS.md) for the complete definition of 4 levels with measurab
 - $50/month to try (individual)
 - Few k$/month to validate (team)
 - Tens of k$/month to scale (prod)
-
----
-
-## Major Divergences Between Frameworks
-
-### Why Does 01-strategy.md Diverge Completely?
-
-The `01-strategy.md` files of the 3 frameworks are **fundamentally different** because strategic objectives change radically:
-
-#### Employee: Personal Discovery Strategy
-- **Focus**: Find tools to improve MY productivity
-- **Approach**: Trial-and-error, no formal analysis
-- **Output**: List of SaaS tools to test
-- **Decision**: Individual, no approval
-- **Metric**: "Does it save me time?"
-
-#### Delivery: Collective Integration Strategy
-- **Focus**: Identify team integration patterns
-- **Approach**: Guided experimentation (2-week sprints)
-- **Output**: 1-2 patterns validated by the team
-- **Decision**: Collective (team lead + retros)
-- **Metric**: "Does it improve our velocity/quality?"
-
-#### Automation: Business Use Case Strategy
-- **Focus**: Identify AI use cases with business ROI
-- **Approach**: Formal analysis, business case, metrics
-- **Output**: Complete AI strategy (use cases, tech, data, owner)
-- **Decision**: Multi-gate (CoE, Legal, Security)
-- **Metric**: "What is the ROI? What are the risks?"
-
-### Governance Differences
-
-| Framework | Governance | Approval | Documentation | Audits |
-|-----------|-------------|-------------|---------------|--------|
-| **Employee** | LIGHT - Acceptable use policy (1-2 pages) | None (self-service) | Minimal | None |
-| **Delivery** | MEDIUM - Team policies (5-10 pages) | Team Lead | Standard (wikis, READMEs) | Team retros |
-| **Automation** | FULL - NIST AI RMF, AI CoE | Multi-gate (3+ approvals) | Complete (architecture, compliance) | Quarterly |
-
-### Security Differences
-
-| Framework | Posture | Controls | Responsibility |
-|-----------|---------|-----------|----------------|
-| **Employee** | Awareness - Best practices | Individual (MFA, no secrets) | Individual |
-| **Delivery** | Pragmatic - OWASP basics | Collective (DLP basics, anonymization) | Tech Lead |
-| **Automation** | Complete - Defense-in-depth (6 layers) | Production (SIEM, pentesting, audits) | CISO + AI CoE |
-
-### Operations Differences
-
-| Framework | MLOps | Deployment | Monitoring | DR/BC |
-|-----------|-------|-------------|------------|-------|
-| **Employee** | None | N/A (SaaS) | None | N/A |
-| **Delivery** | Basics - Git versioning | Simple (staging/prod) | Basics (logs, errors) | Minimal |
-| **Automation** | Complete - CI/CD, registry, drift | Multi-env (dev/staging/prod) | Complete (metrics, traces, alerts) | Complete (RPO/RTO) |
-
----
-
-## No Prioritization, Just Mapping
-
-**Important**: This file does **NOT** say which framework to use as a priority.
-
-It **maps** the 3 categories and helps to:
-- Understand the differences between frameworks
-- Identify where you currently are
-- Understand prerequisites to progress
-
-**Prioritization depends on YOUR context**:
-- Individual discovering AI? → Employee
-- Team with AI skills? → Delivery
-- Mature organization? → Automation
-
-**All frameworks are valid** depending on your situation.
-
----
 
 ## Shared Principles
 
@@ -316,5 +173,5 @@ See [README.md](README.md) for complete details.
 
 ### Cloud Agnosticism
 
-All frameworks are designed to be applicable with any cloud provider.
+All frameworks are designed to be applicable with any IA solution provider.
 

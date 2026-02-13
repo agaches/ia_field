@@ -41,4 +41,4 @@ Structured AI adoption following the "Person → Team → Product" model: indivi
 
 ---
 
-Inspired by Microsoft Cloud Adoption Framework, adapted to be cloud-agnostic and practical.
+Inspired by Microsoft Cloud Adoption Framework, rewrited and adapted to IA needs and be cloud-agnostic and practical.
