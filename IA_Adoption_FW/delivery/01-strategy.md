@@ -11,16 +11,18 @@ Traditional use case analysis = analysis paralysis. Instead: **catalog proven pa
 
 ### Pattern Catalog
 
-| Pattern | Tooling | Maturity | Timeline | Value |
-|---------|---------|----------|----------|-------|
-| **Code Review AI** | CodeRabbit, Copilot | Low-Med | 1-2 sprints | -20-30% review time |
-| **Doc Generation** | Mintlify, Copilot | Low | 1 sprint | -50% doc time |
-| **Test Generation** | Copilot, Cursor | Medium | 2-3 sprints | +20-30% coverage |
-| **Refactoring** | Cursor, Aider | Med-High | 2-4 sprints | Large-scale refactor |
-| **Design Review** | ChatGPT Team, Claude | Medium | 2-3 sprints | Architecture quality |
-| **Sprint Planning** | ChatGPT, Linear AI | Low-Med | 1-2 sprints | -30-40% planning time |
-| **Onboarding** | Cursor, Copilot Chat | Low | 1 sprint | Faster ramp-up |
-| **Bug Triage** | Sentry AI, Datadog | Med-High | 3-4 sprints | Root cause detection |
+| Pattern | Tool Category | Maturity | Timeline | Value |
+|---------|---------------|----------|----------|-------|
+| **Code Review AI** | AI code assistant, LLM with code context | Low-Med | 1-2 sprints | -20-30% review time |
+| **Doc Generation** | AI documentation tool, LLM | Low | 1 sprint | -50% doc time |
+| **Test Generation** | AI code assistant, test framework integration | Medium | 2-3 sprints | +20-30% coverage |
+| **Refactoring** | AI-powered IDE, code transformation tool | Med-High | 2-4 sprints | Large-scale refactor |
+| **Design Review** | LLM with architecture context | Medium | 2-3 sprints | Architecture quality |
+| **Sprint Planning** | LLM, planning tool integration | Low-Med | 1-2 sprints | -30-40% planning time |
+| **Onboarding** | AI code assistant, context-aware chat | Low | 1 sprint | Faster ramp-up |
+| **Bug Triage** | AI-powered error tracking, log analysis | Med-High | 3-4 sprints | Root cause detection |
+
+> **Examples**: Code assistants (GitHub Copilot, Continue.dev, Cody, Tabby), LLMs (OpenAI, Anthropic, Ollama local), IDEs (Cursor, VS Code + extensions)
 
 ### Experimentation Framework (2-week sprints)
 
@@ -46,30 +48,38 @@ Budget manageable ($500-2K/month), time-to-value fast (2 weeks), risk low. Act l
 
 ## 2. Technology Strategy
 
-### SaaS First, Light PaaS, No IaaS
+### Choose Your Stack Based on Context
 
-**Tier 1: SaaS Tools (Primary)**
+**No single "best" approach** - select based on: budget, skills, compliance, data sensitivity, infrastructure.
 
-| Pattern | Tools | Pricing |
-|---------|-------|---------|
-| Code Review | Github Copilot, Claude Code | $10-49/user/month |
-| Documentation | Mintlify, Swimm | $19-120/month |
-| Test Generation | Github Copilot, Claude Code| $10-39/user/month |
-| Design/Planning | Claude Code, Antigravity | $30/user/month |
+**Stack Options** (all valid):
 
-**Tier 2: Light PaaS - API Token (Secondary)**
-Only if SaaS doesn't fit. Anthropic/OpenRouter/Kilocode API (~$0.01/1K tokens), budget cap $500/month.
+| Approach | When to Use | Examples | Considerations |
+|----------|-------------|----------|----------------|
+| **SaaS** | Quick start, low maintenance, public cloud OK | Managed AI services, cloud IDEs | +Fast setup, -Vendor lock-in, -Data leaves premises |
+| **PaaS (APIs)** | Custom integration, pay-per-use | LLM APIs, ML platforms | +Flexibility, +Scale, -Requires integration work |
+| **Self-Hosted** | Data sovereignty, compliance, cost control | Local LLMs (Ollama, LM Studio), on-premise compute | +Full control, +Privacy, -Ops overhead, -Requires expertise |
+| **Hybrid** | Balance control and convenience | SaaS tools + self-hosted models | +Best of both, -Complexity |
 
-**Tier 3: IaaS (For specific constraints, compliance required)**
-Self-hosting = high cost, expertise needed, maintenance burden. 
-For discovery, using SaaS alternatives is easier.
-Then when mature enough, you can build (self-)hosting solutions to comply to compliance.
+**Selection Criteria**:
+- **Data sensitivity**: High → Self-hosted or private cloud
+- **Budget**: Limited → Self-hosted open-source or pay-per-use APIs
+- **Team skills**: Low → SaaS, High → Self-hosted
+- **Compliance**: Strict → Self-hosted or compliant SaaS
+- **Speed**: Fast start → SaaS, Custom needs → PaaS/Self-hosted
 
 ### Integration Architecture
 
 **Principle**: AI fits existing workflows, doesn't create new ones.
 
-Touchpoints: IDE (Copilot) → Git (PR review) → CI/CD (security) → Planning (Claude Code) → Comm (Slack bots)
+**Touchpoints**: IDE (code assistant) → VCS (PR review bot) → CI/CD (security scan) → Planning (LLM integration) → Communication (chat integration)
+
+**Example tools by category**:
+- **Code assistants**: GitHub Copilot, Continue.dev, Cody, Tabby, Ollama with IDE plugins
+- **VCS integration**: PR review bots, commit analysis
+- **CI/CD**: Security scanners, test generators
+- **Planning**: LLM APIs, self-hosted models
+- **Chat**: Slack/Teams/Mattermost bots
 
 **Rules**:
 - One tool per touchpoint

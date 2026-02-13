@@ -11,27 +11,27 @@
 **Onboarding (new member)**:
 ```markdown
 New dev checklist [Name]
-- [ ] Create GitHub org account (email invite)
-- [ ] Assign Copilot Business license ($19/month)
-- [ ] Create ChatGPT Team workspace account ($30/month)
-- [ ] Optional: Claude for Work ($30/month)
-- [ ] Send access to repos (team-ai-prompts, team-vscode-config)
+- [ ] Create necessary accounts (VCS, AI tools)
+- [ ] Assign licenses/access (based on team stack)
+- [ ] Send access to shared resources (prompts, configs)
 - [ ] Schedule 2h training (policy, tools, demos)
 - [ ] Add to team dashboard (tracking costs, adoption)
-- [ ] Date: [Date] | Budget impact: +$49-79/month
+- [ ] Date: [Date] | Budget impact: +[varies by stack]
 ```
+
+> **Adapt to your stack**: List specific tools your team uses (SaaS accounts, self-hosted access, etc.)
 
 **Offboarding (departing member)**:
 ```markdown
 Departing dev checklist [Name]
-- [ ] Revoke GitHub org access (immediate)
-- [ ] Remove from ChatGPT Team workspace (immediate)
-- [ ] Remove Claude for Work if applicable
-- [ ] Recover licenses (reallocation or budget saved)
+- [ ] Revoke all system access (immediate)
+- [ ] Recover licenses/resources (reallocation or savings)
 - [ ] Remove from team dashboard
-- [ ] Archive conversations if required for compliance
-- [ ] Date: [Date] | Budget impact: -$49-79/month
+- [ ] Archive data if required (compliance)
+- [ ] Date: [Date] | Budget impact: -[varies by stack]
 ```
+
+> **Adapt to your stack**: List specific systems to revoke (VCS, SaaS tools, self-hosted access, etc.)
 
 **Daily support**:
 - Tool questions → Dedicated Slack channel
@@ -174,17 +174,22 @@ git checkout v1.2.3 && git push origin main --force
 
 ### Model Tracking
 
-**For SaaS tools**: Copilot (GitHub-managed), ChatGPT (select GPT-3.5/4/4 Turbo), Claude (Haiku/Sonnet/Opus)
+**For managed tools**: Provider-managed models (document which model/version used)
+**For self-hosted**: Track model name, version, source (HuggingFace, local fine-tune, etc.)
 
 **Document in code**:
 ```python
 """
-Generated with: ChatGPT (GPT-4 Turbo)
+Generated with: [Tool name] ([Model name/version])
 Date: 2025-02-13
 Prompt: "Create FastAPI endpoint for auth"
 Modifications: Added rate limiting, logging
 """
 ```
+
+**Examples**:
+- Commercial: "GitHub Copilot (GPT-4)", "ChatGPT (GPT-4 Turbo)", "Claude (Sonnet 3.5)"
+- Self-hosted: "Ollama (Llama 3.1 8B)", "vLLM (CodeLlama 13B)", "LM Studio (Mistral 7B)"
 
 **Why**: Reproduce results, debug if model changes, understand quality by model.
 
@@ -252,15 +257,18 @@ notes: Specialized for code review comments
 ```
 
 **Storage**:
-- **Model files**: S3/GCS/Azure Blob (versioned bucket with lifecycle policies)
+- **Model files**: Object storage with versioning (cloud or self-hosted: MinIO, S3-compatible)
 - **Metadata**: Git (YAML files) for traceability
-- **Training logs**: Cloud Logging (CloudWatch/Stackdriver/Monitor)
+- **Training logs**: Logging system (cloud service, self-hosted: Loki, Elasticsearch)
 
 **Rollback procedure**:
 ```bash
 # If new model degrades performance
 # 1. Copy previous version from versioned storage
-aws s3 cp s3://models/team-code-reviewer-v1.tar.gz ./
+# Examples:
+#   - Cloud: aws s3 cp / gsutil cp / az storage blob download
+#   - Self-hosted: mc cp (MinIO), rclone copy
+# object-storage-cli cp storage://models/team-code-reviewer-v1.tar.gz ./
 
 # 2. Redeploy previous version
 # (depends on deployment method - API key change, endpoint update, etc.)
@@ -302,24 +310,35 @@ git commit -m "Rollback to v1: v2 showed 10% accuracy regression"
 
 ### Monthly Budget
 
-**Per dev**: Copilot $19/month, ChatGPT Team $30/month (if used), Other $10-20/month
-**Average**: $40-70/dev/month
+**Cost factors depend on stack choice**:
 
-**Team budget** (10 devs): Base $500/month + 20% buffer ($100) = **$600/month** = $7,200/year
+**SaaS-heavy approach**:
+- Per-user licenses: $30-70/dev/month
+- Team (10 devs): $500-700/month + 20% buffer
 
-**Budget validation**: If budget < 1 dev-week cost/quarter (~$2K) → Excellent ROI
+**Self-hosted approach**:
+- Infrastructure: $100-500/month (compute, storage)
+- Maintenance effort: [Team time investment]
+- Team (10 devs): $100-500/month
+
+**Hybrid approach**:
+- Mix of licenses + infrastructure: $300-600/month
+
+**Budget validation**: If total cost < 1 dev-week/quarter (~$2K) → Excellent ROI
 
 ### Per-Dev Allocation
 
-**Tracking**:
+**Tracking** (adapt to your tools):
 ```
-| Dev | Copilot | ChatGPT | Other | Total | Usage |
-|-----|---------|---------|-------|-------|-------|
-| Alice | $19 | $30 | $0 | $49 | Active daily |
+| Dev | Tool 1 | Tool 2 | Infrastructure Share | Total | Usage |
+|-----|--------|--------|---------------------|-------|-------|
+| Alice | [cost] | [cost] | [cost] | $XX | Active daily |
 | Dave | $0 | $0 | $0 | $0 | Opt-out |
 ```
 
 **Analysis**: Understand opt-outs, identify underutilization, adjust allocations.
+
+> **SaaS**: Track per-user licenses. **Self-hosted**: Allocate infrastructure costs proportionally.
 
 ### Cost Dashboard
 
@@ -343,16 +362,22 @@ git commit -m "Rollback to v1: v2 showed 10% accuracy regression"
 
 ### Cost Optimization
 
-**Strategy 1: Shared vs Individual Licenses**
-- GitHub Copilot: Business ($19/user) for teams (audit logs, controls justify cost)
-- ChatGPT: Team ($30/user, 2 min) if >3 active users (shared GPTs, admin)
+**Strategy 1: Right-size Your Stack**
+- **SaaS**: Shared licenses vs individual, team vs enterprise tiers
+- **Self-hosted**: Right-size infrastructure (CPU/GPU, storage)
+- **Hybrid**: Balance based on usage patterns
 
 **Strategy 2: Smart Allocation**
-- All devs: Copilot (essential)
-- Leads/seniors: ChatGPT Team (complex tasks)
-- Juniors: ChatGPT optional (evaluate benefit)
+- Essential tools: All team members
+- Premium/advanced: Leads, seniors, power users
+- Optional: Evaluate benefit before expanding
 
-**Strategy 3: Monthly Review** (30min)
+**Strategy 3: Consider Self-Hosting**
+- High usage + technical capacity → Self-hosted can reduce costs
+- Low usage or limited capacity → SaaS often more cost-effective
+- Calculate: License costs vs infrastructure + maintenance effort
+
+**Strategy 4: Monthly Review** (30min)
 Present dashboard, identify underutilization, gather feedback, adjust next month.
 
 ## 5. Data: Basic Versioning
@@ -417,23 +442,27 @@ def validate_embeddings(file_path):
 
 ### Fallback Tools
 
-**Primary → Fallback**:
-- Copilot → Codeium (pre-installed, disabled)
-- ChatGPT → Claude (all devs have account)
-- Cursor → VS Code + Copilot
+**Define fallbacks for your stack**:
 
-**Preparation**: Install fallback tools (disabled), document activation procedure, test quarterly.
+**Examples by category**:
+- **Code assistant**: Primary (commercial/self-hosted) → Fallback (alternative assistant or manual)
+- **LLM access**: Primary API → Fallback API or self-hosted model
+- **Self-hosted service**: Redundancy, backups, or commercial alternative
 
-**Activation procedure**:
+**Preparation**: Setup fallback tools (ready but inactive), document activation procedure, test quarterly.
+
+**Activation procedure template**:
 ```markdown
-# If GitHub Copilot down
-1. Check status.github.com
-2. Disable Copilot extension
-3. Enable Codeium extension
-4. Notify team in Slack
-5. Continue development
-6. Re-enable Copilot when up
+# If [Primary Tool] down
+1. Check status/logs
+2. Disable/switch away from primary
+3. Enable/switch to fallback
+4. Notify team
+5. Continue work
+6. Re-enable primary when available
 ```
+
+> **Adapt to your stack**: Define specific fallbacks for each critical tool/service.
 
 ### Dev Environment Backup
 
@@ -503,11 +532,13 @@ def validate_embeddings(file_path):
 - [ ] Adoption >80% (daily AI usage)
 - [ ] Velocity +10-20% (sprint velocity)
 - [ ] Quality maintained or improved (stable/lower bug rate)
-- [ ] Costs <$70/dev/month
-- [ ] ROI >3x (time savings vs cost)
+- [ ] Costs within budget (depends on your stack choice)
+- [ ] ROI >3x (time savings vs total cost including infrastructure)
 - [ ] Team satisfaction >4/5
 
 **If metrics not met**: Identify root causes, adjust strategy.
+
+> **Note**: Cost targets vary significantly based on SaaS vs self-hosted approach. Focus on ROI rather than absolute cost numbers.
 
 ## Conclusion
 

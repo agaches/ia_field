@@ -13,12 +13,12 @@
 - Output validation (code review, tests)
 - Budget allocation
 
-**Policy Template**:
+**Policy Template Example** (adapt to your tools):
 ```markdown
 # AI Policy - Team [Name]
 
 ## Approved Tools
-GitHub Copilot (all devs), ChatGPT Team (leads/seniors), Cursor (optional)
+[Examples: Code assistants, LLM access (commercial/self-hosted), IDE integrations]
 
 ## Data Handling
 ✅ Open-source, non-proprietary code
@@ -29,11 +29,14 @@ GitHub Copilot (all devs), ChatGPT Team (leads/seniors), Cursor (optional)
 Code review mandatory, unit tests for critical code, security scans
 
 ## Budget
-$50/dev/month standard tools, 20% buffer for experiments, monthly review
+[Define based on your stack: SaaS licenses, API usage, or infrastructure costs]
+20% buffer for experiments, monthly review
 
 ## Training
 2h onboarding for new members, monthly best practices workshop
 ```
+
+> **Note**: This is an example template. Adapt tool names, budget, and policies to your team's chosen stack.
 
 **Storage**: Team wiki (Confluence, Notion, GitHub Wiki), versioned, quarterly review
 
@@ -45,22 +48,24 @@ Team meeting (30min), email with link, add to onboarding, remind in retros.
 
 VPN only needed if: distributed team accessing on-prem resources, internal AI tools, strict compliance (finance, healthcare).
 
-Most SaaS tools (GitHub, ChatGPT) don't need VPN.
+Most cloud-based SaaS tools don't need VPN.
 
-**If required**: Tailscale (mesh VPN, 5min setup, free for 100 devices) or Twingate (zero-trust, free for 5 users).
+**If required**: Choose a mesh VPN or zero-trust solution (examples: Tailscale, Twingate, WireGuard, OpenVPN, or enterprise solutions).
 
 ## 3. Reliability: SLA Awareness
 
-### Provider SLAs
+### Provider SLAs (Examples)
 
-| Tool | SLA | Uptime | Fallback |
-|------|-----|--------|----------|
-| GitHub Copilot | 99.9% | ~99.95% | Disable temporarily |
-| ChatGPT Team | No formal SLA | ~99.5% | Claude, Gemini |
-| Claude Team | No formal SLA | ~99.7% | ChatGPT, Gemini |
-| Azure OpenAI | 99.9% | ~99.9% | OpenAI API direct |
+| Tool Type | Typical SLA | Fallback Strategy |
+|-----------|-------------|-------------------|
+| **Code Assistants** | 99%+ (commercial), N/A (self-hosted) | Alternative assistant, local model, manual |
+| **LLM APIs (commercial)** | 99-99.9% (enterprise), lower (free/basic) | Alternative API, self-hosted model |
+| **Self-hosted** | Depends on your infrastructure | Redundancy, backups, commercial fallback |
+| **VCS (cloud)** | 99.9%+ | N/A (critical dependency) |
 
-Expect 4-8h downtime/year. No compensation for low-tier SaaS.
+**General expectations**: Commercial SaaS ~4-8h downtime/year. Self-hosted depends on your infrastructure reliability.
+
+> **Note**: Check specific SLAs for your chosen tools/infrastructure.
 
 ### Continuity Plan
 
@@ -75,11 +80,23 @@ If tool down:
 
 ### Accounts & Licenses
 
-**GitHub Team**: Org account, invite devs, enable Copilot Business ($19/user/month), configure policies (audit logs, allow repos)
+**Approach depends on your stack**:
 
-**ChatGPT Team**: Subscribe ($30/user/month, 2 min), workspace, invite members, disable data training, 30-day retention
+**Commercial SaaS** (if chosen):
+- Create organization/team accounts
+- Invite team members, assign licenses
+- Configure policies: audit logs, data retention, training opt-out
+- Typical cost: $10-50/user/month per tool
 
-**Claude for Work**: Similar to ChatGPT ($30/user/month), team workspace, configure retention
+**Self-hosted** (if chosen):
+- Setup infrastructure (compute, storage)
+- Deploy services (LLM inference, code assistants)
+- Configure authentication, access control
+- Typical cost: Infrastructure + maintenance effort
+
+**Hybrid**: Combination of both approaches
+
+> **Examples**: GitHub Team + Copilot, GitLab self-hosted + Continue.dev, Gitea + Ollama + Tabby
 
 ### Administration Setup
 
@@ -88,37 +105,48 @@ If tool down:
 **Define processes**:
 
 **Onboarding (new member)**:
-1. Create accounts (GitHub org, ChatGPT workspace, Claude)
-2. Assign licenses (Copilot Business, ChatGPT Team)
+1. Create accounts (VCS, LLM access, tool-specific)
+2. Assign access/licenses (based on your stack)
 3. 2h training (policy, tools, prompt library)
-4. Access repos (team-ai-prompts, team-vscode-config)
+4. Access shared resources (prompts, configs, docs)
 5. Add to team dashboard
 
 **Offboarding (departing member)**:
-1. Revoke access immediately (GitHub, ChatGPT, Claude)
-2. Recover license (reallocation or budget savings)
+1. Revoke access immediately (all systems)
+2. Recover licenses/resources (reallocation or savings)
 3. Remove from team dashboard
-4. Archive conversations if necessary (compliance)
+4. Archive data if necessary (compliance)
+
+> **Adapt to your stack**: SaaS (account management), Self-hosted (user removal, key revocation), Hybrid (both)
 
 **Documentation**: Create administration runbook (wiki/Notion) with detailed procedures
 
 ### IDE Configuration
 
-**VS Code Settings Sync**: Create repo `team-vscode-config`, add `settings.json` + `extensions.json`, document in README.
+**Goal**: Standardize AI tool setup across team
 
-**extensions.json**:
+**Approach**:
+1. Create shared config repo (e.g., `team-ide-config`)
+2. Document recommended extensions/plugins for your IDE(s)
+3. Include settings for AI tools (if applicable)
+4. Version control and distribute via Git
+
+**Example (VS Code)**:
 ```json
 {
   "recommendations": [
-    "github.copilot",
-    "github.copilot-chat",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
+    "[your-code-assistant-extension]",
+    "[formatter]",
+    "[linter]"
   ]
 }
 ```
 
-**Distribution**: Commit to repo, devs clone and symlink to `.vscode/`, update via Git pull.
+**Example (JetBrains)**: Share `settings.zip` or plugin configuration files
+
+**Distribution**: Commit to repo, team members clone/import, update via Git
+
+> **Adapt to your IDE**: VS Code, JetBrains IDEs, Vim/Neovim, Emacs, etc.
 
 ### Shared Prompt Library
 

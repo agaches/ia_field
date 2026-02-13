@@ -2,6 +2,8 @@
 
 > Pragmatic security - Implement what you can, manage what you can't
 
+> **Note**: Code examples use specific APIs/tools for illustration. Adapt security patterns to your chosen stack (commercial APIs, self-hosted models, hybrid).
+
 ## 1. OWASP LLM Top 10 (Pragmatic)
 
 ### Priority Risks (Team Focus: LLM01, LLM06, LLM09)

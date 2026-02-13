@@ -62,9 +62,8 @@ Sources, quality (completeness, accuracy, freshness), accessibility, compliance 
 **Validation**: Complete RAG project (functional app, tests, documentation)
 
 **Recommended certifications** (target: 50% team certified):
-- AWS ML Specialty
-- Google ML Engineer
-- Azure AI Engineer
+- Cloud-agnostic: MLOps Professional, TensorFlow/PyTorch certifications
+- Cloud-specific (if applicable): AWS ML Specialty, Google ML Engineer, Azure AI Engineer, or equivalent for your platform
 
 ### Peer Learning
 
@@ -77,32 +76,37 @@ See [TRAINING.md](../TRAINING.md) section 7:
 
 ## 3. Access AI Resources
 
-### Hybrid Stack (SaaS + PaaS)
+### Hybrid Stack (Examples)
 
-| Category | Solution | Use Case | Cost (5-7 team) |
-|----------|----------|----------|------------------|
-| **SaaS GenAI** | ChatGPT Team / Claude Pro / Gemini Business | Brainstorming, rapid prototyping | 150-250€/month |
-| **PaaS GenAI** | OpenAI/Anthropic API | Production apps | 500-2K€/month |
-| **PaaS ML** | AWS SageMaker / GCP Vertex AI / Azure ML | Training, deployment | 200-1K€/month |
-| **Vector DB** | Pinecone / Weaviate Cloud | RAG, semantic search | 70-200€/month |
-| **Monitoring** | LangSmith / W&B | Prompt tracking, ML experiments | 0-200€/month |
-| **Code assist** | GitHub Copilot / Cursor / Codeium | Dev productivity | 150-250€/month |
+| Category | Approach Options | Use Case | Budget Range (5-7 team) |
+|----------|------------------|----------|-------------------------|
+| **GenAI Access** | SaaS (managed), PaaS (APIs), Self-hosted (Ollama, LM Studio) | Brainstorming, prototyping | Free-500/month |
+| **LLM APIs** | Commercial APIs, Self-hosted inference | Production apps | 0-2K/month |
+| **ML Platform** | Cloud ML service, Self-hosted MLflow/Kubeflow | Training, deployment | 0-1K/month |
+| **Vector DB** | Managed (cloud), Self-hosted (Qdrant, Milvus, Chroma) | RAG, semantic search | 0-200/month |
+| **Monitoring** | SaaS tools, Self-hosted (Prometheus, Grafana) | Tracking, experiments | 0-200/month |
+| **Code Assistant** | Commercial, Open-source (Continue.dev, Tabby) | Dev productivity | 0-500/month |
 
-**Total**: 1-4K€/month dev, 3-10K€/month production
+**Total range**: 0-4K/month (depending on SaaS vs self-hosted choices)
+
+> **Note**: Self-hosted options reduce costs but require infrastructure and maintenance effort.
 
 ### Access Checklist
 
-**Cloud Provider** (choose 1): AWS (Bedrock, SageMaker), GCP (Vertex AI), Azure (OpenAI)
-- Setup: org account, IAM, billing alerts, secrets management, audit logs (1-2 days)
+**Compute Platform** (if needed):
+- **Options**: Public cloud (AWS/GCP/Azure), Private cloud, On-premise, Hybrid
+- **Setup**: Account/cluster, IAM/RBAC, billing/quotas, secrets management, audit logs (1-2 days)
 
-**GenAI APIs**: OpenAI, Anthropic, Google, Mistral
-- Start 500-1K€/month, adjust based on usage
-- Setup: org accounts, billing limits, API keys rotation, secrets manager, rate limiting
+**LLM Access** (choose based on your needs):
+- **Commercial APIs**: Pay-per-use, managed services
+- **Self-hosted**: Local models (Ollama, LM Studio, vLLM), on-premise inference
+- **Budget**: 0-1K/month depending on choice
+- **Setup**: Accounts/infrastructure, billing limits, API key rotation, secrets management, rate limiting
 
 **Data Infrastructure** (for RAG/ML):
-- Vector DB: Pinecone (Level 2) / Weaviate (Level 3)
-- Data warehouse: BigQuery/Snowflake (optional Level 2, recommended Level 3)
-- Data pipeline: Cloud Functions (Level 2) / Airflow (Level 3)
+- **Vector DB**: Managed (cloud providers) or Self-hosted (Qdrant, Milvus, Chroma, Weaviate)
+- **Data warehouse**: Cloud or self-hosted (PostgreSQL, ClickHouse)
+- **Data pipeline**: Serverless functions, Airflow, or custom orchestration
 
 ## 4. Prioritize Use Cases
 
@@ -161,7 +165,11 @@ High Value + Medium Feasibility = Priority 2 (Prepare first)
 **Week 3**: Iteration (improve quality, tune prompts), tests (50-100 cases), handle edge cases, basic monitoring
 **Week 4**: Demo prep, documentation, retrospective, Go/No-go decision
 
-**Tools**: Streamlit/Gradio (prototyping), FastAPI/Flask (backend), LangChain/LlamaIndex (orchestration), Pinecone/Chroma (vector DB)
+**Example tools**:
+- **UI**: Streamlit, Gradio, or custom web framework
+- **Backend**: FastAPI, Flask, or equivalent
+- **Orchestration**: LangChain, LlamaIndex, or custom
+- **Vector DB**: Chroma, Qdrant, Milvus (open-source), or managed alternatives
 
 ### Evaluation & Decision
 
@@ -206,11 +214,13 @@ High Value + Medium Feasibility = Priority 2 (Prepare first)
 
 **Rule**: No PoC without validated Impact Assessment
 
-**Responsible AI Toolkits**:
-- Guardrails AI (Level 2-3): LLM output validation
-- LangSmith (Level 2-3): Prompt monitoring, hallucination detection
-- Microsoft Presidio (Level 2-3): PII detection/anonymization
-- Fairlearn (Level 3): ML bias detection
+**Responsible AI Toolkits** (examples):
+- **Output validation**: Guardrails AI, custom validators
+- **Monitoring**: LangSmith, self-hosted observability (Prometheus, Grafana)
+- **PII detection**: Microsoft Presidio (open-source), custom regex/ML models
+- **Bias detection**: Fairlearn, AIF360, custom analysis
+
+> **Mix approaches**: Commercial tools for ease, open-source for control, custom for specific needs.
 
 **Pre-Production Checklist**:
 - [ ] PII filtering automated

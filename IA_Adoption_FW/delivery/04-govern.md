@@ -81,11 +81,20 @@ If multiple teams use AI: monthly tech leads meeting, share learnings, standardi
 
 ### Team Budget Model
 
-**Per dev**: Copilot $10/month, ChatGPT Team $25/month, Other tools variable
-**Team budget**: (# devs × cost/dev) + 20% buffer
-**Tracking**: Monthly billing per team, dashboard in finance tool
+**Budget Components**:
+- **SaaS**: Per-user licenses (if applicable)
+- **APIs**: Usage-based costs (if applicable)
+- **Infrastructure**: Compute, storage (if self-hosted)
+- **Buffer**: 20% for experiments
 
-**Example** (10 devs): Base $500/month + $100 buffer = $600/month = $7,200/year
+**Tracking**: Monthly costs per team, dashboard in finance tool
+
+**Example range** (10 devs):
+- Self-hosted: $100-500/month (infrastructure)
+- SaaS-heavy: $500-700/month (licenses)
+- Hybrid: $300-600/month
+
+> **Note**: Actual costs depend heavily on your stack choices (SaaS vs self-hosted)
 
 ## Govern Checklist
 
