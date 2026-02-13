@@ -4,7 +4,7 @@
 
 ## Pour qui ?
 
-Ce framework s'adresse aux **individus** (tech et non-tech) souhaitant utiliser l'IA pour leur productivité :
+Ce framework s'adresse aux **individus** (tech et non-tech) souhaitant commencer à utiliser l'IA pour leur productivité :
 - Développeurs (GitHub Copilot, Cursor, etc.)
 - Employés bureautiques (ChatGPT, Claude, M365 Copilot)
 - Professionnels créatifs (writing, research, analyse)

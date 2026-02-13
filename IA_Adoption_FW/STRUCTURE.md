@@ -1,21 +1,21 @@
-# Style Guide & Structure - Framework d'Adoption IA
+# Style Guide & Structure - AI Adoption Framework
 
-> Guide de référence pour maintenir la cohérence du framework et comprendre sa structure
+> Reference guide to maintain framework consistency and understand its structure
 
 ---
 
-## Vue d'ensemble de la structure 3-catégories
+## Overview of the 3-Category Structure
 
-Le framework est organisé en **3 catégories** suivant le modèle "Person → Project → Product" :
+The framework is organized into **3 categories** following the "Person → Project → Product" model:
 
 ```
 /workspace/git/agaches/ia_field/IA_Adoption_FW/
-├── 00-strategy-global.md          ← Stratégie globale, modèle 3-catégories
-├── README.md                       ← Vue d'ensemble, navigation
-├── STRUCTURE.md                    ← Ce fichier (structure + style)
-├── GLOSSARY.md                     ← Équivalences cloud, concepts IA
+├── 00-strategy-global.md          ← Global strategy, 3-category model
+├── README.md                       ← Overview, navigation
+├── STRUCTURE.md                    ← This file (structure + style)
+├── GLOSSARY.md                     ← Cloud equivalences, AI concepts
 │
-├── employee/                       ← Catégorie 1: Adoption individuelle
+├── employee/                       ← Category 1: Individual adoption
 │   ├── README.md
 │   ├── 01-strategy.md
 │   ├── 02-plan.md
@@ -24,225 +24,225 @@ Le framework est organisé en **3 catégories** suivant le modèle "Person → P
 │   ├── 05-secure.md (AWARENESS)
 │   └── 06-manage.md (MINIMAL)
 │
-├── delivery/                       ← Catégorie 2: Intégration équipe
+├── delivery/                       ← Category 2: Team integration
 │   ├── README.md
 │   ├── 01-strategy.md
 │   ├── 02-plan.md
 │   ├── 03-ready.md
 │   ├── 04-govern.md (MEDIUM)
-│   ├── 05-secure.md (PRAGMATIQUE)
-│   └── 06-manage.md (BASIQUE)
+│   ├── 05-secure.md (PRAGMATIC)
+│   └── 06-manage.md (BASIC)
 │
-└── automation/                     ← Catégorie 3: Production métier
+└── automation/                     ← Category 3: Business production
     ├── README.md
     ├── 01-strategy.md
     ├── 02-plan.md
     ├── 03-ready.md
     ├── 04-govern.md (FULL)
-    ├── 05-secure.md (COMPLET)
-    └── 06-manage.md (COMPLET)
+    ├── 05-secure.md (COMPLETE)
+    └── 06-manage.md (COMPLETE)
 ```
 
 ---
 
-## Les 3 catégories : Qui, Quoi, Pourquoi
+## The 3 Categories: Who, What, Why
 
-### 1. Employee - Adoption individuelle
+### 1. Employee - Individual Adoption
 
-**Qui** : Individus (tech ou non-tech)
+**Who**: Individuals (tech or non-tech)
 
-**Quoi** : Améliorer sa productivité personnelle avec des outils IA
+**What**: Improve personal productivity with AI tools
 
-**Pourquoi** :
-- Développer des compétences IA de base
-- Découvrir les outils adaptés à son travail
-- Adopter les bonnes pratiques de sécurité individuelles
+**Why**:
+- Build foundational AI skills
+- Discover tools suited to their work
+- Adopt individual security best practices
 
-**Caractéristiques** :
-- Risque : Low-Medium
-- Budget : 20-50€/mois/personne
-- Timeline : Heures → Jours
-- Gouvernance : LIGHT (1-2 pages)
-- Sécurité : AWARENESS (bonnes pratiques)
-- Opérations : MINIMAL (SaaS subscriptions)
+**Characteristics**:
+- Risk: Low-Medium
+- Budget: 20-50€/month/person
+- Timeline: Hours → Days
+- Governance: LIGHT (1-2 pages)
+- Security: AWARENESS (best practices)
+- Operations: MINIMAL (SaaS subscriptions)
 
-**Fichiers** : [employee/](../employee/)
-
----
-
-### 2. Delivery - Intégration équipe
-
-**Qui** : Équipes techniques et leads
-
-**Quoi** : Intégrer l'IA dans les processus collectifs de livraison
-
-**Pourquoi** :
-- Améliorer la vélocité et qualité de livraison
-- Valider des patterns d'intégration IA en équipe
-- Établir des pratiques collectives
-
-**Caractéristiques** :
-- Risque : Medium
-- Budget : Quelques k€/mois/équipe
-- Timeline : Semaines → Mois
-- Gouvernance : MEDIUM (5-10 pages, politiques équipe)
-- Sécurité : PRAGMATIQUE (OWASP basics, DLP)
-- Opérations : BASIQUE (MLOps basics)
-
-**Prérequis** : Membres d'équipe maîtrisent l'usage individuel (Employee Niveaux 1-2)
-
-**Fichiers** : [delivery/](../delivery/)
+**Files**: [employee/](../employee/)
 
 ---
 
-### 3. Automation - Production métier
+### 2. Delivery - Team Integration
 
-**Qui** : Organisations, architectes, SRE
+**Who**: Technical teams and leads
 
-**Quoi** : Déployer des applications IA en production pour automatiser des processus métier
+**What**: Integrate AI into collective delivery processes
 
-**Pourquoi** :
-- Créer de la valeur business avec l'IA
-- Déployer des applications critiques
-- Gérer l'IA à l'échelle
+**Why**:
+- Improve delivery velocity and quality
+- Validate AI integration patterns in teams
+- Establish collective practices
 
-**Caractéristiques** :
-- Risque : High-Critical
-- Budget : Dizaines-centaines k€/mois
-- Timeline : Mois → Trimestres
-- Gouvernance : FULL (NIST AI RMF, AI CoE, audits)
-- Sécurité : COMPLET (Defense-in-depth 6 layers)
-- Opérations : COMPLET (MLOps/LLMOps full)
+**Characteristics**:
+- Risk: Medium
+- Budget: Few k€/month/team
+- Timeline: Weeks → Months
+- Governance: MEDIUM (5-10 pages, team policies)
+- Security: PRAGMATIC (OWASP basics, DLP)
+- Operations: BASIC (MLOps basics)
 
-**Prérequis** :
-- Maturité individuelle (Employee Niveaux 1-2)
-- Expérience équipe (Delivery Niveaux 2-3)
+**Prerequisites**: Team members master individual usage (Employee Levels 1-2)
 
-**Fichiers** : [automation/](../automation/)
+**Files**: [delivery/](../delivery/)
 
 ---
 
-## Divergence majeure : 01-strategy.md
+### 3. Automation - Business Production
 
-Les fichiers `01-strategy.md` des 3 frameworks sont **fondamentalement différents** car les objectifs stratégiques changent radicalement :
+**Who**: Organizations, architects, SRE
 
-### Employee : Stratégie de découverte personnelle
-- **Focus** : Trouver des outils pour améliorer MA productivité
-- **Approche** : Essai-erreur, pas d'analyse formelle
-- **Contenu** :
-  - Catalogue d'outils IA par catégorie (coding, writing, research)
-  - Approche de découverte (essayer 2-3 outils pendant 1 mois)
-  - Métriques simples ("Est-ce que ça me fait gagner du temps ?")
-  - Principe : SaaS uniquement, pas de données d'entreprise
+**What**: Deploy AI applications in production to automate business processes
 
-### Delivery : Stratégie d'intégration collective
-- **Focus** : Identifier des patterns d'intégration en équipe
-- **Approche** : Expérimentation guidée (sprints 2 semaines)
-- **Contenu** :
-  - Catalogue de patterns éprouvés (code review, doc gen, test gen)
-  - Framework d'expérimentation (sélection, sprint, décision)
-  - Pas de business case formel (budget manageable, feedback rapide)
-  - Stratégie tech : SaaS first, light PaaS, no IaaS
-  - Stratégie data : Données équipe (anonymisées), pas de clients
+**Why**:
+- Create business value with AI
+- Deploy critical applications
+- Manage AI at scale
 
-### Automation : Stratégie de cas d'usage métier
-- **Focus** : Identifier des cas d'usage IA avec ROI business
-- **Approche** : Analyse formelle, business case, métriques
-- **Contenu** :
-  - Méthodologie de découverte (analyse interne, recherche industrie)
-  - Définition cas d'usage (objectif, métrique, stratégie complète)
-  - Arbre de décision technologique (SaaS/PaaS/IaaS)
-  - Stratégie data complète (gouvernance, cycle de vie, conformité)
-  - Stratégie IA responsable (centre d'excellence, réglementations)
+**Characteristics**:
+- Risk: High-Critical
+- Budget: Tens-hundreds k€/month
+- Timeline: Months → Quarters
+- Governance: FULL (NIST AI RMF, AI CoE, audits)
+- Security: COMPLETE (Defense-in-depth 6 layers)
+- Operations: COMPLETE (MLOps/LLMOps full)
 
-**Pourquoi cette divergence ?**
-- Les besoins stratégiques sont radicalement différents à chaque niveau
-- Dupliquer du contenu serait trompeur et contre-productif
-- Chaque framework nécessite une approche adaptée à son contexte
+**Prerequisites**:
+- Individual maturity (Employee Levels 1-2)
+- Team experience (Delivery Levels 2-3)
+
+**Files**: [automation/](../automation/)
 
 ---
 
-## Différences Govern/Secure/Manage
+## Major Divergence: 01-strategy.md
 
-### Gouvernance (04-govern.md)
+The `01-strategy.md` files of the 3 frameworks are **fundamentally different** because strategic objectives change radically:
 
-| Framework | Niveau | Contenu | Approbation |
-|-----------|--------|---------|-------------|
-| **Employee** | LIGHT | Politique acceptable use (1-2 pages) | Aucune (self-service) |
-| **Delivery** | MEDIUM | Politiques équipe (5-10 pages), data handling, incident response | Team Lead |
-| **Automation** | FULL | NIST AI RMF complet, AI CoE, comité éthique, 3 portes d'approbation | Multi-portes (CoE, Legal, Security) |
+### Employee: Personal Discovery Strategy
+- **Focus**: Find tools to improve MY productivity
+- **Approach**: Trial-and-error, no formal analysis
+- **Content**:
+  - AI tool catalog by category (coding, writing, research)
+  - Discovery approach (try 2-3 tools for 1 month)
+  - Simple metrics ("Does this save me time?")
+  - Principle: SaaS only, no company data
 
-### Sécurité (05-secure.md)
+### Delivery: Collective Integration Strategy
+- **Focus**: Identify team integration patterns
+- **Approach**: Guided experimentation (2-week sprints)
+- **Content**:
+  - Catalog of proven patterns (code review, doc gen, test gen)
+  - Experimentation framework (selection, sprint, decision)
+  - No formal business case (manageable budget, quick feedback)
+  - Tech strategy: SaaS first, light PaaS, no IaaS
+  - Data strategy: Team data (anonymized), no customer data
 
-| Framework | Niveau | Contenu | Contrôles |
-|-----------|--------|---------|-----------|
-| **Employee** | AWARENESS | Bonnes pratiques individuelles (MFA, no secrets, awareness biais) | Individuels |
-| **Delivery** | PRAGMATIQUE | OWASP basics, DLP basics, anonymization, secret detection | Collectifs (équipe) |
-| **Automation** | COMPLET | Defense-in-depth (6 layers), pentesting, SIEM, audits, conformité | Production (org) |
+### Automation: Business Use Case Strategy
+- **Focus**: Identify AI use cases with business ROI
+- **Approach**: Formal analysis, business case, metrics
+- **Content**:
+  - Discovery methodology (internal analysis, industry research)
+  - Use case definition (objective, metric, complete strategy)
+  - Technology decision tree (SaaS/PaaS/IaaS)
+  - Complete data strategy (governance, lifecycle, compliance)
+  - Responsible AI strategy (center of excellence, regulations)
 
-### Opérations (06-manage.md)
-
-| Framework | Niveau | Contenu | MLOps |
-|-----------|--------|---------|-------|
-| **Employee** | MINIMAL | Gestion subscriptions SaaS, productivité personnelle | Aucun |
-| **Delivery** | BASIQUE | Git versioning, déploiement simple, monitoring basics | MLOps basics |
-| **Automation** | COMPLET | CI/CD complet, model registry, drift detection, DR/BC | MLOps/LLMOps full |
-
----
-
-## Guide de contribution par catégorie
-
-### Contribuer à Employee
-
-**Style** : Accessible, pédagogique, pragmatique
-- Focus sur la découverte et l'apprentissage
-- Exemples concrets d'outils et cas d'usage
-- Ton encourageant, pas intimidant
-- Pas de jargon technique lourd
-
-**Longueur** : 8-11K tokens par fichier
-
-**Checklist** :
-- [ ] Le contenu est accessible à un non-tech ?
-- [ ] Les exemples sont concrets et actionnables ?
-- [ ] Les outils cités sont réellement utilisables individuellement ?
-- [ ] Le risque est bien encadré (pas de données sensibles) ?
+**Why this divergence?**
+- Strategic needs are radically different at each level
+- Duplicating content would be misleading and counterproductive
+- Each framework requires an approach adapted to its context
 
 ---
 
-### Contribuer à Delivery
+## Govern/Secure/Manage Differences
 
-**Style** : Pragmatique, orienté expérimentation, anti-bureaucratie
-- Focus sur l'action rapide (sprints 2 semaines)
-- Pas de business case formel (validation par l'usage)
-- Catalogue de patterns éprouvés (pas théoriques)
-- Guidance claire pour l'expérimentation
+### Governance (04-govern.md)
 
-**Longueur** : 15-30K tokens par fichier (plus détaillé qu'Employee)
+| Framework | Level | Content | Approval |
+|-----------|-------|---------|----------|
+| **Employee** | LIGHT | Acceptable use policy (1-2 pages) | None (self-service) |
+| **Delivery** | MEDIUM | Team policies (5-10 pages), data handling, incident response | Team Lead |
+| **Automation** | FULL | Complete NIST AI RMF, AI CoE, ethics committee, 3-gate approval | Multi-gate (CoE, Legal, Security) |
 
-**Checklist** :
-- [ ] Le pattern est prouvé dans l'industrie (exemples réels) ?
-- [ ] L'approche d'expérimentation est claire ?
-- [ ] Les métriques de succès sont définies ?
-- [ ] Le risque est gérable pour une équipe ?
+### Security (05-secure.md)
+
+| Framework | Level | Content | Controls |
+|-----------|-------|---------|----------|
+| **Employee** | AWARENESS | Individual best practices (MFA, no secrets, bias awareness) | Individual |
+| **Delivery** | PRAGMATIC | OWASP basics, DLP basics, anonymization, secret detection | Collective (team) |
+| **Automation** | COMPLETE | Defense-in-depth (6 layers), pentesting, SIEM, audits, compliance | Production (org) |
+
+### Operations (06-manage.md)
+
+| Framework | Level | Content | MLOps |
+|-----------|-------|---------|-------|
+| **Employee** | MINIMAL | SaaS subscriptions management, personal productivity | None |
+| **Delivery** | BASIC | Git versioning, simple deployment, monitoring basics | MLOps basics |
+| **Automation** | COMPLETE | Complete CI/CD, model registry, drift detection, DR/BC | MLOps/LLMOps full |
 
 ---
 
-### Contribuer à Automation
+## Contribution Guide by Category
 
-**Style** : Formel, complet, orienté production
-- Focus sur la fiabilité et conformité
-- Business case et ROI requis
-- Gouvernance complète (NIST AI RMF, audits)
-- Architecture et opérations détaillées
+### Contributing to Employee
 
-**Longueur** : 8-20K tokens par fichier (condensé mais complet)
+**Style**: Accessible, educational, pragmatic
+- Focus on discovery and learning
+- Concrete examples of tools and use cases
+- Encouraging tone, not intimidating
+- No heavy technical jargon
 
-**Checklist** :
-- [ ] Le contenu couvre les aspects production (HA, DR, monitoring) ?
-- [ ] La conformité est adressée (NIST, réglementations) ?
-- [ ] Les risques critiques sont identifiés et mitigés ?
-- [ ] L'architecture est scalable et résiliente ?
+**Length**: 8-11K tokens per file
+
+**Checklist**:
+- [ ] Is the content accessible to non-tech users?
+- [ ] Are examples concrete and actionable?
+- [ ] Are cited tools actually usable individually?
+- [ ] Is risk properly managed (no sensitive data)?
+
+---
+
+### Contributing to Delivery
+
+**Style**: Pragmatic, experimentation-oriented, anti-bureaucracy
+- Focus on quick action (2-week sprints)
+- No formal business case (validation through usage)
+- Catalog of proven patterns (not theoretical)
+- Clear guidance for experimentation
+
+**Length**: 15-30K tokens per file (more detailed than Employee)
+
+**Checklist**:
+- [ ] Is the pattern proven in industry (real examples)?
+- [ ] Is the experimentation approach clear?
+- [ ] Are success metrics defined?
+- [ ] Is risk manageable for a team?
+
+---
+
+### Contributing to Automation
+
+**Style**: Formal, complete, production-oriented
+- Focus on reliability and compliance
+- Business case and ROI required
+- Complete governance (NIST AI RMF, audits)
+- Detailed architecture and operations
+
+**Length**: 8-20K tokens per file (condensed but complete)
+
+**Checklist**:
+- [ ] Does content cover production aspects (HA, DR, monitoring)?
+- [ ] Is compliance addressed (NIST, regulations)?
+- [ ] Are critical risks identified and mitigated?
+- [ ] Is architecture scalable and resilient?
 
 ---
 

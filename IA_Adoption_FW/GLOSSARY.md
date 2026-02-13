@@ -1,8 +1,8 @@
-# Glossaire - Équivalences Cloud & Concepts IA
+# Glossary - Cloud Equivalences & AI Concepts
 
-> Référence rapide pour maintenir l'agnosticisme cloud et clarifier les concepts IA
+> Quick reference to maintain cloud agnosticism and clarify AI concepts
 
-## Services Cloud - Équivalences
+## Cloud Services - Equivalences
 
 ### Compute
 
@@ -24,7 +24,7 @@
 | **Model Registry** | SageMaker Model Registry | Vertex AI Model Registry | Azure ML Model Registry |
 | **Low-code AI** | - | - | Copilot Studio |
 
-### AI Services (Pré-entraînés)
+### AI Services (Pre-trained)
 
 | Concept | AWS | GCP | Azure |
 |---------|-----|-----|-------|
@@ -34,7 +34,7 @@
 | **OCR** | Textract | Document AI | Form Recognizer |
 | **Translation** | Translate | Translation AI | Translator |
 
-### Stockage
+### Storage
 
 | Concept | AWS | GCP | Azure |
 |---------|-----|-----|-------|
@@ -43,7 +43,7 @@
 | **File Storage** | EFS | Filestore | Azure Files |
 | **Data Lake** | S3 + Lake Formation | Cloud Storage + BigQuery | Data Lake Storage Gen2 |
 
-### Données & Analytics
+### Data & Analytics
 
 | Concept | AWS | GCP | Azure |
 |---------|-----|-----|-------|
@@ -66,7 +66,7 @@
 | **VPN** | Site-to-Site VPN | Cloud VPN | VPN Gateway |
 | **Bastion** | EC2 Instance Connect | Identity-Aware Proxy | Azure Bastion |
 
-### Sécurité & Identité
+### Security & Identity
 
 | Concept | AWS | GCP | Azure |
 |---------|-----|-----|-------|
@@ -77,7 +77,7 @@
 | **SIEM** | Security Hub | Chronicle | Sentinel |
 | **Compliance** | Config/Audit Manager | Security Command Center | Defender for Cloud |
 
-### Gouvernance
+### Governance
 
 | Concept | AWS | GCP | Azure |
 |---------|-----|-----|-------|
@@ -97,101 +97,101 @@
 | **Alerting** | CloudWatch Alarms | Cloud Monitoring Alerts | Monitor Alerts |
 | **Dashboards** | CloudWatch Dashboards | Cloud Monitoring Dashboards | Monitor Dashboards |
 
-## Concepts IA - Acronymes
+## AI Concepts - Acronyms
 
-### Techniques & Approches
+### Techniques & Approaches
 
-| Acronyme | Terme complet | Description |
-|----------|---------------|-------------|
-| **RAG** | Retrieval-Augmented Generation | Enrichissement du contexte LLM avec données externes |
-| **Fine-tuning** | Model Fine-tuning | Ajustement d'un modèle pré-entraîné sur données spécifiques |
-| **Prompt Engineering** | - | Optimisation des prompts pour meilleurs résultats |
-| **Few-shot** | Few-shot Learning | Apprentissage avec peu d'exemples |
-| **Zero-shot** | Zero-shot Learning | Inférence sans exemples d'entraînement |
-| **Transfer Learning** | - | Réutilisation de modèles pré-entraînés |
+| Acronym | Full Term | Description |
+|---------|-----------|-------------|
+| **RAG** | Retrieval-Augmented Generation | Enriching LLM context with external data |
+| **Fine-tuning** | Model Fine-tuning | Adapting a pre-trained model on specific data |
+| **Prompt Engineering** | - | Optimizing prompts for better results |
+| **Few-shot** | Few-shot Learning | Learning with few examples |
+| **Zero-shot** | Zero-shot Learning | Inference without training examples |
+| **Transfer Learning** | - | Reusing pre-trained models |
 
-### Opérations IA
+### AI Operations
 
-| Acronyme | Terme complet | Description |
-|----------|---------------|-------------|
-| **MLOps** | Machine Learning Operations | Opérations pour ML traditionnel |
-| **GenAIOps** | Generative AI Operations | Opérations spécifiques GenAI (prompts, tokens) |
-| **LLMOps** | Large Language Model Operations | Opérations pour LLMs |
-| **DataOps** | Data Operations | Opérations pour pipelines de données |
-| **ModelOps** | Model Operations | Gestion cycle de vie des modèles |
-| **FinOps** | Financial Operations | Optimisation coûts cloud |
+| Acronym | Full Term | Description |
+|---------|-----------|-------------|
+| **MLOps** | Machine Learning Operations | Operations for traditional ML |
+| **GenAIOps** | Generative AI Operations | GenAI-specific operations (prompts, tokens) |
+| **LLMOps** | Large Language Model Operations | Operations for LLMs |
+| **DataOps** | Data Operations | Operations for data pipelines |
+| **ModelOps** | Model Operations | Model lifecycle management |
+| **FinOps** | Financial Operations | Cloud cost optimization |
 
 ### Frameworks & Standards
 
-| Acronyme | Terme complet | Description |
-|----------|---------------|-------------|
-| **NIST AI RMF** | NIST AI Risk Management Framework | Framework gestion risques IA |
-| **MITRE ATLAS** | Adversarial Threat Landscape for AI Systems | Matrice attaques IA |
-| **OWASP** | Open Web Application Security Project | Standards sécurité applications |
-| **GDPR** | General Data Protection Regulation | Règlement européen protection données |
-| **CCPA** | California Consumer Privacy Act | Loi californienne confidentialité |
-| **EU AI Act** | EU Artificial Intelligence Act | Règlement européen IA |
+| Acronym | Full Term | Description |
+|---------|-----------|-------------|
+| **NIST AI RMF** | NIST AI Risk Management Framework | AI risk management framework |
+| **MITRE ATLAS** | Adversarial Threat Landscape for AI Systems | AI attack matrix |
+| **OWASP** | Open Web Application Security Project | Application security standards |
+| **GDPR** | General Data Protection Regulation | European data protection regulation |
+| **CCPA** | California Consumer Privacy Act | California privacy law |
+| **EU AI Act** | EU Artificial Intelligence Act | European AI regulation |
 
 ### Architecture & Design
 
-| Acronyme | Terme complet | Description |
-|----------|---------------|-------------|
-| **PoC** | Proof of Concept | Preuve de concept |
-| **MVP** | Minimum Viable Product | Produit minimum viable |
-| **SaaS** | Software as a Service | Logiciel en tant que service |
-| **PaaS** | Platform as a Service | Plateforme en tant que service |
-| **IaaS** | Infrastructure as a Service | Infrastructure en tant que service |
-| **API** | Application Programming Interface | Interface de programmation |
-| **SDK** | Software Development Kit | Kit de développement logiciel |
-| **CI/CD** | Continuous Integration/Continuous Deployment | Intégration et déploiement continus |
+| Acronym | Full Term | Description |
+|---------|-----------|-------------|
+| **PoC** | Proof of Concept | Proof of concept |
+| **MVP** | Minimum Viable Product | Minimum viable product |
+| **SaaS** | Software as a Service | Software as a service |
+| **PaaS** | Platform as a Service | Platform as a service |
+| **IaaS** | Infrastructure as a Service | Infrastructure as a service |
+| **API** | Application Programming Interface | Programming interface |
+| **SDK** | Software Development Kit | Software development kit |
+| **CI/CD** | Continuous Integration/Continuous Deployment | Continuous integration and deployment |
 
-### Qualité & Tests
+### Quality & Testing
 
-| Acronyme | Terme complet | Description |
-|----------|---------------|-------------|
-| **DLP** | Data Loss Prevention | Prévention perte de données |
-| **SIEM** | Security Information and Event Management | Gestion événements sécurité |
-| **SOAR** | Security Orchestration, Automation and Response | Orchestration sécurité |
-| **ETL** | Extract, Transform, Load | Extraction, transformation, chargement |
-| **ELT** | Extract, Load, Transform | Extraction, chargement, transformation |
+| Acronym | Full Term | Description |
+|---------|-----------|-------------|
+| **DLP** | Data Loss Prevention | Data loss prevention |
+| **SIEM** | Security Information and Event Management | Security event management |
+| **SOAR** | Security Orchestration, Automation and Response | Security orchestration |
+| **ETL** | Extract, Transform, Load | Extract, transform, load |
+| **ELT** | Extract, Load, Transform | Extract, load, transform |
 
-## Principes IA Responsable
+## Responsible AI Principles
 
-Référence rapide - Voir [README.md](README.md) pour détails complets.
+Quick reference - See [README.md](README.md) for complete details.
 
-1. **Équité** : Traiter tous les utilisateurs de manière équitable
-2. **Fiabilité et sécurité** : Fonctionnement sûr et fiable
-3. **Confidentialité et sécurité** : Respect de la vie privée
-4. **Inclusivité** : Accessible à tous
-5. **Transparence** : Compréhensible et explicable
-6. **Responsabilité** : Responsabilité claire
+1. **Fairness**: Treat all users equitably
+2. **Reliability and Safety**: Safe and reliable operation
+3. **Privacy and Security**: Respect for privacy
+4. **Inclusiveness**: Accessible to all
+5. **Transparency**: Understandable and explainable
+6. **Accountability**: Clear accountability
 
-## Modèles de consommation IA
+## AI Consumption Models
 
-| Modèle | Contrôle | Personnalisation | Complexité | Coût relatif |
-|--------|----------|------------------|------------|--------------|
-| **SaaS** | Faible | Faible | Faible | $ |
-| **PaaS** | Moyen | Moyen | Moyen | $$ |
-| **IaaS** | Élevé | Élevé | Élevé | $$$ |
+| Model | Control | Customization | Complexity | Relative Cost |
+|-------|---------|---------------|------------|---------------|
+| **SaaS** | Low | Low | Low | $ |
+| **PaaS** | Medium | Medium | Medium | $$ |
+| **IaaS** | High | High | High | $$$ |
 
 ## AI Maturity Levels
 
 See [SKILLS.md](SKILLS.md) for the detailed maturity grid and [TRAINING.md](TRAINING.md) for training paths.
 
-## Rôles IA
+## AI Roles
 
-| Rôle | Responsabilités principales |
-|------|----------------------------|
-| **ML Engineer** | Développement et déploiement de modèles |
-| **Data Scientist** | Analyse et modélisation |
-| **MLOps Engineer** | Infrastructure et opérations |
-| **AI Ethics Specialist** | Conformité et responsabilité |
-| **Data Engineer** | Pipelines et qualité des données |
-| **AI Architect** | Architecture et design systèmes IA |
+| Role | Main Responsibilities |
+|------|----------------------|
+| **ML Engineer** | Model development and deployment |
+| **Data Scientist** | Analysis and modeling |
+| **MLOps Engineer** | Infrastructure and operations |
+| **AI Ethics Specialist** | Compliance and accountability |
+| **Data Engineer** | Data pipelines and quality |
+| **AI Architect** | AI systems architecture and design |
 
-## Usage de ce glossaire
+## Using This Glossary
 
-- **Tableaux d'équivalences** : Référencer au lieu de répéter les triplets
-- **Acronymes** : Expliquer une fois, puis utiliser l'acronyme
-- **Concepts** : Pointer vers ce glossaire pour définitions standards
-- **Principes** : Référencer README pour les 6 principes IA responsable
+- **Equivalence tables**: Reference instead of repeating triplets
+- **Acronyms**: Explain once, then use the acronym
+- **Concepts**: Point to this glossary for standard definitions
+- **Principles**: Reference README for the 6 Responsible AI principles
