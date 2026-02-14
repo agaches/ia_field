@@ -54,4 +54,4 @@ These principles apply at all maturity levels, with increasing rigor as you prog
 
 ---
 
-Inspired by Microsoft Cloud Adoption Framework, rewrited and adapted to IA needs and be cloud-agnostic and practical.
+Inspired by Microsoft Cloud Adoption Framework, rewritten and adapted to IA needs and be cloud-agnostic and practical.

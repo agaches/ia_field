@@ -24,7 +24,7 @@ This AI adoption framework is structured around a progressive model in **3 categ
     ┌──────────────────┐
     │     PROJECT      │  ← Build on: Individual maturity
     │   (Delivery)     │     Usage: Collective team processes
-    │   Levels 3-4     │     Risk: Medium
+    │   Levels 2-3     │     Risk: Medium
     └──────────────────┘     Timeline: Weeks → Months
             ↓
     (Team experience validated)
