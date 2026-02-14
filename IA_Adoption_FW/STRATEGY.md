@@ -32,7 +32,7 @@ This AI adoption framework is structured around a progressive model in **3 categ
     ┌──────────────────┐
     │     PRODUCT      │  ← Build on: Processes + Skills
     │  (Automation)    │     Usage: Business APIs in production
-    │   Levels 5-6     │     Risk: High-Critical
+    │   Levels 3-4     │     Risk: High-Critical
     └──────────────────┘     Timeline: Months → Quarters
 ```
 

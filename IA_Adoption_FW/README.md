@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Structured AI adoption following the "Person → Team → Product" model: individual skills, team processes, business production.
+Structured AI adoption following the "Person → Project → Product" model: individual skills, team processes, business production.
 
 ## 3 AI Adoption Frameworks
 
@@ -38,6 +38,19 @@ Structured AI adoption following the "Person → Team → Product" model: indivi
 
 - **Training**: [TRAINING.md](TRAINING.md) - Progression paths by level (1→2, 2→3, 3→4)
 - **Glossary**: [GLOSSARY.md](GLOSSARY.md) - Cloud service equivalences (AWS/GCP/Azure)
+
+## Responsible AI Principles
+
+All frameworks share the same fundamental principles of responsible AI adoption:
+
+1. **Fairness**: Treat all users fairly and avoid bias in AI systems
+2. **Reliability and Safety**: Ensure AI systems operate safely and reliably
+3. **Privacy and Security**: Respect user privacy and protect sensitive data
+4. **Inclusiveness**: Make AI accessible to all users regardless of abilities
+5. **Transparency**: Ensure AI decisions are understandable and explainable
+6. **Accountability**: Maintain clear responsibility for AI system outcomes
+
+These principles apply at all maturity levels, with increasing rigor as you progress from Employee to Delivery to Automation.
 
 ---
 
