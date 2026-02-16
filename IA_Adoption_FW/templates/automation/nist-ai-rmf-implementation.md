@@ -517,7 +517,7 @@ Copy for your project:
 ## Related Templates
 
 - [AI Governance Policy](ai-governance-policy.md) - Comprehensive policy template
-- [EU AI Act Compliance](eu-ai-act-compliance.md) - EU regulatory compliance
+- [Compliance Requirements Checklist](compliance-requirements-checklist.md) - Multi-jurisdiction compliance (incl. EU AI Act)
 - [AI Incident Runbooks](ai-incident-runbooks.md) - Incident response procedures
 - [Model Retraining Playbook](model-retraining-playbook.md) - Model lifecycle management
 - [Compliance Requirements Checklist](compliance-requirements-checklist.md) - Legal and regulatory compliance

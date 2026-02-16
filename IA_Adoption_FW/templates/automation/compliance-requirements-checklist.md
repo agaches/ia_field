@@ -10,27 +10,40 @@
 
 ### EU AI Act (if operating in EU)
 
-**Risk classification** (determine your category):
+**Applicability**: AI systems placed on the EU market or affecting EU residents. Applies to providers, deployers, importers, and distributors.
 
-| Risk Level | Description | Requirements | Examples |
-|------------|-------------|--------------|----------|
-| **Unacceptable** | Prohibited AI systems | ❌ Cannot deploy | Social scoring, subliminal manipulation |
-| **High-risk** | Strict compliance required | 📋 Full compliance | Biometric ID, credit scoring, hiring |
-| **Limited risk** | Transparency obligations | 📝 User disclosure | Chatbots, deepfakes |
-| **Minimal risk** | No specific requirements | ✅ Voluntary best practices | Spam filters, recommendations |
+**Penalties**: Prohibited AI: up to €35M or 7% global turnover. High-risk violations: up to €15M or 3%. Other: up to €7.5M or 1.5%.
 
-**High-risk AI checklist** (if applicable):
-- [ ] Risk management system (NIST AI RMF)
-- [ ] Data governance (quality, lineage, bias prevention)
-- [ ] Technical documentation (model cards, architecture)
-- [ ] Record-keeping (logging all AI decisions)
-- [ ] Transparency requirements (users know it's AI)
-- [ ] Human oversight (human-in-the-loop for critical decisions)
-- [ ] Accuracy and robustness testing
-- [ ] Cybersecurity measures
-- [ ] Conformity assessment (third-party audit)
+**Risk Classification Decision Tree**:
 
-**Timeline**: EU AI Act fully applicable **August 2026**
+1. **Prohibited?** Social scoring, subliminal manipulation, exploiting vulnerable groups, real-time remote biometric ID in public → **BANNED. Stop.**
+2. **High-risk?** Biometrics, critical infrastructure, education, employment, essential services (credit/insurance), law enforcement, migration, justice, safety components → **Full compliance required** (see checklist below)
+3. **Limited risk?** Chatbots, synthetic content, emotion recognition → **Transparency obligations only** (disclose AI use, label AI-generated content)
+4. **All others** → **Minimal risk** (no specific obligations, but GPAI rules may apply)
+
+**High-risk AI checklist** (12 requirements):
+- [ ] Risk management system (identify, estimate, mitigate, review annually)
+- [ ] Data governance (quality, representativeness, bias mitigation, provenance)
+- [ ] Technical documentation (architecture, performance, limitations, instructions — retain 10 years)
+- [ ] Record-keeping (automatic logging of inputs, outputs, errors — protected against tampering)
+- [ ] Transparency (instructions for use, users informed of AI use)
+- [ ] Human oversight (HITL/HOTL/HIC, trained oversight individuals)
+- [ ] Accuracy, robustness, cybersecurity (tested, adversarial inputs, fallbacks)
+- [ ] Quality management system (ISO 9001 or equivalent)
+- [ ] Conformity assessment (self or third-party for biometrics/critical infrastructure)
+- [ ] EU database registration (before market placement)
+- [ ] Post-market monitoring (performance tracking, incident reporting within 15 days)
+- [ ] Deployer obligations (follow instructions, verify input data quality, maintain logs)
+
+**Limited risk transparency**: Chatbots must disclose AI use. Synthetic content must be labeled (machine-readable + human-readable). Emotion recognition must notify users before processing.
+
+**GPAI Models** (e.g., LLMs): Technical documentation + training data summary required. Systemic risk models (>10^25 FLOPs): additional adversarial testing, risk assessment, incident reporting.
+
+**Key Deadlines**:
+- August 2024: Prohibited AI rules apply
+- February 2025: GPAI model rules apply
+- **August 2026**: High-risk AI rules apply
+- August 2027: Full enforcement
 
 ---
 
@@ -214,4 +227,3 @@
 
 - [Organization Readiness Assessment](organization-readiness-assessment.md) - Team and budget
 - [AI Governance Policy](ai-governance-policy.md) - Implement governance
-- [EU AI Act Compliance](eu-ai-act-compliance.md) - Detailed EU AI Act checklist

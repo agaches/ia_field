@@ -12,7 +12,7 @@ Project (Delivery)   → Levels 2-3 → Team AI integration  → Medium risk  �
 Product (Automation) → Levels 3-4 → Production AI        → High risk    → Tens of k$/month
 ```
 
-**Status**: Framework complete. 29/29 templates created. Coherence + density reviews applied.
+**Status**: Framework complete. 28/28 templates created. Coherence + density reviews applied.
 
 ## Structure
 
@@ -22,7 +22,7 @@ Each framework follows **Prepare → Build → Run**:
 employee/     README + 01-prepare + 02-build + 03-run  (27KB)
 delivery/     README + 01-prepare + 02-build + 03-run  (26KB)
 automation/   README + 01-prepare + 02-build + 03-run  (50KB)
-templates/    employee(3) + delivery(5) + automation(18) + shared(3) = 29
+templates/    employee(3) + delivery(5) + automation(17) + shared(3) = 28
 archive/      Old 6-phase files preserved (employee, delivery, automation)
 ```
 

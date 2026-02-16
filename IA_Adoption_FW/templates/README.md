@@ -137,12 +137,11 @@ Templates for production AI systems (Levels 3-4):
 - 📋 [Organization Readiness Assessment](automation/organization-readiness-assessment.md) - Validate team and organizational readiness
 - 📋 [Compliance Requirements Checklist](automation/compliance-requirements-checklist.md) - Identify regulatory requirements
 
-### Phase 2 - Build (7 templates)
+### Phase 2 - Build (6 templates)
 
 - 📋 [AI Landing Zone Checklist](automation/ai-landing-zone-checklist.md) - Deploy production infrastructure
 - 📋 [NIST AI RMF Implementation](automation/nist-ai-rmf-implementation.md) - Implement AI risk management framework
 - 📋 [AI Governance Policy](automation/ai-governance-policy.md) - Establish governance policies
-- 📋 [EU AI Act Compliance](automation/eu-ai-act-compliance.md) - EU AI Act compliance checklist
 - 📋 [MLOps Maturity Assessment](automation/mlops-maturity-assessment.md) - Assess MLOps pipeline maturity
 - 📋 [Production Alerting Runbook](automation/production-alerting-runbook.md) - Configure alerting rules and responses
 - 📋 [Disaster Recovery Plan](automation/disaster-recovery-plan.md) - DR/BC planning and testing
@@ -197,5 +196,5 @@ When creating a new template:
 | **Shared** | 3 | ✅ Complete |
 | **Employee** | 3 | ✅ Complete |
 | **Delivery** | 5 | ✅ Complete |
-| **Automation** | 18 | ✅ Complete |
-| **Total** | **29** | **✅ All created** |
+| **Automation** | 17 | ✅ Complete |
+| **Total** | **28** | **✅ All created** |

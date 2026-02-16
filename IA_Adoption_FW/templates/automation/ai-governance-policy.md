@@ -517,7 +517,7 @@ Copy and customize:
 ## Related Templates
 
 - [NIST AI RMF Implementation](nist-ai-rmf-implementation.md) - Risk management framework
-- [EU AI Act Compliance](eu-ai-act-compliance.md) - EU regulatory compliance
+- [Compliance Requirements Checklist](compliance-requirements-checklist.md) - Multi-jurisdiction compliance (incl. EU AI Act)
 - [AI Incident Runbooks](ai-incident-runbooks.md) - Incident response procedures
 - [Compliance Requirements Checklist](compliance-requirements-checklist.md) - Legal compliance
 - [Model Retraining Playbook](model-retraining-playbook.md) - Model lifecycle management

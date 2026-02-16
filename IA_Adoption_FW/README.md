@@ -1,6 +1,6 @@
 # AI Adoption Framework
 
-> **Cloud-agnostic, practical AI adoption framework**
+> **Concis, efficace** — Cloud-agnostic, practical AI adoption framework
 > Based on Cloud Adoption Framework principles, adapted for AI needs
 
 ---
@@ -121,9 +121,9 @@ All frameworks follow **Prepare → Build → Run**:
 
 ## Templates & Tools
 
-29 practical templates across all frameworks: [→ Browse all templates](templates/)
+28 practical templates across all frameworks: [→ Browse all templates](templates/)
 
-Employee (3) | Delivery (5) | Automation (18) | Shared (3)
+Employee (3) | Delivery (5) | Automation (17) | Shared (3)
 
 ---
 

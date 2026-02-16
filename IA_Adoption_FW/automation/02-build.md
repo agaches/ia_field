@@ -215,7 +215,7 @@ spec:
 
 ### EU AI Act Compliance (if applicable)
 
-📋 **Tool**: [EU AI Act Compliance Checklist](../templates/automation/eu-ai-act-compliance.md)
+📋 **Tool**: [Compliance Requirements Checklist](../templates/automation/compliance-requirements-checklist.md)
 **High-risk AI systems** (require strict compliance):
 - Biometric identification (facial recognition)
 - Critical infrastructure (healthcare, transportation)
