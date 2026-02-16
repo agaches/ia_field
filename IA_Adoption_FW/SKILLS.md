@@ -130,7 +130,7 @@
 **Time investment**: 200+ hours learning + 12-24 months practice
 
 **Validation**:
-- Deploy production AI system with SLA (99.9% uptime, <500ms latency)
+- Deploy production AI system with SLA (99.9% uptime, <2s p95 latency)
 - Complete LLM fine-tuning project with measurable ROI
 - Pass expert-level certifications (AWS ML Specialty, CKAD)
 - Lead organizational AI Center of Excellence

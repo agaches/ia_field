@@ -379,7 +379,7 @@
 
 **Success Criteria**:
 - ✅ System deployed to production with real users (>100 daily active users)
-- ✅ SLA met for 30 consecutive days (99.9% uptime, <100ms p95 latency)
+- ✅ SLA met for 30 consecutive days (99.9% uptime, <2s p95 latency)
 - ✅ Zero critical incidents (data breach, model failure, compliance violation)
 - ✅ Cost within budget (±10% variance)
 - ✅ Responsible AI audit passed (no critical findings)

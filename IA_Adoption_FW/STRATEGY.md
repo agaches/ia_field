@@ -4,7 +4,7 @@
 
 ## Overview
 
-This AI adoption framework is structured around a progressive model in **3 categories** that reflect the reality of technology adoption: we start by developing **individual skills**, then apply them to **team processes**, before deploying them in **production to automate business processes**.
+This AI adoption framework is structured around a progressive model in **3 categories** that reflects the reality of technology adoption: start by developing **individual skills**, then apply them to **team processes**, before deploying them in **production to automate business processes**.
 
 ## "Person → Project → Product" Model
 
@@ -40,11 +40,11 @@ This AI adoption framework is structured around a progressive model in **3 categ
 
 > **Person → Project → Product** = "**I learn** → **We collaborate** → **We industrialize**"
 
-This is a **progressive maturity model** where each level builds on the previous one, instead of trying to do everything at once!
+This is a **progressive maturity model** where each level builds on the previous one, instead of trying to do everything at once.
 
-- **Person (I learn)**: I develop my individual skills with AI
-- **Project (We collaborate)**: We apply these skills to team processes
-- **Product (We industrialize)**: We deploy in production to automate business processes
+- **Person (I learn)**: Develop individual skills with AI
+- **Project (We collaborate)**: Apply these skills to team processes
+- **Product (We industrialize)**: Deploy in production to automate business processes
 
 ---
 
@@ -65,7 +65,7 @@ This is a **progressive maturity model** where each level builds on the previous
 **Demarcation**:
 - **Personal** usage, not collective
 - **Personal** data, no customer data
-- **Low-medium** risk (impact limited to the individual)
+- **Low** risk (impact limited to the individual)
 - Budget **$20-50/month** per person
 
 **Framework**: [employee/](employee/README.md)
@@ -133,7 +133,7 @@ This is a **progressive maturity model** where each level builds on the previous
 | **Timeline** | Hours → Days | Weeks → Months | Months → Quarters |
 | **Governance** | LIGHT | MEDIUM | FULL (NIST AI RMF, AI CoE) |
 | **Security** | Awareness | Pragmatic (OWASP basics) | Complete (Defense-in-depth) |
-| **Operations** | Minimal (SaaS subscriptions) | Basic (MLOps basics) | Complete (MLOps/LLMOps) |
+| **Operations** | Minimal (SaaS subscriptions) | Basic (CI/CD for AI tools) | Complete (MLOps/LLMOps) |
 | **Data** | Personal only | Internal team (anonymized) | Customer/business (sensitive) |
 | **Tech Stack** | SaaS only | SaaS + Light PaaS | SaaS/PaaS/IaaS |
 | **Approval** | None (self-service) | Team Lead | Multi-gate (CoE, Legal, Security) |
@@ -173,5 +173,5 @@ See [README.md](README.md) for complete details.
 
 ### Cloud Agnosticism
 
-All frameworks are designed to be applicable with any IA solution provider.
+All frameworks are designed to be applicable with any AI solution provider.
 
