@@ -61,57 +61,12 @@ jobs:
 
 ## 2. Establish Team Data Policy
 
-📋 **Template**: [Team Policy Template](../templates/delivery/team-policy-template.md)
-### Team Data Classification
+📋 **Template**: [Team Policy Template](../templates/delivery/team-policy-template.md) — contains full data classification rules (🟢🟡🔴), code sharing examples, and .gitignore patterns.
 
-Extend individual [Data Classification](../templates/shared/data-classification-guide.md) for team context:
-
-**🟢 SAFE** (Team level):
-- Open-source code in team repos
-- Public documentation
-- Anonymized architecture diagrams
-- General technical questions
-
-**🟡 CAUTION** (Requires anonymization):
-- Internal code (remove business logic, URLs, secrets)
-- Meeting notes (remove names, customer references)
-- Architecture diagrams (generalize company specifics)
-- Performance metrics (anonymize real numbers)
-
-**🔴 FORBIDDEN** (Never share):
-- Customer data or PII
-- Credentials, API keys, secrets
-- Proprietary algorithms or trade secrets
-- Unreleased product information
-- Competitive intelligence
-
-### Code Sharing Rules
-
-**Allowed**:
-```python
-# ✅ Generic code patterns
-def process_data(df):
-    return df.dropna().sort_values('timestamp')
-```
-
-**Requires anonymization**:
-```python
-# ⚠️ Before sharing
-# Remove: company URLs, service names, business logic
-# if user.subscription == "enterprise":
-#     grant_access(premium_features)
-
-# After anonymization:
-if user.tier == PREMIUM_TIER:
-    grant_access(premium_features)
-```
-
-**Never share**:
-```python
-# ❌ Proprietary algorithms, secrets, customer data
-API_KEY = "sk-abc123..."
-customer_email = "john@client.com"
-```
+Extend individual [Data Classification](../templates/shared/data-classification-guide.md) for team context. Key additions at team level:
+- 🟡 Internal code, meeting notes, architecture diagrams require anonymization before sharing
+- 🔴 Customer data, credentials, proprietary algorithms, unreleased product info are forbidden
+- Code sharing: generic patterns OK, business logic requires anonymization, secrets never shared
 
 ---
 
@@ -215,24 +170,12 @@ Pair Level 2+ with Level 1 team members:
 
 ### Incident Response
 
-Extend individual [Incident Response](../templates/shared/incident-response-process.md) for team:
+📋 **Full process**: [Incident Response Process](../templates/shared/incident-response-process.md)
 
-**Team-specific incidents**:
+**Team-specific additions**:
 - Shared API key leaked → Champion rotates immediately, notifies team
 - Customer data shared → Escalate to Legal/Security, team-wide alert
 - Costly API abuse → Champion pauses API access, investigates
-
-**Team notification**:
-```
-Team incident notification (Slack/Teams):
-
-⚠️ AI SECURITY INCIDENT ⚠️
-Type: [API key leak / Data exposure / etc.]
-Severity: [CRITICAL/HIGH/MEDIUM]
-Status: [Contained / Investigating / Resolved]
-Actions: [What team should do]
-Contact: @ai-champion for questions
-```
 
 ---
 
@@ -301,4 +244,4 @@ Complete before moving to Phase 3:
 
 ---
 
-**Next**: [Phase 3: Run](03-run.md) - Collective operations and continuous improvement
+**Previous**: [Phase 1: Prepare](01-prepare.md) | **Next**: [Phase 3: Run](03-run.md)

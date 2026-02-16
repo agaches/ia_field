@@ -213,25 +213,14 @@ spec:
 
 ## 4. Establish Compliance Framework
 
-### EU AI Act Compliance (if applicable)
+### EU AI Act & Regulatory Compliance
+
+Implement the regulatory requirements identified in [Phase 1: Prepare](01-prepare.md#7-identify-regulatory-requirements).
 
 📋 **Tool**: [Compliance Requirements Checklist](../templates/automation/compliance-requirements-checklist.md)
-**High-risk AI systems** (require strict compliance):
-- Biometric identification (facial recognition)
-- Critical infrastructure (healthcare, transportation)
-- Education/employment decisions (hiring, admissions)
-- Law enforcement (predictive policing)
-- Credit scoring and insurance
 
-**Requirements for high-risk systems**:
-- [ ] Risk management framework (NIST AI RMF compliant)
-- [ ] Data governance (quality, lineage, bias prevention)
-- [ ] Technical documentation (model cards, architecture)
-- [ ] Transparency (user disclosure: "This is AI")
-- [ ] Human oversight (human-in-the-loop for critical decisions)
-- [ ] Accuracy and robustness testing
-- [ ] Logging and auditability (all decisions logged)
-- [ ] Conformity assessment (third-party audit)
+- [ ] All EU AI Act requirements from Phase 1 addressed (risk classification, documentation, transparency, human oversight)
+- [ ] Conformity assessment scheduled (third-party audit for high-risk systems)
 
 ---
 
@@ -264,7 +253,7 @@ Implement the sector-specific requirements identified in [Phase 1: Prepare](01-p
 **MLOps maturity levels**:
 - **Level 0**: Manual (scripts, notebooks) - Not production-ready ❌
 - **Level 1**: Automated training - CI/CD for model training ⚠️
-- **Level 2**: Automated deployment - CI/CD for model serving ✅
+- **Level 2**: CI/CD Pipeline Automation - Full deployment pipeline ✅
 - **Level 3**: Full MLOps - Monitoring, retraining, A/B testing ✅ (target)
 
 ---
@@ -447,4 +436,4 @@ Complete before moving to Phase 3:
 
 ---
 
-**Next**: [Phase 3: Run](03-run.md) - Production operations and continuous improvement
+**Previous**: [Phase 1: Prepare](01-prepare.md) | **Next**: [Phase 3: Run](03-run.md)

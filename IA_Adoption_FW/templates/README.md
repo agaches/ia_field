@@ -9,7 +9,7 @@ templates/
 ├── shared/          # Templates used across all frameworks (Employee, Delivery, Automation)
 ├── employee/        # Employee-specific templates (3)
 ├── delivery/        # Delivery-specific templates (5)
-└── automation/      # Automation-specific templates (18)
+└── automation/      # Automation-specific templates (17)
 ```
 
 ---
@@ -180,7 +180,8 @@ When creating a new template:
 
 **Reference format**:
 ```markdown
-📋 **Tool**: [Template Name](../templates/path/template.md)```
+📋 **Tool**: [Template Name](../templates/path/template.md)
+```
 
 **Linking**:
 - From employee/: `../templates/employee/template.md`
@@ -198,3 +199,7 @@ When creating a new template:
 | **Delivery** | 5 | ✅ Complete |
 | **Automation** | 17 | ✅ Complete |
 | **Total** | **28** | **✅ All created** |
+
+---
+
+**Back**: [README.md](../README.md)

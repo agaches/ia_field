@@ -197,6 +197,4 @@ Example: [Concrete usage example]
 
 ---
 
-**Questions?** Check [TRAINING.md](../TRAINING.md) for learning resources or [SKILLS.md](../SKILLS.md) for skill development paths.
-
-**Congratulations!** You've mastered personal AI adoption. Share your learnings with your team!
+**Previous**: [Phase 2: Build](02-build.md) | **Back**: [Employee README](README.md)

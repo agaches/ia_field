@@ -31,8 +31,8 @@ Structured AI adoption following the **"Person → Project → Product"** model:
 **Prerequisites**: None (start here if new to AI)
 
 **3 Phases**:
-1. **Prepare** (2-4 hours): Identify use cases, select 2-3 tools, classify data (🟢🟡🔴)
-2. **Build** (4-6 hours): Setup accounts, configure security (MFA, privacy), establish backup
+1. **Prepare** (2 hours): Identify use cases, select 2-3 tools, classify data (🟢🟡🔴)
+2. **Build** (4 hours): Setup accounts, configure security (MFA, privacy), establish backup
 3. **Run** (ongoing): Daily AI hygiene, validate outputs, track ROI (≥3x target)
 
 **Success criteria**: ≥2h/week saved, ≥3x/week usage, 0 security incidents
@@ -153,7 +153,7 @@ All frameworks enforce these principles, with increasing rigor from Employee →
 ## Frequently Asked Questions
 
 **Q: Can I skip levels?**
-A: No. Minimum 6-12 months: Employee (1 month) → Delivery (3 months) → Automation (3-6 months). Skipping = high failure risk.
+A: No. Minimum 6-12 months: Employee (2-4 weeks) → Delivery (4-8 weeks + experience) → Automation (3-6 months). Skipping = high failure risk.
 
 **Q: Which cloud provider do I need?**
 A: None specific. Framework is cloud-agnostic. See [GLOSSARY.md](GLOSSARY.md) for AWS/GCP/Azure equivalences.

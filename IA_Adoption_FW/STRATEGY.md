@@ -15,7 +15,7 @@ Progressive adoption: **individual skills** → **team processes** → **product
     │     PERSON       │  ← Foundation: Individual skills
     │   (Employee)     │     Usage: Personal productivity
     │   Levels 1-2     │     Risk: Low
-    └──────────────────┘     Timeline: Hours → Days
+    └──────────────────┘     Timeline: 2-4 weeks (initial ramp-up: hours → days)
             ↓
     (Individual mastery acquired)
             ↓
@@ -118,7 +118,7 @@ Progressive adoption: **individual skills** → **team processes** → **product
 | **Maturity level** | 1-2 | 2-3 | 3-4 |
 | **Risk** | Low | Medium | High-Critical |
 | **Budget** | $20-50/month/person | Few k$/month/team | Tens-hundreds k$/month |
-| **Timeline** | Hours → Days | Weeks → Months | Months → Quarters |
+| **Timeline** | 2-4 weeks | Weeks → Months | Months → Quarters |
 | **Governance** | LIGHT | MEDIUM | FULL (NIST AI RMF, AI CoE) |
 | **Security** | Awareness | Pragmatic (OWASP basics) | Complete (Defense-in-depth) |
 | **Operations** | Minimal (SaaS subscriptions) | Basic (CI/CD for AI tools) | Complete (MLOps/LLMOps) |

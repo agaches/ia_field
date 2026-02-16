@@ -453,4 +453,4 @@ Track and enforce these production SLOs:
 
 ---
 
-**Questions?** Check [TRAINING.md](../TRAINING.md) for advanced topics or [SKILLS.md](../SKILLS.md) for Level 4 expert path.
+**Previous**: [Phase 2: Build](02-build.md) | **Back**: [Automation README](README.md)

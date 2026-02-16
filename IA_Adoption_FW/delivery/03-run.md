@@ -64,15 +64,9 @@ For each of the 3 selected use cases (from Prepare):
 
 ### Sprint Metrics Dashboard
 
-Track these metrics every sprint:
+📋 **Tool**: [Velocity Tracking Matrix](../templates/delivery/velocity-tracking-matrix.md) — full dashboard template with examples.
 
-| Metric | Baseline | Sprint N-1 | Sprint N | Target | Trend |
-|--------|----------|------------|----------|--------|-------|
-| **Velocity** | 40 pts | 43 pts | 46 pts | 46 pts (+ 15%) | ✅ ↗ |
-| **Code review time** | 5h/dev | 4.2h/dev | 3.5h/dev | 3.5h/dev (-30%) | ✅ ↗ |
-| **Bug escape rate** | 5/sprint | 4/sprint | 3/sprint | 4/sprint (-20%) | ✅ ↗ |
-| **Documentation** | 3 pages | 4 pages | 5 pages | 4.5 pages (+50%) | ✅ ↗ |
-| **Test coverage** | 65% | 68% | 72% | 70% | ✅ ↗ |
+Track these metrics every sprint: Velocity, Code review time, Bug escape rate, Documentation output, Test coverage.
 
 **Trends**:
 - ✅ ↗ Improving (on track)
@@ -167,16 +161,7 @@ Author: @security-champion | Last updated: 2026-02-15
 
 ### Monthly Team ROI Review
 
-📋 **Tool**: [Cost & ROI Tracking](../templates/employee/cost-roi-tracking.md) adapted for team
-
-| Tool | Cost | Team Hours Saved | Hourly Value | Value Created | ROI | Decision |
-|------|------|------------------|--------------|---------------|-----|----------|
-| ChatGPT Team | $300 | 60h | $75/h | $4,500 | **15x** | ✅ Keep |
-| Copilot Business | $190 | 80h | $75/h | $6,000 | **32x** | ✅ Keep |
-| API Credits | $450 | 30h | $75/h | $2,250 | **5x** | ✅ Optimize |
-| **Total** | **$940** | **170h** |  | **$12,750** | **13.6x** | ✅ |
-
-**Team average**: 170h/mo ÷ 10 devs = **17h/dev/mo saved**
+📋 **Tool**: [Cost & ROI Tracking](../templates/employee/cost-roi-tracking.md) — use the same ROI formula adapted for team-level aggregation (sum team hours saved, use team hourly value).
 
 **Decision criteria** (Team level):
 - **ROI ≥5x**: Excellent, maintain or expand
@@ -335,4 +320,4 @@ When experiment ROI ≥5x and team satisfaction ≥4/5:
 
 ---
 
-**Questions?** Check [TRAINING.md](../TRAINING.md) for advanced topics or [SKILLS.md](../SKILLS.md) for skills development.
+**Previous**: [Phase 2: Build](02-build.md) | **Back**: [Delivery README](README.md)

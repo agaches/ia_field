@@ -57,8 +57,8 @@ Identify 3 priority tasks where AI saves you time this week.
 ## 4. Assess Your Skills
 
 **Current maturity level**:
-- **Level 1 (Beginner)**: I know AI exists, I use it occasionally
-- **Level 2 (Practitioner)**: I use it daily, I know prompt engineering basics
+- **Level 1 (Basic)**: I know AI exists, I use it occasionally
+- **Level 2 (Intermediate)**: I use it daily, I know prompt engineering basics
 
 📋 **Complete assessment**: [SKILLS.md](../SKILLS.md) - Full 7-domain maturity grid
 
@@ -76,9 +76,9 @@ Identify 3 priority tasks where AI saves you time this week.
 - [ ] Time saved: ≥2 hours/week
 - [ ] Usage frequency: ≥3 times/week
 - [ ] Security incidents: 0
+- [ ] ROI: ≥3x subscription cost
 
 ### Optional Metrics
-- [ ] ROI: ≥3x subscription cost
 - [ ] New skills: 3 prompt techniques learned
 - [ ] Quality: Improved output quality (self-rated)
 
@@ -99,4 +99,4 @@ Complete before moving to Phase 2:
 
 ---
 
-**Next**: [Phase 2: Build](02-build.md) - Secure setup and configuration
+**Previous**: [Employee README](README.md) | **Next**: [Phase 2: Build](02-build.md)

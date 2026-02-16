@@ -63,6 +63,7 @@ Evaluate potential use cases on 4 dimensions:
 ## 3. Design AI Architecture
 
 📋 **Tool**: [Architecture Decision Record (ADR) Template](../templates/automation/architecture-decision-record.md)
+
 ### Key Architecture Decisions
 
 Document each major decision using ADRs:
@@ -232,13 +233,16 @@ Supporting infrastructure:
 - **Return**: 30% support cost reduction = $2M/year savings
 - **ROI**: ($2M - $1.5M) / $1.5M = **33% ROI** ✅
 
-**Decision threshold (Go/No-Go)**: Projected ROI ≥20% to justify investment. Once in production, target ≥100% ROI (2x return) to validate sustained operations (see [Phase 3: Run](03-run.md)).
+**Decision threshold (Go/No-Go)**: Projected ROI ≥20% to justify initial investment.
+
+**ROI threshold progression**: The 20% threshold applies to initial approval (Phase 1). Once in production, the target rises to ≥100% ROI (2x return) to validate sustained operations and continued investment (see [Phase 3: Run](03-run.md)).
 
 ---
 
 ## 7. Identify Regulatory Requirements
 
 📋 **Tool**: [Compliance Requirements Checklist](../templates/automation/compliance-requirements-checklist.md)
+
 ### General Regulations
 
 **EU AI Act** (if operating in EU):
@@ -313,4 +317,4 @@ Complete before moving to Phase 2:
 
 ---
 
-**Next**: [Phase 2: Build](02-build.md) - AI landing zone, governance, and security
+**Previous**: [Automation README](README.md) | **Next**: [Phase 2: Build](02-build.md)

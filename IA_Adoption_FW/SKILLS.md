@@ -74,7 +74,7 @@
 **Validation**:
 - Complete 1 API-based automation project
 - Document 5 reusable prompt templates
-- Achieve 5+ hours/week productivity gains (self-reported)
+- Achieve 2+ hours/week productivity gains (self-reported)
 
 ---
 
@@ -250,16 +250,16 @@ Track your skills progression over time:
 
 | Domain | Current Level | Target Level | Gap Actions | Target Date |
 |--------|---------------|--------------|-------------|-------------|
-| Conversational AI | 1 | 2 | Complete advanced prompting course | Q2 2026 |
-| Code Assistance | 2 | 3 | Build AI code review automation | Q3 2026 |
-| AI/ML Fundamentals | 1 | 2 | Study LLM architectures, practice APIs | Q2 2026 |
-| AI Tooling | 1 | 2 | Learn OpenAI API, build 3 projects | Q2 2026 |
-| Data & Security | 1 | 2 | Complete GDPR training, setup DLP | Q1 2026 |
-| Governance & Ethics | 1 | 2 | Document team AI policies | Q2 2026 |
-| Operations | 1 | 2 | Setup cost tracking, monitor usage | Q1 2026 |
+| Conversational AI | 1 | 2 | Complete advanced prompting course | Q3 2026 |
+| Code Assistance | 2 | 3 | Build AI code review automation | Q4 2026 |
+| AI/ML Fundamentals | 1 | 2 | Study LLM architectures, practice APIs | Q3 2026 |
+| AI Tooling | 1 | 2 | Learn OpenAI API, build 3 projects | Q3 2026 |
+| Data & Security | 1 | 2 | Complete GDPR training, setup DLP | Q2 2026 |
+| Governance & Ethics | 1 | 2 | Document team AI policies | Q3 2026 |
+| Operations | 1 | 2 | Setup cost tracking, monitor usage | Q2 2026 |
 
 **Update quarterly** to track progression and adjust goals.
 
 ---
 
-**Training paths**: See [TRAINING.md](TRAINING.md) for level progression (1→2→3→4).
+**Back**: [README.md](README.md) | [STRATEGY.md](STRATEGY.md) | [TRAINING.md](TRAINING.md) | [GLOSSARY.md](GLOSSARY.md)

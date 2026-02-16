@@ -139,10 +139,6 @@
 | **PoC** | Proof of Concept | Proof of concept |
 | **MVP** | Minimum Viable Product | Minimum viable product |
 
----
-
-**Back**: [README.md](README.md) | [SKILLS.md](SKILLS.md) | [TRAINING.md](TRAINING.md)
-
 ### Quality & Testing
 
 | Acronym | Full Term | Description |
@@ -152,4 +148,8 @@
 | **SOAR** | Security Orchestration, Automation and Response | Security orchestration |
 | **ETL** | Extract, Transform, Load | Extract, transform, load |
 | **ELT** | Extract, Load, Transform | Extract, load, transform |
+
+---
+
+**Back**: [README.md](README.md) | [SKILLS.md](SKILLS.md) | [TRAINING.md](TRAINING.md)
 

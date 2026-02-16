@@ -149,4 +149,4 @@ Complete before moving to Phase 3:
 
 ---
 
-**Next**: [Phase 3: Run](03-run.md) - Daily operations and optimization
+**Previous**: [Phase 1: Prepare](01-prepare.md) | **Next**: [Phase 3: Run](03-run.md)

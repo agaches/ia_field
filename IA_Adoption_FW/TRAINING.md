@@ -23,8 +23,8 @@
 | **Level** | Basic → Intermediate | Intermediate → Advanced | Advanced → Expert |
 | **Risk** | Low (personal data) | Medium (team velocity) | High-Critical (business SLA) |
 | **Budget** | $20-50/month | Few k$/month | Tens-hundreds k$/month |
-| **Time** | 2-4 weeks | 2-3 months | 6-12 months |
-| **Prerequisites** | None | 50%+ team at L2 | Team L2-3 + Exec sponsor |
+| **Time** | 2-4 weeks | 4-8 weeks (training) + experience | 6-12 months |
+| **Prerequisites** | None | 50%+ team at L2, AI champion | All members ≥L2, 50%+ L3, ≥1 L4 + Exec sponsor |
 | **Key Skills** | Prompting, SaaS tools, API basics | RAG, MLOps basics, team integration | Fine-tuning, K8s, NIST AI RMF |
 | **Validation** | 3 use cases automated | RAG app deployed | Production system (99.9% SLA) |
 
@@ -39,7 +39,7 @@
 
 **Tools**: ChatGPT, Claude, GitHub Copilot, M365 Copilot, OpenAI/Anthropic API basics
 
-**Validation**: Automate 3 daily tasks, create 10+ reusable prompts, 1 simple API call, track ROI for 1 month. **Success**: 5h/week saved, zero 🔴 data exposure, manager validation.
+**Validation**: Automate 3 daily tasks, create 5+ reusable prompts, 1 simple API call, track ROI for 1 month. **Success**: 2+ hours/week saved, zero 🔴 data exposure, manager validation.
 
 ---
 
@@ -81,4 +81,4 @@
 
 ---
 
-**Getting started**: Assess your level with [SKILLS.md](SKILLS.md), then follow the corresponding path above.
+**Back**: [README.md](README.md) | [STRATEGY.md](STRATEGY.md) | [SKILLS.md](SKILLS.md) | [GLOSSARY.md](GLOSSARY.md)

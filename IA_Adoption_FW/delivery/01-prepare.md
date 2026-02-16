@@ -34,6 +34,7 @@
 **Focus on collective processes**, not individual tasks.
 
 📋 **Tool**: [AI Integration Readiness](../templates/delivery/ai-integration-readiness.md)
+
 ### Team Process Categories
 
 **Code Quality & Review** (High ROI):
@@ -208,4 +209,4 @@ Complete before moving to Phase 2:
 
 ---
 
-**Next**: [Phase 2: Build](02-build.md) - Infrastructure, policies, and team training
+**Previous**: [Delivery README](README.md) | **Next**: [Phase 2: Build](02-build.md)

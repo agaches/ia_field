@@ -354,7 +354,7 @@ detect-secrets scan --baseline .secrets.baseline
 ### Ongoing Support
 
 **Resources**:
-- Team prompt library: [/team-ai-library/](link)
+- Team prompt library: `/team-ai-library/`
 - Weekly office hours: [Champion] - Wednesdays 2-3pm
 - Slack channel: #ai-adoption
 - Incident reporting: #ai-incidents
