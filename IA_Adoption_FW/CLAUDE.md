@@ -55,6 +55,49 @@ archive/      Old 6-phase files preserved (employee, delivery, automation)
 - Responsible AI principles in README.md
 - Progressive prerequisites (cannot skip levels)
 
-## Optional Improvements
+## Review Prompts
 
-- **TRAINING.md**: Already functional (paths + validation projects). Could add more practical exercises per level.
+Three reusable review passes. Run individually or in sequence.
+
+### 1. Coherence Review
+
+```
+Lis TOUS les fichiers .md du framework (core docs + employee/ + delivery/ + automation/ + templates/README.md).
+Identifie :
+- Contradictions : chiffres, niveaux, timelines, budgets qui se contredisent entre fichiers
+- Ruptures narratives : prérequis manquants, liens cassés, références à du contenu inexistant
+- Redondances : même contenu dupliqué dans plusieurs fichiers (hors références croisées volontaires)
+
+Format de sortie : tableau avec colonnes [Sévérité (CRITICAL/MEDIUM/LOW), Type, Fichier(s), Description, Correction proposée].
+Ne corrige rien, liste seulement.
+```
+
+### 2. Value Density Review
+
+```
+Lis TOUS les fichiers .md du framework.
+Pour chaque fichier, identifie les sections à faible valeur :
+- Conseils génériques ("test your code", "document your work", "communicate with stakeholders")
+- Listes de ressources externes (liens Coursera, livres, communautés) qui vieillissent vite
+- Sections "pourquoi c'est important" qui n'apportent pas d'action concrète
+- Répétitions de contenu déjà présent dans un autre fichier
+- Prose là où une checklist ou un tableau suffirait
+
+Format de sortie : tableau avec colonnes [Fichier, Section, Lignes, % estimé de filler, Action proposée (CUT/CONDENSE/MERGE)].
+Ne corrige rien, liste seulement.
+```
+
+### 3. Post-Edit Review
+
+```
+Lis TOUS les fichiers .md du framework (core docs + employee/ + delivery/ + automation/ + templates/).
+Vérifie :
+- Liens internes : tous les liens [texte](chemin) pointent vers des fichiers existants
+- Compteurs : les totaux (nombre de templates, phases, niveaux) sont cohérents partout
+- Markdown : séparateurs --- précédés d'une ligne vide, pas de headings collés au texte, code blocks correctement fermés
+- Footers : chaque fichier a une navigation cohérente vers les fichiers liés
+- Références croisées : les templates mentionnés dans les phases existent dans templates/
+
+Format de sortie : tableau avec colonnes [Sévérité (CRITICAL/MEDIUM/LOW), Fichier, Ligne, Description, Correction proposée].
+Ne corrige rien, liste seulement.
+```
