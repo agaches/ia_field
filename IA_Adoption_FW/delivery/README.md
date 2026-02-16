@@ -1,39 +1,67 @@
-# Delivery AI Framework
+# Delivery Framework - Team AI Integration
 
-> Team AI integration for collective development processes
+> **Target**: Development teams and technical leads
+> **Maturity**: Levels 2-3 (Intermediate → Advanced)
+> **Timeline**: 4-8 weeks to operational
+> **Budget**: Few k$/month per team
 
 ## Purpose
 
-This framework is for **technical teams and leads** who want to integrate AI into delivery processes:
-- AI-automated code review
-- Collective documentation generation
-- AI-assisted testing and refactoring
-- Sprint planning with AI support
-
-**Target audience**: Development teams looking to improve velocity and quality with AI
-
-**Maturity level**: Levels 2-3 (intermediate to advanced) - See [SKILLS.md](../SKILLS.md)
+Integrate AI into collective delivery processes in 3 phases:
+- **Prepare** (1-2 weeks): Team assessment, use case selection, experimentation plan
+- **Build** (2-3 weeks): Infrastructure setup, team policies, security controls
+- **Run** (ongoing): Collective operations, velocity tracking, continuous improvement
 
 ## Prerequisites
 
 Before using this framework, ensure:
-- ✅ **Individual maturity**: Team members are proficient with AI tools ([Employee Framework](../employee/README.md) Levels 1-2)
-- ✅ **Team readiness**: 50%+ team uses AI daily
-- ✅ **AI champion**: At least one team member ready to lead AI adoption
+- ✅ **Individual maturity**: Team members proficient with AI (Employee Levels 1-2)
+- ✅ **Team readiness**: ≥50% team uses AI daily
+- ✅ **AI champion**: At least 1 team member ready to lead adoption
+- ✅ **Management support**: Budget and time allocated
 
-**Not ready yet?** Start with the [Employee Framework](../employee/README.md) to build individual skills first.
+**Not ready yet?** Start with [Employee Framework](../employee/) to build individual skills first.
 
-## 6-Phase Framework
+## 3-Phase Journey
 
-| Phase | Focus |
-|-------|-------|
-| [Strategy](01-strategy.md) | Explore team integration patterns |
-| [Plan](02-plan.md) | Plan collective experimentation |
-| [Ready](03-ready.md) | Prepare team infrastructure |
-| [Govern](04-govern.md) | Establish team policies |
-| [Secure](05-secure.md) | Implement security controls |
-| [Manage](06-manage.md) | Monitor and optimize operations |
+| Phase | Focus | Time | Deliverable |
+|-------|-------|------|-------------|
+| **[1. Prepare](01-prepare.md)** | Assessment + Use Cases + Plan | 1-2 weeks | Team readiness + Integration roadmap |
+| **[2. Build](02-build.md)** | Infrastructure + Policies + Security | 2-3 weeks | Team environment + Data governance |
+| **[3. Run](03-run.md)** | Operations + Optimization + Scale | Ongoing | Velocity gains + Knowledge sharing |
+
+## Success Criteria (90 days)
+
+- [ ] ≥3 team processes AI-augmented
+- [ ] Velocity increase ≥15% (measured)
+- [ ] All team members using AI weekly
+- [ ] Zero security incidents
+- [ ] Documented best practices shared
+
+## Team AI Integration Patterns
+
+**Code-focused teams**:
+- AI-assisted code review
+- Test generation automation
+- Documentation generation
+- Refactoring support
+
+**Product teams**:
+- Sprint planning assistance
+- User story refinement
+- Technical spike research
+- Architecture exploration
+
+**DevOps teams**:
+- Incident analysis
+- Runbook generation
+- Infrastructure as Code generation
+- Log analysis and troubleshooting
 
 ## Next Steps
 
-Once your team has 6-12 months of Delivery experience (Levels 2-3), progress to the **[Automation Framework](../automation/README.md)** to deploy AI applications in production.
+Once your team has 6-12 months of Delivery experience (Levels 2-3), progress to **[Automation Framework](../automation/)** for production AI systems.
+
+---
+
+**Need help?** Check [SKILLS.md](../SKILLS.md) for team assessment | [TRAINING.md](../TRAINING.md) for team learning paths

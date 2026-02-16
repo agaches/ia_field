@@ -1,49 +1,101 @@
-# Automation AI Framework
+# Automation Framework - Production AI Systems
 
-> Production AI - Business applications and APIs
-
-> This framework provides guidance, not prescriptive details. Users are expected to research specific topics based on their context.
+> **Target**: Organizations, architects, and SREs
+> **Maturity**: Levels 3-4 (Advanced → Expert)
+> **Timeline**: 3-6 months to production
+> **Budget**: Tens-hundreds k$/month
 
 ## Purpose
 
-This framework is for **organizations, architects, and SREs** who want to:
-- Deploy AI applications in production
-- Expose AI APIs to customers or users
-- Automate business-critical processes with AI
-- Build scalable AI systems with high availability
+Deploy business-critical AI systems in production with enterprise-grade governance, security, and operations.
 
-**Use case examples**:
-- Public AI API
-- Production customer chatbot
-- Business-critical automated workflow
-- ML prediction or recommendation system
-
-**Target audience**: Organizations deploying production AI systems
-
-**Maturity level**: Levels 3-4 (advanced to expert) - See [SKILLS.md](../SKILLS.md)
+**Use cases**:
+- Public AI APIs serving customers
+- Production chatbots and assistants
+- Automated business workflows (document processing, prediction systems)
+- ML/AI recommendation engines at scale
 
 ## Prerequisites
 
-Before using this framework, ensure:
-- ✅ **Individual maturity**: Team members are proficient with AI ([Employee Framework](../employee/README.md) Levels 1-2)
-- ✅ **Team maturity**: Proven delivery processes with AI integration ([Delivery Framework](../delivery/README.md) Levels 2-3)
-- ✅ **Technical skills**: RAG, advanced ML, MLOps, orchestration (Levels 3-4)
-- ✅ **Team composition**: All members ≥ Level 2, 50%+ at Level 3, at least 1 at Level 4
-- ✅ **Organizational support**: Executive sponsor (CTO/VP) and AI CoE or dedicated team
+**Critical**: All prerequisites must be met. Do not skip to Automation prematurely.
 
-**Not ready yet?** Start with the [Employee Framework](../employee/README.md), then progress to [Delivery Framework](../delivery/README.md).
+- ✅ **Individual maturity**: Team members proficient with AI (Employee Levels 1-2)
+- ✅ **Team maturity**: Proven delivery processes with AI integration (Delivery Levels 2-3)
+- ✅ **Technical skills**: RAG, fine-tuning, MLOps, orchestration (Levels 3-4)
+- ✅ **Team composition**: All members ≥Level 2, 50%+ at Level 3, ≥1 at Level 4
+- ✅ **Executive sponsor**: CTO/VP backing and budget authority
+- ✅ **Organizational readiness**: AI CoE or dedicated team, governance capacity
 
-## 6-Phase Framework
+**Not ready yet?** Start with [Employee Framework](../employee/) → [Delivery Framework](../delivery/) → Automation (6-12 months minimum).
 
-| Phase | Focus |
-|-------|-------|
-| [Strategy](01-strategy.md) | Identify business use cases with ROI |
-| [Plan](02-plan.md) | Plan architecture and infrastructure |
-| [Ready](03-ready.md) | Establish complete AI landing zone |
-| [Govern](04-govern.md) | Implement full governance (NIST AI RMF) |
-| [Secure](05-secure.md) | Deploy defense-in-depth security |
-| [Manage](06-manage.md) | Operate with full MLOps/LLMOps |
+## 3-Phase Journey
+
+| Phase | Focus | Time | Deliverable |
+|-------|-------|------|-------------|
+| **[1. Prepare](01-prepare.md)** | Use Cases + Architecture + Readiness | 4-6 weeks | Business case + Technical design |
+| **[2. Build](02-build.md)** | Landing Zone + Governance + Security | 6-8 weeks | Production-ready infrastructure |
+| **[3. Run](03-run.md)** | Operations + Monitoring + Lifecycle | Ongoing | Reliable production AI systems |
+
+## Success Criteria (6 months)
+
+- [ ] ≥1 production AI system deployed
+- [ ] SLA compliance ≥99.9% uptime
+- [ ] Zero critical security incidents
+- [ ] NIST AI RMF governance implemented
+- [ ] Regulatory compliance validated
+- [ ] MLOps/LLMOps operations mature
+
+## Risk Profile
+
+| Risk Category | Level | Key Controls |
+|---------------|-------|--------------|
+| **Technical** | 🔴 High | Architecture review, load testing, DR/BC |
+| **Security** | 🔴 Critical | Defense-in-depth, OWASP LLM Top 10, DLP |
+| **Compliance** | 🔴 Critical | EU AI Act, GDPR, sector regulations |
+| **Operational** | 🟠 High | 24/7 monitoring, incident response, SLA |
+| **Financial** | 🟠 High | Cost monitoring, ROI tracking, optimization |
+| **Reputational** | 🔴 Critical | Bias testing, human oversight, transparency |
+
+## Automation Patterns by Domain
+
+**Customer-Facing AI**:
+- Chatbots and virtual assistants (RAG, fine-tuning)
+- Content generation APIs (guardrails, moderation)
+- Recommendation engines (personalization, A/B testing)
+
+**Internal Automation**:
+- Document processing (OCR, classification, extraction)
+- Code generation and review (security scanning, quality gates)
+- Data analysis and reporting (BI integration, anomaly detection)
+
+**Business-Critical ML**:
+- Prediction systems (fraud detection, churn prediction)
+- Optimization engines (pricing, inventory, scheduling)
+- Computer vision (quality control, surveillance)
+
+## When to Use This Framework
+
+**Use Automation if**:
+- ✅ Deploying AI systems that directly impact customers or revenue
+- ✅ Require SLAs, high availability, and disaster recovery
+- ✅ Need regulatory compliance (EU AI Act, GDPR, sector-specific)
+- ✅ Team has advanced AI/ML skills (Levels 3-4)
+- ✅ Executive sponsorship and budget secured
+
+**Stay with Delivery if**:
+- Team still building AI maturity (not all at Level 2+)
+- Use cases are internal productivity tools (not customer-facing)
+- No regulatory/compliance requirements yet
+- Budget constraints (<tens k$/month)
 
 ## Next Steps
 
-Continue iterating and scaling your production AI systems. Consider establishing an **AI Center of Excellence (CoE)** to govern and accelerate AI adoption across your organization.
+After 6-12 months of successful production AI operations, consider:
+- **AI Center of Excellence (CoE)**: Scale governance across organization
+- **Multi-model orchestration**: Deploy multiple AI systems efficiently
+- **Advanced MLOps**: Model monitoring, A/B testing, canary deployments
+- **AI-driven product innovation**: AI as core product differentiator
+
+---
+
+**Need help?** Check [SKILLS.md](../SKILLS.md) for Level 3-4 assessment | [TRAINING.md](../TRAINING.md) for advanced learning paths

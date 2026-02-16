@@ -1,38 +1,45 @@
-# Employee AI Framework
+# Employee Framework - Personal AI Adoption
 
-> Individual AI adoption to improve your personal productivity
+> **Target**: Individuals (tech and non-tech)
+> **Maturity**: Levels 1-2 (Basic → Intermediate)
+> **Timeline**: 2-4 weeks to operational
+> **Budget**: $20-50/month
 
 ## Purpose
 
-This framework is for **individuals** (technical and non-technical) who want to start using AI for their productivity:
-- Developers (GitHub Copilot, Cursor, etc.)
-- Office workers (ChatGPT, Claude, M365 Copilot)
-- Creative professionals (writing, research, analysis)
-
-**Target audience**: Anyone looking to improve personal productivity with AI tools
-
-**Maturity level**: Levels 1-2 (basic to intermediate) - See [SKILLS.md](../SKILLS.md)
+Boost your personal productivity with AI tools in 3 phases:
+- **Prepare** (2h): Define objectives, select tools
+- **Build** (4h): Secure setup, configure environment
+- **Run** (ongoing): Daily operations, track ROI
 
 ## Prerequisites
 
-**None** - This is the entry point for AI adoption.
+**None** - This is your entry point to AI adoption.
 
 Start here if:
 - You've never used AI tools
-- You want to explore AI for personal productivity
+- You want personal productivity gains
 - Your team has no AI experience yet
 
-## 6-Phase Framework
+## 3-Phase Journey
 
-| Phase | Focus |
-|-------|-------|
-| [Strategy](01-strategy.md) | Discover available AI tools |
-| [Plan](02-plan.md) | Assess and develop your skills |
-| [Ready](03-ready.md) | Configure your personal environment |
-| [Govern](04-govern.md) | Understand usage policies |
-| [Secure](05-secure.md) | Adopt security best practices |
-| [Manage](06-manage.md) | Manage your productivity |
+| Phase | Focus | Time | Deliverable |
+|-------|-------|------|-------------|
+| **[1. Prepare](01-prepare.md)** | Objectives + Tools + Skills | 2h | Use cases + Tool stack + Baseline assessment |
+| **[2. Build](02-build.md)** | Security + Configuration | 4h | Hardened accounts + Backup plan |
+| **[3. Run](03-run.md)** | Operations + Optimization | Ongoing | ROI tracking + Continuous improvement |
+
+## Success Criteria (30 days)
+
+- [ ] Save ≥2 hours/week with AI
+- [ ] Use AI ≥3 times/week
+- [ ] Zero security incidents
+- [ ] ROI ≥3x subscription cost
 
 ## Next Steps
 
-Once you've mastered individual AI usage (Levels 1-2), progress to the **[Delivery Framework](../delivery/README.md)** to integrate AI into team processes.
+Once you master personal AI usage (Levels 1-2), progress to **[Delivery Framework](../delivery/)** for team integration.
+
+---
+
+**Need help?** Check [SKILLS.md](../SKILLS.md) for self-assessment | [TRAINING.md](../TRAINING.md) for learning paths
