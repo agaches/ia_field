@@ -73,6 +73,7 @@
 - [ ] Use AI as assistant, not decision-maker
 
 📋 **Full reference**: [OWASP LLM Top 10](../templates/shared/owasp-llm-top10.md)
+
 ---
 
 ## 4. Establish Backup & Reliability
@@ -110,6 +111,7 @@ Even at $20-50/month, track where your money goes.
 - **Break-even**: ___ hours saved/month (at your hourly rate)
 
 📋 **Tool**: [Cost & ROI Tracking](../templates/employee/cost-roi-tracking.md)
+
 ### Billing Alerts
 
 - [ ] Set spending alert at 80% of budget

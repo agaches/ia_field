@@ -18,7 +18,9 @@ templates/
 
 Templates applicable to all maturity levels:
 
-### 📋 [Data Classification Guide](shared/data-classification-guide.md)**Purpose**: Reference for what data is safe/unsafe to share with AI tools
+### 📋 [Data Classification Guide](shared/data-classification-guide.md)
+
+**Purpose**: Reference for what data is safe/unsafe to share with AI tools
 **Used by**: All frameworks (Employee, Delivery, Automation)
 **Content**:
 - 🟢 Safe: Public docs, open-source code
@@ -27,7 +29,9 @@ Templates applicable to all maturity levels:
 - Cloud-specific rules (AWS/GCP/Azure)
 - Examples by role (developer, analyst, manager)
 
-### 📋 [Incident Response Process](shared/incident-response-process.md)**Purpose**: Step-by-step guide when sensitive data is accidentally shared
+### 📋 [Incident Response Process](shared/incident-response-process.md)
+
+**Purpose**: Step-by-step guide when sensitive data is accidentally shared
 **Used by**: All frameworks
 **Content**:
 - Immediate actions (STOP, ROTATE, REPORT)
@@ -36,7 +40,9 @@ Templates applicable to all maturity levels:
 - Follow-up checklist
 - Post-mortem template
 
-### 📋 [OWASP LLM Top 10](shared/owasp-llm-top10.md)**Purpose**: Security risks specific to LLM applications
+### 📋 [OWASP LLM Top 10](shared/owasp-llm-top10.md)
+
+**Purpose**: Security risks specific to LLM applications
 **Used by**: All frameworks (depth varies by maturity)
 **Content**:
 - LLM01-LLM10 with descriptions
@@ -50,7 +56,9 @@ Templates applicable to all maturity levels:
 
 Templates specific to personal AI adoption (Levels 1-2):
 
-### 📋 [Use Case Identification Matrix](employee/use-case-identification-matrix.md)**Purpose**: Identify high-value personal productivity use cases
+### 📋 [Use Case Identification Matrix](employee/use-case-identification-matrix.md)
+
+**Purpose**: Identify high-value personal productivity use cases
 **Format**: Interactive matrix/worksheet
 **Content**:
 - Task categories (Writing, Code, Analysis, Creative)
@@ -64,7 +72,9 @@ Templates specific to personal AI adoption (Levels 1-2):
 |------|-----------|-----------|----------------|--------------|----------|
 | Write weekly report | Weekly | 2h | High | 1h/week | ⭐⭐⭐ |
 
-### 📋 [Tool Selection Matrix](employee/tool-selection-matrix.md)**Purpose**: Compare AI tools based on use cases and budget
+### 📋 [Tool Selection Matrix](employee/tool-selection-matrix.md)
+
+**Purpose**: Compare AI tools based on use cases and budget
 **Format**: Decision matrix
 **Content**:
 - Tool comparison table (features, pricing, use cases)
@@ -74,7 +84,9 @@ Templates specific to personal AI adoption (Levels 1-2):
 
 **Columns**: Tool | Category | Cost | Free Tier | Best For | Limitations | Rating
 
-### 📋 [Cost & ROI Tracking](employee/cost-roi-tracking.md)**Purpose**: Track monthly AI tool costs and measure ROI
+### 📋 [Cost & ROI Tracking](employee/cost-roi-tracking.md)
+
+**Purpose**: Track monthly AI tool costs and measure ROI
 **Format**: Spreadsheet/table template
 **Content**:
 - Monthly cost tracker
@@ -103,7 +115,7 @@ Templates for team AI integration (Levels 2-3):
 **Purpose**: Plan and track team AI experiments with structured approach
 **Used by**: Delivery Phase 1 (Prepare)
 
-### 📋 [Team Policy Template](delivery/team-ai-policy-template.md)
+### 📋 [Team Policy Template](delivery/team-policy-template.md)
 **Purpose**: Define team AI usage policies, data rules, and governance
 **Used by**: Delivery Phase 2 (Build)
 

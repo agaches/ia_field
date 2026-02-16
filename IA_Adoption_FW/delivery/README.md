@@ -36,6 +36,7 @@ Before using this framework, ensure:
 - [ ] Velocity increase ≥15% (measured)
 - [ ] All team members using AI weekly
 - [ ] Zero security incidents
+- [ ] ROI ≥5x team investment
 - [ ] Documented best practices shared
 
 ## Team AI Integration Patterns

@@ -2,11 +2,9 @@
 
 > Strategic overview of the "Person → Project → Product" model
 
-## Overview
-
-This AI adoption framework is structured around a progressive model in **3 categories** that reflects the reality of technology adoption: start by developing **individual skills**, then apply them to **team processes**, before deploying them in **production to automate business processes**.
-
 ## "Person → Project → Product" Model
+
+Progressive adoption: **individual skills** → **team processes** → **production systems**.
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────┐
@@ -36,19 +34,9 @@ This AI adoption framework is structured around a progressive model in **3 categ
     └──────────────────┘     Timeline: Months → Quarters
 ```
 
-### In Summary
-
-> **Person → Project → Product** = "**I learn** → **We collaborate** → **We industrialize**"
-
-This is a **progressive maturity model** where each level builds on the previous one, instead of trying to do everything at once.
-
-- **Person (I learn)**: Develop individual skills with AI
-- **Project (We collaborate)**: Apply these skills to team processes
-- **Product (We industrialize)**: Deploy in production to automate business processes
-
 ---
 
-## The 3 Categories: Clear Demarcation
+## The 3 Categories
 
 ### 1. Person (Employee) - Individual Adoption
 
@@ -138,40 +126,6 @@ This is a **progressive maturity model** where each level builds on the previous
 | **Tech Stack** | SaaS only | SaaS + Light PaaS | SaaS/PaaS/IaaS |
 | **Approval** | None (self-service) | Team Lead | Multi-gate (CoE, Legal, Security) |
 
+---
 
-
-### Why This Layered Structure?
-
-**1. Clear prerequisites**: Each framework assumes the previous one is mastered
-- Cannot deploy to production if the team has no AI experience
-- Cannot integrate AI in a team if individuals don't know how to use it
-
-**2. Progressive risk management**: Risk increases with scope
-- Individual: Low risk (simple management)
-- Team: Medium risk (team governance)
-- Prod: High-critical risk (full governance)
-
-**3. Progressive investment**: Budget proportional to value
-- $50/month to try (individual)
-- Few k$/month to validate (team)
-- Tens of k$/month to scale (prod)
-
-## Shared Principles
-
-### The 6 Principles of Responsible AI
-
-All frameworks share the same fundamental principles:
-
-1. **Fairness**: Treat all users fairly
-2. **Reliability and safety**: Safe and reliable operation
-3. **Privacy and security**: Respect for privacy
-4. **Inclusiveness**: Accessible to all
-5. **Transparency**: Understandable and explainable
-6. **Accountability**: Clear responsibility
-
-See [README.md](README.md) for complete details.
-
-### Cloud Agnosticism
-
-All frameworks are designed to be applicable with any AI solution provider.
-
+**Back**: [README.md](README.md) | [SKILLS.md](SKILLS.md) | [TRAINING.md](TRAINING.md)

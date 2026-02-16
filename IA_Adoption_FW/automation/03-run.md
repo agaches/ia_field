@@ -10,22 +10,11 @@
 
 ### Daily Operations Checklist
 
-**Morning (8am)**:
-- [ ] Review overnight alerts and incidents
-- [ ] Check SLA compliance (availability, latency, error rate)
-- [ ] Verify model performance metrics (no degradation)
+- [ ] Review overnight alerts, SLA compliance, model performance
+- [ ] Monitor dashboards (Grafana, Datadog) — respond per severity
 - [ ] Review cost dashboard (no unexpected spikes)
 - [ ] Check security alerts (DLP, anomalies)
-
-**Throughout Day**:
-- [ ] Monitor real-time dashboards (Grafana, Datadog)
-- [ ] Respond to alerts per severity (Critical: <15min, High: <1h)
-- [ ] Triage user-reported issues
-- [ ] Update on-call runbooks based on new issues
-
-**Evening (6pm)**:
 - [ ] Daily standup: incidents, learnings, blockers
-- [ ] Review tomorrow's scheduled maintenance
 - [ ] Handoff to next shift (if 24/7 operations)
 
 ---
@@ -414,22 +403,9 @@ Track and enforce these production SLOs:
 
 ### Continuous Learning
 
-**Team training**:
-- [ ] Monthly: Lunch & Learn (new AI techniques, tools, case studies)
-- [ ] Quarterly: Advanced training (MLOps, RAG, fine-tuning)
-- [ ] Annually: Conferences and certifications (AWS ML, Azure AI, Google Cloud)
-
-**Knowledge sharing**:
-- [ ] Document all incidents (runbooks updated)
-- [ ] Share learnings across teams (wiki, Confluence)
-- [ ] Contribute to open source (if applicable)
-- [ ] Publish case studies (anonymized, marketing)
-
-**Technology refresh**:
-- [ ] Evaluate new models (GPT-5, Claude 4, open-source)
-- [ ] Test new AI patterns (multi-agent, tool use, function calling)
-- [ ] Benchmark performance improvements
-- [ ] Plan migrations (LangChain → LangGraph, vector DB upgrade)
+- **Monthly**: Lunch & Learn, document incidents, update runbooks
+- **Quarterly**: Advanced training (MLOps, fine-tuning), evaluate new models/patterns
+- **Annually**: Conferences, certifications, technology refresh planning
 
 ---
 

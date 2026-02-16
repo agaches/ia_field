@@ -45,32 +45,18 @@ For each of the 3 selected use cases (from Prepare):
 
 ### Daily AI Hygiene (Team Level)
 
-**Morning standup additions**:
-- "Any AI-assisted work completed yesterday?"
-- "Blockers with AI tools?"
-- "Learnings to share?"
+**Standup additions**: AI-assisted work? Blockers? Learnings?
 
-**Code review checklist additions**:
-- [ ] If AI-generated code: Reviewed thoroughly?
-- [ ] If sensitive: Data classification verified?
-- [ ] If novel approach: Rationale documented?
+**Code review additions**:
+- [ ] AI-generated code reviewed thoroughly?
+- [ ] Data classification verified?
+- [ ] Novel approach rationale documented?
 
-### Weekly Team Practices
+### Weekly: 3 touchpoints
 
-**Monday: Planning**
-- [ ] Review AI tool availability (check status pages)
-- [ ] Plan week's AI-assisted tasks
-- [ ] Assign ownership for experiments
-
-**Wednesday: Mid-week Check**
-- [ ] Quick wins sharing (5 min)
-- [ ] Blocker resolution
-- [ ] Tool tips exchange
-
-**Friday: Retrospective**
-- [ ] Week's AI wins and learnings
-- [ ] Update team prompt library
-- [ ] Cost review (if needed)
+- **Monday**: Review AI tool status, plan AI-assisted tasks, assign experiments
+- **Wednesday**: Quick wins sharing (5 min), blocker resolution
+- **Friday**: Learnings, update prompt library, cost review
 
 ---
 
@@ -134,7 +120,7 @@ team-ai-library/
 - Author and date
 
 **Example prompt**:
-```markdown
+````markdown
 # Security Code Review Prompt
 
 ## Use Case
@@ -166,7 +152,7 @@ Provide:
 - Always verify AI findings manually
 
 Author: @security-champion | Last updated: 2026-02-15
-```
+````
 
 ### Knowledge Sharing Cadence
 
@@ -303,57 +289,11 @@ When experiment ROI ≥5x and team satisfaction ≥4/5:
 
 ## Troubleshooting
 
-### Issue: Low team adoption
-
-**Symptoms**: <50% daily users after 30 days
-
-**Diagnosis**:
-- [ ] Tools too complex? (Need more training)
-- [ ] Use cases not compelling? (Revisit selection)
-- [ ] Time pressure? (Need management support)
-- [ ] Skills gap? (Individual coaching needed)
-
-**Actions**:
-- Pair programming with AI champion
-- Simplify initial use cases
-- Celebrate quick wins publicly
-- Address individual concerns 1:1
-
----
-
-### Issue: No velocity improvement
-
-**Symptoms**: Metrics flat or declining after 60 days
-
-**Diagnosis**:
-- [ ] Wrong metrics tracked?
-- [ ] Overhead from learning curve?
-- [ ] Tool performance issues?
-- [ ] Team resistance?
-
-**Actions**:
-- Review baseline measurement accuracy
-- Adjust timeline expectations (3+ months for full benefit)
-- Optimize tool configuration
-- Conduct team retrospective to identify blockers
-
----
-
-### Issue: Costs exceeding budget
-
-**Symptoms**: Monthly costs >20% over budget
-
-**Diagnosis**:
-- [ ] API usage spikes (check logs)
-- [ ] More users than planned?
-- [ ] Inefficient prompts?
-- [ ] Unused premium features?
-
-**Actions**:
-- Implement usage quotas
-- Optimize prompt token usage
-- Cache repeated queries
-- Downgrade unused features
+| Issue | Symptoms | Actions |
+|-------|----------|---------|
+| **Low adoption** | <50% daily users after 30 days | Pair with champion, simplify use cases, celebrate wins |
+| **No velocity gain** | Metrics flat after 60 days | Review baselines, extend timeline (3+ months), retro |
+| **Cost overrun** | >20% over budget | Audit API usage, set quotas, optimize prompts, cache |
 
 ---
 

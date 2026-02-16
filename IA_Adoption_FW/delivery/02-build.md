@@ -39,7 +39,7 @@ jobs:
   ai-review:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: AI Review
         run: |
           # Call AI API for code analysis
@@ -178,30 +178,14 @@ detect-secrets scan --baseline .secrets.baseline
 
 ## 4. Team Training & Onboarding
 
-### Training Program (1 week)
+### Training Program (1 week, ~10h)
 
-**Day 1: Kickoff (2h)**:
-- Framework overview
-- Team policies review
-- Tool access setup
-- Q&A session
-
-**Day 2-3: Hands-on Training (4h)**:
-- Advanced prompt engineering (few-shot, CoT, role-based)
-- Code AI best practices
-- Team workflow integration
-- Security awareness
-
-**Day 4: Experimentation Setup (2h)**:
-- First experiment launch
-- Success metrics review
-- Buddy system assignments
-- Office hours schedule
-
-**Day 5: Knowledge Sharing (1h)**:
-- Team members share early wins
-- Q&A with AI champion
-- Resource library walkthrough
+| Day | Duration | Content |
+|-----|----------|---------|
+| 1 | 2h | Framework overview, policies, tool setup |
+| 2-3 | 4h | Hands-on: prompting, code AI, workflow integration |
+| 4 | 2h | First experiment launch, buddy assignments |
+| 5 | 1h | Early wins sharing, Q&A |
 
 📋 **Resources**: [TRAINING.md](../TRAINING.md) - Level 2→3 path
 

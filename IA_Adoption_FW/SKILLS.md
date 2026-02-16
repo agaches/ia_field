@@ -244,26 +244,7 @@ Assess yourself on a scale of 1-4 for each domain:
 
 ---
 
-## 5. Progression Paths
-
-### From Level 1 to Level 2
-**Focus**: SaaS → APIs + advanced prompting
-**Timeline**: 3-6 months of daily practice
-**Training**: See [TRAINING.md](TRAINING.md) Section 3
-
-### From Level 2 to Level 3
-**Focus**: APIs → RAG/custom solutions + MLOps basics
-**Timeline**: 6-12 months of project work
-**Training**: See [TRAINING.md](TRAINING.md) Section 4
-
-### From Level 3 to Level 4
-**Focus**: RAG → Fine-tuning + production infrastructure
-**Timeline**: 12-24 months of production experience
-**Training**: See [TRAINING.md](TRAINING.md) Section 5
-
----
-
-## 6. Skills Matrix Template
+## 5. Skills Matrix Template
 
 Track your skills progression over time:
 
@@ -281,12 +262,4 @@ Track your skills progression over time:
 
 ---
 
-## Next Steps
-
-1. **Complete self-assessment** using domain radar (Section 3)
-2. **Determine your level** using assessment guide (Section 4)
-3. **Choose your framework**: [Employee](employee/README.md) | [Delivery](delivery/README.md) | [Automation](automation/README.md)
-4. **Start training**: Follow [TRAINING.md](TRAINING.md) for your level progression
-5. **Track progress**: Update your skills matrix quarterly
-
-**Questions?** Consult [README.md](README.md) for framework overview or [STRATEGY.md](STRATEGY.md) for strategic guidance.
+**Training paths**: See [TRAINING.md](TRAINING.md) for level progression (1→2→3→4).

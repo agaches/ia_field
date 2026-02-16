@@ -138,12 +138,10 @@
 |---------|-----------|-------------|
 | **PoC** | Proof of Concept | Proof of concept |
 | **MVP** | Minimum Viable Product | Minimum viable product |
-| **SaaS** | Software as a Service | Software as a service |
-| **PaaS** | Platform as a Service | Platform as a service |
-| **IaaS** | Infrastructure as a Service | Infrastructure as a service |
-| **API** | Application Programming Interface | Programming interface |
-| **SDK** | Software Development Kit | Software development kit |
-| **CI/CD** | Continuous Integration/Continuous Deployment | Continuous integration and deployment |
+
+---
+
+**Back**: [README.md](README.md) | [SKILLS.md](SKILLS.md) | [TRAINING.md](TRAINING.md)
 
 ### Quality & Testing
 
@@ -155,20 +153,3 @@
 | **ETL** | Extract, Transform, Load | Extract, transform, load |
 | **ELT** | Extract, Load, Transform | Extract, load, transform |
 
-## AI & Data Roles
-
-| Role | Main Responsibilities |
-|------|----------------------|
-| **ML Engineer** | Model development and deployment |
-| **Data Scientist** | Analysis and modeling |
-| **MLOps Engineer** | Infrastructure and operations |
-| **AI Ethics Specialist** | Compliance and accountability |
-| **Data Engineer** | Data pipelines and quality |
-| **AI Architect** | AI systems architecture and design |
-
-## Using This Glossary
-
-- **Equivalence tables**: Reference instead of repeating triplets
-- **Acronyms**: Explain once, then use the acronym
-- **Concepts**: Point to this glossary for standard definitions
-- **Principles**: Reference README for the 6 Responsible AI principles

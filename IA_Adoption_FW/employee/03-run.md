@@ -49,6 +49,7 @@
 **If you accidentally paste a secret or PII:**
 
 📋 **Full process**: [Incident Response Process](../templates/shared/incident-response-process.md)
+
 ### Immediate Actions (Within 5 minutes)
 
 1. **STOP**: Immediately stop the conversation
@@ -126,27 +127,9 @@ Example: [Concrete usage example]
 
 ## 6. Continuous Improvement
 
-### Weekly (5 minutes)
-
-- [ ] Try 1 new prompt technique (few-shot, chain-of-thought, role-based)
-- [ ] Test different phrasing for repeated tasks
-- [ ] Review AI tool changelog for new features
-
-### Monthly (30 minutes)
-
-- [ ] Review ROI and cost (Section 4)
-- [ ] Check for new/better tools in your category
-- [ ] Read 1 article on AI best practices
-- [ ] Update prompt library with new templates
-
-### Quarterly (1 hour)
-
-- [ ] Reassess skills using [SKILLS.md](../SKILLS.md)
-- [ ] Check if ready for [Delivery Framework](../delivery/) (team usage)
-- [ ] Review progress against 30-day success criteria
-- [ ] Set goals for next quarter
-
-📋 **Track progress**: [Skills Matrix Template](../SKILLS.md#6-skills-matrix-template)
+- **Weekly** (5 min): Try 1 new prompt technique, review tool changelog
+- **Monthly** (30 min): Review ROI/cost (Section 4), update prompt library
+- **Quarterly** (1h): Reassess skills ([SKILLS.md](../SKILLS.md)), check readiness for [Delivery Framework](../delivery/)
 
 ---
 

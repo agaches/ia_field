@@ -113,200 +113,57 @@ All frameworks follow **Prepare → Build → Run**:
 
 ## Getting Started
 
-### Step 1: Assess Your Maturity
-
-📋 **[SKILLS.md](SKILLS.md)** - Self-assessment across 7 domains:
-- Conversational AI, Code Assistance, AI/ML Fundamentals
-- Tooling & Integration, Data & Security, Governance, Operations
-
-**Maturity levels**:
-- **Level 1** (Beginner): Basic AI usage, simple prompts
-- **Level 2** (Intermediate): Advanced prompting, team coordination
-- **Level 3** (Advanced): RAG, fine-tuning, MLOps basics
-- **Level 4** (Expert): Production AI, architecture, governance
-
----
-
-### Step 2: Choose Your Framework
-
-Based on your assessment:
-- **Levels 1-2**: [Employee Framework](employee/)
-- **Levels 2-3** + Team ready: [Delivery Framework](delivery/)
-- **Levels 3-4** + Organization ready: [Automation Framework](automation/)
-
----
-
-### Step 3: Follow the Phases
-
-Each framework has **Prepare → Build → Run** phases with:
-- ✅ Clear objectives and success criteria
-- ✅ Actionable checklists and decision matrices
-- ✅ Tracking tools (ROI, velocity, SLA dashboards)
-- ✅ Templates for common artifacts (policies, ADRs, runbooks)
+1. **Assess your level**: [SKILLS.md](SKILLS.md) (7 domains, 4 levels)
+2. **Choose framework**: Levels 1-2 → [Employee](employee/) | Levels 2-3 → [Delivery](delivery/) | Levels 3-4 → [Automation](automation/)
+3. **Follow Prepare → Build → Run** phases in your chosen framework
 
 ---
 
 ## Templates & Tools
 
-Each framework includes practical templates:
+29 practical templates across all frameworks: [→ Browse all templates](templates/)
 
-**Employee** (3 templates):
-- Use Case Identification Matrix
-- Tool Selection Matrix
-- Cost & ROI Tracking
-
-**Delivery** (5 templates):
-- Team Adoption Metrics
-- AI Integration Readiness
-- Collective Experimentation Canvas
-- Team Policy Template
-- Velocity Tracking Matrix
-
-**Automation** (18 templates):
-- Production Use Case Matrix, ADRs, Readiness Assessment
-- NIST AI RMF, AI Governance Policy, Compliance Checklists
-- Landing Zone, MLOps Maturity, Alerting Runbooks
-- Performance Dashboards, Retraining Playbooks, Incident Runbooks
-
-**Shared** (3 templates):
-- Data Classification Guide (🟢🟡🔴)
-- Incident Response Process
-- OWASP LLM Top 10
-
-[→ Browse all templates](templates/)
+Employee (3) | Delivery (5) | Automation (18) | Shared (3)
 
 ---
 
 ## Responsible AI Principles
 
-All frameworks enforce these principles at every maturity level:
+All frameworks enforce these principles, with increasing rigor from Employee → Automation:
 
-### 1. **Fairness**
-Treat all users fairly, avoid bias in AI systems
-- **Employee**: Verify AI outputs don't contain stereotypes
-- **Delivery**: Test team tools for bias in recommendations
-- **Automation**: Regular fairness audits (demographic parity testing)
-
-### 2. **Reliability and Safety**
-Ensure AI systems operate safely and reliably
-- **Employee**: Always verify AI outputs before using
-- **Delivery**: Quality gates (test coverage, code review)
-- **Automation**: ≥99.9% SLA, DR/BC plans, incident response
-
-### 3. **Privacy and Security**
-Respect user privacy, protect sensitive data
-- **Employee**: Never share PII, credentials, secrets with AI
-- **Delivery**: Team data policies, anonymization requirements
-- **Automation**: Defense-in-depth, OWASP LLM Top 10, DLP
-
-### 4. **Inclusiveness**
-Make AI accessible to all users regardless of abilities
-- **Employee**: Choose tools with accessibility features
-- **Delivery**: Train all team members (buddy system)
-- **Automation**: Design for diverse users, multi-language support
-
-### 5. **Transparency**
-Ensure AI decisions are understandable and explainable
-- **Employee**: Understand how AI generates outputs
-- **Delivery**: Document AI-assisted processes
-- **Automation**: Model cards, explainable AI (XAI), user disclosure
-
-### 6. **Accountability**
-Maintain clear responsibility for AI system outcomes
-- **Employee**: You're responsible for AI-assisted work
-- **Delivery**: AI Champion + team policies
-- **Automation**: AI CoE, governance framework, audit trails
-
-**Progressive rigor**: Principles apply at all levels, with increasing controls as you progress from Employee → Delivery → Automation.
+| Principle | Employee | Delivery | Automation |
+|-----------|----------|----------|------------|
+| **Fairness** | Verify outputs for stereotypes | Test tools for bias | Regular fairness audits |
+| **Reliability** | Verify before using | Quality gates | ≥99.9% SLA, DR/BC |
+| **Privacy** | Never share PII/secrets | Team data policies | Defense-in-depth, DLP |
+| **Inclusiveness** | Accessible tool choices | Buddy system training | Multi-language, diverse users |
+| **Transparency** | Understand AI outputs | Document AI processes | Model cards, XAI |
+| **Accountability** | You own AI-assisted work | AI Champion + policies | AI CoE, audit trails |
 
 ---
 
 ## Additional Resources
 
-### Learning & Skills
-📋 **[TRAINING.md](TRAINING.md)** - Learning paths by maturity level
-- Level 1→2: Prompt engineering, AI fundamentals
-- Level 2→3: RAG, fine-tuning, team practices
-- Level 3→4: MLOps, governance, production systems
-
-### Strategy & Model
-📋 **[STRATEGY.md](STRATEGY.md)** - Deep dive into "Person → Project → Product" model
-- Risk profiles by framework (Low → Medium → High-Critical)
-- Budget expectations ($50/mo → Few k$/mo → Tens-hundreds k$/mo)
-- Timeline guidance (Weeks → Months → Quarters)
-
-### Technical Reference
-📋 **[GLOSSARY.md](GLOSSARY.md)** - Cloud service equivalences
-- AWS, GCP, Azure, On-Premise mappings
-- AI/ML terminology and acronyms
-- Tool categories and examples
-
----
-
-## Success Stories & Benchmarks
-
-**Employee Framework** (typical results after 30 days):
-- ⏱️ 2-5 hours/week saved per person
-- 📈 3-10x ROI on tool investment
-- ✅ 80-100% team adoption (if voluntary)
-
-**Delivery Framework** (typical results after 90 days):
-- 🚀 +15-25% team velocity improvement
-- ⏱️ -30-50% time on overhead (code review, testing, docs)
-- ✅ 3-5 processes successfully AI-augmented
-
-**Automation Framework** (typical results after 6 months):
-- 💰 100-300% ROI (2-4x return on investment)
-- 📊 ≥99.9% SLA compliance
-- 🎯 Business objectives met (cost savings, revenue increase)
-
-*Note: Results vary by context. Use metrics to validate in your environment.*
+- **[STRATEGY.md](STRATEGY.md)** — "Person → Project → Product" model deep dive
+- **[TRAINING.md](TRAINING.md)** — Learning paths (Level 1→2→3→4)
+- **[GLOSSARY.md](GLOSSARY.md)** — Cloud equivalences (AWS/GCP/Azure) and AI acronyms
 
 ---
 
 ## Frequently Asked Questions
 
-**Q: Can I skip Employee and go straight to Automation?**
-A: No. Automation requires team maturity (Delivery) and individual skills (Employee). Skipping = high failure risk.
-
-**Q: How long does it take to go from Employee to Automation?**
-A: Minimum 6-12 months. Employee (1 month) → Delivery (3 months) → Automation (3-6 months). Cannot rush maturity.
+**Q: Can I skip levels?**
+A: No. Minimum 6-12 months: Employee (1 month) → Delivery (3 months) → Automation (3-6 months). Skipping = high failure risk.
 
 **Q: Which cloud provider do I need?**
-A: Framework is cloud-agnostic. Works with AWS, GCP, Azure, or on-premise. See [GLOSSARY.md](GLOSSARY.md) for equivalences.
-
-**Q: Do I need to follow all phases strictly?**
-A: Yes for first time. Once mature, you can adapt. But skipping Build phase (security, governance) = incidents waiting to happen.
+A: None specific. Framework is cloud-agnostic. See [GLOSSARY.md](GLOSSARY.md) for AWS/GCP/Azure equivalences.
 
 **Q: What if my team has mixed maturity levels?**
-A: Start at lowest common level. Use buddy system: pair Level 2+ with Level 1 team members.
+A: Start at lowest common level. Pair Level 2+ with Level 1 members (buddy system).
 
-**Q: Is this only for developers/tech teams?**
-A: No. Employee framework is for anyone (tech and non-tech). Delivery/Automation require technical skills.
-
----
-
-## Contributing & Feedback
-
-This framework is based on real-world AI adoption experience and evolves continuously.
-
-**Found an issue?** Open an issue or submit a PR
-**Have a success story?** Share your learnings (anonymized)
-**Want to adapt for your context?** Fork and customize (attribution appreciated)
+**Q: Is this only for developers?**
+A: Employee framework is for anyone. Delivery/Automation require technical skills.
 
 ---
 
-## License & Attribution
-
-Inspired by [Microsoft Cloud Adoption Framework](https://learn.microsoft.com/azure/cloud-adoption-framework/), rewritten and adapted for AI adoption needs.
-
-Cloud-agnostic, practical, and pragmatic approach based on industry best practices.
-
----
-
-**Ready to start?**
-1. [Assess your skills](SKILLS.md) → Determine maturity level
-2. [Choose framework](employee/) → Employee, Delivery, or Automation
-3. [Start Phase 1](employee/01-prepare.md) → Prepare phase of chosen framework
-
-**Questions?** Check [STRATEGY.md](STRATEGY.md) for model details or [TRAINING.md](TRAINING.md) for learning paths.
+Inspired by [Microsoft Cloud Adoption Framework](https://learn.microsoft.com/azure/cloud-adoption-framework/), adapted for AI adoption. Contributions welcome — open an issue or submit a PR.
