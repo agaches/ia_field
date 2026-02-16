@@ -6,11 +6,35 @@
 
 **Philosophy**: Progressive 1→2→3→4 with practical project validation.
 
+**Framework Alignment**:
+- **Path 1→2** = [Employee Framework](employee/) (Personal productivity)
+- **Path 2→3** = [Delivery Framework](delivery/) (Team processes)
+- **Path 3→4** = [Automation Framework](automation/) (Production systems)
+
 **Structure per path**:
 - **Concepts**: Theory, fundamentals (what you need to understand)
 - **Tools**: Practice, discovery and usage (what you need to know how to use)
+- **Validation**: Practical project to validate skills before moving to next level
 
-**Validation**: Each path ends with a practical project to validate skills.
+**Quick Start**:
+1. Assess your current level: [SKILLS.md](SKILLS.md)
+2. Identify target framework: Employee (personal) → Delivery (team) → Automation (production)
+3. Follow the corresponding training path below
+4. Complete validation project to prove competency
+
+### Training Paths Comparison
+
+| Aspect | Path 1→2 (Employee) | Path 2→3 (Delivery) | Path 3→4 (Automation) |
+|--------|---------------------|---------------------|------------------------|
+| **Framework** | [Employee](employee/) | [Delivery](delivery/) | [Automation](automation/) |
+| **Focus** | Personal productivity | Team processes | Production systems |
+| **Level** | Basic → Intermediate | Intermediate → Advanced | Advanced → Expert |
+| **Risk** | Low (personal data) | Medium (team velocity) | High-Critical (business SLA) |
+| **Budget** | $20-50/month | Few k$/month | Tens-hundreds k$/month |
+| **Time** | 2-4 weeks | 2-3 months | 6-12 months |
+| **Prerequisites** | None | 50%+ team at L2 | Team L2-3 + Exec sponsor |
+| **Key Skills** | Prompting, SaaS tools, API basics | RAG, MLOps basics, team integration | Fine-tuning, K8s, NIST AI RMF |
+| **Validation** | 3 use cases automated | RAG app deployed | Production system (99.9% SLA) |
 
 ---
 
@@ -68,9 +92,13 @@
 
 ---
 
-## 3. Path 1→2 (Basic → Intermediate)
+## 3. Path 1→2 (Basic → Intermediate) — Employee Framework
 
-**Goal**: SaaS → API + team usage
+**Framework**: [Employee](employee/) (Personal AI productivity)
+**Goal**: Master SaaS AI tools + API basics for individual work
+**Risk**: Low (personal data only)
+**Budget**: $20-50/month
+**Time**: 2-4 weeks (10-20h training + validation project)
 
 ### Concepts
 
@@ -84,10 +112,17 @@
 - Few-shot learning
 - Chain-of-thought (CoT)
 
+**Security & Privacy**
+- Data classification (🟢🟡🔴) — See [Data Classification Guide](templates/shared/data-classification-guide.md)
+- MFA, opt-out model training
+- GDPR compliance basics
+
 **Business Practice**
 - Business prompt templates
 - Daily workflow integration
 - Use cases by role
+
+**Framework Integration**: Study [Employee/01-Prepare](employee/01-prepare.md) for tool selection, [Employee/02-Build](employee/02-build.md) for security setup, and [Employee/03-Run](employee/03-run.md) for daily operations.
 
 ### Tools
 
@@ -102,14 +137,32 @@
 - Token and cost management
 - Simple integrations
 
-### Validation
+### Validation Project
 
-**Project**: Automate 3 daily tasks with AI
-- 3 complex prompts (few-shot, CoT)
-- 1 simple API call
-- Use case documentation
+**Goal**: Demonstrate personal AI productivity mastery
 
-**Quiz**: GenAI fundamentals (80% pass)
+**Requirements**:
+1. **Tool Selection**: Choose 2-3 AI tools using [Tool Selection Matrix](templates/employee/tool-selection-matrix.md)
+2. **Use Cases**: Automate 3 daily tasks (use [Use Case Identification Matrix](templates/employee/use-case-identification-matrix.md))
+   - 1 content creation task (email, doc, report)
+   - 1 analysis task (data, research, decision support)
+   - 1 automation task (workflow, integration)
+3. **Technical Skills**:
+   - 3 complex prompts (few-shot, CoT, ReAct)
+   - 1 simple API call (OpenAI/Anthropic)
+   - Data classification applied (no 🔴 data in prompts)
+4. **Documentation**:
+   - Prompt library (10+ reusable prompts)
+   - Security checklist completed
+   - ROI tracking: Track 1 month with [Cost ROI Tracking](templates/employee/cost-roi-tracking.md)
+
+**Success Criteria**:
+- ✅ 5h/week time saved (measured over 4 weeks)
+- ✅ GenAI fundamentals quiz (80% pass)
+- ✅ Zero security incidents (no 🔴 data exposure)
+- ✅ Manager validation of use cases
+
+**Expected Outcome**: Ready for Level 2, can participate in team AI initiatives (Delivery framework).
 
 ### Resources
 
@@ -124,31 +177,43 @@
 
 ---
 
-## 4. Path 2→3 (Intermediate → Advanced)
+## 4. Path 2→3 (Intermediate → Advanced) — Delivery Framework
 
-**Goal**: API → RAG/custom ML + MLOps basics
+**Framework**: [Delivery](delivery/) (Team AI processes)
+**Goal**: Build team AI capabilities with RAG, APIs, and MLOps basics
+**Prerequisites**: 50%+ team at Level 2, has AI champion
+**Risk**: Medium (team velocity, internal data)
+**Budget**: Few k$/month
+**Time**: 2-3 months (40-60h training + team validation project)
 
 ### Concepts
 
 **AI/ML Fundamentals**
 - LLM architectures (GPT, Claude, Llama)
-- ML pipelines
-- GenAI vs classical ML
+- ML pipelines and lifecycle
+- GenAI vs classical ML (when to use which)
 
 **Advanced Prompting**
 - ReAct (Reasoning + Acting)
 - Tree-of-Thought
-- Prompt evaluation
+- Prompt evaluation and optimization
 
 **RAG & Vector DBs**
-- Embeddings and similarity
-- Chunking strategies
-- Retrieval optimization
+- Embeddings and semantic search
+- Chunking strategies (size, overlap)
+- Retrieval optimization (hybrid search, reranking)
 
 **MLOps Basics**
-- Versioning (Git, DVC)
-- CI/CD for ML
-- Basic monitoring
+- Versioning (Git, DVC, model registries)
+- CI/CD for ML (testing, deployment)
+- Basic monitoring (latency, accuracy drift)
+
+**Team Practices**
+- AI integration patterns (code review, testing, docs)
+- Cost optimization and tracking
+- Team policies and guardrails
+
+**Framework Integration**: Study [Delivery/01-Prepare](delivery/01-prepare.md) for team readiness, [Delivery/02-Build](delivery/02-build.md) for governance setup, and [Delivery/03-Run](delivery/03-run.md) for team operations.
 
 ### Tools
 
@@ -162,13 +227,39 @@
 - RAG frameworks
 - Prompt evaluation (LangSmith)
 
-### Validation
+### Validation Project
 
-**RAG Project**: Functional application
-- Complete RAG app (Q&A on internal docs)
-- Latency <2s (p95)
-- Automated tests
-- Technical documentation
+**Goal**: Demonstrate team AI integration capabilities
+
+**Requirements**:
+1. **Team Readiness**: Complete [AI Integration Readiness](templates/delivery/ai-integration-readiness.md) assessment
+2. **RAG Application**: Build functional Q&A system on internal documentation
+   - Embeddings + vector DB (Pinecone, Weaviate, or Qdrant)
+   - Latency <2s (p95)
+   - Answer accuracy >80% on test set
+   - Proper error handling and fallbacks
+3. **Team Integration**: Implement 2+ team AI patterns
+   - Code review assistance (e.g., PR summarization)
+   - Testing support (test generation, coverage analysis)
+   - Documentation automation (API docs, changelogs)
+4. **Technical Excellence**:
+   - Automated tests (unit + integration, >80% coverage)
+   - CI/CD pipeline with quality gates
+   - Cost monitoring (<$500/month)
+   - Technical documentation (architecture, runbooks)
+5. **Team Practices**: Document in [Team Policy Template](templates/delivery/team-ai-policy-template.md)
+   - Experimentation process (use [Collective Experimentation Canvas](templates/delivery/collective-experimentation-canvas.md))
+   - AI usage guidelines and guardrails
+   - Knowledge sharing rituals (demos, retros)
+
+**Success Criteria**:
+- ✅ RAG app deployed and used by team (>10 queries/day)
+- ✅ Team velocity maintained or improved (track with [Velocity Tracking Matrix](templates/delivery/velocity-tracking-matrix.md))
+- ✅ Zero critical incidents (data leaks, cost overruns)
+- ✅ Tech Lead + Senior Dev code review passed
+- ✅ 30min technical presentation to peers
+
+**Expected Outcome**: Ready for Level 3, can lead production AI initiatives (Automation framework).
 
 ### Resources
 
@@ -184,36 +275,54 @@
 
 ---
 
-## 5. Path 3→4 (Advanced → Expert)
+## 5. Path 3→4 (Advanced → Expert) — Automation Framework
 
-**Goal**: RAG/ML → LLM fine-tuning + Production infrastructure
+**Framework**: [Automation](automation/) (Production AI systems)
+**Goal**: Build and operate production-grade AI systems at scale
+**Prerequisites**: Team maturity (Delivery L2-3), Technical skills (RAG, MLOps), Executive sponsor
+**Risk**: High-Critical (SLA, customer data, business impact)
+**Budget**: Tens-hundreds k$/month
+**Time**: 6-12 months (100-200h training + production system deployment)
 
 ### Concepts
 
 **Advanced ML & LLM Fine-Tuning**
-- LoRA, QLoRA, PEFT
+- LoRA, QLoRA, PEFT (Parameter-Efficient Fine-Tuning)
 - RLHF (Reinforcement Learning from Human Feedback)
 - Distributed training (DeepSpeed, FSDP)
+- Model quantization and optimization
 
 **AI Infrastructure**
-- Multi-region architecture
-- GPU optimization
-- Autoscaling strategies
+- Multi-region architecture (99.9%+ SLA)
+- GPU optimization (A100/H100 clusters)
+- Autoscaling strategies (cost vs latency)
+- Landing zone design (networking, IAM, monitoring)
 
-**Complete MLOps**
+**Complete MLOps/LLMOps**
 - CI/CD/CT (Continuous Training)
-- A/B testing, canary deployments
-- Production observability
+- A/B testing, canary deployments, blue/green
+- Production observability (latency, drift, costs)
+- Model versioning and rollback strategies
+
+**AI Governance & Compliance**
+- NIST AI RMF (Govern, Map, Measure, Manage) — See [NIST AI RMF Implementation](templates/automation/nist-ai-rmf-implementation.md)
+- EU AI Act compliance (if applicable)
+- Fairness, bias mitigation, explainability
+- Red-teaming and adversarial testing
 
 **Responsible AI**
-- Fairness, bias mitigation
-- Audits and compliance (NIST AI RMF)
-- Red-teaming
+- Model card documentation
+- Bias and fairness audits
+- Incident response and postmortems
+- Continuous risk assessment
 
 **Architecture & Scale**
-- AI architecture patterns
-- Performance optimization
-- Technical leadership
+- AI architecture patterns (agentic, RAG, fine-tuned)
+- Performance optimization (caching, batching, parallelization)
+- Cost optimization (reserved instances, spot, model distillation)
+- Technical leadership and mentoring
+
+**Framework Integration**: Study [Automation/01-Prepare](automation/01-prepare.md) for architecture decisions, [Automation/02-Build](automation/02-build.md) for governance, and [Automation/03-Run](automation/03-run.md) for operations.
 
 ### Tools
 
@@ -228,15 +337,58 @@
 - Kubeflow
 - Prometheus, Grafana
 
-### Validation
+### Validation Project
 
-**Production Project**:
-- LLM fine-tuning (LoRA/QLoRA) on business data
-- Multi-region K8s infrastructure
-- Complete CI/CD/CT
-- Monitoring + Alerting
-- Responsible AI audit
-- Documented ROI
+**Goal**: Demonstrate production AI system expertise
+
+**Requirements**:
+1. **Architecture & Planning**:
+   - Complete [Readiness Assessment](templates/automation/organization-readiness-assessment.md)
+   - Document architecture with [ADR Template](templates/automation/architecture-decision-record.md)
+   - Select use case using [Use Case Evaluation](templates/automation/production-ai-use-case-matrix.md)
+2. **AI System Implementation**:
+   - LLM fine-tuning (LoRA/QLoRA) on business data OR
+   - Production RAG system with advanced retrieval (hybrid search, reranking) OR
+   - Agentic system with multi-step reasoning
+3. **Infrastructure** (choose based on organization):
+   - Multi-region K8s cluster (99.9%+ SLA) OR
+   - Serverless deployment with auto-scaling
+   - GPU optimization (if applicable)
+   - Landing zone setup (see [Landing Zone Checklist](templates/automation/ai-landing-zone-checklist.md))
+4. **MLOps/LLMOps Pipeline**:
+   - Complete CI/CD/CT (build, test, deploy, retrain)
+   - A/B testing and canary deployments
+   - Model versioning and rollback capability
+   - Automated model retraining triggers
+5. **Governance & Compliance**:
+   - NIST AI RMF governance implemented (see [NIST AI RMF Implementation](templates/automation/nist-ai-rmf-implementation.md))
+   - EU AI Act compliance (if applicable, see [EU AI Act Compliance](templates/automation/eu-ai-act-compliance.md))
+   - Responsible AI audit completed (fairness, bias, explainability)
+   - Security controls (OWASP LLM Top 10 mitigated)
+6. **Operations & Observability**:
+   - Production monitoring (see [System Health Dashboard](templates/automation/production-health-dashboard.md))
+   - Model performance tracking (see [Model Performance Dashboard](templates/automation/model-performance-dashboard.md))
+   - Cost monitoring and optimization (see [Cost Dashboard](templates/automation/production-cost-dashboard.md))
+   - Incident response runbooks (see [Incident Runbooks](templates/automation/ai-incident-runbooks.md))
+   - DR/BC plan tested (see [Disaster Recovery Plan](templates/automation/disaster-recovery-plan.md))
+7. **Documentation & Knowledge Transfer**:
+   - Complete technical documentation (architecture, runbooks, ADRs)
+   - Quarterly review template populated (see [Quarterly System Review](templates/automation/quarterly-system-review.md))
+   - Model cards and explainability docs
+   - Team training materials
+
+**Success Criteria**:
+- ✅ System deployed to production with real users (>100 daily active users)
+- ✅ SLA met for 30 consecutive days (99.9% uptime, <100ms p95 latency)
+- ✅ Zero critical incidents (data breach, model failure, compliance violation)
+- ✅ Cost within budget (±10% variance)
+- ✅ Responsible AI audit passed (no critical findings)
+- ✅ Architecture review passed (CTO/VP + AI CoE)
+- ✅ Live demo under load (100+ concurrent users)
+- ✅ Documented ROI (business value > costs)
+- ✅ Team knowledge transfer completed (runbooks, on-call rotation)
+
+**Expected Outcome**: Ready for Level 4 Expert, can architect and lead organization-wide AI transformation.
 
 ### Resources
 
@@ -367,10 +519,31 @@
 
 ## Next Steps
 
-1. **Assess your level**: [SKILLS.md](SKILLS.md)
-2. **Choose your path**: Based on your current level
-3. **Start training**: Concepts + Tools
-4. **Validate with project**: Practical project
-5. **Update Skills Matrix**: Track your progress
+### Getting Started
 
-**Questions?** Consult your Tech Lead or AI CoE.
+1. **Assess your current level**: Use [SKILLS.md](SKILLS.md) maturity assessment (7 domains, 4 levels)
+2. **Identify target framework**:
+   - **Level 1-2** → [Employee Framework](employee/) (Personal productivity)
+   - **Level 2-3** → [Delivery Framework](delivery/) (Team processes)
+   - **Level 3-4** → [Automation Framework](automation/) (Production systems)
+3. **Choose your training path**:
+   - Path 1→2 (Employee): 2-4 weeks, $20-50/month
+   - Path 2→3 (Delivery): 2-3 months, few k$/month
+   - Path 3→4 (Automation): 6-12 months, tens-hundreds k$/month
+4. **Start training**: Follow Concepts + Tools sections for your path
+5. **Complete validation project**: Prove competency with practical project
+6. **Update Skills Matrix**: Track your progress and validate with manager/tech lead
+
+### Framework-Specific Resources
+
+- **Employee**: [Use Case Matrix](templates/employee/use-case-identification-matrix.md), [Tool Selection](templates/employee/tool-selection-matrix.md), [Cost Tracking](templates/employee/cost-roi-tracking.md)
+- **Delivery**: [Team Readiness](templates/delivery/ai-integration-readiness.md), [Team Policy](templates/delivery/team-policy-template.md), [Velocity Tracking](templates/delivery/velocity-tracking-matrix.md)
+- **Automation**: [ADR Template](templates/automation/architecture-decision-record.md), [NIST AI RMF](templates/automation/nist-ai-rmf-implementation.md), [System Health](templates/automation/production-health-dashboard.md)
+
+### Support
+
+- **Level 1-2**: Self-service, manager approval for budget
+- **Level 2-3**: Tech Lead mentoring, code reviews, team demos
+- **Level 3-4**: AI CoE governance, CTO/VP sponsorship, architecture reviews
+
+**Questions?** Consult your manager (L1-2), Tech Lead (L2-3), or AI CoE (L3-4).
